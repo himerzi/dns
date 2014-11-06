@@ -168,59 +168,120 @@ def construct_A_query(domain_name):
     domain name is the domain name we're querying about
     """
     #generate a 16 bit random number - Header class ensures this is packed correctly
-    h_id = randint(0, 65535)
-    header = Header(h_id, Header.OPCODE_QUERY, Header.RCODE_NOERR,
-                    qdcount=1, ancount=0, nscount=0, arcount=0, qr=False,
-                    aa=False, tc=False, rd=False, ra=False)
+    h_id                    = randint(0, 65535)
+    header                  = Header(h_id, Header.OPCODE_QUERY, Header.RCODE_NOERR,
+                    qdcount = 1, ancount=0, nscount=0, arcount=0, qr=False,
+                    aa      = False, tc=False, rd=False, ra=False)
     if not isinstance(domain_name, DomainName):
         raise Exception("construct_A_query didnt receive a domain name of type DomainName")
     
-    question = QE(type=QE.TYPE_A, dn=domain_name)
+    question                = QE(type=QE.TYPE_A, dn=domain_name)
 
     return "{}{}".format(header.pack(),question.pack())
     
-def print_dns(data):
+def print_dns_payload(data):
   logger.log(DEBUG1, "payload (length:{} bytes) received is:\n{}\n".format(len(data), hexdump(data)))
   logger.log(DEBUG1, "Header received  is:\n{}\n".format(Header.fromData(data)))
-  header_len = len(Header.fromData(data))
-  question = QE.fromData(data, header_len)
+  header_len                = len(Header.fromData(data))
+  question                  = QE.fromData(data, header_len)
   logger.log(DEBUG1, "Question received  is:\n{}\n".format(question))
     #logger.log(DEBUG2, "raw from {} type {}:\n{}".format(address,type(data), repr(data)))
 
+def parse_rrs(payload, offset, quantity):
+  rrs = []
+  for i in range(quantity):
+    subtype = get_record_type(payload, offset)
+    rr, length = subtype.fromData(payload, offset)
+    rrs.append(rr)
+    offset += length
+  return rrs, offset
+def calculate_total_length(rrs):
+  """
+  expects a list or Resource Records, computes their total length
+  """
+  return reduce(lambda x, y: x  + len(y), rrs, 0)
+
+def get_record_type(rr, offset=0):
+  """
+  expects a raw representation of a RR, and returns the corresponding python class
+  _type -- The DNS type of this resource record; one of { RR.TYPE_A
+  (DNS A record), RR.TYPE_NS (DNS NS record), RR.TYPE_CNAME (DNS CNAME
+  record), RR.TYPE_SOA (DNS start-of-authority record), RR.TYPE_PTR
+  (DNS PTR record), RR.TYPE_MX (DNS mail exchange record),
+  RR.TYPE_AAAA (DNS IPv6 address record).
+  """
+  (generic_type, _) = RR.fromData(rr,offset)
+  print "gen type {}".format(generic_type._type)
+  return {
+        RR.TYPE_A : RR_A,
+        RR.TYPE_AAAA : RR_AAAA,
+        RR.TYPE_NS : RR_NS,
+        RR.TYPE_CNAME : RR_CNAME
+        }[generic_type._type]
+      
+def parse_response_payload(payload):
+  header                    = Header.fromData(payload)
+  hlen = len(header)
+  byte_ptr = hlen
+  config = OrderedDict(zip(["question" , "answer", "authority", "additional"], ["_qdcount", "_ancount", "_nscount", "_arcount"]))
+  parsed = {}
+  for key, val in config:
+    num_entries = header.getattr(val)
+    rrs, byte_ptr = ([], byte_ptr) if num_entries is 0 else parse_rrs(payload,
+                                                                              byte_ptr,
+                                                                              num_entries)
+    
+    parsed[key] = rrs
+    logger.log(DEBUG2, "parsed:\n{}\n".format(parsed))
+  #As per requirements, we assume there is only ever one question
+  # ***perhaps we should be checking that there is at least a question present...
+  
+  # parse CNAMES, NS, and A records
+  # question_start =  hlen
+  # question                  = QE.fromData(data, hlen) 
+  # answer_start =  question_start + len(question)
+  # answers, answers_endpoint = ([], answer_start) if header._ancount is 0 else parse_rrs(payload,
+  #                                                                                       answer_start,
+  #                                                                                       header._ancount)
+  # authority_start = answer_start + answers_endpoint
+  # logger.log(DEBUG2, "Auth start is:{}\nAnswers is {}\nAnswer length is {}\n".format(authority_start,
+  #                                                                                    answers,
+  #                                                                                    calculate_total_length(answers)))
+  # authorities , auth_endpoint = ([], authority_start) if header._nscount is 0 else parse_rrs(payload, authority_start,
+  #                                                         header._nscount)
+  # logger.log(DEBUG2, "Authorities  is:\n{}\n Auths end is {}\n".format(authorities,
+  #                                                                        auth_endpoint))
+  
+  # additionals, additionals_endpoint = ([], additional_start) if header._arcount is 0 else parse_rrs(payload, auth_endpoint, header._arcount)
+  # logger.log(DEBUG2, "Additionals  is:\n{}\n".format(additionals))
+  
 # This is a simple, single-threaded server that takes successive
 # connections with each iteration of the following loop:
 while 1:
-  #(data, address,) = ss.recvfrom(512) # DNS limits UDP msgs to 512 bytes
+  #(data, address,)         = ss.recvfrom(512) # DNS limits UDP msgs to 512 bytes
   #dummy data
-  data = '\xadF\x01\x00\x00\x01\x00\x00\x00\x00\x00\x00\x05qsipb\x03mit\x03edu\x00\x00\x01\x00\x01'
+  data                      = '\xadF\x01\x00\x00\x01\x00\x00\x00\x00\x00\x00\x05qsipb\x03mit\x03edu\x00\x00\x01\x00\x01'
+  resp_data                 = "\xb8\xfe\x80\x00\x00\x01\x00\x00\x00\x06\x00\x07\x05qsipb\x03mit\x03edu\x00\x00\x01\x00\x01\xc0\x16\x00\x02\x00\x01\x00\x02\xa3\x00\x00\x13\x01f\x0bedu-servers\x03net\x00\xc0\x16\x00\x02\x00\x01\x00\x02\xa3\x00\x00\x04\x01g\xc0-\xc0\x16\x00\x02\x00\x01\x00\x02\xa3\x00\x00\x04\x01c\xc0-\xc0\x16\x00\x02\x00\x01\x00\x02\xa3\x00\x00\x04\x01a\xc0-\xc0\x16\x00\x02\x00\x01\x00\x02\xa3\x00\x00\x04\x01l\xc0-\xc0\x16\x00\x02\x00\x01\x00\x02\xa3\x00\x00\x04\x01d\xc0-\xc0j\x00\x01\x00\x01\x00\x02\xa3\x00\x00\x04\xc0\x05\x06\x1e\xc0Z\x00\x01\x00\x01\x00\x02\xa3\x00\x00\x04\xc0\x1a\\\x1e\xc0\x8a\x00\x01\x00\x01\x00\x02\xa3\x00\x00\x04\xc0\x1fP\x1e\xc0+\x00\x01\x00\x01\x00\x02\xa3\x00\x00\x04\xc0#3\x1e\xc0J\x00\x01\x00\x01\x00\x02\xa3\x00\x00\x04\xc0*]\x1e\xc0J\x00\x1c\x00\x01\x00\x02\xa3\x00\x00\x10 \x01\x05\x03\xcc,\x00\x00\x00\x00\x00\x00\x00\x02\x006\xc0z\x00\x01\x00\x01\x00\x02\xa3\x00\x00\x04\xc0)\xa2\x1e"
   if not data:
     log.error("client provided no data")
     continue
-  print_dns(data)
-  header_len = len(Header.fromData(data))
-  qname = DomainName.fromData(data, header_len)
+  print_dns_payload(data)
+  header_len                = len(Header.fromData(data))
+  qname                     = DomainName.fromData(data, header_len)
   
-  slist = get_best_ns(nscache, qname)
+  slist                     = get_best_ns(nscache, qname)
 
-  #
-  # TODO: Insert code here to perform the recursive DNS lookup;
-  #       putting the result in reply.
-  #
-
-  #logger.log(DEBUG2, "our reply in full:") 
- # logger.log(DEBUG2, hexdump(reply))
-  firstup = slist.popitem()
-  ipv4 = str(acache[firstup[0]]._dict.keys()[0]) ##this is what a ridiculously obfuscated data type looks like!
-  address = (ipv4,53)
-  print type(ipv4)
-  payload = construct_A_query(qname)
-
+  firstup                 = slist.popitem()
+  ipv4                      = str(acache[firstup[0]]._dict.keys()[0]) ##this is what a ridiculously obfuscated data type looks like!
+  address                   = (ipv4,53)
+  payload                   = construct_A_query(qname)
   logger.log(DEBUG1, "sending:\n{}\n".format(hexdump(payload)))
-  cs.sendto(payload, address)
-  (cs_data, cs_address,) = cs.recvfrom(512)
+  #cs.sendto(payload, address)
+  #(cs_data, cs_address,)    = cs.recvfrom(512)
   logger.log(DEBUG2, "Answer received from server  is:\n")
-  print_dns(cs_data)
+  print_dns_payload(resp_data)
+  parse_response_payload(resp_data)
 #  ss.sendto(reply, acache[firstup])
  # ss.sendto(reply, address)
-  logger.log(DEBUG1, "-"*20)
+  logger.log(DEBUG1, "-"*50)
   break
