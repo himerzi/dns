@@ -119,9 +119,9 @@ class RR:
     dn = DomainName.fromData(data, offset)
     (type, cls, ttl, rdlength) = struct.unpack_from(">2HlH", data, 
                                                     offset + len(dn))
-    logger.log(DEBUG2, "RR.fromData: offset=%s; dn=%s; len(dn)=%d,\
-               type=%d, cls=%d, ttl=%d, rdlength=%d" % \
-               (hex(offset), dn, len(dn), type, cls, ttl, rdlength,))
+    # logger.log(DEBUG2, "RR.fromData: offset=%s; dn=%s; len(dn)=%d,\
+    #            type=%d, cls=%d, ttl=%d, rdlength=%d" % \
+    #            (hex(offset), dn, len(dn), type, cls, ttl, rdlength,))
     if type == RR.TYPE_A:
       (inaddr,) = struct.unpack_from(">4s", data, offset + len(dn) + 10)
       return (RR_A(copy(dn), ttl, inaddr), len(dn) + 10 + rdlength)

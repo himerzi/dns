@@ -147,6 +147,10 @@ sys.stdout.flush()
 setdefaulttimeout(TIMEOUT)
 cs = socket(AF_INET, SOCK_DGRAM)
 
+  #dummy data
+data                      = "\x86\x9f\x01\x00\x00\x01\x00\x00\x00\x00\x00\x00\x04sipb\x03mit\x03edu\x00\x00\x01\x00\x01"
+resp_data                 = "\xb8\xfe\x80\x00\x00\x01\x00\x00\x00\x06\x00\x07\x05qsipb\x03mit\x03edu\x00\x00\x01\x00\x01\xc0\x16\x00\x02\x00\x01\x00\x02\xa3\x00\x00\x13\x01f\x0bedu-servers\x03net\x00\xc0\x16\x00\x02\x00\x01\x00\x02\xa3\x00\x00\x04\x01g\xc0-\xc0\x16\x00\x02\x00\x01\x00\x02\xa3\x00\x00\x04\x01c\xc0-\xc0\x16\x00\x02\x00\x01\x00\x02\xa3\x00\x00\x04\x01a\xc0-\xc0\x16\x00\x02\x00\x01\x00\x02\xa3\x00\x00\x04\x01l\xc0-\xc0\x16\x00\x02\x00\x01\x00\x02\xa3\x00\x00\x04\x01d\xc0-\xc0j\x00\x01\x00\x01\x00\x02\xa3\x00\x00\x04\xc0\x05\x06\x1e\xc0Z\x00\x01\x00\x01\x00\x02\xa3\x00\x00\x04\xc0\x1a\\\x1e\xc0\x8a\x00\x01\x00\x01\x00\x02\xa3\x00\x00\x04\xc0\x1fP\x1e\xc0+\x00\x01\x00\x01\x00\x02\xa3\x00\x00\x04\xc0#3\x1e\xc0J\x00\x01\x00\x01\x00\x02\xa3\x00\x00\x04\xc0*]\x1e\xc0J\x00\x1c\x00\x01\x00\x02\xa3\x00\x00\x10 \x01\x05\x03\xcc,\x00\x00\x00\x00\x00\x00\x00\x02\x006\xc0z\x00\x01\x00\x01\x00\x02\xa3\x00\x00\x04\xc0)\xa2\x1e"
+
 def get_best_ns(ns_cache, qname):
   """
     expects QNAME to be a DomainName - we should throw an error if it isnt.
@@ -162,7 +166,10 @@ def get_best_ns(ns_cache, qname):
             logger.log(DEBUG2, "{}\n".format(key))
           return ns_cache[super_domain]
   raise Exception("Bad state, root name wasn't matched, but it should have been!")    
-
+def construct_response(id, question, answer):
+    header = Header(id, Header.OPCODE_QUERY, Header.RCODE_NOERR, qdcount=1, ancount=1,
+                    nscount=0, arcount=0, qr=True, aa=False, tc=False, rd=True, ra=True)
+    return "{}{}{}".format(header.pack(),question.pack(),answer.pack())
 def construct_A_query(domain_name):
     """
     domain name is the domain name we're querying about
@@ -185,21 +192,18 @@ def print_dns_payload(data):
   header_len                = len(Header.fromData(data))
   question                  = QE.fromData(data, header_len)
   logger.log(DEBUG1, "Question received  is:\n{}\n".format(question))
-    #logger.log(DEBUG2, "raw from {} type {}:\n{}".format(address,type(data), repr(data)))
+  #logger.log(DEBUG2, "raw from {} type {}:\n{}".format(address,type(data), repr(data)))
 
 def parse_rrs(payload, offset, quantity):
   rrs = []
   for i in range(quantity):
     subtype = get_record_type(payload, offset)
+   # print "subtype " + subtype
     rr, length = subtype.fromData(payload, offset)
     rrs.append(rr)
     offset += length
+    
   return rrs, offset
-def calculate_total_length(rrs):
-  """
-  expects a list or Resource Records, computes their total length
-  """
-  return reduce(lambda x, y: x  + len(y), rrs, 0)
 
 def get_record_type(rr, offset=0):
   """
@@ -211,7 +215,6 @@ def get_record_type(rr, offset=0):
   RR.TYPE_AAAA (DNS IPv6 address record).
   """
   (generic_type, _) = RR.fromData(rr,offset)
-  print "gen type {}".format(generic_type._type)
   return {
         RR.TYPE_A : RR_A,
         RR.TYPE_AAAA : RR_AAAA,
@@ -221,67 +224,101 @@ def get_record_type(rr, offset=0):
       
 def parse_response_payload(payload):
   header                    = Header.fromData(payload)
-  hlen = len(header)
-  byte_ptr = hlen
+  byte_ptr = len(header)
   config = OrderedDict(zip(["question" , "answer", "authority", "additional"], ["_qdcount", "_ancount", "_nscount", "_arcount"]))
   parsed = {}
-  for key, val in config:
-    num_entries = header.getattr(val)
-    rrs, byte_ptr = ([], byte_ptr) if num_entries is 0 else parse_rrs(payload,
-                                                                              byte_ptr,
-                                                                              num_entries)
+  for key, val in config.items():
+    #the question section isn't parsed as a RR, needs special treatment
+    if key is "question":
+      #assumes only ever receive one question entry
+      if getattr(header, val) > 1:
+        raise Exception("Uh oh!")
+      question = QE.fromData(data, byte_ptr)
+      parsed[key] = [question,]
+      byte_ptr += len(question)
+        
+    else:
+      num_entries = getattr(header, val)
+      rrs, byte_ptr = ([], byte_ptr) if num_entries is 0 else parse_rrs(payload,
+                                                                        byte_ptr,
+                                                                        num_entries)    
+      parsed[key] = rrs
+  logger.log(DEBUG2, "parsed:\n{}\n".format(pp.pformat(parsed)))
+  return parsed
+def insert_in_acache(rr, authoritative=False):
+  global acache
+  #if rr._dn is already in acache, we should somehow choose which value to keep....
+  if isinstance(rr, RR_AAAA):
+    return
+  acache[rr._dn] = ACacheEntry({InetAddr.fromNetwork(rr._addr) : CacheEntry(expiration=rr._ttl, authoritative=authoritative)})
+  #return acache
+def insert_in_nscache(rr,  authoritative=False):
+  global nscache
+  dn = rr._dn
+  nsdn = rr._nsdn
+  ce =  CacheEntry(expiration=rr._ttl, authoritative=authoritative)
+  if dn in nscache:
+    nscache[dn][nsdn] = ce
+  else:
+    nscache[dn] = OrderedDict([(nsdn, ce)])
+  
+def load_response_into_cache(response):
+#  global nscache, acache
+  for entry in response["authority"]:
+    insert_in_nscache(entry)
+  for entry in response["additional"]:
+    insert_in_acache(entry)
+
+def resolve(qid, qname, slist):
+  #for i in range(2):
+    global acache
+
+    firstup                 = slist.popitem()
+    ipv4                      = str(acache[firstup[0]]._dict.keys()[0]) ##this is what a ridiculously obfuscated data type looks like!
+    address                   = (ipv4,53)
+    payload                   = construct_A_query(qname)
+    logger.log(DEBUG1, "*"*50)
+    logger.log(DEBUG1, "sending to {}:\n{}\n".format(address, hexdump(payload)))
+    cs.sendto(payload, address)
+    (cs_data, cs_address,)    = cs.recvfrom(512)
+    logger.log(DEBUG2, "Answer received from server  is:\n")
     
-    parsed[key] = rrs
-    logger.log(DEBUG2, "parsed:\n{}\n".format(parsed))
-  #As per requirements, we assume there is only ever one question
-  # ***perhaps we should be checking that there is at least a question present...
-  
-  # parse CNAMES, NS, and A records
-  # question_start =  hlen
-  # question                  = QE.fromData(data, hlen) 
-  # answer_start =  question_start + len(question)
-  # answers, answers_endpoint = ([], answer_start) if header._ancount is 0 else parse_rrs(payload,
-  #                                                                                       answer_start,
-  #                                                                                       header._ancount)
-  # authority_start = answer_start + answers_endpoint
-  # logger.log(DEBUG2, "Auth start is:{}\nAnswers is {}\nAnswer length is {}\n".format(authority_start,
-  #                                                                                    answers,
-  #                                                                                    calculate_total_length(answers)))
-  # authorities , auth_endpoint = ([], authority_start) if header._nscount is 0 else parse_rrs(payload, authority_start,
-  #                                                         header._nscount)
-  # logger.log(DEBUG2, "Authorities  is:\n{}\n Auths end is {}\n".format(authorities,
-  #                                                                        auth_endpoint))
-  
-  # additionals, additionals_endpoint = ([], additional_start) if header._arcount is 0 else parse_rrs(payload, auth_endpoint, header._arcount)
-  # logger.log(DEBUG2, "Additionals  is:\n{}\n".format(additionals))
-  
+    print_dns_payload(cs_data)
+    logger.log(DEBUG1, "*"*50)
+    #would need to check if this response is actually getting us closer....
+    response = parse_response_payload(cs_data)
+    if len(response['answer']) > 0:
+        our_response = construct_response(qid, response["question"][0], response["answer"][0])
+        logger.log(DEBUG1, "&#"*50+"\n"*3+"Response:\n{}".format(our_response))
+        return our_response
+    load_response_into_cache(response)
+    logger.log(DEBUG2, "NSCache is:\n{}\n".format(pp.pformat(nscache)))
+    return resolve(qid, qname, get_best_ns(nscache, qname))
+   # slist = 
+   # logger.log(DEBUG2, "new slist:\n{}".format(slist))
+#    logger.log(DEBUG2, "new ns:\n{}\nNewA:\n{}".format(new_ns, new_a))
+def exc(qid, qname):
+     return resolve(qid, qname, get_best_ns(nscache, qname))
 # This is a simple, single-threaded server that takes successive
 # connections with each iteration of the following loop:
 while 1:
-  #(data, address,)         = ss.recvfrom(512) # DNS limits UDP msgs to 512 bytes
-  #dummy data
-  data                      = '\xadF\x01\x00\x00\x01\x00\x00\x00\x00\x00\x00\x05qsipb\x03mit\x03edu\x00\x00\x01\x00\x01'
-  resp_data                 = "\xb8\xfe\x80\x00\x00\x01\x00\x00\x00\x06\x00\x07\x05qsipb\x03mit\x03edu\x00\x00\x01\x00\x01\xc0\x16\x00\x02\x00\x01\x00\x02\xa3\x00\x00\x13\x01f\x0bedu-servers\x03net\x00\xc0\x16\x00\x02\x00\x01\x00\x02\xa3\x00\x00\x04\x01g\xc0-\xc0\x16\x00\x02\x00\x01\x00\x02\xa3\x00\x00\x04\x01c\xc0-\xc0\x16\x00\x02\x00\x01\x00\x02\xa3\x00\x00\x04\x01a\xc0-\xc0\x16\x00\x02\x00\x01\x00\x02\xa3\x00\x00\x04\x01l\xc0-\xc0\x16\x00\x02\x00\x01\x00\x02\xa3\x00\x00\x04\x01d\xc0-\xc0j\x00\x01\x00\x01\x00\x02\xa3\x00\x00\x04\xc0\x05\x06\x1e\xc0Z\x00\x01\x00\x01\x00\x02\xa3\x00\x00\x04\xc0\x1a\\\x1e\xc0\x8a\x00\x01\x00\x01\x00\x02\xa3\x00\x00\x04\xc0\x1fP\x1e\xc0+\x00\x01\x00\x01\x00\x02\xa3\x00\x00\x04\xc0#3\x1e\xc0J\x00\x01\x00\x01\x00\x02\xa3\x00\x00\x04\xc0*]\x1e\xc0J\x00\x1c\x00\x01\x00\x02\xa3\x00\x00\x10 \x01\x05\x03\xcc,\x00\x00\x00\x00\x00\x00\x00\x02\x006\xc0z\x00\x01\x00\x01\x00\x02\xa3\x00\x00\x04\xc0)\xa2\x1e"
+  logger.log(DEBUG1, "\n"*40)
+  logger.log(DEBUG1, "="*400)
+  
+  (data, address,)         = ss.recvfrom(512) # DNS limits UDP msgs to 512 bytes
+
   if not data:
     log.error("client provided no data")
     continue
-  print_dns_payload(data)
-  header_len                = len(Header.fromData(data))
+  #print_dns_payload(data)
+  header = Header.fromData(data)
+  #print "id: " + repr(header._id)
+  qid = header._id
+  header_len                = len(header)
   qname                     = DomainName.fromData(data, header_len)
-  
-  slist                     = get_best_ns(nscache, qname)
-
-  firstup                 = slist.popitem()
-  ipv4                      = str(acache[firstup[0]]._dict.keys()[0]) ##this is what a ridiculously obfuscated data type looks like!
-  address                   = (ipv4,53)
-  payload                   = construct_A_query(qname)
-  logger.log(DEBUG1, "sending:\n{}\n".format(hexdump(payload)))
-  #cs.sendto(payload, address)
-  #(cs_data, cs_address,)    = cs.recvfrom(512)
-  logger.log(DEBUG2, "Answer received from server  is:\n")
-  print_dns_payload(resp_data)
-  parse_response_payload(resp_data)
+  response = exc(qid, qname)
+  #logger.info( "&#"*50+"\n"*3+"Response:\n{}".format(response))
 #  ss.sendto(reply, acache[firstup])
- # ss.sendto(reply, address)
-  logger.log(DEBUG1, "-"*50)
-  break
+  ss.sendto(response, address)
+  
+ # break
