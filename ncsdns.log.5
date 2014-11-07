@@ -1,48 +1,2098 @@
-query (length:31 bytes) received from client is:
-0000   67 48 01 00 00 01 00 00 00 00 00 00 05 71 73 69    gH...........qsi
-0010   70 62 03 6D 69 74 03 65 64 75 00 00 01 00 01       pb.mit.edu.....
+NSCache INIT = 
+{.: {f.root-servers.net.: <CE exp=9223372035439382663s auth=True>}}
 
 
-Header received from client is:
-->>HEADER<<- opcode: QUERY, status: NOERROR, id: 26440
-    flags: rd; QUERY: 1, ANSWER: 0,    AUTHORITY: 0, ADDITIONAL: 0
-
-Question received from client is:
-qsipb.mit.edu.                	IN	A
-
---------------------
-Best matchin RR for qsipb.mit.edu.:
-.
-
-query (length:31 bytes) received from client is:
-0000   67 48 01 00 00 01 00 00 00 00 00 00 05 71 73 69    gH...........qsi
-0010   70 62 03 6D 69 74 03 65 64 75 00 00 01 00 01       pb.mit.edu.....
 
 
-Header received from client is:
-->>HEADER<<- opcode: QUERY, status: NOERROR, id: 26440
-    flags: rd; QUERY: 1, ANSWER: 0,    AUTHORITY: 0, ADDITIONAL: 0
-
-Question received from client is:
-qsipb.mit.edu.                	IN	A
-
---------------------
-Best matchin RR for qsipb.mit.edu.:
-.
-
-query (length:31 bytes) received from client is:
-0000   67 48 01 00 00 01 00 00 00 00 00 00 05 71 73 69    gH...........qsi
-0010   70 62 03 6D 69 74 03 65 64 75 00 00 01 00 01       pb.mit.edu.....
 
 
-Header received from client is:
-->>HEADER<<- opcode: QUERY, status: NOERROR, id: 26440
-    flags: rd; QUERY: 1, ANSWER: 0,    AUTHORITY: 0, ADDITIONAL: 0
 
-Question received from client is:
-qsipb.mit.edu.                	IN	A
 
---------------------
-Best matchin RR for qsipb.mit.edu.:
-.
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+================================================================================================================================================================================================================================================================================================================================================================================================================
+Best matching RR's for www.mit.edu. are for parent domain ".":
+
+f.root-servers.net.
+
+Acache is:
+{  f.root-servers.net.: <ACE {<InetAddr 192.5.5.241>: <CE exp=9223372035439382657s auth=True>}, srtt=*>}
+
+Checking if we have an A record in cache for: f.root-servers.net.
+
+    We have: f.root-servers.net.@192.5.5.241
+
+Attempting:
+f.root-servers.net.
+
+CCache is:
+{  }
+
+sending to f.root-servers.net. @('192.5.5.241', 53):
+0000   E4 79 00 00 00 01 00 00 00 00 00 00 03 77 77 77    .y...........www
+0010   03 6D 69 74 03 65 64 75 00 00 01 00 01             .mit.edu.....
+
+
+Answer received from f.root-servers.net. server is:
+ {  'additional': [  (a.edu-servers.net., 172800, IN, A, 192.5.6.30),
+                    (c.edu-servers.net., 172800, IN, A, 192.26.92.30),
+                    (d.edu-servers.net., 172800, IN, A, 192.31.80.30),
+                    (f.edu-servers.net., 172800, IN, A, 192.35.51.30),
+                    (g.edu-servers.net., 172800, IN, A, 192.42.93.30),
+                    <gz01.dnslib.RR.RR_AAAA instance at 0x1079129e0>,
+                    (l.edu-servers.net., 172800, IN, A, 192.41.162.30)],
+   'answer': [],
+   'authority': [  (edu., 172800, IN, NS, l.edu-servers.net.),
+                   (edu., 172800, IN, NS, d.edu-servers.net.),
+                   (edu., 172800, IN, NS, a.edu-servers.net.),
+                   (edu., 172800, IN, NS, f.edu-servers.net.),
+                   (edu., 172800, IN, NS, g.edu-servers.net.),
+                   (edu., 172800, IN, NS, c.edu-servers.net.)],
+   'question': [<gz01.dnslib.QE.QE instance at 0x107908a70>]}
+**************************************************
+Best matching RR's for www.mit.edu. are for parent domain "edu.":
+
+l.edu-servers.net.
+
+g.edu-servers.net.
+
+a.edu-servers.net.
+
+f.edu-servers.net.
+
+c.edu-servers.net.
+
+d.edu-servers.net.
+
+Acache is:
+{  a.edu-servers.net.: <ACE {<InetAddr 192.5.6.30>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   c.edu-servers.net.: <ACE {<InetAddr 192.26.92.30>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   d.edu-servers.net.: <ACE {<InetAddr 192.31.80.30>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   f.edu-servers.net.: <ACE {<InetAddr 192.35.51.30>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   f.root-servers.net.: <ACE {<InetAddr 192.5.5.241>: <CE exp=9223372035439382657s auth=True>}, srtt=*>,
+   g.edu-servers.net.: <ACE {<InetAddr 192.42.93.30>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   l.edu-servers.net.: <ACE {<InetAddr 192.41.162.30>: <CE exp=-1415220350s auth=False>}, srtt=*>}
+
+Checking if we have an A record in cache for: l.edu-servers.net.
+
+    We have: l.edu-servers.net.@192.41.162.30
+
+Attempting:
+l.edu-servers.net.
+
+CCache is:
+{  }
+
+sending to l.edu-servers.net. @('192.41.162.30', 53):
+0000   8A 4A 00 00 00 01 00 00 00 00 00 00 03 77 77 77    .J...........www
+0010   03 6D 69 74 03 65 64 75 00 00 01 00 01             .mit.edu.....
+
+
+Answer received from l.edu-servers.net. server is:
+ {  'additional': [  (usw2.akam.net., 172800, IN, A, 184.26.161.64),
+                    (asia1.akam.net., 172800, IN, A, 95.100.175.64),
+                    (asia2.akam.net., 172800, IN, A, 95.101.36.64),
+                    (use2.akam.net., 172800, IN, A, 96.7.49.64),
+                    (ns1-37.akam.net., 172800, IN, A, 193.108.91.37),
+                    <gz01.dnslib.RR.RR_AAAA instance at 0x10791f5a8>,
+                    (ns1-173.akam.net., 172800, IN, A, 193.108.91.173),
+                    <gz01.dnslib.RR.RR_AAAA instance at 0x10791f758>,
+                    (eur5.akam.net., 172800, IN, A, 23.74.25.64),
+                    (use5.akam.net., 172800, IN, A, 2.16.40.64),
+                    <gz01.dnslib.RR.RR_AAAA instance at 0x10791f9e0>],
+   'answer': [],
+   'authority': [  (mit.edu., 172800, IN, NS, usw2.akam.net.),
+                   (mit.edu., 172800, IN, NS, asia1.akam.net.),
+                   (mit.edu., 172800, IN, NS, asia2.akam.net.),
+                   (mit.edu., 172800, IN, NS, use2.akam.net.),
+                   (mit.edu., 172800, IN, NS, ns1-37.akam.net.),
+                   (mit.edu., 172800, IN, NS, ns1-173.akam.net.),
+                   (mit.edu., 172800, IN, NS, eur5.akam.net.),
+                   (mit.edu., 172800, IN, NS, use5.akam.net.)],
+   'question': [<gz01.dnslib.QE.QE instance at 0x10791a3b0>]}
+**************************************************
+Best matching RR's for www.mit.edu. are for parent domain "mit.edu.":
+
+usw2.akam.net.
+
+asia2.akam.net.
+
+ns1-37.akam.net.
+
+eur5.akam.net.
+
+asia1.akam.net.
+
+use2.akam.net.
+
+use5.akam.net.
+
+ns1-173.akam.net.
+
+Acache is:
+{  a.edu-servers.net.: <ACE {<InetAddr 192.5.6.30>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   asia1.akam.net.: <ACE {<InetAddr 95.100.175.64>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   asia2.akam.net.: <ACE {<InetAddr 95.101.36.64>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   c.edu-servers.net.: <ACE {<InetAddr 192.26.92.30>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   d.edu-servers.net.: <ACE {<InetAddr 192.31.80.30>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   eur5.akam.net.: <ACE {<InetAddr 23.74.25.64>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   f.edu-servers.net.: <ACE {<InetAddr 192.35.51.30>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   f.root-servers.net.: <ACE {<InetAddr 192.5.5.241>: <CE exp=9223372035439382657s auth=True>}, srtt=*>,
+   g.edu-servers.net.: <ACE {<InetAddr 192.42.93.30>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   l.edu-servers.net.: <ACE {<InetAddr 192.41.162.30>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   ns1-173.akam.net.: <ACE {<InetAddr 193.108.91.173>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   ns1-37.akam.net.: <ACE {<InetAddr 193.108.91.37>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   use2.akam.net.: <ACE {<InetAddr 96.7.49.64>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   use5.akam.net.: <ACE {<InetAddr 2.16.40.64>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   usw2.akam.net.: <ACE {<InetAddr 184.26.161.64>: <CE exp=-1415220350s auth=False>}, srtt=*>}
+
+Checking if we have an A record in cache for: usw2.akam.net.
+
+    We have: usw2.akam.net.@184.26.161.64
+
+Attempting:
+usw2.akam.net.
+
+CCache is:
+{  }
+
+sending to usw2.akam.net. @('184.26.161.64', 53):
+0000   D5 61 00 00 00 01 00 00 00 00 00 00 03 77 77 77    .a...........www
+0010   03 6D 69 74 03 65 64 75 00 00 01 00 01             .mit.edu.....
+
+
+Answer received from usw2.akam.net. server is:
+ {  'additional': [],
+   'answer': [(www.mit.edu., 1800, IN, CNAME, www.mit.edu.edgekey.net.)],
+   'authority': [],
+   'question': [<gz01.dnslib.QE.QE instance at 0x1079245a8>]}
+**************************************************
+Sanswers is [(www.mit.edu., 1800, IN, CNAME, www.mit.edu.edgekey.net.)]
+Best matching RR's for www.mit.edu.edgekey.net. are for parent domain ".":
+
+f.root-servers.net.
+
+Acache is:
+{  a.edu-servers.net.: <ACE {<InetAddr 192.5.6.30>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   asia1.akam.net.: <ACE {<InetAddr 95.100.175.64>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   asia2.akam.net.: <ACE {<InetAddr 95.101.36.64>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   c.edu-servers.net.: <ACE {<InetAddr 192.26.92.30>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   d.edu-servers.net.: <ACE {<InetAddr 192.31.80.30>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   eur5.akam.net.: <ACE {<InetAddr 23.74.25.64>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   f.edu-servers.net.: <ACE {<InetAddr 192.35.51.30>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   f.root-servers.net.: <ACE {<InetAddr 192.5.5.241>: <CE exp=9223372035439382657s auth=True>}, srtt=*>,
+   g.edu-servers.net.: <ACE {<InetAddr 192.42.93.30>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   l.edu-servers.net.: <ACE {<InetAddr 192.41.162.30>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   ns1-173.akam.net.: <ACE {<InetAddr 193.108.91.173>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   ns1-37.akam.net.: <ACE {<InetAddr 193.108.91.37>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   use2.akam.net.: <ACE {<InetAddr 96.7.49.64>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   use5.akam.net.: <ACE {<InetAddr 2.16.40.64>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   usw2.akam.net.: <ACE {<InetAddr 184.26.161.64>: <CE exp=-1415220350s auth=False>}, srtt=*>}
+
+Checking if we have an A record in cache for: f.root-servers.net.
+
+    We have: f.root-servers.net.@192.5.5.241
+
+Attempting:
+f.root-servers.net.
+
+CCache is:
+{  www.mit.edu.: <CCE cname=www.mit.edu.edgekey.net. exp=9223372035439382657s auth=False>}
+
+sending to f.root-servers.net. @('192.5.5.241', 53):
+0000   11 2A 00 00 00 01 00 00 00 00 00 00 03 77 77 77    .*...........www
+0010   03 6D 69 74 03 65 64 75 07 65 64 67 65 6B 65 79    .mit.edu.edgekey
+0020   03 6E 65 74 00 00 01 00 01                         .net.....
+
+
+Answer received from f.root-servers.net. server is:
+ {  'additional': [  (a.gtld-servers.net., 172800, IN, A, 192.5.6.30),
+                    <gz01.dnslib.RR.RR_AAAA instance at 0x10792c050>,
+                    (b.gtld-servers.net., 172800, IN, A, 192.33.14.30),
+                    <gz01.dnslib.RR.RR_AAAA instance at 0x10792c200>,
+                    (c.gtld-servers.net., 172800, IN, A, 192.26.92.30),
+                    (d.gtld-servers.net., 172800, IN, A, 192.31.80.30),
+                    (e.gtld-servers.net., 172800, IN, A, 192.12.94.30),
+                    (f.gtld-servers.net., 172800, IN, A, 192.35.51.30),
+                    (g.gtld-servers.net., 172800, IN, A, 192.42.93.30),
+                    (h.gtld-servers.net., 172800, IN, A, 192.54.112.30),
+                    (i.gtld-servers.net., 172800, IN, A, 192.43.172.30),
+                    (j.gtld-servers.net., 172800, IN, A, 192.48.79.30),
+                    (k.gtld-servers.net., 172800, IN, A, 192.52.178.30),
+                    (l.gtld-servers.net., 172800, IN, A, 192.41.162.30)],
+   'answer': [],
+   'authority': [  (net., 172800, IN, NS, h.gtld-servers.net.),
+                   (net., 172800, IN, NS, i.gtld-servers.net.),
+                   (net., 172800, IN, NS, b.gtld-servers.net.),
+                   (net., 172800, IN, NS, g.gtld-servers.net.),
+                   (net., 172800, IN, NS, m.gtld-servers.net.),
+                   (net., 172800, IN, NS, e.gtld-servers.net.),
+                   (net., 172800, IN, NS, f.gtld-servers.net.),
+                   (net., 172800, IN, NS, k.gtld-servers.net.),
+                   (net., 172800, IN, NS, a.gtld-servers.net.),
+                   (net., 172800, IN, NS, d.gtld-servers.net.),
+                   (net., 172800, IN, NS, j.gtld-servers.net.),
+                   (net., 172800, IN, NS, l.gtld-servers.net.),
+                   (net., 172800, IN, NS, c.gtld-servers.net.)],
+   'question': [<gz01.dnslib.QE.QE instance at 0x107924a28>]}
+**************************************************
+Best matching RR's for www.mit.edu.edgekey.net. are for parent domain "net.":
+
+m.gtld-servers.net.
+
+j.gtld-servers.net.
+
+d.gtld-servers.net.
+
+h.gtld-servers.net.
+
+l.gtld-servers.net.
+
+c.gtld-servers.net.
+
+a.gtld-servers.net.
+
+g.gtld-servers.net.
+
+e.gtld-servers.net.
+
+b.gtld-servers.net.
+
+k.gtld-servers.net.
+
+i.gtld-servers.net.
+
+f.gtld-servers.net.
+
+Acache is:
+{  a.edu-servers.net.: <ACE {<InetAddr 192.5.6.30>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   a.gtld-servers.net.: <ACE {<InetAddr 192.5.6.30>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   asia1.akam.net.: <ACE {<InetAddr 95.100.175.64>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   asia2.akam.net.: <ACE {<InetAddr 95.101.36.64>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   b.gtld-servers.net.: <ACE {<InetAddr 192.33.14.30>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   c.edu-servers.net.: <ACE {<InetAddr 192.26.92.30>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   c.gtld-servers.net.: <ACE {<InetAddr 192.26.92.30>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   d.edu-servers.net.: <ACE {<InetAddr 192.31.80.30>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   d.gtld-servers.net.: <ACE {<InetAddr 192.31.80.30>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   e.gtld-servers.net.: <ACE {<InetAddr 192.12.94.30>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   eur5.akam.net.: <ACE {<InetAddr 23.74.25.64>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   f.edu-servers.net.: <ACE {<InetAddr 192.35.51.30>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   f.gtld-servers.net.: <ACE {<InetAddr 192.35.51.30>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   f.root-servers.net.: <ACE {<InetAddr 192.5.5.241>: <CE exp=9223372035439382657s auth=True>}, srtt=*>,
+   g.edu-servers.net.: <ACE {<InetAddr 192.42.93.30>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   g.gtld-servers.net.: <ACE {<InetAddr 192.42.93.30>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   h.gtld-servers.net.: <ACE {<InetAddr 192.54.112.30>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   i.gtld-servers.net.: <ACE {<InetAddr 192.43.172.30>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   j.gtld-servers.net.: <ACE {<InetAddr 192.48.79.30>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   k.gtld-servers.net.: <ACE {<InetAddr 192.52.178.30>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   l.edu-servers.net.: <ACE {<InetAddr 192.41.162.30>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   l.gtld-servers.net.: <ACE {<InetAddr 192.41.162.30>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   ns1-173.akam.net.: <ACE {<InetAddr 193.108.91.173>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   ns1-37.akam.net.: <ACE {<InetAddr 193.108.91.37>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   use2.akam.net.: <ACE {<InetAddr 96.7.49.64>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   use5.akam.net.: <ACE {<InetAddr 2.16.40.64>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   usw2.akam.net.: <ACE {<InetAddr 184.26.161.64>: <CE exp=-1415220350s auth=False>}, srtt=*>}
+
+Checking if we have an A record in cache for: h.gtld-servers.net.
+
+    We have: h.gtld-servers.net.@192.54.112.30
+
+Attempting:
+h.gtld-servers.net.
+
+CCache is:
+{  www.mit.edu.: <CCE cname=www.mit.edu.edgekey.net. exp=9223372035439382657s auth=False>}
+
+sending to h.gtld-servers.net. @('192.54.112.30', 53):
+0000   BB BF 00 00 00 01 00 00 00 00 00 00 03 77 77 77    .............www
+0010   03 6D 69 74 03 65 64 75 07 65 64 67 65 6B 65 79    .mit.edu.edgekey
+0020   03 6E 65 74 00 00 01 00 01                         .net.....
+
+
+Answer received from h.gtld-servers.net. server is:
+ {  'additional': [  (ns1-66.akam.net., 172800, IN, A, 193.108.91.66),
+                    <gz01.dnslib.RR.RR_AAAA instance at 0x10793a320>,
+                    (usw6.akam.net., 172800, IN, A, 23.61.199.64),
+                    (adns1.akam.net., 172800, IN, A, 96.7.50.66),
+                    (ns4-66.akam.net., 172800, IN, A, 84.53.139.66),
+                    (ns7-65.akam.net., 172800, IN, A, 96.7.49.65),
+                    (ns5-66.akam.net., 172800, IN, A, 184.85.248.66),
+                    (a6-65.akam.net., 172800, IN, A, 23.211.133.65),
+                    <gz01.dnslib.RR.RR_AAAA instance at 0x10793a908>,
+                    (a5-65.akam.net., 172800, IN, A, 95.100.168.65)],
+   'answer': [],
+   'authority': [  (edgekey.net., 172800, IN, NS, ns1-66.akam.net.),
+                   (edgekey.net., 172800, IN, NS, usw6.akam.net.),
+                   (edgekey.net., 172800, IN, NS, adns1.akam.net.),
+                   (edgekey.net., 172800, IN, NS, ns4-66.akam.net.),
+                   (edgekey.net., 172800, IN, NS, ns7-65.akam.net.),
+                   (edgekey.net., 172800, IN, NS, ns5-66.akam.net.),
+                   (edgekey.net., 172800, IN, NS, a6-65.akam.net.),
+                   (edgekey.net., 172800, IN, NS, a5-65.akam.net.),
+                   (edgekey.net., 172800, IN, NS, a16-65.akam.net.),
+                   (edgekey.net., 172800, IN, NS, a18-65.akam.net.),
+                   (edgekey.net., 172800, IN, NS, a28-65.akam.net.),
+                   (edgekey.net., 172800, IN, NS, a13-65.akam.net.),
+                   (edgekey.net., 172800, IN, NS, a26-65.akam.net.)],
+   'question': [<gz01.dnslib.QE.QE instance at 0x107932cf8>]}
+**************************************************
+Best matching RR's for www.mit.edu.edgekey.net. are for parent domain "edgekey.net.":
+
+a13-65.akam.net.
+
+a18-65.akam.net.
+
+ns5-66.akam.net.
+
+ns7-65.akam.net.
+
+a6-65.akam.net.
+
+ns4-66.akam.net.
+
+a5-65.akam.net.
+
+a26-65.akam.net.
+
+a28-65.akam.net.
+
+a16-65.akam.net.
+
+usw6.akam.net.
+
+adns1.akam.net.
+
+ns1-66.akam.net.
+
+Acache is:
+{  a.edu-servers.net.: <ACE {<InetAddr 192.5.6.30>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   a.gtld-servers.net.: <ACE {<InetAddr 192.5.6.30>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   a5-65.akam.net.: <ACE {<InetAddr 95.100.168.65>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   a6-65.akam.net.: <ACE {<InetAddr 23.211.133.65>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   adns1.akam.net.: <ACE {<InetAddr 96.7.50.66>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   asia1.akam.net.: <ACE {<InetAddr 95.100.175.64>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   asia2.akam.net.: <ACE {<InetAddr 95.101.36.64>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   b.gtld-servers.net.: <ACE {<InetAddr 192.33.14.30>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   c.edu-servers.net.: <ACE {<InetAddr 192.26.92.30>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   c.gtld-servers.net.: <ACE {<InetAddr 192.26.92.30>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   d.edu-servers.net.: <ACE {<InetAddr 192.31.80.30>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   d.gtld-servers.net.: <ACE {<InetAddr 192.31.80.30>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   e.gtld-servers.net.: <ACE {<InetAddr 192.12.94.30>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   eur5.akam.net.: <ACE {<InetAddr 23.74.25.64>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   f.edu-servers.net.: <ACE {<InetAddr 192.35.51.30>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   f.gtld-servers.net.: <ACE {<InetAddr 192.35.51.30>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   f.root-servers.net.: <ACE {<InetAddr 192.5.5.241>: <CE exp=9223372035439382657s auth=True>}, srtt=*>,
+   g.edu-servers.net.: <ACE {<InetAddr 192.42.93.30>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   g.gtld-servers.net.: <ACE {<InetAddr 192.42.93.30>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   h.gtld-servers.net.: <ACE {<InetAddr 192.54.112.30>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   i.gtld-servers.net.: <ACE {<InetAddr 192.43.172.30>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   j.gtld-servers.net.: <ACE {<InetAddr 192.48.79.30>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   k.gtld-servers.net.: <ACE {<InetAddr 192.52.178.30>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   l.edu-servers.net.: <ACE {<InetAddr 192.41.162.30>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   l.gtld-servers.net.: <ACE {<InetAddr 192.41.162.30>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   ns1-173.akam.net.: <ACE {<InetAddr 193.108.91.173>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   ns1-37.akam.net.: <ACE {<InetAddr 193.108.91.37>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   ns1-66.akam.net.: <ACE {<InetAddr 193.108.91.66>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   ns4-66.akam.net.: <ACE {<InetAddr 84.53.139.66>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   ns5-66.akam.net.: <ACE {<InetAddr 184.85.248.66>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   ns7-65.akam.net.: <ACE {<InetAddr 96.7.49.65>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   use2.akam.net.: <ACE {<InetAddr 96.7.49.64>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   use5.akam.net.: <ACE {<InetAddr 2.16.40.64>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   usw2.akam.net.: <ACE {<InetAddr 184.26.161.64>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   usw6.akam.net.: <ACE {<InetAddr 23.61.199.64>: <CE exp=-1415220350s auth=False>}, srtt=*>}
+
+Checking if we have an A record in cache for: ns1-66.akam.net.
+
+    We have: ns1-66.akam.net.@193.108.91.66
+
+Attempting:
+ns1-66.akam.net.
+
+CCache is:
+{  www.mit.edu.: <CCE cname=www.mit.edu.edgekey.net. exp=9223372035439382657s auth=False>}
+
+sending to ns1-66.akam.net. @('193.108.91.66', 53):
+0000   2B A3 00 00 00 01 00 00 00 00 00 00 03 77 77 77    +............www
+0010   03 6D 69 74 03 65 64 75 07 65 64 67 65 6B 65 79    .mit.edu.edgekey
+0020   03 6E 65 74 00 00 01 00 01                         .net.....
+
+
+Answer received from ns1-66.akam.net. server is:
+ {  'additional': [],
+   'answer': [  (www.mit.edu.edgekey.net., 60, IN, CNAME, e9566.b.akamaiedge.net.)],
+   'authority': [],
+   'question': [<gz01.dnslib.QE.QE instance at 0x10793e7e8>]}
+**************************************************
+Sanswers is [  (www.mit.edu., 1800, IN, CNAME, www.mit.edu.edgekey.net.),
+   (www.mit.edu.edgekey.net., 60, IN, CNAME, e9566.b.akamaiedge.net.)]
+Best matching RR's for e9566.b.akamaiedge.net. are for parent domain "net.":
+
+m.gtld-servers.net.
+
+j.gtld-servers.net.
+
+d.gtld-servers.net.
+
+h.gtld-servers.net.
+
+l.gtld-servers.net.
+
+c.gtld-servers.net.
+
+a.gtld-servers.net.
+
+g.gtld-servers.net.
+
+e.gtld-servers.net.
+
+b.gtld-servers.net.
+
+k.gtld-servers.net.
+
+i.gtld-servers.net.
+
+f.gtld-servers.net.
+
+Acache is:
+{  a.edu-servers.net.: <ACE {<InetAddr 192.5.6.30>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   a.gtld-servers.net.: <ACE {<InetAddr 192.5.6.30>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   a5-65.akam.net.: <ACE {<InetAddr 95.100.168.65>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   a6-65.akam.net.: <ACE {<InetAddr 23.211.133.65>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   adns1.akam.net.: <ACE {<InetAddr 96.7.50.66>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   asia1.akam.net.: <ACE {<InetAddr 95.100.175.64>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   asia2.akam.net.: <ACE {<InetAddr 95.101.36.64>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   b.gtld-servers.net.: <ACE {<InetAddr 192.33.14.30>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   c.edu-servers.net.: <ACE {<InetAddr 192.26.92.30>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   c.gtld-servers.net.: <ACE {<InetAddr 192.26.92.30>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   d.edu-servers.net.: <ACE {<InetAddr 192.31.80.30>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   d.gtld-servers.net.: <ACE {<InetAddr 192.31.80.30>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   e.gtld-servers.net.: <ACE {<InetAddr 192.12.94.30>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   eur5.akam.net.: <ACE {<InetAddr 23.74.25.64>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   f.edu-servers.net.: <ACE {<InetAddr 192.35.51.30>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   f.gtld-servers.net.: <ACE {<InetAddr 192.35.51.30>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   f.root-servers.net.: <ACE {<InetAddr 192.5.5.241>: <CE exp=9223372035439382657s auth=True>}, srtt=*>,
+   g.edu-servers.net.: <ACE {<InetAddr 192.42.93.30>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   g.gtld-servers.net.: <ACE {<InetAddr 192.42.93.30>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   h.gtld-servers.net.: <ACE {<InetAddr 192.54.112.30>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   i.gtld-servers.net.: <ACE {<InetAddr 192.43.172.30>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   j.gtld-servers.net.: <ACE {<InetAddr 192.48.79.30>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   k.gtld-servers.net.: <ACE {<InetAddr 192.52.178.30>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   l.edu-servers.net.: <ACE {<InetAddr 192.41.162.30>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   l.gtld-servers.net.: <ACE {<InetAddr 192.41.162.30>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   ns1-173.akam.net.: <ACE {<InetAddr 193.108.91.173>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   ns1-37.akam.net.: <ACE {<InetAddr 193.108.91.37>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   ns1-66.akam.net.: <ACE {<InetAddr 193.108.91.66>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   ns4-66.akam.net.: <ACE {<InetAddr 84.53.139.66>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   ns5-66.akam.net.: <ACE {<InetAddr 184.85.248.66>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   ns7-65.akam.net.: <ACE {<InetAddr 96.7.49.65>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   use2.akam.net.: <ACE {<InetAddr 96.7.49.64>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   use5.akam.net.: <ACE {<InetAddr 2.16.40.64>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   usw2.akam.net.: <ACE {<InetAddr 184.26.161.64>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   usw6.akam.net.: <ACE {<InetAddr 23.61.199.64>: <CE exp=-1415220350s auth=False>}, srtt=*>}
+
+Checking if we have an A record in cache for: h.gtld-servers.net.
+
+    We have: h.gtld-servers.net.@192.54.112.30
+
+Attempting:
+h.gtld-servers.net.
+
+CCache is:
+{  www.mit.edu.: <CCE cname=www.mit.edu.edgekey.net. exp=9223372035439382657s auth=False>,
+   www.mit.edu.edgekey.net.: <CCE cname=e9566.b.akamaiedge.net. exp=9223372035439382657s auth=False>}
+
+sending to h.gtld-servers.net. @('192.54.112.30', 53):
+0000   46 CB 00 00 00 01 00 00 00 00 00 00 05 65 39 35    F............e95
+0010   36 36 01 62 0A 61 6B 61 6D 61 69 65 64 67 65 03    66.b.akamaiedge.
+0020   6E 65 74 00 00 01 00 01                            net.....
+
+
+Answer received from h.gtld-servers.net. server is:
+ {  'additional': [  (la1.akamaiedge.net., 172800, IN, A, 184.26.161.192),
+                    (la6.akamaiedge.net., 172800, IN, A, 96.7.50.192),
+                    (la7.akamaiedge.net., 172800, IN, A, 23.211.132.192),
+                    (la3.akamaiedge.net., 172800, IN, A, 95.101.36.192),
+                    (lar6.akamaiedge.net., 172800, IN, A, 95.100.174.192),
+                    (lar2.akamaiedge.net., 172800, IN, A, 2.16.40.192),
+                    (ns3-194.akamaiedge.net., 172800, IN, A, 23.61.199.194),
+                    (ns2-194.akamaiedge.net., 172800, IN, A, 2.22.230.194),
+                    (ns4-194.akamaiedge.net., 172800, IN, A, 84.53.139.194),
+                    (ns6-194.akamaiedge.net., 172800, IN, A, 95.100.168.194),
+                    (ns7-194.akamaiedge.net., 172800, IN, A, 96.7.49.194),
+                    (ns5-194.akamaiedge.net., 172800, IN, A, 184.85.248.194),
+                    (ns1-1.akamaiedge.net., 172800, IN, A, 193.108.88.1)],
+   'answer': [],
+   'authority': [  (akamaiedge.net., 172800, IN, NS, la1.akamaiedge.net.),
+                   (akamaiedge.net., 172800, IN, NS, la6.akamaiedge.net.),
+                   (akamaiedge.net., 172800, IN, NS, la7.akamaiedge.net.),
+                   (akamaiedge.net., 172800, IN, NS, la3.akamaiedge.net.),
+                   (akamaiedge.net., 172800, IN, NS, lar6.akamaiedge.net.),
+                   (akamaiedge.net., 172800, IN, NS, lar2.akamaiedge.net.),
+                   (akamaiedge.net., 172800, IN, NS, ns3-194.akamaiedge.net.),
+                   (akamaiedge.net., 172800, IN, NS, ns2-194.akamaiedge.net.),
+                   (akamaiedge.net., 172800, IN, NS, ns4-194.akamaiedge.net.),
+                   (akamaiedge.net., 172800, IN, NS, ns6-194.akamaiedge.net.),
+                   (akamaiedge.net., 172800, IN, NS, ns7-194.akamaiedge.net.),
+                   (akamaiedge.net., 172800, IN, NS, ns5-194.akamaiedge.net.),
+                   (akamaiedge.net., 172800, IN, NS, ns1-1.akamaiedge.net.)],
+   'question': [<gz01.dnslib.QE.QE instance at 0x10793ec20>]}
+**************************************************
+Best matching RR's for e9566.b.akamaiedge.net. are for parent domain "akamaiedge.net.":
+
+lar6.akamaiedge.net.
+
+ns2-194.akamaiedge.net.
+
+la7.akamaiedge.net.
+
+ns4-194.akamaiedge.net.
+
+la6.akamaiedge.net.
+
+ns6-194.akamaiedge.net.
+
+ns5-194.akamaiedge.net.
+
+ns7-194.akamaiedge.net.
+
+ns1-1.akamaiedge.net.
+
+lar2.akamaiedge.net.
+
+la3.akamaiedge.net.
+
+ns3-194.akamaiedge.net.
+
+la1.akamaiedge.net.
+
+Acache is:
+{  a.edu-servers.net.: <ACE {<InetAddr 192.5.6.30>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   a.gtld-servers.net.: <ACE {<InetAddr 192.5.6.30>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   a5-65.akam.net.: <ACE {<InetAddr 95.100.168.65>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   a6-65.akam.net.: <ACE {<InetAddr 23.211.133.65>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   adns1.akam.net.: <ACE {<InetAddr 96.7.50.66>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   asia1.akam.net.: <ACE {<InetAddr 95.100.175.64>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   asia2.akam.net.: <ACE {<InetAddr 95.101.36.64>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   b.gtld-servers.net.: <ACE {<InetAddr 192.33.14.30>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   c.edu-servers.net.: <ACE {<InetAddr 192.26.92.30>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   c.gtld-servers.net.: <ACE {<InetAddr 192.26.92.30>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   d.edu-servers.net.: <ACE {<InetAddr 192.31.80.30>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   d.gtld-servers.net.: <ACE {<InetAddr 192.31.80.30>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   e.gtld-servers.net.: <ACE {<InetAddr 192.12.94.30>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   eur5.akam.net.: <ACE {<InetAddr 23.74.25.64>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   f.edu-servers.net.: <ACE {<InetAddr 192.35.51.30>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   f.gtld-servers.net.: <ACE {<InetAddr 192.35.51.30>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   f.root-servers.net.: <ACE {<InetAddr 192.5.5.241>: <CE exp=9223372035439382657s auth=True>}, srtt=*>,
+   g.edu-servers.net.: <ACE {<InetAddr 192.42.93.30>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   g.gtld-servers.net.: <ACE {<InetAddr 192.42.93.30>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   h.gtld-servers.net.: <ACE {<InetAddr 192.54.112.30>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   i.gtld-servers.net.: <ACE {<InetAddr 192.43.172.30>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   j.gtld-servers.net.: <ACE {<InetAddr 192.48.79.30>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   k.gtld-servers.net.: <ACE {<InetAddr 192.52.178.30>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   l.edu-servers.net.: <ACE {<InetAddr 192.41.162.30>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   l.gtld-servers.net.: <ACE {<InetAddr 192.41.162.30>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   la1.akamaiedge.net.: <ACE {<InetAddr 184.26.161.192>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   la3.akamaiedge.net.: <ACE {<InetAddr 95.101.36.192>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   la6.akamaiedge.net.: <ACE {<InetAddr 96.7.50.192>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   la7.akamaiedge.net.: <ACE {<InetAddr 23.211.132.192>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   lar2.akamaiedge.net.: <ACE {<InetAddr 2.16.40.192>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   lar6.akamaiedge.net.: <ACE {<InetAddr 95.100.174.192>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   ns1-1.akamaiedge.net.: <ACE {<InetAddr 193.108.88.1>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   ns1-173.akam.net.: <ACE {<InetAddr 193.108.91.173>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   ns1-37.akam.net.: <ACE {<InetAddr 193.108.91.37>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   ns1-66.akam.net.: <ACE {<InetAddr 193.108.91.66>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   ns2-194.akamaiedge.net.: <ACE {<InetAddr 2.22.230.194>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   ns3-194.akamaiedge.net.: <ACE {<InetAddr 23.61.199.194>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   ns4-194.akamaiedge.net.: <ACE {<InetAddr 84.53.139.194>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   ns4-66.akam.net.: <ACE {<InetAddr 84.53.139.66>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   ns5-194.akamaiedge.net.: <ACE {<InetAddr 184.85.248.194>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   ns5-66.akam.net.: <ACE {<InetAddr 184.85.248.66>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   ns6-194.akamaiedge.net.: <ACE {<InetAddr 95.100.168.194>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   ns7-194.akamaiedge.net.: <ACE {<InetAddr 96.7.49.194>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   ns7-65.akam.net.: <ACE {<InetAddr 96.7.49.65>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   use2.akam.net.: <ACE {<InetAddr 96.7.49.64>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   use5.akam.net.: <ACE {<InetAddr 2.16.40.64>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   usw2.akam.net.: <ACE {<InetAddr 184.26.161.64>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   usw6.akam.net.: <ACE {<InetAddr 23.61.199.64>: <CE exp=-1415220350s auth=False>}, srtt=*>}
+
+Checking if we have an A record in cache for: la1.akamaiedge.net.
+
+    We have: la1.akamaiedge.net.@184.26.161.192
+
+Attempting:
+la1.akamaiedge.net.
+
+CCache is:
+{  www.mit.edu.: <CCE cname=www.mit.edu.edgekey.net. exp=9223372035439382657s auth=False>,
+   www.mit.edu.edgekey.net.: <CCE cname=e9566.b.akamaiedge.net. exp=9223372035439382657s auth=False>}
+
+sending to la1.akamaiedge.net. @('184.26.161.192', 53):
+0000   3B C9 00 00 00 01 00 00 00 00 00 00 05 65 39 35    ;............e95
+0010   36 36 01 62 0A 61 6B 61 6D 61 69 65 64 67 65 03    66.b.akamaiedge.
+0020   6E 65 74 00 00 01 00 01                            net.....
+
+
+Answer received from la1.akamaiedge.net. server is:
+ {  'additional': [  <gz01.dnslib.RR.RR_AAAA instance at 0x107951cb0>,
+                    <gz01.dnslib.RR.RR_AAAA instance at 0x107951d88>,
+                    (n0b.akamaiedge.net., 4000, IN, A, 195.59.43.137),
+                    (n2b.akamaiedge.net., 4000, IN, A, 195.245.125.122),
+                    (n1b.akamaiedge.net., 8000, IN, A, 23.3.15.48),
+                    (n3b.akamaiedge.net., 6000, IN, A, 88.221.81.193),
+                    (n4b.akamaiedge.net., 8000, IN, A, 195.59.43.138),
+                    (n5b.akamaiedge.net., 6000, IN, A, 195.59.43.132)],
+   'answer': [],
+   'authority': [  (b.akamaiedge.net., 6000, IN, NS, a0b.akamaiedge.net.),
+                   (b.akamaiedge.net., 4000, IN, NS, a1b.akamaiedge.net.),
+                   (b.akamaiedge.net., 4000, IN, NS, n0b.akamaiedge.net.),
+                   (b.akamaiedge.net., 4000, IN, NS, n2b.akamaiedge.net.),
+                   (b.akamaiedge.net., 8000, IN, NS, n1b.akamaiedge.net.),
+                   (b.akamaiedge.net., 6000, IN, NS, n3b.akamaiedge.net.),
+                   (b.akamaiedge.net., 8000, IN, NS, n4b.akamaiedge.net.),
+                   (b.akamaiedge.net., 6000, IN, NS, n5b.akamaiedge.net.)],
+   'question': [<gz01.dnslib.QE.QE instance at 0x10794cf38>]}
+**************************************************
+Best matching RR's for e9566.b.akamaiedge.net. are for parent domain "b.akamaiedge.net.":
+
+n0b.akamaiedge.net.
+
+n4b.akamaiedge.net.
+
+n5b.akamaiedge.net.
+
+a0b.akamaiedge.net.
+
+n2b.akamaiedge.net.
+
+n1b.akamaiedge.net.
+
+n3b.akamaiedge.net.
+
+a1b.akamaiedge.net.
+
+Acache is:
+{  a.edu-servers.net.: <ACE {<InetAddr 192.5.6.30>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   a.gtld-servers.net.: <ACE {<InetAddr 192.5.6.30>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   a5-65.akam.net.: <ACE {<InetAddr 95.100.168.65>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   a6-65.akam.net.: <ACE {<InetAddr 23.211.133.65>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   adns1.akam.net.: <ACE {<InetAddr 96.7.50.66>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   asia1.akam.net.: <ACE {<InetAddr 95.100.175.64>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   asia2.akam.net.: <ACE {<InetAddr 95.101.36.64>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   b.gtld-servers.net.: <ACE {<InetAddr 192.33.14.30>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   c.edu-servers.net.: <ACE {<InetAddr 192.26.92.30>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   c.gtld-servers.net.: <ACE {<InetAddr 192.26.92.30>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   d.edu-servers.net.: <ACE {<InetAddr 192.31.80.30>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   d.gtld-servers.net.: <ACE {<InetAddr 192.31.80.30>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   e.gtld-servers.net.: <ACE {<InetAddr 192.12.94.30>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   eur5.akam.net.: <ACE {<InetAddr 23.74.25.64>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   f.edu-servers.net.: <ACE {<InetAddr 192.35.51.30>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   f.gtld-servers.net.: <ACE {<InetAddr 192.35.51.30>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   f.root-servers.net.: <ACE {<InetAddr 192.5.5.241>: <CE exp=9223372035439382657s auth=True>}, srtt=*>,
+   g.edu-servers.net.: <ACE {<InetAddr 192.42.93.30>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   g.gtld-servers.net.: <ACE {<InetAddr 192.42.93.30>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   h.gtld-servers.net.: <ACE {<InetAddr 192.54.112.30>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   i.gtld-servers.net.: <ACE {<InetAddr 192.43.172.30>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   j.gtld-servers.net.: <ACE {<InetAddr 192.48.79.30>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   k.gtld-servers.net.: <ACE {<InetAddr 192.52.178.30>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   l.edu-servers.net.: <ACE {<InetAddr 192.41.162.30>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   l.gtld-servers.net.: <ACE {<InetAddr 192.41.162.30>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   la1.akamaiedge.net.: <ACE {<InetAddr 184.26.161.192>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   la3.akamaiedge.net.: <ACE {<InetAddr 95.101.36.192>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   la6.akamaiedge.net.: <ACE {<InetAddr 96.7.50.192>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   la7.akamaiedge.net.: <ACE {<InetAddr 23.211.132.192>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   lar2.akamaiedge.net.: <ACE {<InetAddr 2.16.40.192>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   lar6.akamaiedge.net.: <ACE {<InetAddr 95.100.174.192>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   n0b.akamaiedge.net.: <ACE {<InetAddr 195.59.43.137>: <CE exp=-1415389150s auth=False>}, srtt=*>,
+   n1b.akamaiedge.net.: <ACE {<InetAddr 23.3.15.48>: <CE exp=-1415385150s auth=False>}, srtt=*>,
+   n2b.akamaiedge.net.: <ACE {<InetAddr 195.245.125.122>: <CE exp=-1415389150s auth=False>}, srtt=*>,
+   n3b.akamaiedge.net.: <ACE {<InetAddr 88.221.81.193>: <CE exp=-1415387150s auth=False>}, srtt=*>,
+   n4b.akamaiedge.net.: <ACE {<InetAddr 195.59.43.138>: <CE exp=-1415385150s auth=False>}, srtt=*>,
+   n5b.akamaiedge.net.: <ACE {<InetAddr 195.59.43.132>: <CE exp=-1415387150s auth=False>}, srtt=*>,
+   ns1-1.akamaiedge.net.: <ACE {<InetAddr 193.108.88.1>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   ns1-173.akam.net.: <ACE {<InetAddr 193.108.91.173>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   ns1-37.akam.net.: <ACE {<InetAddr 193.108.91.37>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   ns1-66.akam.net.: <ACE {<InetAddr 193.108.91.66>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   ns2-194.akamaiedge.net.: <ACE {<InetAddr 2.22.230.194>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   ns3-194.akamaiedge.net.: <ACE {<InetAddr 23.61.199.194>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   ns4-194.akamaiedge.net.: <ACE {<InetAddr 84.53.139.194>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   ns4-66.akam.net.: <ACE {<InetAddr 84.53.139.66>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   ns5-194.akamaiedge.net.: <ACE {<InetAddr 184.85.248.194>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   ns5-66.akam.net.: <ACE {<InetAddr 184.85.248.66>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   ns6-194.akamaiedge.net.: <ACE {<InetAddr 95.100.168.194>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   ns7-194.akamaiedge.net.: <ACE {<InetAddr 96.7.49.194>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   ns7-65.akam.net.: <ACE {<InetAddr 96.7.49.65>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   use2.akam.net.: <ACE {<InetAddr 96.7.49.64>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   use5.akam.net.: <ACE {<InetAddr 2.16.40.64>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   usw2.akam.net.: <ACE {<InetAddr 184.26.161.64>: <CE exp=-1415220350s auth=False>}, srtt=*>,
+   usw6.akam.net.: <ACE {<InetAddr 23.61.199.64>: <CE exp=-1415220350s auth=False>}, srtt=*>}
+
+Checking if we have an A record in cache for: a0b.akamaiedge.net.
+
+Checking if we have an A record in cache for: a1b.akamaiedge.net.
+
+Checking if we have an A record in cache for: n0b.akamaiedge.net.
+
+    We have: n0b.akamaiedge.net.@195.59.43.137
+
+Attempting:
+n0b.akamaiedge.net.
+
+CCache is:
+{  www.mit.edu.: <CCE cname=www.mit.edu.edgekey.net. exp=9223372035439382657s auth=False>,
+   www.mit.edu.edgekey.net.: <CCE cname=e9566.b.akamaiedge.net. exp=9223372035439382657s auth=False>}
+
+sending to n0b.akamaiedge.net. @('195.59.43.137', 53):
+0000   DB 8C 00 00 00 01 00 00 00 00 00 00 05 65 39 35    .............e95
+0010   36 36 01 62 0A 61 6B 61 6D 61 69 65 64 67 65 03    66.b.akamaiedge.
+0020   6E 65 74 00 00 01 00 01                            net.....
+
+
+Answer received from n0b.akamaiedge.net. server is:
+ {  'additional': [],
+   'answer': [(e9566.b.akamaiedge.net., 20, IN, A, 184.30.96.128)],
+   'authority': [],
+   'question': [<gz01.dnslib.QE.QE instance at 0x107955d88>]}
+**************************************************
+Sanswers is [  (www.mit.edu., 1800, IN, CNAME, www.mit.edu.edgekey.net.),
+   (www.mit.edu.edgekey.net., 60, IN, CNAME, e9566.b.akamaiedge.net.),
+   (e9566.b.akamaiedge.net., 20, IN, A, 184.30.96.128)]
+&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#
+
+
+Response:
+Õ^€      wwwmitedu   wwwmitedu      wwwmiteduedgekeynet wwwmiteduedgekeynet      < e9566b
+akamaiedgenet e9566b
+akamaiedgenet       ¸`€
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+================================================================================================================================================================================================================================================================================================================================================================================================================
+Best matching RR's for www.mit.edu. are for parent domain "mit.edu.":
+
+usw2.akam.net.
+
+asia2.akam.net.
+
+ns1-37.akam.net.
+
+eur5.akam.net.
+
+asia1.akam.net.
+
+use2.akam.net.
+
+use5.akam.net.
+
+ns1-173.akam.net.
+
+Acache is:
+{  a.edu-servers.net.: <ACE {<InetAddr 192.5.6.30>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   a.gtld-servers.net.: <ACE {<InetAddr 192.5.6.30>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   a5-65.akam.net.: <ACE {<InetAddr 95.100.168.65>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   a6-65.akam.net.: <ACE {<InetAddr 23.211.133.65>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   adns1.akam.net.: <ACE {<InetAddr 96.7.50.66>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   asia1.akam.net.: <ACE {<InetAddr 95.100.175.64>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   asia2.akam.net.: <ACE {<InetAddr 95.101.36.64>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   b.gtld-servers.net.: <ACE {<InetAddr 192.33.14.30>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   c.edu-servers.net.: <ACE {<InetAddr 192.26.92.30>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   c.gtld-servers.net.: <ACE {<InetAddr 192.26.92.30>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   d.edu-servers.net.: <ACE {<InetAddr 192.31.80.30>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   d.gtld-servers.net.: <ACE {<InetAddr 192.31.80.30>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   e.gtld-servers.net.: <ACE {<InetAddr 192.12.94.30>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   e9566.b.akamaiedge.net.: <ACE {<InetAddr 184.30.96.128>: <CE exp=-1415393139s auth=False>}, srtt=*>,
+   eur5.akam.net.: <ACE {<InetAddr 23.74.25.64>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   f.edu-servers.net.: <ACE {<InetAddr 192.35.51.30>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   f.gtld-servers.net.: <ACE {<InetAddr 192.35.51.30>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   f.root-servers.net.: <ACE {<InetAddr 192.5.5.241>: <CE exp=9223372035439382648s auth=True>}, srtt=*>,
+   g.edu-servers.net.: <ACE {<InetAddr 192.42.93.30>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   g.gtld-servers.net.: <ACE {<InetAddr 192.42.93.30>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   h.gtld-servers.net.: <ACE {<InetAddr 192.54.112.30>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   i.gtld-servers.net.: <ACE {<InetAddr 192.43.172.30>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   j.gtld-servers.net.: <ACE {<InetAddr 192.48.79.30>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   k.gtld-servers.net.: <ACE {<InetAddr 192.52.178.30>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   l.edu-servers.net.: <ACE {<InetAddr 192.41.162.30>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   l.gtld-servers.net.: <ACE {<InetAddr 192.41.162.30>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   la1.akamaiedge.net.: <ACE {<InetAddr 184.26.161.192>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   la3.akamaiedge.net.: <ACE {<InetAddr 95.101.36.192>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   la6.akamaiedge.net.: <ACE {<InetAddr 96.7.50.192>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   la7.akamaiedge.net.: <ACE {<InetAddr 23.211.132.192>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   lar2.akamaiedge.net.: <ACE {<InetAddr 2.16.40.192>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   lar6.akamaiedge.net.: <ACE {<InetAddr 95.100.174.192>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   n0b.akamaiedge.net.: <ACE {<InetAddr 195.59.43.137>: <CE exp=-1415389159s auth=False>}, srtt=*>,
+   n1b.akamaiedge.net.: <ACE {<InetAddr 23.3.15.48>: <CE exp=-1415385159s auth=False>}, srtt=*>,
+   n2b.akamaiedge.net.: <ACE {<InetAddr 195.245.125.122>: <CE exp=-1415389159s auth=False>}, srtt=*>,
+   n3b.akamaiedge.net.: <ACE {<InetAddr 88.221.81.193>: <CE exp=-1415387159s auth=False>}, srtt=*>,
+   n4b.akamaiedge.net.: <ACE {<InetAddr 195.59.43.138>: <CE exp=-1415385159s auth=False>}, srtt=*>,
+   n5b.akamaiedge.net.: <ACE {<InetAddr 195.59.43.132>: <CE exp=-1415387159s auth=False>}, srtt=*>,
+   ns1-1.akamaiedge.net.: <ACE {<InetAddr 193.108.88.1>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   ns1-173.akam.net.: <ACE {<InetAddr 193.108.91.173>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   ns1-37.akam.net.: <ACE {<InetAddr 193.108.91.37>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   ns1-66.akam.net.: <ACE {<InetAddr 193.108.91.66>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   ns2-194.akamaiedge.net.: <ACE {<InetAddr 2.22.230.194>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   ns3-194.akamaiedge.net.: <ACE {<InetAddr 23.61.199.194>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   ns4-194.akamaiedge.net.: <ACE {<InetAddr 84.53.139.194>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   ns4-66.akam.net.: <ACE {<InetAddr 84.53.139.66>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   ns5-194.akamaiedge.net.: <ACE {<InetAddr 184.85.248.194>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   ns5-66.akam.net.: <ACE {<InetAddr 184.85.248.66>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   ns6-194.akamaiedge.net.: <ACE {<InetAddr 95.100.168.194>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   ns7-194.akamaiedge.net.: <ACE {<InetAddr 96.7.49.194>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   ns7-65.akam.net.: <ACE {<InetAddr 96.7.49.65>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   use2.akam.net.: <ACE {<InetAddr 96.7.49.64>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   use5.akam.net.: <ACE {<InetAddr 2.16.40.64>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   usw2.akam.net.: <ACE {<InetAddr 184.26.161.64>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   usw6.akam.net.: <ACE {<InetAddr 23.61.199.64>: <CE exp=-1415220359s auth=False>}, srtt=*>}
+
+Checking if we have an A record in cache for: usw2.akam.net.
+
+    We have: usw2.akam.net.@184.26.161.64
+
+Attempting:
+usw2.akam.net.
+
+CCache is:
+{  www.mit.edu.: <CCE cname=www.mit.edu.edgekey.net. exp=9223372035439382648s auth=False>,
+   www.mit.edu.edgekey.net.: <CCE cname=e9566.b.akamaiedge.net. exp=9223372035439382648s auth=False>}
+
+sending to usw2.akam.net. @('184.26.161.64', 53):
+0000   A5 E1 00 00 00 01 00 00 00 00 00 00 03 77 77 77    .............www
+0010   03 6D 69 74 03 65 64 75 00 00 01 00 01             .mit.edu.....
+
+
+Answer received from usw2.akam.net. server is:
+ {  'additional': [],
+   'answer': [(www.mit.edu., 1800, IN, CNAME, www.mit.edu.edgekey.net.)],
+   'authority': [],
+   'question': [<gz01.dnslib.QE.QE instance at 0x10791f248>]}
+**************************************************
+Sanswers is [(www.mit.edu., 1800, IN, CNAME, www.mit.edu.edgekey.net.)]
+Best matching RR's for www.mit.edu.edgekey.net. are for parent domain "edgekey.net.":
+
+a13-65.akam.net.
+
+a18-65.akam.net.
+
+ns5-66.akam.net.
+
+ns7-65.akam.net.
+
+a6-65.akam.net.
+
+ns4-66.akam.net.
+
+a5-65.akam.net.
+
+a26-65.akam.net.
+
+a28-65.akam.net.
+
+a16-65.akam.net.
+
+usw6.akam.net.
+
+adns1.akam.net.
+
+ns1-66.akam.net.
+
+Acache is:
+{  a.edu-servers.net.: <ACE {<InetAddr 192.5.6.30>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   a.gtld-servers.net.: <ACE {<InetAddr 192.5.6.30>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   a5-65.akam.net.: <ACE {<InetAddr 95.100.168.65>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   a6-65.akam.net.: <ACE {<InetAddr 23.211.133.65>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   adns1.akam.net.: <ACE {<InetAddr 96.7.50.66>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   asia1.akam.net.: <ACE {<InetAddr 95.100.175.64>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   asia2.akam.net.: <ACE {<InetAddr 95.101.36.64>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   b.gtld-servers.net.: <ACE {<InetAddr 192.33.14.30>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   c.edu-servers.net.: <ACE {<InetAddr 192.26.92.30>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   c.gtld-servers.net.: <ACE {<InetAddr 192.26.92.30>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   d.edu-servers.net.: <ACE {<InetAddr 192.31.80.30>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   d.gtld-servers.net.: <ACE {<InetAddr 192.31.80.30>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   e.gtld-servers.net.: <ACE {<InetAddr 192.12.94.30>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   e9566.b.akamaiedge.net.: <ACE {<InetAddr 184.30.96.128>: <CE exp=-1415393139s auth=False>}, srtt=*>,
+   eur5.akam.net.: <ACE {<InetAddr 23.74.25.64>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   f.edu-servers.net.: <ACE {<InetAddr 192.35.51.30>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   f.gtld-servers.net.: <ACE {<InetAddr 192.35.51.30>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   f.root-servers.net.: <ACE {<InetAddr 192.5.5.241>: <CE exp=9223372035439382648s auth=True>}, srtt=*>,
+   g.edu-servers.net.: <ACE {<InetAddr 192.42.93.30>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   g.gtld-servers.net.: <ACE {<InetAddr 192.42.93.30>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   h.gtld-servers.net.: <ACE {<InetAddr 192.54.112.30>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   i.gtld-servers.net.: <ACE {<InetAddr 192.43.172.30>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   j.gtld-servers.net.: <ACE {<InetAddr 192.48.79.30>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   k.gtld-servers.net.: <ACE {<InetAddr 192.52.178.30>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   l.edu-servers.net.: <ACE {<InetAddr 192.41.162.30>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   l.gtld-servers.net.: <ACE {<InetAddr 192.41.162.30>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   la1.akamaiedge.net.: <ACE {<InetAddr 184.26.161.192>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   la3.akamaiedge.net.: <ACE {<InetAddr 95.101.36.192>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   la6.akamaiedge.net.: <ACE {<InetAddr 96.7.50.192>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   la7.akamaiedge.net.: <ACE {<InetAddr 23.211.132.192>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   lar2.akamaiedge.net.: <ACE {<InetAddr 2.16.40.192>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   lar6.akamaiedge.net.: <ACE {<InetAddr 95.100.174.192>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   n0b.akamaiedge.net.: <ACE {<InetAddr 195.59.43.137>: <CE exp=-1415389159s auth=False>}, srtt=*>,
+   n1b.akamaiedge.net.: <ACE {<InetAddr 23.3.15.48>: <CE exp=-1415385159s auth=False>}, srtt=*>,
+   n2b.akamaiedge.net.: <ACE {<InetAddr 195.245.125.122>: <CE exp=-1415389159s auth=False>}, srtt=*>,
+   n3b.akamaiedge.net.: <ACE {<InetAddr 88.221.81.193>: <CE exp=-1415387159s auth=False>}, srtt=*>,
+   n4b.akamaiedge.net.: <ACE {<InetAddr 195.59.43.138>: <CE exp=-1415385159s auth=False>}, srtt=*>,
+   n5b.akamaiedge.net.: <ACE {<InetAddr 195.59.43.132>: <CE exp=-1415387159s auth=False>}, srtt=*>,
+   ns1-1.akamaiedge.net.: <ACE {<InetAddr 193.108.88.1>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   ns1-173.akam.net.: <ACE {<InetAddr 193.108.91.173>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   ns1-37.akam.net.: <ACE {<InetAddr 193.108.91.37>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   ns1-66.akam.net.: <ACE {<InetAddr 193.108.91.66>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   ns2-194.akamaiedge.net.: <ACE {<InetAddr 2.22.230.194>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   ns3-194.akamaiedge.net.: <ACE {<InetAddr 23.61.199.194>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   ns4-194.akamaiedge.net.: <ACE {<InetAddr 84.53.139.194>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   ns4-66.akam.net.: <ACE {<InetAddr 84.53.139.66>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   ns5-194.akamaiedge.net.: <ACE {<InetAddr 184.85.248.194>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   ns5-66.akam.net.: <ACE {<InetAddr 184.85.248.66>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   ns6-194.akamaiedge.net.: <ACE {<InetAddr 95.100.168.194>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   ns7-194.akamaiedge.net.: <ACE {<InetAddr 96.7.49.194>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   ns7-65.akam.net.: <ACE {<InetAddr 96.7.49.65>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   use2.akam.net.: <ACE {<InetAddr 96.7.49.64>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   use5.akam.net.: <ACE {<InetAddr 2.16.40.64>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   usw2.akam.net.: <ACE {<InetAddr 184.26.161.64>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   usw6.akam.net.: <ACE {<InetAddr 23.61.199.64>: <CE exp=-1415220359s auth=False>}, srtt=*>}
+
+Checking if we have an A record in cache for: ns1-66.akam.net.
+
+    We have: ns1-66.akam.net.@193.108.91.66
+
+Attempting:
+ns1-66.akam.net.
+
+CCache is:
+{  www.mit.edu.: <CCE cname=www.mit.edu.edgekey.net. exp=9223372035439382648s auth=False>,
+   www.mit.edu.edgekey.net.: <CCE cname=e9566.b.akamaiedge.net. exp=9223372035439382648s auth=False>}
+
+sending to ns1-66.akam.net. @('193.108.91.66', 53):
+0000   D5 15 00 00 00 01 00 00 00 00 00 00 03 77 77 77    .............www
+0010   03 6D 69 74 03 65 64 75 07 65 64 67 65 6B 65 79    .mit.edu.edgekey
+0020   03 6E 65 74 00 00 01 00 01                         .net.....
+
+
+Answer received from ns1-66.akam.net. server is:
+ {  'additional': [],
+   'answer': [  (www.mit.edu.edgekey.net., 60, IN, CNAME, e9566.b.akamaiedge.net.)],
+   'authority': [],
+   'question': [<gz01.dnslib.QE.QE instance at 0x10791f680>]}
+**************************************************
+Sanswers is [  (www.mit.edu., 1800, IN, CNAME, www.mit.edu.edgekey.net.),
+   (www.mit.edu.edgekey.net., 60, IN, CNAME, e9566.b.akamaiedge.net.)]
+Best matching RR's for e9566.b.akamaiedge.net. are for parent domain "b.akamaiedge.net.":
+
+n0b.akamaiedge.net.
+
+n4b.akamaiedge.net.
+
+n5b.akamaiedge.net.
+
+a0b.akamaiedge.net.
+
+n2b.akamaiedge.net.
+
+n1b.akamaiedge.net.
+
+n3b.akamaiedge.net.
+
+a1b.akamaiedge.net.
+
+Acache is:
+{  a.edu-servers.net.: <ACE {<InetAddr 192.5.6.30>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   a.gtld-servers.net.: <ACE {<InetAddr 192.5.6.30>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   a5-65.akam.net.: <ACE {<InetAddr 95.100.168.65>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   a6-65.akam.net.: <ACE {<InetAddr 23.211.133.65>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   adns1.akam.net.: <ACE {<InetAddr 96.7.50.66>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   asia1.akam.net.: <ACE {<InetAddr 95.100.175.64>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   asia2.akam.net.: <ACE {<InetAddr 95.101.36.64>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   b.gtld-servers.net.: <ACE {<InetAddr 192.33.14.30>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   c.edu-servers.net.: <ACE {<InetAddr 192.26.92.30>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   c.gtld-servers.net.: <ACE {<InetAddr 192.26.92.30>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   d.edu-servers.net.: <ACE {<InetAddr 192.31.80.30>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   d.gtld-servers.net.: <ACE {<InetAddr 192.31.80.30>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   e.gtld-servers.net.: <ACE {<InetAddr 192.12.94.30>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   e9566.b.akamaiedge.net.: <ACE {<InetAddr 184.30.96.128>: <CE exp=-1415393139s auth=False>}, srtt=*>,
+   eur5.akam.net.: <ACE {<InetAddr 23.74.25.64>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   f.edu-servers.net.: <ACE {<InetAddr 192.35.51.30>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   f.gtld-servers.net.: <ACE {<InetAddr 192.35.51.30>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   f.root-servers.net.: <ACE {<InetAddr 192.5.5.241>: <CE exp=9223372035439382648s auth=True>}, srtt=*>,
+   g.edu-servers.net.: <ACE {<InetAddr 192.42.93.30>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   g.gtld-servers.net.: <ACE {<InetAddr 192.42.93.30>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   h.gtld-servers.net.: <ACE {<InetAddr 192.54.112.30>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   i.gtld-servers.net.: <ACE {<InetAddr 192.43.172.30>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   j.gtld-servers.net.: <ACE {<InetAddr 192.48.79.30>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   k.gtld-servers.net.: <ACE {<InetAddr 192.52.178.30>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   l.edu-servers.net.: <ACE {<InetAddr 192.41.162.30>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   l.gtld-servers.net.: <ACE {<InetAddr 192.41.162.30>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   la1.akamaiedge.net.: <ACE {<InetAddr 184.26.161.192>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   la3.akamaiedge.net.: <ACE {<InetAddr 95.101.36.192>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   la6.akamaiedge.net.: <ACE {<InetAddr 96.7.50.192>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   la7.akamaiedge.net.: <ACE {<InetAddr 23.211.132.192>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   lar2.akamaiedge.net.: <ACE {<InetAddr 2.16.40.192>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   lar6.akamaiedge.net.: <ACE {<InetAddr 95.100.174.192>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   n0b.akamaiedge.net.: <ACE {<InetAddr 195.59.43.137>: <CE exp=-1415389159s auth=False>}, srtt=*>,
+   n1b.akamaiedge.net.: <ACE {<InetAddr 23.3.15.48>: <CE exp=-1415385159s auth=False>}, srtt=*>,
+   n2b.akamaiedge.net.: <ACE {<InetAddr 195.245.125.122>: <CE exp=-1415389159s auth=False>}, srtt=*>,
+   n3b.akamaiedge.net.: <ACE {<InetAddr 88.221.81.193>: <CE exp=-1415387159s auth=False>}, srtt=*>,
+   n4b.akamaiedge.net.: <ACE {<InetAddr 195.59.43.138>: <CE exp=-1415385159s auth=False>}, srtt=*>,
+   n5b.akamaiedge.net.: <ACE {<InetAddr 195.59.43.132>: <CE exp=-1415387159s auth=False>}, srtt=*>,
+   ns1-1.akamaiedge.net.: <ACE {<InetAddr 193.108.88.1>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   ns1-173.akam.net.: <ACE {<InetAddr 193.108.91.173>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   ns1-37.akam.net.: <ACE {<InetAddr 193.108.91.37>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   ns1-66.akam.net.: <ACE {<InetAddr 193.108.91.66>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   ns2-194.akamaiedge.net.: <ACE {<InetAddr 2.22.230.194>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   ns3-194.akamaiedge.net.: <ACE {<InetAddr 23.61.199.194>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   ns4-194.akamaiedge.net.: <ACE {<InetAddr 84.53.139.194>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   ns4-66.akam.net.: <ACE {<InetAddr 84.53.139.66>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   ns5-194.akamaiedge.net.: <ACE {<InetAddr 184.85.248.194>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   ns5-66.akam.net.: <ACE {<InetAddr 184.85.248.66>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   ns6-194.akamaiedge.net.: <ACE {<InetAddr 95.100.168.194>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   ns7-194.akamaiedge.net.: <ACE {<InetAddr 96.7.49.194>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   ns7-65.akam.net.: <ACE {<InetAddr 96.7.49.65>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   use2.akam.net.: <ACE {<InetAddr 96.7.49.64>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   use5.akam.net.: <ACE {<InetAddr 2.16.40.64>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   usw2.akam.net.: <ACE {<InetAddr 184.26.161.64>: <CE exp=-1415220359s auth=False>}, srtt=*>,
+   usw6.akam.net.: <ACE {<InetAddr 23.61.199.64>: <CE exp=-1415220359s auth=False>}, srtt=*>}
+
+Checking if we have an A record in cache for: a0b.akamaiedge.net.
+
+Checking if we have an A record in cache for: a1b.akamaiedge.net.
+
+Checking if we have an A record in cache for: n0b.akamaiedge.net.
+
+    We have: n0b.akamaiedge.net.@195.59.43.137
+
+Attempting:
+n0b.akamaiedge.net.
+
+CCache is:
+{  www.mit.edu.: <CCE cname=www.mit.edu.edgekey.net. exp=9223372035439382648s auth=False>,
+   www.mit.edu.edgekey.net.: <CCE cname=e9566.b.akamaiedge.net. exp=9223372035439382648s auth=False>}
+
+sending to n0b.akamaiedge.net. @('195.59.43.137', 53):
+0000   5A E7 00 00 00 01 00 00 00 00 00 00 05 65 39 35    Z............e95
+0010   36 36 01 62 0A 61 6B 61 6D 61 69 65 64 67 65 03    66.b.akamaiedge.
+0020   6E 65 74 00 00 01 00 01                            net.....
+
+
+NSCache INIT = 
+{.: {f.root-servers.net.: <CE exp=9223372035439382568s auth=True>}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+================================================================================================================================================================================================================================================================================================================================================================================================================
+Best matching RR's for www.mit.edu. are for parent domain ".":
+
+f.root-servers.net.
+
+Acache is:
+{  f.root-servers.net.: <ACE {<InetAddr 192.5.5.241>: <CE exp=9223372035439382555s auth=True>}, srtt=*>}
+
+Checking if we have an A record in cache for: f.root-servers.net.
+
+    We have: f.root-servers.net.@192.5.5.241
+
+Attempting:
+f.root-servers.net.
+
+CCache is:
+{  }
+
+sending to f.root-servers.net. @('192.5.5.241', 53):
+0000   9B DA 00 00 00 01 00 00 00 00 00 00 03 77 77 77    .............www
+0010   03 6D 69 74 03 65 64 75 00 00 01 00 01             .mit.edu.....
+
+
+Answer received from f.root-servers.net. server is:
+ {  'additional': [  (a.edu-servers.net., 172800, IN, A, 192.5.6.30),
+                    (c.edu-servers.net., 172800, IN, A, 192.26.92.30),
+                    (d.edu-servers.net., 172800, IN, A, 192.31.80.30),
+                    (f.edu-servers.net., 172800, IN, A, 192.35.51.30),
+                    (g.edu-servers.net., 172800, IN, A, 192.42.93.30),
+                    <gz01.dnslib.RR.RR_AAAA instance at 0x101f609e0>,
+                    (l.edu-servers.net., 172800, IN, A, 192.41.162.30)],
+   'answer': [],
+   'authority': [  (edu., 172800, IN, NS, f.edu-servers.net.),
+                   (edu., 172800, IN, NS, g.edu-servers.net.),
+                   (edu., 172800, IN, NS, a.edu-servers.net.),
+                   (edu., 172800, IN, NS, c.edu-servers.net.),
+                   (edu., 172800, IN, NS, l.edu-servers.net.),
+                   (edu., 172800, IN, NS, d.edu-servers.net.)],
+   'question': [<gz01.dnslib.QE.QE instance at 0x101f55a70>]}
+**************************************************
+Best matching RR's for www.mit.edu. are for parent domain "edu.":
+
+l.edu-servers.net.
+
+g.edu-servers.net.
+
+a.edu-servers.net.
+
+f.edu-servers.net.
+
+c.edu-servers.net.
+
+d.edu-servers.net.
+
+Acache is:
+{  a.edu-servers.net.: <ACE {<InetAddr 192.5.6.30>: <CE exp=-1415220452s auth=False>}, srtt=*>,
+   c.edu-servers.net.: <ACE {<InetAddr 192.26.92.30>: <CE exp=-1415220452s auth=False>}, srtt=*>,
+   d.edu-servers.net.: <ACE {<InetAddr 192.31.80.30>: <CE exp=-1415220452s auth=False>}, srtt=*>,
+   f.edu-servers.net.: <ACE {<InetAddr 192.35.51.30>: <CE exp=-1415220452s auth=False>}, srtt=*>,
+   f.root-servers.net.: <ACE {<InetAddr 192.5.5.241>: <CE exp=9223372035439382555s auth=True>}, srtt=*>,
+   g.edu-servers.net.: <ACE {<InetAddr 192.42.93.30>: <CE exp=-1415220452s auth=False>}, srtt=*>,
+   l.edu-servers.net.: <ACE {<InetAddr 192.41.162.30>: <CE exp=-1415220452s auth=False>}, srtt=*>}
+
+Checking if we have an A record in cache for: f.edu-servers.net.
+
+    We have: f.edu-servers.net.@192.35.51.30
+
+Attempting:
+f.edu-servers.net.
+
+CCache is:
+{  }
+
+sending to f.edu-servers.net. @('192.35.51.30', 53):
+0000   5E A3 00 00 00 01 00 00 00 00 00 00 03 77 77 77    ^............www
+0010   03 6D 69 74 03 65 64 75 00 00 01 00 01             .mit.edu.....
+
+
+Answer received from f.edu-servers.net. server is:
+ {  'additional': [  (usw2.akam.net., 172800, IN, A, 184.26.161.64),
+                    (asia1.akam.net., 172800, IN, A, 95.100.175.64),
+                    (asia2.akam.net., 172800, IN, A, 95.101.36.64),
+                    (use2.akam.net., 172800, IN, A, 96.7.49.64),
+                    (ns1-37.akam.net., 172800, IN, A, 193.108.91.37),
+                    <gz01.dnslib.RR.RR_AAAA instance at 0x101f6c5a8>,
+                    (ns1-173.akam.net., 172800, IN, A, 193.108.91.173),
+                    <gz01.dnslib.RR.RR_AAAA instance at 0x101f6c758>,
+                    (eur5.akam.net., 172800, IN, A, 23.74.25.64),
+                    (use5.akam.net., 172800, IN, A, 2.16.40.64),
+                    <gz01.dnslib.RR.RR_AAAA instance at 0x101f6c9e0>],
+   'answer': [],
+   'authority': [  (mit.edu., 172800, IN, NS, usw2.akam.net.),
+                   (mit.edu., 172800, IN, NS, asia1.akam.net.),
+                   (mit.edu., 172800, IN, NS, asia2.akam.net.),
+                   (mit.edu., 172800, IN, NS, use2.akam.net.),
+                   (mit.edu., 172800, IN, NS, ns1-37.akam.net.),
+                   (mit.edu., 172800, IN, NS, ns1-173.akam.net.),
+                   (mit.edu., 172800, IN, NS, eur5.akam.net.),
+                   (mit.edu., 172800, IN, NS, use5.akam.net.)],
+   'question': [<gz01.dnslib.QE.QE instance at 0x101f673b0>]}
+**************************************************
+Best matching RR's for www.mit.edu. are for parent domain "mit.edu.":
+
+usw2.akam.net.
+
+asia2.akam.net.
+
+ns1-37.akam.net.
+
+eur5.akam.net.
+
+asia1.akam.net.
+
+use2.akam.net.
+
+use5.akam.net.
+
+ns1-173.akam.net.
+
+Acache is:
+{  a.edu-servers.net.: <ACE {<InetAddr 192.5.6.30>: <CE exp=-1415220452s auth=False>}, srtt=*>,
+   asia1.akam.net.: <ACE {<InetAddr 95.100.175.64>: <CE exp=-1415220452s auth=False>}, srtt=*>,
+   asia2.akam.net.: <ACE {<InetAddr 95.101.36.64>: <CE exp=-1415220452s auth=False>}, srtt=*>,
+   c.edu-servers.net.: <ACE {<InetAddr 192.26.92.30>: <CE exp=-1415220452s auth=False>}, srtt=*>,
+   d.edu-servers.net.: <ACE {<InetAddr 192.31.80.30>: <CE exp=-1415220452s auth=False>}, srtt=*>,
+   eur5.akam.net.: <ACE {<InetAddr 23.74.25.64>: <CE exp=-1415220452s auth=False>}, srtt=*>,
+   f.edu-servers.net.: <ACE {<InetAddr 192.35.51.30>: <CE exp=-1415220452s auth=False>}, srtt=*>,
+   f.root-servers.net.: <ACE {<InetAddr 192.5.5.241>: <CE exp=9223372035439382555s auth=True>}, srtt=*>,
+   g.edu-servers.net.: <ACE {<InetAddr 192.42.93.30>: <CE exp=-1415220452s auth=False>}, srtt=*>,
+   l.edu-servers.net.: <ACE {<InetAddr 192.41.162.30>: <CE exp=-1415220452s auth=False>}, srtt=*>,
+   ns1-173.akam.net.: <ACE {<InetAddr 193.108.91.173>: <CE exp=-1415220452s auth=False>}, srtt=*>,
+   ns1-37.akam.net.: <ACE {<InetAddr 193.108.91.37>: <CE exp=-1415220452s auth=False>}, srtt=*>,
+   use2.akam.net.: <ACE {<InetAddr 96.7.49.64>: <CE exp=-1415220452s auth=False>}, srtt=*>,
+   use5.akam.net.: <ACE {<InetAddr 2.16.40.64>: <CE exp=-1415220452s auth=False>}, srtt=*>,
+   usw2.akam.net.: <ACE {<InetAddr 184.26.161.64>: <CE exp=-1415220452s auth=False>}, srtt=*>}
+
+Checking if we have an A record in cache for: usw2.akam.net.
+
+    We have: usw2.akam.net.@184.26.161.64
+
+Attempting:
+usw2.akam.net.
+
+CCache is:
+{  }
+
+sending to usw2.akam.net. @('184.26.161.64', 53):
+0000   D3 83 00 00 00 01 00 00 00 00 00 00 03 77 77 77    .............www
+0010   03 6D 69 74 03 65 64 75 00 00 01 00 01             .mit.edu.....
+
+
+Answer received from usw2.akam.net. server is:
+ {  'additional': [],
+   'answer': [(www.mit.edu., 1800, IN, CNAME, www.mit.edu.edgekey.net.)],
+   'authority': [],
+   'question': [<gz01.dnslib.QE.QE instance at 0x101f715a8>]}
+**************************************************
+Sanswers is [(www.mit.edu., 1800, IN, CNAME, www.mit.edu.edgekey.net.)]
+Best matching RR's for www.mit.edu.edgekey.net. are for parent domain ".":
+
+f.root-servers.net.
+
+Acache is:
+{  a.edu-servers.net.: <ACE {<InetAddr 192.5.6.30>: <CE exp=-1415220452s auth=False>}, srtt=*>,
+   asia1.akam.net.: <ACE {<InetAddr 95.100.175.64>: <CE exp=-1415220452s auth=False>}, srtt=*>,
+   asia2.akam.net.: <ACE {<InetAddr 95.101.36.64>: <CE exp=-1415220452s auth=False>}, srtt=*>,
+   c.edu-servers.net.: <ACE {<InetAddr 192.26.92.30>: <CE exp=-1415220452s auth=False>}, srtt=*>,
+   d.edu-servers.net.: <ACE {<InetAddr 192.31.80.30>: <CE exp=-1415220452s auth=False>}, srtt=*>,
+   eur5.akam.net.: <ACE {<InetAddr 23.74.25.64>: <CE exp=-1415220452s auth=False>}, srtt=*>,
+   f.edu-servers.net.: <ACE {<InetAddr 192.35.51.30>: <CE exp=-1415220452s auth=False>}, srtt=*>,
+   f.root-servers.net.: <ACE {<InetAddr 192.5.5.241>: <CE exp=9223372035439382555s auth=True>}, srtt=*>,
+   g.edu-servers.net.: <ACE {<InetAddr 192.42.93.30>: <CE exp=-1415220452s auth=False>}, srtt=*>,
+   l.edu-servers.net.: <ACE {<InetAddr 192.41.162.30>: <CE exp=-1415220452s auth=False>}, srtt=*>,
+   ns1-173.akam.net.: <ACE {<InetAddr 193.108.91.173>: <CE exp=-1415220452s auth=False>}, srtt=*>,
+   ns1-37.akam.net.: <ACE {<InetAddr 193.108.91.37>: <CE exp=-1415220452s auth=False>}, srtt=*>,
+   use2.akam.net.: <ACE {<InetAddr 96.7.49.64>: <CE exp=-1415220452s auth=False>}, srtt=*>,
+   use5.akam.net.: <ACE {<InetAddr 2.16.40.64>: <CE exp=-1415220452s auth=False>}, srtt=*>,
+   usw2.akam.net.: <ACE {<InetAddr 184.26.161.64>: <CE exp=-1415220452s auth=False>}, srtt=*>}
+
+Checking if we have an A record in cache for: f.root-servers.net.
+
+    We have: f.root-servers.net.@192.5.5.241
+
+Attempting:
+f.root-servers.net.
+
+CCache is:
+{  www.mit.edu.: <CCE cname=www.mit.edu.edgekey.net. exp=9223372035439382555s auth=False>}
+
+sending to f.root-servers.net. @('192.5.5.241', 53):
+0000   00 17 00 00 00 01 00 00 00 00 00 00 03 77 77 77    .............www
+0010   03 6D 69 74 03 65 64 75 07 65 64 67 65 6B 65 79    .mit.edu.edgekey
+0020   03 6E 65 74 00 00 01 00 01                         .net.....
+
+
+Answer received from f.root-servers.net. server is:
+ {  'additional': [  (a.gtld-servers.net., 172800, IN, A, 192.5.6.30),
+                    <gz01.dnslib.RR.RR_AAAA instance at 0x101f79050>,
+                    (b.gtld-servers.net., 172800, IN, A, 192.33.14.30),
+                    <gz01.dnslib.RR.RR_AAAA instance at 0x101f79200>,
+                    (c.gtld-servers.net., 172800, IN, A, 192.26.92.30),
+                    (d.gtld-servers.net., 172800, IN, A, 192.31.80.30),
+                    (e.gtld-servers.net., 172800, IN, A, 192.12.94.30),
+                    (f.gtld-servers.net., 172800, IN, A, 192.35.51.30),
+                    (g.gtld-servers.net., 172800, IN, A, 192.42.93.30),
+                    (h.gtld-servers.net., 172800, IN, A, 192.54.112.30),
+                    (i.gtld-servers.net., 172800, IN, A, 192.43.172.30),
+                    (j.gtld-servers.net., 172800, IN, A, 192.48.79.30),
+                    (k.gtld-servers.net., 172800, IN, A, 192.52.178.30),
+                    (l.gtld-servers.net., 172800, IN, A, 192.41.162.30)],
+   'answer': [],
+   'authority': [  (net., 172800, IN, NS, l.gtld-servers.net.),
+                   (net., 172800, IN, NS, f.gtld-servers.net.),
+                   (net., 172800, IN, NS, h.gtld-servers.net.),
+                   (net., 172800, IN, NS, i.gtld-servers.net.),
+                   (net., 172800, IN, NS, g.gtld-servers.net.),
+                   (net., 172800, IN, NS, j.gtld-servers.net.),
+                   (net., 172800, IN, NS, a.gtld-servers.net.),
+                   (net., 172800, IN, NS, d.gtld-servers.net.),
+                   (net., 172800, IN, NS, m.gtld-servers.net.),
+                   (net., 172800, IN, NS, e.gtld-servers.net.),
+                   (net., 172800, IN, NS, c.gtld-servers.net.),
+                   (net., 172800, IN, NS, k.gtld-servers.net.),
+                   (net., 172800, IN, NS, b.gtld-servers.net.)],
+   'question': [<gz01.dnslib.QE.QE instance at 0x101f71a28>]}
+**************************************************
+Best matching RR's for www.mit.edu.edgekey.net. are for parent domain "net.":
+
+m.gtld-servers.net.
+
+j.gtld-servers.net.
+
+d.gtld-servers.net.
+
+h.gtld-servers.net.
+
+l.gtld-servers.net.
+
+c.gtld-servers.net.
+
+a.gtld-servers.net.
+
+g.gtld-servers.net.
+
+e.gtld-servers.net.
+
+b.gtld-servers.net.
+
+k.gtld-servers.net.
+
+i.gtld-servers.net.
+
+f.gtld-servers.net.
+
+Acache is:
+{  a.edu-servers.net.: <ACE {<InetAddr 192.5.6.30>: <CE exp=-1415220452s auth=False>}, srtt=*>,
+   a.gtld-servers.net.: <ACE {<InetAddr 192.5.6.30>: <CE exp=-1415220452s auth=False>}, srtt=*>,
+   asia1.akam.net.: <ACE {<InetAddr 95.100.175.64>: <CE exp=-1415220452s auth=False>}, srtt=*>,
+   asia2.akam.net.: <ACE {<InetAddr 95.101.36.64>: <CE exp=-1415220452s auth=False>}, srtt=*>,
+   b.gtld-servers.net.: <ACE {<InetAddr 192.33.14.30>: <CE exp=-1415220452s auth=False>}, srtt=*>,
+   c.edu-servers.net.: <ACE {<InetAddr 192.26.92.30>: <CE exp=-1415220452s auth=False>}, srtt=*>,
+   c.gtld-servers.net.: <ACE {<InetAddr 192.26.92.30>: <CE exp=-1415220452s auth=False>}, srtt=*>,
+   d.edu-servers.net.: <ACE {<InetAddr 192.31.80.30>: <CE exp=-1415220452s auth=False>}, srtt=*>,
+   d.gtld-servers.net.: <ACE {<InetAddr 192.31.80.30>: <CE exp=-1415220452s auth=False>}, srtt=*>,
+   e.gtld-servers.net.: <ACE {<InetAddr 192.12.94.30>: <CE exp=-1415220452s auth=False>}, srtt=*>,
+   eur5.akam.net.: <ACE {<InetAddr 23.74.25.64>: <CE exp=-1415220452s auth=False>}, srtt=*>,
+   f.edu-servers.net.: <ACE {<InetAddr 192.35.51.30>: <CE exp=-1415220452s auth=False>}, srtt=*>,
+   f.gtld-servers.net.: <ACE {<InetAddr 192.35.51.30>: <CE exp=-1415220452s auth=False>}, srtt=*>,
+   f.root-servers.net.: <ACE {<InetAddr 192.5.5.241>: <CE exp=9223372035439382555s auth=True>}, srtt=*>,
+   g.edu-servers.net.: <ACE {<InetAddr 192.42.93.30>: <CE exp=-1415220452s auth=False>}, srtt=*>,
+   g.gtld-servers.net.: <ACE {<InetAddr 192.42.93.30>: <CE exp=-1415220452s auth=False>}, srtt=*>,
+   h.gtld-servers.net.: <ACE {<InetAddr 192.54.112.30>: <CE exp=-1415220452s auth=False>}, srtt=*>,
+   i.gtld-servers.net.: <ACE {<InetAddr 192.43.172.30>: <CE exp=-1415220452s auth=False>}, srtt=*>,
+   j.gtld-servers.net.: <ACE {<InetAddr 192.48.79.30>: <CE exp=-1415220452s auth=False>}, srtt=*>,
+   k.gtld-servers.net.: <ACE {<InetAddr 192.52.178.30>: <CE exp=-1415220452s auth=False>}, srtt=*>,
+   l.edu-servers.net.: <ACE {<InetAddr 192.41.162.30>: <CE exp=-1415220452s auth=False>}, srtt=*>,
+   l.gtld-servers.net.: <ACE {<InetAddr 192.41.162.30>: <CE exp=-1415220452s auth=False>}, srtt=*>,
+   ns1-173.akam.net.: <ACE {<InetAddr 193.108.91.173>: <CE exp=-1415220452s auth=False>}, srtt=*>,
+   ns1-37.akam.net.: <ACE {<InetAddr 193.108.91.37>: <CE exp=-1415220452s auth=False>}, srtt=*>,
+   use2.akam.net.: <ACE {<InetAddr 96.7.49.64>: <CE exp=-1415220452s auth=False>}, srtt=*>,
+   use5.akam.net.: <ACE {<InetAddr 2.16.40.64>: <CE exp=-1415220452s auth=False>}, srtt=*>,
+   usw2.akam.net.: <ACE {<InetAddr 184.26.161.64>: <CE exp=-1415220452s auth=False>}, srtt=*>}
+
+Checking if we have an A record in cache for: l.gtld-servers.net.
+
+    We have: l.gtld-servers.net.@192.41.162.30
+
+Attempting:
+l.gtld-servers.net.
+
+CCache is:
+{  www.mit.edu.: <CCE cname=www.mit.edu.edgekey.net. exp=9223372035439382555s auth=False>}
+
+sending to l.gtld-servers.net. @('192.41.162.30', 53):
+0000   EC BC 00 00 00 01 00 00 00 00 00 00 03 77 77 77    .............www
+0010   03 6D 69 74 03 65 64 75 07 65 64 67 65 6B 65 79    .mit.edu.edgekey
+0020   03 6E 65 74 00 00 01 00 01                         .net.....
+
+
+Answer received from l.gtld-servers.net. server is:
+ {  'additional': [  (ns1-66.akam.net., 172800, IN, A, 193.108.91.66),
+                    <gz01.dnslib.RR.RR_AAAA instance at 0x101f87320>,
+                    (usw6.akam.net., 172800, IN, A, 23.61.199.64),
+                    (adns1.akam.net., 172800, IN, A, 96.7.50.66),
+                    (ns4-66.akam.net., 172800, IN, A, 84.53.139.66),
+                    (ns7-65.akam.net., 172800, IN, A, 96.7.49.65),
+                    (ns5-66.akam.net., 172800, IN, A, 184.85.248.66),
+                    (a6-65.akam.net., 172800, IN, A, 23.211.133.65),
+                    <gz01.dnslib.RR.RR_AAAA instance at 0x101f87908>,
+                    (a5-65.akam.net., 172800, IN, A, 95.100.168.65)],
+   'answer': [],
+   'authority': [  (edgekey.net., 172800, IN, NS, ns1-66.akam.net.),
+                   (edgekey.net., 172800, IN, NS, usw6.akam.net.),
+                   (edgekey.net., 172800, IN, NS, adns1.akam.net.),
+                   (edgekey.net., 172800, IN, NS, ns4-66.akam.net.),
+                   (edgekey.net., 172800, IN, NS, ns7-65.akam.net.),
+                   (edgekey.net., 172800, IN, NS, ns5-66.akam.net.),
+                   (edgekey.net., 172800, IN, NS, a6-65.akam.net.),
+                   (edgekey.net., 172800, IN, NS, a5-65.akam.net.),
+                   (edgekey.net., 172800, IN, NS, a16-65.akam.net.),
+                   (edgekey.net., 172800, IN, NS, a18-65.akam.net.),
+                   (edgekey.net., 172800, IN, NS, a28-65.akam.net.),
+                   (edgekey.net., 172800, IN, NS, a13-65.akam.net.),
+                   (edgekey.net., 172800, IN, NS, a26-65.akam.net.)],
+   'question': [<gz01.dnslib.QE.QE instance at 0x101f7fcf8>]}
+**************************************************
+Best matching RR's for www.mit.edu.edgekey.net. are for parent domain "edgekey.net.":
+
+a13-65.akam.net.
+
+a18-65.akam.net.
+
+ns5-66.akam.net.
+
+ns7-65.akam.net.
+
+a6-65.akam.net.
+
+ns4-66.akam.net.
+
+a5-65.akam.net.
+
+a26-65.akam.net.
+
+a28-65.akam.net.
+
+a16-65.akam.net.
+
+usw6.akam.net.
+
+adns1.akam.net.
+
+ns1-66.akam.net.
+
+Acache is:
+{  a.edu-servers.net.: <ACE {<InetAddr 192.5.6.30>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   a.gtld-servers.net.: <ACE {<InetAddr 192.5.6.30>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   a5-65.akam.net.: <ACE {<InetAddr 95.100.168.65>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   a6-65.akam.net.: <ACE {<InetAddr 23.211.133.65>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   adns1.akam.net.: <ACE {<InetAddr 96.7.50.66>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   asia1.akam.net.: <ACE {<InetAddr 95.100.175.64>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   asia2.akam.net.: <ACE {<InetAddr 95.101.36.64>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   b.gtld-servers.net.: <ACE {<InetAddr 192.33.14.30>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   c.edu-servers.net.: <ACE {<InetAddr 192.26.92.30>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   c.gtld-servers.net.: <ACE {<InetAddr 192.26.92.30>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   d.edu-servers.net.: <ACE {<InetAddr 192.31.80.30>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   d.gtld-servers.net.: <ACE {<InetAddr 192.31.80.30>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   e.gtld-servers.net.: <ACE {<InetAddr 192.12.94.30>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   eur5.akam.net.: <ACE {<InetAddr 23.74.25.64>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   f.edu-servers.net.: <ACE {<InetAddr 192.35.51.30>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   f.gtld-servers.net.: <ACE {<InetAddr 192.35.51.30>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   f.root-servers.net.: <ACE {<InetAddr 192.5.5.241>: <CE exp=9223372035439382554s auth=True>}, srtt=*>,
+   g.edu-servers.net.: <ACE {<InetAddr 192.42.93.30>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   g.gtld-servers.net.: <ACE {<InetAddr 192.42.93.30>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   h.gtld-servers.net.: <ACE {<InetAddr 192.54.112.30>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   i.gtld-servers.net.: <ACE {<InetAddr 192.43.172.30>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   j.gtld-servers.net.: <ACE {<InetAddr 192.48.79.30>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   k.gtld-servers.net.: <ACE {<InetAddr 192.52.178.30>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   l.edu-servers.net.: <ACE {<InetAddr 192.41.162.30>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   l.gtld-servers.net.: <ACE {<InetAddr 192.41.162.30>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   ns1-173.akam.net.: <ACE {<InetAddr 193.108.91.173>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   ns1-37.akam.net.: <ACE {<InetAddr 193.108.91.37>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   ns1-66.akam.net.: <ACE {<InetAddr 193.108.91.66>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   ns4-66.akam.net.: <ACE {<InetAddr 84.53.139.66>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   ns5-66.akam.net.: <ACE {<InetAddr 184.85.248.66>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   ns7-65.akam.net.: <ACE {<InetAddr 96.7.49.65>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   use2.akam.net.: <ACE {<InetAddr 96.7.49.64>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   use5.akam.net.: <ACE {<InetAddr 2.16.40.64>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   usw2.akam.net.: <ACE {<InetAddr 184.26.161.64>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   usw6.akam.net.: <ACE {<InetAddr 23.61.199.64>: <CE exp=-1415220453s auth=False>}, srtt=*>}
+
+Checking if we have an A record in cache for: ns1-66.akam.net.
+
+    We have: ns1-66.akam.net.@193.108.91.66
+
+Attempting:
+ns1-66.akam.net.
+
+CCache is:
+{  www.mit.edu.: <CCE cname=www.mit.edu.edgekey.net. exp=9223372035439382554s auth=False>}
+
+sending to ns1-66.akam.net. @('193.108.91.66', 53):
+0000   98 FF 00 00 00 01 00 00 00 00 00 00 03 77 77 77    .............www
+0010   03 6D 69 74 03 65 64 75 07 65 64 67 65 6B 65 79    .mit.edu.edgekey
+0020   03 6E 65 74 00 00 01 00 01                         .net.....
+
+
+Answer received from ns1-66.akam.net. server is:
+ {  'additional': [],
+   'answer': [  (www.mit.edu.edgekey.net., 60, IN, CNAME, e9566.b.akamaiedge.net.)],
+   'authority': [],
+   'question': [<gz01.dnslib.QE.QE instance at 0x101f8b7e8>]}
+**************************************************
+Sanswers is [  (www.mit.edu., 1800, IN, CNAME, www.mit.edu.edgekey.net.),
+   (www.mit.edu.edgekey.net., 60, IN, CNAME, e9566.b.akamaiedge.net.)]
+Best matching RR's for e9566.b.akamaiedge.net. are for parent domain "net.":
+
+m.gtld-servers.net.
+
+j.gtld-servers.net.
+
+d.gtld-servers.net.
+
+h.gtld-servers.net.
+
+l.gtld-servers.net.
+
+c.gtld-servers.net.
+
+a.gtld-servers.net.
+
+g.gtld-servers.net.
+
+e.gtld-servers.net.
+
+b.gtld-servers.net.
+
+k.gtld-servers.net.
+
+i.gtld-servers.net.
+
+f.gtld-servers.net.
+
+Acache is:
+{  a.edu-servers.net.: <ACE {<InetAddr 192.5.6.30>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   a.gtld-servers.net.: <ACE {<InetAddr 192.5.6.30>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   a5-65.akam.net.: <ACE {<InetAddr 95.100.168.65>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   a6-65.akam.net.: <ACE {<InetAddr 23.211.133.65>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   adns1.akam.net.: <ACE {<InetAddr 96.7.50.66>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   asia1.akam.net.: <ACE {<InetAddr 95.100.175.64>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   asia2.akam.net.: <ACE {<InetAddr 95.101.36.64>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   b.gtld-servers.net.: <ACE {<InetAddr 192.33.14.30>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   c.edu-servers.net.: <ACE {<InetAddr 192.26.92.30>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   c.gtld-servers.net.: <ACE {<InetAddr 192.26.92.30>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   d.edu-servers.net.: <ACE {<InetAddr 192.31.80.30>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   d.gtld-servers.net.: <ACE {<InetAddr 192.31.80.30>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   e.gtld-servers.net.: <ACE {<InetAddr 192.12.94.30>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   eur5.akam.net.: <ACE {<InetAddr 23.74.25.64>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   f.edu-servers.net.: <ACE {<InetAddr 192.35.51.30>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   f.gtld-servers.net.: <ACE {<InetAddr 192.35.51.30>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   f.root-servers.net.: <ACE {<InetAddr 192.5.5.241>: <CE exp=9223372035439382554s auth=True>}, srtt=*>,
+   g.edu-servers.net.: <ACE {<InetAddr 192.42.93.30>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   g.gtld-servers.net.: <ACE {<InetAddr 192.42.93.30>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   h.gtld-servers.net.: <ACE {<InetAddr 192.54.112.30>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   i.gtld-servers.net.: <ACE {<InetAddr 192.43.172.30>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   j.gtld-servers.net.: <ACE {<InetAddr 192.48.79.30>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   k.gtld-servers.net.: <ACE {<InetAddr 192.52.178.30>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   l.edu-servers.net.: <ACE {<InetAddr 192.41.162.30>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   l.gtld-servers.net.: <ACE {<InetAddr 192.41.162.30>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   ns1-173.akam.net.: <ACE {<InetAddr 193.108.91.173>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   ns1-37.akam.net.: <ACE {<InetAddr 193.108.91.37>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   ns1-66.akam.net.: <ACE {<InetAddr 193.108.91.66>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   ns4-66.akam.net.: <ACE {<InetAddr 84.53.139.66>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   ns5-66.akam.net.: <ACE {<InetAddr 184.85.248.66>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   ns7-65.akam.net.: <ACE {<InetAddr 96.7.49.65>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   use2.akam.net.: <ACE {<InetAddr 96.7.49.64>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   use5.akam.net.: <ACE {<InetAddr 2.16.40.64>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   usw2.akam.net.: <ACE {<InetAddr 184.26.161.64>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   usw6.akam.net.: <ACE {<InetAddr 23.61.199.64>: <CE exp=-1415220453s auth=False>}, srtt=*>}
+
+Checking if we have an A record in cache for: l.gtld-servers.net.
+
+    We have: l.gtld-servers.net.@192.41.162.30
+
+Attempting:
+l.gtld-servers.net.
+
+CCache is:
+{  www.mit.edu.: <CCE cname=www.mit.edu.edgekey.net. exp=9223372035439382554s auth=False>,
+   www.mit.edu.edgekey.net.: <CCE cname=e9566.b.akamaiedge.net. exp=9223372035439382554s auth=False>}
+
+sending to l.gtld-servers.net. @('192.41.162.30', 53):
+0000   34 9A 00 00 00 01 00 00 00 00 00 00 05 65 39 35    4............e95
+0010   36 36 01 62 0A 61 6B 61 6D 61 69 65 64 67 65 03    66.b.akamaiedge.
+0020   6E 65 74 00 00 01 00 01                            net.....
+
+
+Answer received from l.gtld-servers.net. server is:
+ {  'additional': [  (la1.akamaiedge.net., 172800, IN, A, 184.26.161.192),
+                    (la6.akamaiedge.net., 172800, IN, A, 96.7.50.192),
+                    (la7.akamaiedge.net., 172800, IN, A, 23.211.132.192),
+                    (la3.akamaiedge.net., 172800, IN, A, 95.101.36.192),
+                    (lar6.akamaiedge.net., 172800, IN, A, 95.100.174.192),
+                    (lar2.akamaiedge.net., 172800, IN, A, 2.16.40.192),
+                    (ns3-194.akamaiedge.net., 172800, IN, A, 23.61.199.194),
+                    (ns2-194.akamaiedge.net., 172800, IN, A, 2.22.230.194),
+                    (ns4-194.akamaiedge.net., 172800, IN, A, 84.53.139.194),
+                    (ns6-194.akamaiedge.net., 172800, IN, A, 95.100.168.194),
+                    (ns7-194.akamaiedge.net., 172800, IN, A, 96.7.49.194),
+                    (ns5-194.akamaiedge.net., 172800, IN, A, 184.85.248.194),
+                    (ns1-1.akamaiedge.net., 172800, IN, A, 193.108.88.1)],
+   'answer': [],
+   'authority': [  (akamaiedge.net., 172800, IN, NS, la1.akamaiedge.net.),
+                   (akamaiedge.net., 172800, IN, NS, la6.akamaiedge.net.),
+                   (akamaiedge.net., 172800, IN, NS, la7.akamaiedge.net.),
+                   (akamaiedge.net., 172800, IN, NS, la3.akamaiedge.net.),
+                   (akamaiedge.net., 172800, IN, NS, lar6.akamaiedge.net.),
+                   (akamaiedge.net., 172800, IN, NS, lar2.akamaiedge.net.),
+                   (akamaiedge.net., 172800, IN, NS, ns3-194.akamaiedge.net.),
+                   (akamaiedge.net., 172800, IN, NS, ns2-194.akamaiedge.net.),
+                   (akamaiedge.net., 172800, IN, NS, ns4-194.akamaiedge.net.),
+                   (akamaiedge.net., 172800, IN, NS, ns6-194.akamaiedge.net.),
+                   (akamaiedge.net., 172800, IN, NS, ns7-194.akamaiedge.net.),
+                   (akamaiedge.net., 172800, IN, NS, ns5-194.akamaiedge.net.),
+                   (akamaiedge.net., 172800, IN, NS, ns1-1.akamaiedge.net.)],
+   'question': [<gz01.dnslib.QE.QE instance at 0x101f8bc20>]}
+**************************************************
+Best matching RR's for e9566.b.akamaiedge.net. are for parent domain "akamaiedge.net.":
+
+lar6.akamaiedge.net.
+
+ns2-194.akamaiedge.net.
+
+la7.akamaiedge.net.
+
+ns4-194.akamaiedge.net.
+
+la6.akamaiedge.net.
+
+ns6-194.akamaiedge.net.
+
+ns5-194.akamaiedge.net.
+
+ns7-194.akamaiedge.net.
+
+ns1-1.akamaiedge.net.
+
+lar2.akamaiedge.net.
+
+la3.akamaiedge.net.
+
+ns3-194.akamaiedge.net.
+
+la1.akamaiedge.net.
+
+Acache is:
+{  a.edu-servers.net.: <ACE {<InetAddr 192.5.6.30>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   a.gtld-servers.net.: <ACE {<InetAddr 192.5.6.30>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   a5-65.akam.net.: <ACE {<InetAddr 95.100.168.65>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   a6-65.akam.net.: <ACE {<InetAddr 23.211.133.65>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   adns1.akam.net.: <ACE {<InetAddr 96.7.50.66>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   asia1.akam.net.: <ACE {<InetAddr 95.100.175.64>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   asia2.akam.net.: <ACE {<InetAddr 95.101.36.64>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   b.gtld-servers.net.: <ACE {<InetAddr 192.33.14.30>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   c.edu-servers.net.: <ACE {<InetAddr 192.26.92.30>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   c.gtld-servers.net.: <ACE {<InetAddr 192.26.92.30>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   d.edu-servers.net.: <ACE {<InetAddr 192.31.80.30>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   d.gtld-servers.net.: <ACE {<InetAddr 192.31.80.30>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   e.gtld-servers.net.: <ACE {<InetAddr 192.12.94.30>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   eur5.akam.net.: <ACE {<InetAddr 23.74.25.64>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   f.edu-servers.net.: <ACE {<InetAddr 192.35.51.30>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   f.gtld-servers.net.: <ACE {<InetAddr 192.35.51.30>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   f.root-servers.net.: <ACE {<InetAddr 192.5.5.241>: <CE exp=9223372035439382554s auth=True>}, srtt=*>,
+   g.edu-servers.net.: <ACE {<InetAddr 192.42.93.30>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   g.gtld-servers.net.: <ACE {<InetAddr 192.42.93.30>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   h.gtld-servers.net.: <ACE {<InetAddr 192.54.112.30>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   i.gtld-servers.net.: <ACE {<InetAddr 192.43.172.30>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   j.gtld-servers.net.: <ACE {<InetAddr 192.48.79.30>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   k.gtld-servers.net.: <ACE {<InetAddr 192.52.178.30>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   l.edu-servers.net.: <ACE {<InetAddr 192.41.162.30>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   l.gtld-servers.net.: <ACE {<InetAddr 192.41.162.30>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   la1.akamaiedge.net.: <ACE {<InetAddr 184.26.161.192>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   la3.akamaiedge.net.: <ACE {<InetAddr 95.101.36.192>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   la6.akamaiedge.net.: <ACE {<InetAddr 96.7.50.192>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   la7.akamaiedge.net.: <ACE {<InetAddr 23.211.132.192>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   lar2.akamaiedge.net.: <ACE {<InetAddr 2.16.40.192>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   lar6.akamaiedge.net.: <ACE {<InetAddr 95.100.174.192>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   ns1-1.akamaiedge.net.: <ACE {<InetAddr 193.108.88.1>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   ns1-173.akam.net.: <ACE {<InetAddr 193.108.91.173>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   ns1-37.akam.net.: <ACE {<InetAddr 193.108.91.37>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   ns1-66.akam.net.: <ACE {<InetAddr 193.108.91.66>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   ns2-194.akamaiedge.net.: <ACE {<InetAddr 2.22.230.194>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   ns3-194.akamaiedge.net.: <ACE {<InetAddr 23.61.199.194>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   ns4-194.akamaiedge.net.: <ACE {<InetAddr 84.53.139.194>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   ns4-66.akam.net.: <ACE {<InetAddr 84.53.139.66>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   ns5-194.akamaiedge.net.: <ACE {<InetAddr 184.85.248.194>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   ns5-66.akam.net.: <ACE {<InetAddr 184.85.248.66>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   ns6-194.akamaiedge.net.: <ACE {<InetAddr 95.100.168.194>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   ns7-194.akamaiedge.net.: <ACE {<InetAddr 96.7.49.194>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   ns7-65.akam.net.: <ACE {<InetAddr 96.7.49.65>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   use2.akam.net.: <ACE {<InetAddr 96.7.49.64>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   use5.akam.net.: <ACE {<InetAddr 2.16.40.64>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   usw2.akam.net.: <ACE {<InetAddr 184.26.161.64>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   usw6.akam.net.: <ACE {<InetAddr 23.61.199.64>: <CE exp=-1415220453s auth=False>}, srtt=*>}
+
+Checking if we have an A record in cache for: la1.akamaiedge.net.
+
+    We have: la1.akamaiedge.net.@184.26.161.192
+
+Attempting:
+la1.akamaiedge.net.
+
+CCache is:
+{  www.mit.edu.: <CCE cname=www.mit.edu.edgekey.net. exp=9223372035439382554s auth=False>,
+   www.mit.edu.edgekey.net.: <CCE cname=e9566.b.akamaiedge.net. exp=9223372035439382554s auth=False>}
+
+sending to la1.akamaiedge.net. @('184.26.161.192', 53):
+0000   3F E1 00 00 00 01 00 00 00 00 00 00 05 65 39 35    ?............e95
+0010   36 36 01 62 0A 61 6B 61 6D 61 69 65 64 67 65 03    66.b.akamaiedge.
+0020   6E 65 74 00 00 01 00 01                            net.....
+
+
+Answer received from la1.akamaiedge.net. server is:
+ {  'additional': [  (n1b.akamaiedge.net., 8000, IN, A, 23.3.15.48),
+                    (n4b.akamaiedge.net., 8000, IN, A, 195.59.43.138),
+                    (n5b.akamaiedge.net., 6000, IN, A, 195.59.43.132),
+                    (n2b.akamaiedge.net., 4000, IN, A, 195.245.125.245),
+                    (n3b.akamaiedge.net., 6000, IN, A, 88.221.81.193),
+                    (n0b.akamaiedge.net., 4000, IN, A, 195.59.43.137),
+                    <gz01.dnslib.RR.RR_AAAA instance at 0x101fa2290>,
+                    <gz01.dnslib.RR.RR_AAAA instance at 0x101fa2368>],
+   'answer': [],
+   'authority': [  (b.akamaiedge.net., 8000, IN, NS, n1b.akamaiedge.net.),
+                   (b.akamaiedge.net., 8000, IN, NS, n4b.akamaiedge.net.),
+                   (b.akamaiedge.net., 6000, IN, NS, n5b.akamaiedge.net.),
+                   (b.akamaiedge.net., 4000, IN, NS, n2b.akamaiedge.net.),
+                   (b.akamaiedge.net., 6000, IN, NS, n3b.akamaiedge.net.),
+                   (b.akamaiedge.net., 4000, IN, NS, n0b.akamaiedge.net.),
+                   (b.akamaiedge.net., 4000, IN, NS, a1b.akamaiedge.net.),
+                   (b.akamaiedge.net., 6000, IN, NS, a0b.akamaiedge.net.)],
+   'question': [<gz01.dnslib.QE.QE instance at 0x101f99f38>]}
+**************************************************
+Best matching RR's for e9566.b.akamaiedge.net. are for parent domain "b.akamaiedge.net.":
+
+n0b.akamaiedge.net.
+
+n4b.akamaiedge.net.
+
+n5b.akamaiedge.net.
+
+a0b.akamaiedge.net.
+
+n2b.akamaiedge.net.
+
+n1b.akamaiedge.net.
+
+n3b.akamaiedge.net.
+
+a1b.akamaiedge.net.
+
+Acache is:
+{  a.edu-servers.net.: <ACE {<InetAddr 192.5.6.30>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   a.gtld-servers.net.: <ACE {<InetAddr 192.5.6.30>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   a5-65.akam.net.: <ACE {<InetAddr 95.100.168.65>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   a6-65.akam.net.: <ACE {<InetAddr 23.211.133.65>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   adns1.akam.net.: <ACE {<InetAddr 96.7.50.66>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   asia1.akam.net.: <ACE {<InetAddr 95.100.175.64>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   asia2.akam.net.: <ACE {<InetAddr 95.101.36.64>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   b.gtld-servers.net.: <ACE {<InetAddr 192.33.14.30>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   c.edu-servers.net.: <ACE {<InetAddr 192.26.92.30>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   c.gtld-servers.net.: <ACE {<InetAddr 192.26.92.30>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   d.edu-servers.net.: <ACE {<InetAddr 192.31.80.30>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   d.gtld-servers.net.: <ACE {<InetAddr 192.31.80.30>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   e.gtld-servers.net.: <ACE {<InetAddr 192.12.94.30>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   eur5.akam.net.: <ACE {<InetAddr 23.74.25.64>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   f.edu-servers.net.: <ACE {<InetAddr 192.35.51.30>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   f.gtld-servers.net.: <ACE {<InetAddr 192.35.51.30>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   f.root-servers.net.: <ACE {<InetAddr 192.5.5.241>: <CE exp=9223372035439382554s auth=True>}, srtt=*>,
+   g.edu-servers.net.: <ACE {<InetAddr 192.42.93.30>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   g.gtld-servers.net.: <ACE {<InetAddr 192.42.93.30>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   h.gtld-servers.net.: <ACE {<InetAddr 192.54.112.30>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   i.gtld-servers.net.: <ACE {<InetAddr 192.43.172.30>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   j.gtld-servers.net.: <ACE {<InetAddr 192.48.79.30>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   k.gtld-servers.net.: <ACE {<InetAddr 192.52.178.30>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   l.edu-servers.net.: <ACE {<InetAddr 192.41.162.30>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   l.gtld-servers.net.: <ACE {<InetAddr 192.41.162.30>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   la1.akamaiedge.net.: <ACE {<InetAddr 184.26.161.192>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   la3.akamaiedge.net.: <ACE {<InetAddr 95.101.36.192>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   la6.akamaiedge.net.: <ACE {<InetAddr 96.7.50.192>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   la7.akamaiedge.net.: <ACE {<InetAddr 23.211.132.192>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   lar2.akamaiedge.net.: <ACE {<InetAddr 2.16.40.192>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   lar6.akamaiedge.net.: <ACE {<InetAddr 95.100.174.192>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   n0b.akamaiedge.net.: <ACE {<InetAddr 195.59.43.137>: <CE exp=-1415389253s auth=False>}, srtt=*>,
+   n1b.akamaiedge.net.: <ACE {<InetAddr 23.3.15.48>: <CE exp=-1415385253s auth=False>}, srtt=*>,
+   n2b.akamaiedge.net.: <ACE {<InetAddr 195.245.125.245>: <CE exp=-1415389253s auth=False>}, srtt=*>,
+   n3b.akamaiedge.net.: <ACE {<InetAddr 88.221.81.193>: <CE exp=-1415387253s auth=False>}, srtt=*>,
+   n4b.akamaiedge.net.: <ACE {<InetAddr 195.59.43.138>: <CE exp=-1415385253s auth=False>}, srtt=*>,
+   n5b.akamaiedge.net.: <ACE {<InetAddr 195.59.43.132>: <CE exp=-1415387253s auth=False>}, srtt=*>,
+   ns1-1.akamaiedge.net.: <ACE {<InetAddr 193.108.88.1>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   ns1-173.akam.net.: <ACE {<InetAddr 193.108.91.173>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   ns1-37.akam.net.: <ACE {<InetAddr 193.108.91.37>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   ns1-66.akam.net.: <ACE {<InetAddr 193.108.91.66>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   ns2-194.akamaiedge.net.: <ACE {<InetAddr 2.22.230.194>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   ns3-194.akamaiedge.net.: <ACE {<InetAddr 23.61.199.194>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   ns4-194.akamaiedge.net.: <ACE {<InetAddr 84.53.139.194>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   ns4-66.akam.net.: <ACE {<InetAddr 84.53.139.66>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   ns5-194.akamaiedge.net.: <ACE {<InetAddr 184.85.248.194>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   ns5-66.akam.net.: <ACE {<InetAddr 184.85.248.66>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   ns6-194.akamaiedge.net.: <ACE {<InetAddr 95.100.168.194>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   ns7-194.akamaiedge.net.: <ACE {<InetAddr 96.7.49.194>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   ns7-65.akam.net.: <ACE {<InetAddr 96.7.49.65>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   use2.akam.net.: <ACE {<InetAddr 96.7.49.64>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   use5.akam.net.: <ACE {<InetAddr 2.16.40.64>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   usw2.akam.net.: <ACE {<InetAddr 184.26.161.64>: <CE exp=-1415220453s auth=False>}, srtt=*>,
+   usw6.akam.net.: <ACE {<InetAddr 23.61.199.64>: <CE exp=-1415220453s auth=False>}, srtt=*>}
+
+Checking if we have an A record in cache for: n1b.akamaiedge.net.
+
+    We have: n1b.akamaiedge.net.@23.3.15.48
+
+Attempting:
+n1b.akamaiedge.net.
+
+CCache is:
+{  www.mit.edu.: <CCE cname=www.mit.edu.edgekey.net. exp=9223372035439382554s auth=False>,
+   www.mit.edu.edgekey.net.: <CCE cname=e9566.b.akamaiedge.net. exp=9223372035439382554s auth=False>}
+
+sending to n1b.akamaiedge.net. @('23.3.15.48', 53):
+0000   0C F8 00 00 00 01 00 00 00 00 00 00 05 65 39 35    .............e95
+0010   36 36 01 62 0A 61 6B 61 6D 61 69 65 64 67 65 03    66.b.akamaiedge.
+0020   6E 65 74 00 00 01 00 01                            net.....
+
+
+Answer received from n1b.akamaiedge.net. server is:
+ {  'additional': [],
+   'answer': [(e9566.b.akamaiedge.net., 20, IN, A, 184.30.96.128)],
+   'authority': [],
+   'question': [<gz01.dnslib.QE.QE instance at 0x101fa2d88>]}
+**************************************************
+Sanswers is [  (www.mit.edu., 1800, IN, CNAME, www.mit.edu.edgekey.net.),
+   (www.mit.edu.edgekey.net., 60, IN, CNAME, e9566.b.akamaiedge.net.),
+   (e9566.b.akamaiedge.net., 20, IN, A, 184.30.96.128)]
+&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#
+
+
+Response:
+b–€      wwwmitedu   wwwmitedu      wwwmiteduedgekeynet wwwmiteduedgekeynet      < e9566b
+akamaiedgenet e9566b
+akamaiedgenet       ¸`€
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+================================================================================================================================================================================================================================================================================================================================================================================================================
+Best matching RR's for www.mit.edu. are for parent domain "mit.edu.":
+
+usw2.akam.net.
+
+asia2.akam.net.
+
+ns1-37.akam.net.
+
+eur5.akam.net.
+
+asia1.akam.net.
+
+use2.akam.net.
+
+use5.akam.net.
+
+ns1-173.akam.net.
+
+Acache is:
+{  a.edu-servers.net.: <ACE {<InetAddr 192.5.6.30>: <CE exp=-1415220457s auth=False>}, srtt=*>,
+   a.gtld-servers.net.: <ACE {<InetAddr 192.5.6.30>: <CE exp=-1415220457s auth=False>}, srtt=*>,
+   a5-65.akam.net.: <ACE {<InetAddr 95.100.168.65>: <CE exp=-1415220457s auth=False>}, srtt=*>,
+   a6-65.akam.net.: <ACE {<InetAddr 23.211.133.65>: <CE exp=-1415220457s auth=False>}, srtt=*>,
+   adns1.akam.net.: <ACE {<InetAddr 96.7.50.66>: <CE exp=-1415220457s auth=False>}, srtt=*>,
+   asia1.akam.net.: <ACE {<InetAddr 95.100.175.64>: <CE exp=-1415220457s auth=False>}, srtt=*>,
+   asia2.akam.net.: <ACE {<InetAddr 95.101.36.64>: <CE exp=-1415220457s auth=False>}, srtt=*>,
+   b.gtld-servers.net.: <ACE {<InetAddr 192.33.14.30>: <CE exp=-1415220457s auth=False>}, srtt=*>,
+   c.edu-servers.net.: <ACE {<InetAddr 192.26.92.30>: <CE exp=-1415220457s auth=False>}, srtt=*>,
+   c.gtld-servers.net.: <ACE {<InetAddr 192.26.92.30>: <CE exp=-1415220457s auth=False>}, srtt=*>,
+   d.edu-servers.net.: <ACE {<InetAddr 192.31.80.30>: <CE exp=-1415220457s auth=False>}, srtt=*>,
+   d.gtld-servers.net.: <ACE {<InetAddr 192.31.80.30>: <CE exp=-1415220457s auth=False>}, srtt=*>,
+   e.gtld-servers.net.: <ACE {<InetAddr 192.12.94.30>: <CE exp=-1415220457s auth=False>}, srtt=*>,
+   e9566.b.akamaiedge.net.: <ACE {<InetAddr 184.30.96.128>: <CE exp=-1415393237s auth=False>}, srtt=*>,
+   eur5.akam.net.: <ACE {<InetAddr 23.74.25.64>: <CE exp=-1415220457s auth=False>}, srtt=*>,
+   f.edu-servers.net.: <ACE {<InetAddr 192.35.51.30>: <CE exp=-1415220457s auth=False>}, srtt=*>,
+   f.gtld-servers.net.: <ACE {<InetAddr 192.35.51.30>: <CE exp=-1415220457s auth=False>}, srtt=*>,
+   f.root-servers.net.: <ACE {<InetAddr 192.5.5.241>: <CE exp=9223372035439382550s auth=True>}, srtt=*>,
+   g.edu-servers.net.: <ACE {<InetAddr 192.42.93.30>: <CE exp=-1415220457s auth=False>}, srtt=*>,
+   g.gtld-servers.net.: <ACE {<InetAddr 192.42.93.30>: <CE exp=-1415220457s auth=False>}, srtt=*>,
+   h.gtld-servers.net.: <ACE {<InetAddr 192.54.112.30>: <CE exp=-1415220457s auth=False>}, srtt=*>,
+   i.gtld-servers.net.: <ACE {<InetAddr 192.43.172.30>: <CE exp=-1415220457s auth=False>}, srtt=*>,
+   j.gtld-servers.net.: <ACE {<InetAddr 192.48.79.30>: <CE exp=-1415220457s auth=False>}, srtt=*>,
+   k.gtld-servers.net.: <ACE {<InetAddr 192.52.178.30>: <CE exp=-1415220457s auth=False>}, srtt=*>,
+   l.edu-servers.net.: <ACE {<InetAddr 192.41.162.30>: <CE exp=-1415220457s auth=False>}, srtt=*>,
+   l.gtld-servers.net.: <ACE {<InetAddr 192.41.162.30>: <CE exp=-1415220457s auth=False>}, srtt=*>,
+   la1.akamaiedge.net.: <ACE {<InetAddr 184.26.161.192>: <CE exp=-1415220457s auth=False>}, srtt=*>,
+   la3.akamaiedge.net.: <ACE {<InetAddr 95.101.36.192>: <CE exp=-1415220457s auth=False>}, srtt=*>,
+   la6.akamaiedge.net.: <ACE {<InetAddr 96.7.50.192>: <CE exp=-1415220457s auth=False>}, srtt=*>,
+   la7.akamaiedge.net.: <ACE {<InetAddr 23.211.132.192>: <CE exp=-1415220457s auth=False>}, srtt=*>,
+   lar2.akamaiedge.net.: <ACE {<InetAddr 2.16.40.192>: <CE exp=-1415220457s auth=False>}, srtt=*>,
+   lar6.akamaiedge.net.: <ACE {<InetAddr 95.100.174.192>: <CE exp=-1415220457s auth=False>}, srtt=*>,
+   n0b.akamaiedge.net.: <ACE {<InetAddr 195.59.43.137>: <CE exp=-1415389257s auth=False>}, srtt=*>,
+   n1b.akamaiedge.net.: <ACE {<InetAddr 23.3.15.48>: <CE exp=-1415385257s auth=False>}, srtt=*>,
+   n2b.akamaiedge.net.: <ACE {<InetAddr 195.245.125.245>: <CE exp=-1415389257s auth=False>}, srtt=*>,
+   n3b.akamaiedge.net.: <ACE {<InetAddr 88.221.81.193>: <CE exp=-1415387257s auth=False>}, srtt=*>,
+   n4b.akamaiedge.net.: <ACE {<InetAddr 195.59.43.138>: <CE exp=-1415385257s auth=False>}, srtt=*>,
+   n5b.akamaiedge.net.: <ACE {<InetAddr 195.59.43.132>: <CE exp=-1415387257s auth=False>}, srtt=*>,
+   ns1-1.akamaiedge.net.: <ACE {<InetAddr 193.108.88.1>: <CE exp=-1415220457s auth=False>}, srtt=*>,
+   ns1-173.akam.net.: <ACE {<InetAddr 193.108.91.173>: <CE exp=-1415220457s auth=False>}, srtt=*>,
+   ns1-37.akam.net.: <ACE {<InetAddr 193.108.91.37>: <CE exp=-1415220457s auth=False>}, srtt=*>,
+   ns1-66.akam.net.: <ACE {<InetAddr 193.108.91.66>: <CE exp=-1415220457s auth=False>}, srtt=*>,
+   ns2-194.akamaiedge.net.: <ACE {<InetAddr 2.22.230.194>: <CE exp=-1415220457s auth=False>}, srtt=*>,
+   ns3-194.akamaiedge.net.: <ACE {<InetAddr 23.61.199.194>: <CE exp=-1415220457s auth=False>}, srtt=*>,
+   ns4-194.akamaiedge.net.: <ACE {<InetAddr 84.53.139.194>: <CE exp=-1415220457s auth=False>}, srtt=*>,
+   ns4-66.akam.net.: <ACE {<InetAddr 84.53.139.66>: <CE exp=-1415220457s auth=False>}, srtt=*>,
+   ns5-194.akamaiedge.net.: <ACE {<InetAddr 184.85.248.194>: <CE exp=-1415220457s auth=False>}, srtt=*>,
+   ns5-66.akam.net.: <ACE {<InetAddr 184.85.248.66>: <CE exp=-1415220457s auth=False>}, srtt=*>,
+   ns6-194.akamaiedge.net.: <ACE {<InetAddr 95.100.168.194>: <CE exp=-1415220457s auth=False>}, srtt=*>,
+   ns7-194.akamaiedge.net.: <ACE {<InetAddr 96.7.49.194>: <CE exp=-1415220457s auth=False>}, srtt=*>,
+   ns7-65.akam.net.: <ACE {<InetAddr 96.7.49.65>: <CE exp=-1415220457s auth=False>}, srtt=*>,
+   use2.akam.net.: <ACE {<InetAddr 96.7.49.64>: <CE exp=-1415220457s auth=False>}, srtt=*>,
+   use5.akam.net.: <ACE {<InetAddr 2.16.40.64>: <CE exp=-1415220457s auth=False>}, srtt=*>,
+   usw2.akam.net.: <ACE {<InetAddr 184.26.161.64>: <CE exp=-1415220457s auth=False>}, srtt=*>,
+   usw6.akam.net.: <ACE {<InetAddr 23.61.199.64>: <CE exp=-1415220457s auth=False>}, srtt=*>}
+
+&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#
+
+
+Response:
+°š€       wwwmitedu   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+================================================================================================================================================================================================================================================================================================================================================================================================================
