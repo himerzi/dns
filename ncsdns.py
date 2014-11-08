@@ -9,6 +9,7 @@ from socket import *
 from sys import exit, maxint as MAXINT
 from time import time, sleep
 from string import join
+import signal, os
 
 from gz01.collections_backport import OrderedDict
 from gz01.dnslib.RR import *
@@ -27,6 +28,9 @@ ROOTNS_IN_ADDR = "192.5.5.241"
 #Logging config - not used
 #LOG_FORMAT = '%(lineno)d: %(message)s'
 #logger.basicConfig(format=LOG_FORMAT)
+
+  
+
 
 class ACacheEntry:
   ALPHA = 0.8
@@ -191,12 +195,12 @@ def get_best_ns(ns_cache, qname):
   else:
     #loop fell through without finding any match
     raise Exception("Bad state, root name wasn't matched, but it should have been!")    
-def construct_response(id, question, answers, authority, additional):
+def construct_response(id, question, answers, authority, additional, RCODE=Header.RCODE_NOERR):
     ancount = len(answers)
     nscount = len(authority)
     arcount = len(additional)
     #print "ans {} auths {} \n adds {}".format(answers, authority, additional)
-    header = Header(id, Header.OPCODE_QUERY, Header.RCODE_NOERR, qdcount=1, ancount=ancount,
+    header = Header(id, Header.OPCODE_QUERY, RCODE, qdcount=1, ancount=ancount,
                     nscount=nscount, arcount=arcount, qr=True, aa=False, tc=False, rd=True, ra=True)
     packed_secs = ""
     for sec in [answers, authority, additional]:
@@ -234,14 +238,11 @@ def set_authoritative(subdom, ns_dn):
     for super_domain in subdom:
         if super_domain in nscache:
             #print "super {}".format (pp.pformat(nscache[super_domain]))
-            print "setting {} as auth for parent domain {} of {}".format(ns_dn, super_domain, subdom)
+            #print "setting {} as auth for parent domain {} of {}".format(ns_dn, super_domain, subdom)
             nscache[super_domain][ns_dn]._authoritative = True
             now = int(time())
             ttl = nscache[super_domain][ns_dn]._expiration - now
             #dn, ttl, nsdn
-            print "ttl {} {}, SD {} {}, nsdn {} {}".format(type(ttl), ttl,
-                                                           type(super_domain), super_domain,
-                                                           type(ns_dn), ns_dn)
             rr_ns = RR_NS(DomainName(super_domain), ttl, ns_dn)
             rr_ns.pack()
             return rr_ns
@@ -352,83 +353,83 @@ def update_caches():
         del acache[key]
 def get_ip_from_acache(key):
     return str(acache[key]._dict.keys()[0])
-#def construct_cname_rr():
-def resolve(qid, original_question, qname, sname, slist, sanswers=[], sauthorities=[], sadditional=[]):
+
+def pick_from_slist(slist):
+    for server in slist:
+        logger.log(DEBUG2, "Picking from slist, checking if we have an A record (probably supplied as glue) in cache for: {}\n".format(server))
+        if server in acache:
+            logger.log(DEBUG2, "    We have: {}@{}\n".format(server, acache[server]._dict.keys()[0]))
+            ipv4 = str(acache[server]._dict.keys()[0]) #this is what a ridiculously obfuscated data type looks like!
+            return (server, ipv4)
+    else:
+        return False
+def resolve(iteration_count, qid, original_question, qname, sname, slist, sanswers, sauthorities, sadditional):
     """
     qname is original domain name were looking for
     sname is current name were resolving
     """
     #logger.log(DEBUG2, "Acache is:\n{}\n".format(pp.pformat(acache)))
-    logger.log(DEBUG2, "NSCache is:\n{}\n".format(pp.pformat(nscache)))
-          #check if its an alias we know of
+    #logger.log(DEBUG2, "NSCache is:\n{}\n".format(pp.pformat(nscache)))
+    #check if its an alias we know of
+    iteration_count += 1
+    #requirement #2
+    if iteration_count > 200:
+        raise OutOfTimeException("Called resolve too many times, might be stuck in a loop")
     if sname in cnamecache:
-         #print resolve_cname_in_cache(sname)
-         cname_record = RR_CNAME(sname, 1, cnamecache[sname]._cname)
-         sanswers.append(cname_record)
+         now = int(time())
          new_sname = cnamecache[sname]._cname
-         return resolve(qid, original_question, qname, new_sname, get_best_ns(nscache, new_sname), sanswers)
+         cname_record = RR_CNAME(sname, cnamecache[sname]._expiration - now, new_sname)
+         sanswers.append(cname_record)
+         return resolve(iteration_count, qid, original_question, qname, new_sname, get_best_ns(nscache, new_sname), sanswers, sauthorities, sadditional)
     if sname in acache:
         ip = acache[sname]._dict.keys()[0].toNetwork()
         answer_a_record = RR_A (sname, 1, ip)
         sanswers.append(answer_a_record)
-        #our_response = construct_response(qid, original_question, sanswers)
-        
         our_response = (qid, original_question, sanswers, sauthorities, sadditional)
         logger.log(DEBUG1, "wang"*50+"\n"*3+"Response:\n{}".format(our_response))
         return our_response
-
-    for server in slist:
-        #print "slist {}".format(slist)
-       
-        logger.log(DEBUG2, "Picking from slist, checking if we have an A record (probably supplied as glue) in cache for: {}\n".format(server))
-        if server in acache:
-            firstup = server
-            logger.log(DEBUG2, "    We have: {}@{}\n".format(server, acache[server]._dict.keys()[0]))
-            ipv4 = str(acache[server]._dict.keys()[0]) ##this is what a ridiculously obfuscated data type looks like!
-            break
-    else:
+    
+    ns_to_query = pick_from_slist(slist)
+    if not ns_to_query:
         #exhausted list, and couldnt find anything about these servers in our cache which shouldnt be the case
         #beacuse only servers in our cache get added to slist... and everything should fall back to the root server
         logger.log(DEBUG1, "exhausted list, and couldnt find anything about these servers in our cache")
         new_qname = next(slist.iterkeys())
-        #print "server {}".format(slist)
-        #print "not here"
         #we now have to resolve one of these servers as if it were a normal domain query,
         #save the answer, and use it to continue our original query, we should iterate through each server
         # check the return value for a succesful resolution, and carry on.
         #shouldnt need qid nor original question (still refers to old question)
-        (_, original_question, _sanswers) = resolve(qid , original_question, new_qname, new_qname, get_best_ns(nscache, new_qname), [])
-        #print "we found {} answers {}".format(new_qname, _sanswers)
-        load_records_into_cache(_sanswers)
+        #essentially calling resolve in this case will cause side-effects that update the cache with
+        #the entries we need
+        resolve(iteration_count, qid , original_question, new_qname, new_qname, get_best_ns(nscache, new_qname), [], [], [])
         #continue search as before
-        return resolve(qid, original_question, qname, sname, get_best_ns(nscache, sname), sanswers)
-               #if qname actually is an alias for sname, and we already have an 
-            # A record for sname in cache, then we're all done!
-            #first check if qname is an alias, then see what it resolves to
+        return resolve(iteration_count, qid, original_question, qname, sname, get_best_ns(nscache, sname), sanswers, sauthorities, sadditional)
     
+    (firstup, ipv4) = ns_to_query
     #logger.log(DEBUG2, "CCache is:\n{}\n".format(pp.pformat(cnamecache)))
     address                   = (ipv4,53)
     payload, question                   = construct_A_query(sname)
     
     logger.log(DEBUG1, "sending question for A record for  {}  to {} @{}:\n{}\n".format(question._dn, firstup, address, hexdump(payload)))
+    #requirement #8
+    #cs.sendto(payload, address)
     cs.sendto(payload, address)
-    (cs_data, cs_address,)    = cs.recvfrom(512)
+    try:
+         (cs_data, cs_address,)    = cs.recvfrom(512)
+    except timeout:
+        #try a different server
+        logger.info("Timed out, trying someone else")
+        return resolve(iteration_count, qid, original_question, qname, sname, get_best_ns(nscache, sname), sanswers, sauthorities, sadditional)
+
     
-    
-    #print_dns_payload(cs_data)
-    
-    #would need to check if this response is actually getting us closer....
-    
+            
     response = parse_response_payload(cs_data)
     #if is authority
     if response["header"]._aa is 1:
-        #authorities ns
-        #additional a
-        
         ns_ns_rr = set_authoritative(sname, firstup)
         ns_a_rr = construct_a_rr_from_cache(firstup)
         if ns_ns_rr not in sauthorities:
-            print "adding {} to {}".format(ns_ns_rr, sauthorities)
+            print "adding to cache {}".format(ns_ns_rr)
             sauthorities.append(ns_ns_rr)
         if ns_a_rr not in sadditional:
             sadditional.append(ns_a_rr)
@@ -444,17 +445,42 @@ def resolve(qid, original_question, qname, sname, slist, sanswers=[], sauthoriti
         logger.log(DEBUG2, "Sanswers is {}".format(pp.pformat(sanswers)))
         if answer_sec[0]._type is RR.TYPE_CNAME:
             sname  =  answer_sec[0]._cname
-            return resolve(qid, original_question, qname, sname,  get_best_ns(nscache, sname), sanswers=sanswers)
+            return resolve(iteration_count, qid, original_question, qname, sname,  get_best_ns(nscache, sname), sanswers, sauthorities, sadditional)
         our_response = (qid, original_question, sanswers, sauthorities, sadditional)
         logger.log(DEBUG1, "&#"*50+"\n"*3+"Response:\n{}".format(our_response))
-        return our_response
-       
-    #could go into infinite loop if our response getting loaded into cache doesnt get us any closer to qname
-    return resolve(qid, original_question, qname, sname, get_best_ns(nscache, sname), sanswers=sanswers)
-   # logger.log(DEBUG2, "new slist:\n{}".format(slist))
+        return our_response       
+    return resolve(iteration_count, qid, original_question, qname, sname, get_best_ns(nscache, sname), sanswers, sauthorities, sadditional)
+ 
+class OutOfTimeException(Exception):
+  def __init__(self, value):
+    self.value = value
+      
+  def __str__(self):
+    return repr(self.value)
+  
 def exc(qid, qname, question):
-     update_caches()
-     return construct_response(*resolve(qid, question, qname, qname, get_best_ns(nscache, qname), sanswers=[], sauthorities=[], sadditional=[]))
+    
+    
+
+    def handler(signum, frame):
+        print 'Signal handler called with signal', signum
+        raise OutOfTimeException("Query couldn't be processed in under 1 minute!")
+    try:
+        # Set the signal handler and a 60 second alarm
+        # as per requirement 8
+        signal.signal(signal.SIGALRM, handler)
+        signal.alarm(60)
+        update_caches() 
+        # This open() may hang indefinitely
+        print "new res"
+        response  = construct_response(*resolve(0, qid, question, qname, qname, get_best_ns(nscache, qname), [], [], []))
+        signal.alarm(0)   
+    except (OutOfTimeException) as e:
+        # Server Failure
+        logger.error(e)
+        signal.alarm(0)
+        response = construct_response(qid, question, [], [], [], RCODE=Header.RCODE_SRVFAIL)
+    return response 
 # This is a simple, single-threaded server that takes successive
 # connections with each iteration of the following loop:
 while 1:
@@ -462,7 +488,6 @@ while 1:
   logger.log(DEBUG1, "="*400)
   
   (data, address,)         = ss.recvfrom(512) # DNS limits UDP msgs to 512 bytes
-  print "data"
   if not data:
     log.error("client provided no data")
     continue

@@ -1,5 +1,5 @@
 NSCache INIT = 
-{.: {f.root-servers.net.: <CE exp=9223372035439299916s auth=True>}}
+{.: {f.root-servers.net.: <CE exp=9223372035439286208s auth=True>}}
 
 
 
@@ -48,24 +48,21 @@ Best matching RR's for www.microsoft.com. are for parent domain "."
 f.root-servers.net.
 
 This will probably get added to SLIST
-NSCache is:
-{  .: {  f.root-servers.net.: <CE exp=9223372035439299913s auth=True>}}
-
 Picking from slist, checking if we have an A record (probably supplied as glue) in cache for: f.root-servers.net.
 
     We have: f.root-servers.net.@192.5.5.241
 
 sending question for A record for  www.microsoft.com.  to f.root-servers.net. @('192.5.5.241', 53):
-0000   76 CF 00 00 00 01 00 00 00 00 00 00 03 77 77 77    v............www
+0000   61 E8 00 00 00 01 00 00 00 00 00 00 03 77 77 77    a............www
 0010   09 6D 69 63 72 6F 73 6F 66 74 03 63 6F 6D 00 00    .microsoft.com..
 0020   01 00 01                                           ...
 
 
 Answer received from f.root-servers.net. server is:
  {  'additional': [  (a.gtld-servers.net., 172800, IN, A, 192.5.6.30),
-                    <gz01.dnslib.RR.RR_AAAA instance at 0x1011cc368>,
+                    <gz01.dnslib.RR.RR_AAAA instance at 0x10d2c0560>,
                     (b.gtld-servers.net., 172800, IN, A, 192.33.14.30),
-                    <gz01.dnslib.RR.RR_AAAA instance at 0x1011cc518>,
+                    <gz01.dnslib.RR.RR_AAAA instance at 0x10d2c0710>,
                     (c.gtld-servers.net., 172800, IN, A, 192.26.92.30),
                     (d.gtld-servers.net., 172800, IN, A, 192.31.80.30),
                     (e.gtld-servers.net., 172800, IN, A, 192.12.94.30),
@@ -77,21 +74,21 @@ Answer received from f.root-servers.net. server is:
                     (k.gtld-servers.net., 172800, IN, A, 192.52.178.30),
                     (l.gtld-servers.net., 172800, IN, A, 192.41.162.30)],
    'answer': [],
-   'authority': [  (com., 172800, IN, NS, b.gtld-servers.net.),
-                   (com., 172800, IN, NS, e.gtld-servers.net.),
-                   (com., 172800, IN, NS, a.gtld-servers.net.),
-                   (com., 172800, IN, NS, g.gtld-servers.net.),
-                   (com., 172800, IN, NS, j.gtld-servers.net.),
+   'authority': [  (com., 172800, IN, NS, d.gtld-servers.net.),
+                   (com., 172800, IN, NS, f.gtld-servers.net.),
+                   (com., 172800, IN, NS, i.gtld-servers.net.),
                    (com., 172800, IN, NS, m.gtld-servers.net.),
                    (com., 172800, IN, NS, l.gtld-servers.net.),
-                   (com., 172800, IN, NS, h.gtld-servers.net.),
-                   (com., 172800, IN, NS, k.gtld-servers.net.),
+                   (com., 172800, IN, NS, b.gtld-servers.net.),
                    (com., 172800, IN, NS, c.gtld-servers.net.),
-                   (com., 172800, IN, NS, i.gtld-servers.net.),
-                   (com., 172800, IN, NS, d.gtld-servers.net.),
-                   (com., 172800, IN, NS, f.gtld-servers.net.)],
-   'header': <gz01.dnslib.Header.Header instance at 0x1011bcc68>,
-   'question': [<gz01.dnslib.QE.QE instance at 0x1011bcdd0>]}
+                   (com., 172800, IN, NS, g.gtld-servers.net.),
+                   (com., 172800, IN, NS, h.gtld-servers.net.),
+                   (com., 172800, IN, NS, e.gtld-servers.net.),
+                   (com., 172800, IN, NS, j.gtld-servers.net.),
+                   (com., 172800, IN, NS, a.gtld-servers.net.),
+                   (com., 172800, IN, NS, k.gtld-servers.net.)],
+   'header': <gz01.dnslib.Header.Header instance at 0x10d2acd88>,
+   'question': [<gz01.dnslib.QE.QE instance at 0x10d2acef0>]}
 **************************************************
 Best matching RR's for www.microsoft.com. are for parent domain "com."
  the nameserves in cache for that zone are as follows:
@@ -123,48 +120,32 @@ i.gtld-servers.net.
 f.gtld-servers.net.
 
 This will probably get added to SLIST
-NSCache is:
-{  .: {  f.root-servers.net.: <CE exp=9223372035439299913s auth=True>},
-   com.: {  a.gtld-servers.net.: <CE exp=172800s auth=False>,
-            b.gtld-servers.net.: <CE exp=172800s auth=False>,
-            c.gtld-servers.net.: <CE exp=172800s auth=False>,
-            d.gtld-servers.net.: <CE exp=172800s auth=False>,
-            e.gtld-servers.net.: <CE exp=172800s auth=False>,
-            f.gtld-servers.net.: <CE exp=172800s auth=False>,
-            g.gtld-servers.net.: <CE exp=172800s auth=False>,
-            h.gtld-servers.net.: <CE exp=172800s auth=False>,
-            i.gtld-servers.net.: <CE exp=172800s auth=False>,
-            j.gtld-servers.net.: <CE exp=172800s auth=False>,
-            k.gtld-servers.net.: <CE exp=172800s auth=False>,
-            l.gtld-servers.net.: <CE exp=172800s auth=False>,
-            m.gtld-servers.net.: <CE exp=172800s auth=False>}}
+Picking from slist, checking if we have an A record (probably supplied as glue) in cache for: d.gtld-servers.net.
 
-Picking from slist, checking if we have an A record (probably supplied as glue) in cache for: b.gtld-servers.net.
+    We have: d.gtld-servers.net.@192.31.80.30
 
-    We have: b.gtld-servers.net.@192.33.14.30
-
-sending question for A record for  www.microsoft.com.  to b.gtld-servers.net. @('192.33.14.30', 53):
-0000   0C 6E 00 00 00 01 00 00 00 00 00 00 03 77 77 77    .n...........www
+sending question for A record for  www.microsoft.com.  to d.gtld-servers.net. @('192.31.80.30', 53):
+0000   6D 99 00 00 00 01 00 00 00 00 00 00 03 77 77 77    m............www
 0010   09 6D 69 63 72 6F 73 6F 66 74 03 63 6F 6D 00 00    .microsoft.com..
 0020   01 00 01                                           ...
 
 
-Answer received from b.gtld-servers.net. server is:
+Answer received from d.gtld-servers.net. server is:
  {  'additional': [  (ns3.msft.net., 172800, IN, A, 213.199.180.53),
-                    <gz01.dnslib.RR.RR_AAAA instance at 0x1011d87a0>,
-                    <gz01.dnslib.RR.RR_AAAA instance at 0x1011d8878>,
+                    <gz01.dnslib.RR.RR_AAAA instance at 0x10d2ce908>,
+                    <gz01.dnslib.RR.RR_AAAA instance at 0x10d2ce9e0>,
                     (ns1.msft.net., 172800, IN, A, 65.55.37.62),
                     (ns2.msft.net., 172800, IN, A, 208.84.2.53),
-                    <gz01.dnslib.RR.RR_AAAA instance at 0x1011d8b00>,
+                    <gz01.dnslib.RR.RR_AAAA instance at 0x10d2cec68>,
                     (ns4.msft.net., 172800, IN, A, 208.76.45.53),
-                    <gz01.dnslib.RR.RR_AAAA instance at 0x1011d8cb0>],
+                    <gz01.dnslib.RR.RR_AAAA instance at 0x10d2cee18>],
    'answer': [],
    'authority': [  (microsoft.com., 172800, IN, NS, ns3.msft.net.),
                    (microsoft.com., 172800, IN, NS, ns1.msft.net.),
                    (microsoft.com., 172800, IN, NS, ns2.msft.net.),
                    (microsoft.com., 172800, IN, NS, ns4.msft.net.)],
-   'header': <gz01.dnslib.Header.Header instance at 0x1011d1ef0>,
-   'question': [<gz01.dnslib.QE.QE instance at 0x1011d1fc8>]}
+   'header': <gz01.dnslib.Header.Header instance at 0x10d2c6ea8>,
+   'question': [<gz01.dnslib.QE.QE instance at 0x10d2ce098>]}
 **************************************************
 Best matching RR's for www.microsoft.com. are for parent domain "microsoft.com."
  the nameserves in cache for that zone are as follows:
@@ -178,32 +159,12 @@ ns3.msft.net.
 ns2.msft.net.
 
 This will probably get added to SLIST
-NSCache is:
-{  .: {  f.root-servers.net.: <CE exp=9223372035439299913s auth=True>},
-   com.: {  a.gtld-servers.net.: <CE exp=172800s auth=False>,
-            b.gtld-servers.net.: <CE exp=172800s auth=False>,
-            c.gtld-servers.net.: <CE exp=172800s auth=False>,
-            d.gtld-servers.net.: <CE exp=172800s auth=False>,
-            e.gtld-servers.net.: <CE exp=172800s auth=False>,
-            f.gtld-servers.net.: <CE exp=172800s auth=False>,
-            g.gtld-servers.net.: <CE exp=172800s auth=False>,
-            h.gtld-servers.net.: <CE exp=172800s auth=False>,
-            i.gtld-servers.net.: <CE exp=172800s auth=False>,
-            j.gtld-servers.net.: <CE exp=172800s auth=False>,
-            k.gtld-servers.net.: <CE exp=172800s auth=False>,
-            l.gtld-servers.net.: <CE exp=172800s auth=False>,
-            m.gtld-servers.net.: <CE exp=172800s auth=False>},
-   microsoft.com.: {  ns1.msft.net.: <CE exp=172800s auth=False>,
-                      ns2.msft.net.: <CE exp=172800s auth=False>,
-                      ns3.msft.net.: <CE exp=172800s auth=False>,
-                      ns4.msft.net.: <CE exp=172800s auth=False>}}
-
 Picking from slist, checking if we have an A record (probably supplied as glue) in cache for: ns3.msft.net.
 
     We have: ns3.msft.net.@213.199.180.53
 
 sending question for A record for  www.microsoft.com.  to ns3.msft.net. @('213.199.180.53', 53):
-0000   5E 99 00 00 00 01 00 00 00 00 00 00 03 77 77 77    ^............www
+0000   D4 C1 00 00 00 01 00 00 00 00 00 00 03 77 77 77    .............www
 0010   09 6D 69 63 72 6F 73 6F 66 74 03 63 6F 6D 00 00    .microsoft.com..
 0020   01 00 01                                           ...
 
@@ -212,8 +173,8 @@ Answer received from ns3.msft.net. server is:
  {  'additional': [],
    'answer': [  (www.microsoft.com., 3600, IN, CNAME, toggle.www.ms.akadns.net.)],
    'authority': [],
-   'header': <gz01.dnslib.Header.Header instance at 0x1011db440>,
-   'question': [<gz01.dnslib.QE.QE instance at 0x1011db518>]}
+   'header': <gz01.dnslib.Header.Header instance at 0x10d2d13f8>,
+   'question': [<gz01.dnslib.QE.QE instance at 0x10d2d15a8>]}
 **************************************************
 Sanswers is [(www.microsoft.com., 3600, IN, CNAME, toggle.www.ms.akadns.net.)]
 Best matching RR's for toggle.www.ms.akadns.net. are for parent domain "."
@@ -222,41 +183,21 @@ Best matching RR's for toggle.www.ms.akadns.net. are for parent domain "."
 f.root-servers.net.
 
 This will probably get added to SLIST
-NSCache is:
-{  .: {  f.root-servers.net.: <CE exp=9223372035439299913s auth=True>},
-   com.: {  a.gtld-servers.net.: <CE exp=172800s auth=False>,
-            b.gtld-servers.net.: <CE exp=172800s auth=False>,
-            c.gtld-servers.net.: <CE exp=172800s auth=False>,
-            d.gtld-servers.net.: <CE exp=172800s auth=False>,
-            e.gtld-servers.net.: <CE exp=172800s auth=False>,
-            f.gtld-servers.net.: <CE exp=172800s auth=False>,
-            g.gtld-servers.net.: <CE exp=172800s auth=False>,
-            h.gtld-servers.net.: <CE exp=172800s auth=False>,
-            i.gtld-servers.net.: <CE exp=172800s auth=False>,
-            j.gtld-servers.net.: <CE exp=172800s auth=False>,
-            k.gtld-servers.net.: <CE exp=172800s auth=False>,
-            l.gtld-servers.net.: <CE exp=172800s auth=False>,
-            m.gtld-servers.net.: <CE exp=172800s auth=False>},
-   microsoft.com.: {  ns1.msft.net.: <CE exp=172800s auth=False>,
-                      ns2.msft.net.: <CE exp=172800s auth=False>,
-                      ns3.msft.net.: <CE exp=172800s auth=True>,
-                      ns4.msft.net.: <CE exp=172800s auth=False>}}
-
 Picking from slist, checking if we have an A record (probably supplied as glue) in cache for: f.root-servers.net.
 
     We have: f.root-servers.net.@192.5.5.241
 
 sending question for A record for  toggle.www.ms.akadns.net.  to f.root-servers.net. @('192.5.5.241', 53):
-0000   40 BA 00 00 00 01 00 00 00 00 00 00 06 74 6F 67    @............tog
+0000   14 31 00 00 00 01 00 00 00 00 00 00 06 74 6F 67    .1...........tog
 0010   67 6C 65 03 77 77 77 02 6D 73 06 61 6B 61 64 6E    gle.www.ms.akadn
 0020   73 03 6E 65 74 00 00 01 00 01                      s.net.....
 
 
 Answer received from f.root-servers.net. server is:
  {  'additional': [  (a.gtld-servers.net., 172800, IN, A, 192.5.6.30),
-                    <gz01.dnslib.RR.RR_AAAA instance at 0x1011e4050>,
+                    <gz01.dnslib.RR.RR_AAAA instance at 0x10d2db200>,
                     (b.gtld-servers.net., 172800, IN, A, 192.33.14.30),
-                    <gz01.dnslib.RR.RR_AAAA instance at 0x1011e4200>,
+                    <gz01.dnslib.RR.RR_AAAA instance at 0x10d2db3b0>,
                     (c.gtld-servers.net., 172800, IN, A, 192.26.92.30),
                     (d.gtld-servers.net., 172800, IN, A, 192.31.80.30),
                     (e.gtld-servers.net., 172800, IN, A, 192.12.94.30),
@@ -268,21 +209,21 @@ Answer received from f.root-servers.net. server is:
                     (k.gtld-servers.net., 172800, IN, A, 192.52.178.30),
                     (l.gtld-servers.net., 172800, IN, A, 192.41.162.30)],
    'answer': [],
-   'authority': [  (net., 172800, IN, NS, a.gtld-servers.net.),
-                   (net., 172800, IN, NS, d.gtld-servers.net.),
+   'authority': [  (net., 172800, IN, NS, g.gtld-servers.net.),
                    (net., 172800, IN, NS, e.gtld-servers.net.),
-                   (net., 172800, IN, NS, i.gtld-servers.net.),
                    (net., 172800, IN, NS, h.gtld-servers.net.),
-                   (net., 172800, IN, NS, k.gtld-servers.net.),
-                   (net., 172800, IN, NS, c.gtld-servers.net.),
-                   (net., 172800, IN, NS, j.gtld-servers.net.),
-                   (net., 172800, IN, NS, l.gtld-servers.net.),
-                   (net., 172800, IN, NS, g.gtld-servers.net.),
-                   (net., 172800, IN, NS, f.gtld-servers.net.),
+                   (net., 172800, IN, NS, a.gtld-servers.net.),
                    (net., 172800, IN, NS, b.gtld-servers.net.),
+                   (net., 172800, IN, NS, l.gtld-servers.net.),
+                   (net., 172800, IN, NS, k.gtld-servers.net.),
+                   (net., 172800, IN, NS, f.gtld-servers.net.),
+                   (net., 172800, IN, NS, i.gtld-servers.net.),
+                   (net., 172800, IN, NS, j.gtld-servers.net.),
+                   (net., 172800, IN, NS, d.gtld-servers.net.),
+                   (net., 172800, IN, NS, c.gtld-servers.net.),
                    (net., 172800, IN, NS, m.gtld-servers.net.)],
-   'header': <gz01.dnslib.Header.Header instance at 0x1011dba70>,
-   'question': [<gz01.dnslib.QE.QE instance at 0x1011dbb00>]}
+   'header': <gz01.dnslib.Header.Header instance at 0x10d2d1a70>,
+   'question': [<gz01.dnslib.QE.QE instance at 0x10d2d1bd8>]}
 **************************************************
 Best matching RR's for toggle.www.ms.akadns.net. are for parent domain "net."
  the nameserves in cache for that zone are as follows:
@@ -314,50 +255,17 @@ i.gtld-servers.net.
 f.gtld-servers.net.
 
 This will probably get added to SLIST
-NSCache is:
-{  .: {  f.root-servers.net.: <CE exp=9223372035439299913s auth=True>},
-   com.: {  a.gtld-servers.net.: <CE exp=172800s auth=False>,
-            b.gtld-servers.net.: <CE exp=172800s auth=False>,
-            c.gtld-servers.net.: <CE exp=172800s auth=False>,
-            d.gtld-servers.net.: <CE exp=172800s auth=False>,
-            e.gtld-servers.net.: <CE exp=172800s auth=False>,
-            f.gtld-servers.net.: <CE exp=172800s auth=False>,
-            g.gtld-servers.net.: <CE exp=172800s auth=False>,
-            h.gtld-servers.net.: <CE exp=172800s auth=False>,
-            i.gtld-servers.net.: <CE exp=172800s auth=False>,
-            j.gtld-servers.net.: <CE exp=172800s auth=False>,
-            k.gtld-servers.net.: <CE exp=172800s auth=False>,
-            l.gtld-servers.net.: <CE exp=172800s auth=False>,
-            m.gtld-servers.net.: <CE exp=172800s auth=False>},
-   microsoft.com.: {  ns1.msft.net.: <CE exp=172800s auth=False>,
-                      ns2.msft.net.: <CE exp=172800s auth=False>,
-                      ns3.msft.net.: <CE exp=172800s auth=True>,
-                      ns4.msft.net.: <CE exp=172800s auth=False>},
-   net.: {  a.gtld-servers.net.: <CE exp=172800s auth=False>,
-            b.gtld-servers.net.: <CE exp=172800s auth=False>,
-            c.gtld-servers.net.: <CE exp=172800s auth=False>,
-            d.gtld-servers.net.: <CE exp=172800s auth=False>,
-            e.gtld-servers.net.: <CE exp=172800s auth=False>,
-            f.gtld-servers.net.: <CE exp=172800s auth=False>,
-            g.gtld-servers.net.: <CE exp=172800s auth=False>,
-            h.gtld-servers.net.: <CE exp=172800s auth=False>,
-            i.gtld-servers.net.: <CE exp=172800s auth=False>,
-            j.gtld-servers.net.: <CE exp=172800s auth=False>,
-            k.gtld-servers.net.: <CE exp=172800s auth=False>,
-            l.gtld-servers.net.: <CE exp=172800s auth=False>,
-            m.gtld-servers.net.: <CE exp=172800s auth=False>}}
+Picking from slist, checking if we have an A record (probably supplied as glue) in cache for: g.gtld-servers.net.
 
-Picking from slist, checking if we have an A record (probably supplied as glue) in cache for: a.gtld-servers.net.
+    We have: g.gtld-servers.net.@192.42.93.30
 
-    We have: a.gtld-servers.net.@192.5.6.30
-
-sending question for A record for  toggle.www.ms.akadns.net.  to a.gtld-servers.net. @('192.5.6.30', 53):
-0000   AF 87 00 00 00 01 00 00 00 00 00 00 06 74 6F 67    .............tog
+sending question for A record for  toggle.www.ms.akadns.net.  to g.gtld-servers.net. @('192.42.93.30', 53):
+0000   03 4A 00 00 00 01 00 00 00 00 00 00 06 74 6F 67    .J...........tog
 0010   67 6C 65 03 77 77 77 02 6D 73 06 61 6B 61 64 6E    gle.www.ms.akadn
 0020   73 03 6E 65 74 00 00 01 00 01                      s.net.....
 
 
-Answer received from a.gtld-servers.net. server is:
+Answer received from g.gtld-servers.net. server is:
  {  'additional': [  (a3-129.akadns.net., 172800, IN, A, 96.7.49.129),
                     (a7-131.akadns.net., 172800, IN, A, 23.61.199.131),
                     (a11-129.akadns.net., 172800, IN, A, 23.74.25.129),
@@ -374,8 +282,8 @@ Answer received from a.gtld-servers.net. server is:
                    (akadns.net., 172800, IN, NS, a4-131.akadns.org.),
                    (akadns.net., 172800, IN, NS, a10-128.akadns.org.),
                    (akadns.net., 172800, IN, NS, a28-129.akadns.org.)],
-   'header': <gz01.dnslib.Header.Header instance at 0x1011e9098>,
-   'question': [<gz01.dnslib.QE.QE instance at 0x1011e9128>]}
+   'header': <gz01.dnslib.Header.Header instance at 0x10d2c6cf8>,
+   'question': [<gz01.dnslib.QE.QE instance at 0x10d2df200>]}
 **************************************************
 Best matching RR's for toggle.www.ms.akadns.net. are for parent domain "akadns.net."
  the nameserves in cache for that zone are as follows:
@@ -401,55 +309,12 @@ a7-131.akadns.net.
 a28-129.akadns.org.
 
 This will probably get added to SLIST
-NSCache is:
-{  .: {  f.root-servers.net.: <CE exp=9223372035439299913s auth=True>},
-   akadns.net.: {  a1-128.akadns.net.: <CE exp=172800s auth=False>,
-                   a10-128.akadns.org.: <CE exp=172800s auth=False>,
-                   a11-129.akadns.net.: <CE exp=172800s auth=False>,
-                   a13-130.akadns.org.: <CE exp=172800s auth=False>,
-                   a28-129.akadns.org.: <CE exp=172800s auth=False>,
-                   a3-129.akadns.net.: <CE exp=172800s auth=False>,
-                   a4-131.akadns.org.: <CE exp=172800s auth=False>,
-                   a5-130.akadns.org.: <CE exp=172800s auth=False>,
-                   a7-131.akadns.net.: <CE exp=172800s auth=False>,
-                   a9-128.akadns.net.: <CE exp=172800s auth=False>},
-   com.: {  a.gtld-servers.net.: <CE exp=172800s auth=False>,
-            b.gtld-servers.net.: <CE exp=172800s auth=False>,
-            c.gtld-servers.net.: <CE exp=172800s auth=False>,
-            d.gtld-servers.net.: <CE exp=172800s auth=False>,
-            e.gtld-servers.net.: <CE exp=172800s auth=False>,
-            f.gtld-servers.net.: <CE exp=172800s auth=False>,
-            g.gtld-servers.net.: <CE exp=172800s auth=False>,
-            h.gtld-servers.net.: <CE exp=172800s auth=False>,
-            i.gtld-servers.net.: <CE exp=172800s auth=False>,
-            j.gtld-servers.net.: <CE exp=172800s auth=False>,
-            k.gtld-servers.net.: <CE exp=172800s auth=False>,
-            l.gtld-servers.net.: <CE exp=172800s auth=False>,
-            m.gtld-servers.net.: <CE exp=172800s auth=False>},
-   microsoft.com.: {  ns1.msft.net.: <CE exp=172800s auth=False>,
-                      ns2.msft.net.: <CE exp=172800s auth=False>,
-                      ns3.msft.net.: <CE exp=172800s auth=True>,
-                      ns4.msft.net.: <CE exp=172800s auth=False>},
-   net.: {  a.gtld-servers.net.: <CE exp=172800s auth=False>,
-            b.gtld-servers.net.: <CE exp=172800s auth=False>,
-            c.gtld-servers.net.: <CE exp=172800s auth=False>,
-            d.gtld-servers.net.: <CE exp=172800s auth=False>,
-            e.gtld-servers.net.: <CE exp=172800s auth=False>,
-            f.gtld-servers.net.: <CE exp=172800s auth=False>,
-            g.gtld-servers.net.: <CE exp=172800s auth=False>,
-            h.gtld-servers.net.: <CE exp=172800s auth=False>,
-            i.gtld-servers.net.: <CE exp=172800s auth=False>,
-            j.gtld-servers.net.: <CE exp=172800s auth=False>,
-            k.gtld-servers.net.: <CE exp=172800s auth=False>,
-            l.gtld-servers.net.: <CE exp=172800s auth=False>,
-            m.gtld-servers.net.: <CE exp=172800s auth=False>}}
-
 Picking from slist, checking if we have an A record (probably supplied as glue) in cache for: a3-129.akadns.net.
 
     We have: a3-129.akadns.net.@96.7.49.129
 
 sending question for A record for  toggle.www.ms.akadns.net.  to a3-129.akadns.net. @('96.7.49.129', 53):
-0000   A4 A4 00 00 00 01 00 00 00 00 00 00 06 74 6F 67    .............tog
+0000   3D B1 00 00 00 01 00 00 00 00 00 00 06 74 6F 67    =............tog
 0010   67 6C 65 03 77 77 77 02 6D 73 06 61 6B 61 64 6E    gle.www.ms.akadn
 0020   73 03 6E 65 74 00 00 01 00 01                      s.net.....
 
@@ -458,8 +323,8 @@ Answer received from a3-129.akadns.net. server is:
  {  'additional': [],
    'answer': [  (toggle.www.ms.akadns.net., 300, IN, CNAME, c.www.ms.akadns.net.)],
    'authority': [],
-   'header': <gz01.dnslib.Header.Header instance at 0x1011eddd0>,
-   'question': [<gz01.dnslib.QE.QE instance at 0x1011ede60>]}
+   'header': <gz01.dnslib.Header.Header instance at 0x10d2e2dd0>,
+   'question': [<gz01.dnslib.QE.QE instance at 0x10d2e2f38>]}
 **************************************************
 Sanswers is [  (www.microsoft.com., 3600, IN, CNAME, toggle.www.ms.akadns.net.),
    (toggle.www.ms.akadns.net., 300, IN, CNAME, c.www.ms.akadns.net.)]
@@ -487,55 +352,12 @@ a7-131.akadns.net.
 a28-129.akadns.org.
 
 This will probably get added to SLIST
-NSCache is:
-{  .: {  f.root-servers.net.: <CE exp=9223372035439299912s auth=True>},
-   akadns.net.: {  a1-128.akadns.net.: <CE exp=172799s auth=False>,
-                   a10-128.akadns.org.: <CE exp=172799s auth=False>,
-                   a11-129.akadns.net.: <CE exp=172799s auth=False>,
-                   a13-130.akadns.org.: <CE exp=172799s auth=False>,
-                   a28-129.akadns.org.: <CE exp=172799s auth=False>,
-                   a3-129.akadns.net.: <CE exp=172799s auth=True>,
-                   a4-131.akadns.org.: <CE exp=172799s auth=False>,
-                   a5-130.akadns.org.: <CE exp=172799s auth=False>,
-                   a7-131.akadns.net.: <CE exp=172799s auth=False>,
-                   a9-128.akadns.net.: <CE exp=172799s auth=False>},
-   com.: {  a.gtld-servers.net.: <CE exp=172799s auth=False>,
-            b.gtld-servers.net.: <CE exp=172799s auth=False>,
-            c.gtld-servers.net.: <CE exp=172799s auth=False>,
-            d.gtld-servers.net.: <CE exp=172799s auth=False>,
-            e.gtld-servers.net.: <CE exp=172799s auth=False>,
-            f.gtld-servers.net.: <CE exp=172799s auth=False>,
-            g.gtld-servers.net.: <CE exp=172799s auth=False>,
-            h.gtld-servers.net.: <CE exp=172799s auth=False>,
-            i.gtld-servers.net.: <CE exp=172799s auth=False>,
-            j.gtld-servers.net.: <CE exp=172799s auth=False>,
-            k.gtld-servers.net.: <CE exp=172799s auth=False>,
-            l.gtld-servers.net.: <CE exp=172799s auth=False>,
-            m.gtld-servers.net.: <CE exp=172799s auth=False>},
-   microsoft.com.: {  ns1.msft.net.: <CE exp=172799s auth=False>,
-                      ns2.msft.net.: <CE exp=172799s auth=False>,
-                      ns3.msft.net.: <CE exp=172799s auth=True>,
-                      ns4.msft.net.: <CE exp=172799s auth=False>},
-   net.: {  a.gtld-servers.net.: <CE exp=172799s auth=False>,
-            b.gtld-servers.net.: <CE exp=172799s auth=False>,
-            c.gtld-servers.net.: <CE exp=172799s auth=False>,
-            d.gtld-servers.net.: <CE exp=172799s auth=False>,
-            e.gtld-servers.net.: <CE exp=172799s auth=False>,
-            f.gtld-servers.net.: <CE exp=172799s auth=False>,
-            g.gtld-servers.net.: <CE exp=172799s auth=False>,
-            h.gtld-servers.net.: <CE exp=172799s auth=False>,
-            i.gtld-servers.net.: <CE exp=172799s auth=False>,
-            j.gtld-servers.net.: <CE exp=172799s auth=False>,
-            k.gtld-servers.net.: <CE exp=172799s auth=False>,
-            l.gtld-servers.net.: <CE exp=172799s auth=False>,
-            m.gtld-servers.net.: <CE exp=172799s auth=False>}}
-
 Picking from slist, checking if we have an A record (probably supplied as glue) in cache for: a3-129.akadns.net.
 
     We have: a3-129.akadns.net.@96.7.49.129
 
 sending question for A record for  c.www.ms.akadns.net.  to a3-129.akadns.net. @('96.7.49.129', 53):
-0000   E9 B0 00 00 00 01 00 00 00 00 00 00 01 63 03 77    .............c.w
+0000   09 80 00 00 00 01 00 00 00 00 00 00 01 63 03 77    .............c.w
 0010   77 77 02 6D 73 06 61 6B 61 64 6E 73 03 6E 65 74    ww.ms.akadns.net
 0020   00 00 01 00 01                                     .....
 
@@ -544,8 +366,8 @@ Answer received from a3-129.akadns.net. server is:
  {  'additional': [],
    'answer': [(c.www.ms.akadns.net., 300, IN, CNAME, lb1.www.ms.akadns.net.)],
    'authority': [],
-   'header': <gz01.dnslib.Header.Header instance at 0x1011f13f8>,
-   'question': [<gz01.dnslib.QE.QE instance at 0x1011f1488>]}
+   'header': <gz01.dnslib.Header.Header instance at 0x10d2e7440>,
+   'question': [<gz01.dnslib.QE.QE instance at 0x10d2e75a8>]}
 **************************************************
 Sanswers is [  (www.microsoft.com., 3600, IN, CNAME, toggle.www.ms.akadns.net.),
    (toggle.www.ms.akadns.net., 300, IN, CNAME, c.www.ms.akadns.net.),
@@ -574,75 +396,422 @@ a7-131.akadns.net.
 a28-129.akadns.org.
 
 This will probably get added to SLIST
-NSCache is:
-{  .: {  f.root-servers.net.: <CE exp=9223372035439299912s auth=True>},
-   akadns.net.: {  a1-128.akadns.net.: <CE exp=172799s auth=False>,
-                   a10-128.akadns.org.: <CE exp=172799s auth=False>,
-                   a11-129.akadns.net.: <CE exp=172799s auth=False>,
-                   a13-130.akadns.org.: <CE exp=172799s auth=False>,
-                   a28-129.akadns.org.: <CE exp=172799s auth=False>,
-                   a3-129.akadns.net.: <CE exp=172799s auth=True>,
-                   a4-131.akadns.org.: <CE exp=172799s auth=False>,
-                   a5-130.akadns.org.: <CE exp=172799s auth=False>,
-                   a7-131.akadns.net.: <CE exp=172799s auth=False>,
-                   a9-128.akadns.net.: <CE exp=172799s auth=False>},
-   com.: {  a.gtld-servers.net.: <CE exp=172799s auth=False>,
-            b.gtld-servers.net.: <CE exp=172799s auth=False>,
-            c.gtld-servers.net.: <CE exp=172799s auth=False>,
-            d.gtld-servers.net.: <CE exp=172799s auth=False>,
-            e.gtld-servers.net.: <CE exp=172799s auth=False>,
-            f.gtld-servers.net.: <CE exp=172799s auth=False>,
-            g.gtld-servers.net.: <CE exp=172799s auth=False>,
-            h.gtld-servers.net.: <CE exp=172799s auth=False>,
-            i.gtld-servers.net.: <CE exp=172799s auth=False>,
-            j.gtld-servers.net.: <CE exp=172799s auth=False>,
-            k.gtld-servers.net.: <CE exp=172799s auth=False>,
-            l.gtld-servers.net.: <CE exp=172799s auth=False>,
-            m.gtld-servers.net.: <CE exp=172799s auth=False>},
-   microsoft.com.: {  ns1.msft.net.: <CE exp=172799s auth=False>,
-                      ns2.msft.net.: <CE exp=172799s auth=False>,
-                      ns3.msft.net.: <CE exp=172799s auth=True>,
-                      ns4.msft.net.: <CE exp=172799s auth=False>},
-   net.: {  a.gtld-servers.net.: <CE exp=172799s auth=False>,
-            b.gtld-servers.net.: <CE exp=172799s auth=False>,
-            c.gtld-servers.net.: <CE exp=172799s auth=False>,
-            d.gtld-servers.net.: <CE exp=172799s auth=False>,
-            e.gtld-servers.net.: <CE exp=172799s auth=False>,
-            f.gtld-servers.net.: <CE exp=172799s auth=False>,
-            g.gtld-servers.net.: <CE exp=172799s auth=False>,
-            h.gtld-servers.net.: <CE exp=172799s auth=False>,
-            i.gtld-servers.net.: <CE exp=172799s auth=False>,
-            j.gtld-servers.net.: <CE exp=172799s auth=False>,
-            k.gtld-servers.net.: <CE exp=172799s auth=False>,
-            l.gtld-servers.net.: <CE exp=172799s auth=False>,
-            m.gtld-servers.net.: <CE exp=172799s auth=False>}}
-
 Picking from slist, checking if we have an A record (probably supplied as glue) in cache for: a3-129.akadns.net.
 
     We have: a3-129.akadns.net.@96.7.49.129
 
 sending question for A record for  lb1.www.ms.akadns.net.  to a3-129.akadns.net. @('96.7.49.129', 53):
-0000   BD 31 00 00 00 01 00 00 00 00 00 00 03 6C 62 31    .1...........lb1
+0000   B3 85 00 00 00 01 00 00 00 00 00 00 03 6C 62 31    .............lb1
 0010   03 77 77 77 02 6D 73 06 61 6B 61 64 6E 73 03 6E    .www.ms.akadns.n
 0020   65 74 00 00 01 00 01                               et.....
 
 
 Answer received from a3-129.akadns.net. server is:
  {  'additional': [],
-   'answer': [(lb1.www.ms.akadns.net., 300, IN, A, 134.170.188.84)],
+   'answer': [(lb1.www.ms.akadns.net., 300, IN, A, 134.170.184.133)],
    'authority': [],
-   'header': <gz01.dnslib.Header.Header instance at 0x1011f19e0>,
-   'question': [<gz01.dnslib.QE.QE instance at 0x1011f1a70>]}
+   'header': <gz01.dnslib.Header.Header instance at 0x10d2e7a70>,
+   'question': [<gz01.dnslib.QE.QE instance at 0x10d2e7bd8>]}
 **************************************************
 Sanswers is [  (www.microsoft.com., 3600, IN, CNAME, toggle.www.ms.akadns.net.),
    (toggle.www.ms.akadns.net., 300, IN, CNAME, c.www.ms.akadns.net.),
    (c.www.ms.akadns.net., 300, IN, CNAME, lb1.www.ms.akadns.net.),
-   (lb1.www.ms.akadns.net., 300, IN, A, 134.170.188.84)]
+   (lb1.www.ms.akadns.net., 300, IN, A, 134.170.184.133)]
 &#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#
 
 
 Response:
-(2874, <gz01.dnslib.QE.QE instance at 0x1011bc758>, [(www.microsoft.com., 3600, IN, CNAME, toggle.www.ms.akadns.net.), (toggle.www.ms.akadns.net., 300, IN, CNAME, c.www.ms.akadns.net.), (c.www.ms.akadns.net., 300, IN, CNAME, lb1.www.ms.akadns.net.), (lb1.www.ms.akadns.net., 300, IN, A, 134.170.188.84)], [(microsoft.com., 172800, IN, NS, ns3.msft.net.), (akadns.net., 172799, IN, NS, a3-129.akadns.net.), (akadns.net., 172799, IN, NS, a3-129.akadns.net.), (akadns.net., 172799, IN, NS, a3-129.akadns.net.)], [(ns3.msft.net., 172800, IN, A, 213.199.180.53), (a3-129.akadns.net., 172799, IN, A, 96.7.49.129), (a3-129.akadns.net., 172799, IN, A, 96.7.49.129), (a3-129.akadns.net., 172799, IN, A, 96.7.49.129)])
+(51934, <gz01.dnslib.QE.QE instance at 0x10d2acab8>, [(www.microsoft.com., 3600, IN, CNAME, toggle.www.ms.akadns.net.), (toggle.www.ms.akadns.net., 300, IN, CNAME, c.www.ms.akadns.net.), (c.www.ms.akadns.net., 300, IN, CNAME, lb1.www.ms.akadns.net.), (lb1.www.ms.akadns.net., 300, IN, A, 134.170.184.133)], [(microsoft.com., 172800, IN, NS, ns3.msft.net.), (akadns.net., 172800, IN, NS, a3-129.akadns.net.)], [(ns3.msft.net., 172800, IN, A, 213.199.180.53), (a3-129.akadns.net., 172800, IN, A, 96.7.49.129)])
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+================================================================================================================================================================================================================================================================================================================================================================================================================
+Best matching RR's for haig.cs.ucl.ac.uk. are for parent domain "."
+ the nameserves in cache for that zone are as follows:
+
+f.root-servers.net.
+
+This will probably get added to SLIST
+Picking from slist, checking if we have an A record (probably supplied as glue) in cache for: f.root-servers.net.
+
+    We have: f.root-servers.net.@192.5.5.241
+
+sending question for A record for  haig.cs.ucl.ac.uk.  to f.root-servers.net. @('192.5.5.241', 53):
+0000   ED 47 00 00 00 01 00 00 00 00 00 00 04 68 61 69    .G...........hai
+0010   67 02 63 73 03 75 63 6C 02 61 63 02 75 6B 00 00    g.cs.ucl.ac.uk..
+0020   01 00 01                                           ...
+
+
+Answer received from f.root-servers.net. server is:
+ {  'additional': [  (ns1.nic.uk., 172800, IN, A, 195.66.240.130),
+                    <gz01.dnslib.RR.RR_AAAA instance at 0x10d2bb998>,
+                    (ns2.nic.uk., 172800, IN, A, 217.79.164.131),
+                    (ns4.nic.uk., 172800, IN, A, 194.83.244.131),
+                    <gz01.dnslib.RR.RR_AAAA instance at 0x10d2bbc68>,
+                    (ns5.nic.uk., 172800, IN, A, 213.246.167.131),
+                    (ns6.nic.uk., 172800, IN, A, 213.248.254.130),
+                    (ns7.nic.uk., 172800, IN, A, 212.121.40.130),
+                    (nsa.nic.uk., 172800, IN, A, 156.154.100.3),
+                    <gz01.dnslib.RR.RR_AAAA instance at 0x10d2acab8>,
+                    (nsb.nic.uk., 172800, IN, A, 156.154.101.3),
+                    (nsc.nic.uk., 172800, IN, A, 156.154.102.3),
+                    (nsd.nic.uk., 172800, IN, A, 156.154.103.3)],
+   'answer': [],
+   'authority': [  (uk., 172800, IN, NS, nsd.nic.uk.),
+                   (uk., 172800, IN, NS, ns6.nic.uk.),
+                   (uk., 172800, IN, NS, nsc.nic.uk.),
+                   (uk., 172800, IN, NS, ns7.nic.uk.),
+                   (uk., 172800, IN, NS, ns2.nic.uk.),
+                   (uk., 172800, IN, NS, ns1.nic.uk.),
+                   (uk., 172800, IN, NS, nsb.nic.uk.),
+                   (uk., 172800, IN, NS, ns5.nic.uk.),
+                   (uk., 172800, IN, NS, ns4.nic.uk.),
+                   (uk., 172800, IN, NS, nsa.nic.uk.)],
+   'header': <gz01.dnslib.Header.Header instance at 0x10d2c02d8>,
+   'question': [<gz01.dnslib.QE.QE instance at 0x10d2c0440>]}
+**************************************************
+Best matching RR's for haig.cs.ucl.ac.uk. are for parent domain "uk."
+ the nameserves in cache for that zone are as follows:
+
+nsd.nic.uk.
+
+ns6.nic.uk.
+
+nsb.nic.uk.
+
+ns1.nic.uk.
+
+ns4.nic.uk.
+
+nsc.nic.uk.
+
+ns5.nic.uk.
+
+ns2.nic.uk.
+
+nsa.nic.uk.
+
+ns7.nic.uk.
+
+This will probably get added to SLIST
+Picking from slist, checking if we have an A record (probably supplied as glue) in cache for: nsd.nic.uk.
+
+    We have: nsd.nic.uk.@156.154.103.3
+
+sending question for A record for  haig.cs.ucl.ac.uk.  to nsd.nic.uk. @('156.154.103.3', 53):
+0000   11 1D 00 00 00 01 00 00 00 00 00 00 04 68 61 69    .............hai
+0010   67 02 63 73 03 75 63 6C 02 61 63 02 75 6B 00 00    g.cs.ucl.ac.uk..
+0020   01 00 01                                           ...
+
+
+Answer received from nsd.nic.uk. server is:
+ {  'additional': [],
+   'answer': [],
+   'authority': [  (ac.uk., 172800, IN, NS, ns3.ja.net.),
+                   (ac.uk., 172800, IN, NS, auth03.ns.uu.net.),
+                   (ac.uk., 172800, IN, NS, ns1.surfnet.nl.),
+                   (ac.uk., 172800, IN, NS, ns4.ja.net.),
+                   (ac.uk., 172800, IN, NS, ns2.ja.net.),
+                   (ac.uk., 172800, IN, NS, ns0.ja.net.),
+                   (ac.uk., 172800, IN, NS, ws-fra1.win-ip.dfn.de.)],
+   'header': <gz01.dnslib.Header.Header instance at 0x10d2d5c68>,
+   'question': [<gz01.dnslib.QE.QE instance at 0x10d2d5758>]}
+**************************************************
+Best matching RR's for haig.cs.ucl.ac.uk. are for parent domain "ac.uk."
+ the nameserves in cache for that zone are as follows:
+
+ns3.ja.net.
+
+ns1.surfnet.nl.
+
+auth03.ns.uu.net.
+
+ns0.ja.net.
+
+ns4.ja.net.
+
+ns2.ja.net.
+
+ws-fra1.win-ip.dfn.de.
+
+This will probably get added to SLIST
+Picking from slist, checking if we have an A record (probably supplied as glue) in cache for: ns3.ja.net.
+
+Picking from slist, checking if we have an A record (probably supplied as glue) in cache for: auth03.ns.uu.net.
+
+Picking from slist, checking if we have an A record (probably supplied as glue) in cache for: ns1.surfnet.nl.
+
+Picking from slist, checking if we have an A record (probably supplied as glue) in cache for: ns4.ja.net.
+
+Picking from slist, checking if we have an A record (probably supplied as glue) in cache for: ns2.ja.net.
+
+Picking from slist, checking if we have an A record (probably supplied as glue) in cache for: ns0.ja.net.
+
+Picking from slist, checking if we have an A record (probably supplied as glue) in cache for: ws-fra1.win-ip.dfn.de.
+
+exhausted list, and couldnt find anything about these servers in our cache
+Best matching RR's for ns3.ja.net. are for parent domain "net."
+ the nameserves in cache for that zone are as follows:
+
+m.gtld-servers.net.
+
+j.gtld-servers.net.
+
+d.gtld-servers.net.
+
+h.gtld-servers.net.
+
+l.gtld-servers.net.
+
+c.gtld-servers.net.
+
+a.gtld-servers.net.
+
+g.gtld-servers.net.
+
+e.gtld-servers.net.
+
+b.gtld-servers.net.
+
+k.gtld-servers.net.
+
+i.gtld-servers.net.
+
+f.gtld-servers.net.
+
+This will probably get added to SLIST
+Picking from slist, checking if we have an A record (probably supplied as glue) in cache for: g.gtld-servers.net.
+
+    We have: g.gtld-servers.net.@192.42.93.30
+
+sending question for A record for  ns3.ja.net.  to g.gtld-servers.net. @('192.42.93.30', 53):
+0000   50 17 00 00 00 01 00 00 00 00 00 00 03 6E 73 33    P............ns3
+0010   02 6A 61 03 6E 65 74 00 00 01 00 01                .ja.net.....
+
+
+Answer received from g.gtld-servers.net. server is:
+ {  'additional': [  (ns0.ja.net., 172800, IN, A, 128.86.1.20),
+                    (ns0.ja.net., 172800, IN, A, 193.63.94.20),
+                    <gz01.dnslib.RR.RR_AAAA instance at 0x10d2dfc68>,
+                    <gz01.dnslib.RR.RR_AAAA instance at 0x10d2dfea8>,
+                    (ns1.ja.net., 172800, IN, A, 194.81.227.226),
+                    <gz01.dnslib.RR.RR_AAAA instance at 0x10d2d1ab8>,
+                    (ns2.ja.net., 172800, IN, A, 193.63.105.17),
+                    <gz01.dnslib.RR.RR_AAAA instance at 0x10d2e2320>,
+                    (ns4.ja.net., 172800, IN, A, 193.62.157.66),
+                    <gz01.dnslib.RR.RR_AAAA instance at 0x10d2e2f80>],
+   'answer': [],
+   'authority': [  (ja.net., 172800, IN, NS, ns0.ja.net.),
+                   (ja.net., 172800, IN, NS, ns1.surfnet.nl.),
+                   (ja.net., 172800, IN, NS, ns1.ja.net.),
+                   (ja.net., 172800, IN, NS, ns2.ja.net.),
+                   (ja.net., 172800, IN, NS, ns4.ja.net.)],
+   'header': <gz01.dnslib.Header.Header instance at 0x10d2db998>,
+   'question': [<gz01.dnslib.QE.QE instance at 0x10d2dbab8>]}
+**************************************************
+Best matching RR's for ns3.ja.net. are for parent domain "ja.net."
+ the nameserves in cache for that zone are as follows:
+
+ns1.surfnet.nl.
+
+ns1.ja.net.
+
+ns2.ja.net.
+
+ns4.ja.net.
+
+ns0.ja.net.
+
+This will probably get added to SLIST
+Picking from slist, checking if we have an A record (probably supplied as glue) in cache for: ns0.ja.net.
+
+    We have: ns0.ja.net.@193.63.94.20
+
+sending question for A record for  ns3.ja.net.  to ns0.ja.net. @('193.63.94.20', 53):
+0000   7E 77 00 00 00 01 00 00 00 00 00 00 03 6E 73 33    ~w...........ns3
+0010   02 6A 61 03 6E 65 74 00 00 01 00 01                .ja.net.....
+
+
+Answer received from ns0.ja.net. server is:
+ {  'additional': [  (ns0.ja.net., 86400, IN, A, 128.86.1.20),
+                    (ns0.ja.net., 86400, IN, A, 193.63.94.20),
+                    <gz01.dnslib.RR.RR_AAAA instance at 0x10d2ebcf8>,
+                    <gz01.dnslib.RR.RR_AAAA instance at 0x10d2ebdd0>,
+                    (ns1.ja.net., 86400, IN, A, 194.81.227.226),
+                    <gz01.dnslib.RR.RR_AAAA instance at 0x10d2f1050>,
+                    (ns1.surfnet.nl., 3600, IN, A, 192.87.106.101),
+                    <gz01.dnslib.RR.RR_AAAA instance at 0x10d2f1200>,
+                    (ns2.ja.net., 86400, IN, A, 193.63.105.17),
+                    <gz01.dnslib.RR.RR_AAAA instance at 0x10d2f13b0>,
+                    (ns4.ja.net., 86400, IN, A, 193.62.157.66),
+                    <gz01.dnslib.RR.RR_AAAA instance at 0x10d2f1560>],
+   'answer': [(ns3.ja.net., 86400, IN, A, 193.63.106.103)],
+   'authority': [  (ja.net., 86400, IN, NS, ns1.surfnet.nl.),
+                   (ja.net., 86400, IN, NS, ns0.ja.net.),
+                   (ja.net., 86400, IN, NS, ns2.ja.net.),
+                   (ja.net., 86400, IN, NS, ns4.ja.net.),
+                   (ja.net., 86400, IN, NS, ns1.ja.net.)],
+   'header': <gz01.dnslib.Header.Header instance at 0x10d2e7ab8>,
+   'question': [<gz01.dnslib.QE.QE instance at 0x10d2eb170>]}
+**************************************************
+Sanswers is [(ns3.ja.net., 86400, IN, A, 193.63.106.103)]
+&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#
+
+
+Response:
+(47562, <gz01.dnslib.QE.QE instance at 0x10d2c0170>, [(ns3.ja.net., 86400, IN, A, 193.63.106.103)], [(microsoft.com., 172800, IN, NS, ns3.msft.net.), (akadns.net., 172800, IN, NS, a3-129.akadns.net.), (ja.net., 172800, IN, NS, ns0.ja.net.)], [(ns3.msft.net., 172800, IN, A, 213.199.180.53), (a3-129.akadns.net., 172800, IN, A, 96.7.49.129), (ns0.ja.net., 172800, IN, A, 193.63.94.20)])
+Best matching RR's for haig.cs.ucl.ac.uk. are for parent domain "ac.uk."
+ the nameserves in cache for that zone are as follows:
+
+ns3.ja.net.
+
+ns1.surfnet.nl.
+
+auth03.ns.uu.net.
+
+ns0.ja.net.
+
+ns4.ja.net.
+
+ns2.ja.net.
+
+ws-fra1.win-ip.dfn.de.
+
+This will probably get added to SLIST
+Picking from slist, checking if we have an A record (probably supplied as glue) in cache for: ns3.ja.net.
+
+    We have: ns3.ja.net.@193.63.106.103
+
+sending question for A record for  haig.cs.ucl.ac.uk.  to ns3.ja.net. @('193.63.106.103', 53):
+0000   D1 7B 00 00 00 01 00 00 00 00 00 00 04 68 61 69    .{...........hai
+0010   67 02 63 73 03 75 63 6C 02 61 63 02 75 6B 00 00    g.cs.ucl.ac.uk..
+0020   01 00 01                                           ...
+
+
+Answer received from ns3.ja.net. server is:
+ {  'additional': [  (ns1.cs.ucl.ac.uk., 86400, IN, A, 128.16.5.32),
+                    (ns2.ja.net., 86400, IN, A, 193.63.105.17),
+                    <gz01.dnslib.RR.RR_AAAA instance at 0x10d2c6cf8>,
+                    (bas-a.bcc.ac.uk., 86400, IN, A, 144.82.100.41),
+                    (link-1.ts.bcc.ac.uk., 86400, IN, A, 144.82.100.1)],
+   'answer': [],
+   'authority': [  (ucl.ac.uk., 86400, IN, NS, ns2.ja.net.),
+                   (ucl.ac.uk., 86400, IN, NS, link-1.ts.bcc.ac.uk.),
+                   (ucl.ac.uk., 86400, IN, NS, ns1.cs.ucl.ac.uk.),
+                   (ucl.ac.uk., 86400, IN, NS, bas-a.bcc.ac.uk.)],
+   'header': <gz01.dnslib.Header.Header instance at 0x10d2df560>,
+   'question': [<gz01.dnslib.QE.QE instance at 0x10d2dfa70>]}
+**************************************************
+Best matching RR's for haig.cs.ucl.ac.uk. are for parent domain "ucl.ac.uk."
+ the nameserves in cache for that zone are as follows:
+
+bas-a.bcc.ac.uk.
+
+ns2.ja.net.
+
+ns1.cs.ucl.ac.uk.
+
+link-1.ts.bcc.ac.uk.
+
+This will probably get added to SLIST
+Picking from slist, checking if we have an A record (probably supplied as glue) in cache for: ns2.ja.net.
+
+    We have: ns2.ja.net.@193.63.105.17
+
+sending question for A record for  haig.cs.ucl.ac.uk.  to ns2.ja.net. @('193.63.105.17', 53):
+0000   EF AF 00 00 00 01 00 00 00 00 00 00 04 68 61 69    .............hai
+0010   67 02 63 73 03 75 63 6C 02 61 63 02 75 6B 00 00    g.cs.ucl.ac.uk..
+0020   01 00 01                                           ...
+
+
+Answer received from ns2.ja.net. server is:
+ {  'additional': [  (ns0.ja.net., 86400, IN, A, 128.86.1.20),
+                    (ns0.ja.net., 86400, IN, A, 193.63.94.20),
+                    <gz01.dnslib.RR.RR_AAAA instance at 0x10d2f18c0>,
+                    <gz01.dnslib.RR.RR_AAAA instance at 0x10d2f1830>,
+                    (ns1.cs.ucl.ac.uk., 360000, IN, A, 128.16.5.32),
+                    (sun.mhs-relay.ac.uk., 50400, IN, A, 128.86.8.25),
+                    <gz01.dnslib.RR.RR_AAAA instance at 0x10d2f1248>],
+   'answer': [],
+   'authority': [  (cs.ucl.ac.uk., 360000, IN, NS, ns1.cs.ucl.ac.uk.),
+                   (cs.ucl.ac.uk., 360000, IN, NS, ns0.ja.net.),
+                   (cs.ucl.ac.uk., 360000, IN, NS, sun.mhs-relay.ac.uk.)],
+   'header': <gz01.dnslib.Header.Header instance at 0x10d2eb9e0>,
+   'question': [<gz01.dnslib.QE.QE instance at 0x10d2ebb48>]}
+**************************************************
+Best matching RR's for haig.cs.ucl.ac.uk. are for parent domain "cs.ucl.ac.uk."
+ the nameserves in cache for that zone are as follows:
+
+sun.mhs-relay.ac.uk.
+
+ns1.cs.ucl.ac.uk.
+
+ns0.ja.net.
+
+This will probably get added to SLIST
+Picking from slist, checking if we have an A record (probably supplied as glue) in cache for: ns1.cs.ucl.ac.uk.
+
+    We have: ns1.cs.ucl.ac.uk.@128.16.5.32
+
+sending question for A record for  haig.cs.ucl.ac.uk.  to ns1.cs.ucl.ac.uk. @('128.16.5.32', 53):
+0000   8A 1F 00 00 00 01 00 00 00 00 00 00 04 68 61 69    .............hai
+0010   67 02 63 73 03 75 63 6C 02 61 63 02 75 6B 00 00    g.cs.ucl.ac.uk..
+0020   01 00 01                                           ...
+
+
+Answer received from ns1.cs.ucl.ac.uk. server is:
+ {  'additional': [(ns1.cs.ucl.ac.uk., 360000, IN, A, 128.16.5.32)],
+   'answer': [(haig.cs.ucl.ac.uk., 86400, IN, A, 128.16.6.8)],
+   'authority': [  (cs.ucl.ac.uk., 360000, IN, NS, ns1.cs.ucl.ac.uk.),
+                   (cs.ucl.ac.uk., 360000, IN, NS, sun.mhs-relay.ac.uk.),
+                   (cs.ucl.ac.uk., 360000, IN, NS, ns0.ja.net.)],
+   'header': <gz01.dnslib.Header.Header instance at 0x10d2f1560>,
+   'question': [<gz01.dnslib.QE.QE instance at 0x10d2f1950>]}
+**************************************************
+Sanswers is [(haig.cs.ucl.ac.uk., 86400, IN, A, 128.16.6.8)]
+&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#
+
+
+Response:
+(47562, <gz01.dnslib.QE.QE instance at 0x10d2c0170>, [(haig.cs.ucl.ac.uk., 86400, IN, A, 128.16.6.8)], [(microsoft.com., 172800, IN, NS, ns3.msft.net.), (akadns.net., 172800, IN, NS, a3-129.akadns.net.), (ja.net., 172800, IN, NS, ns0.ja.net.), (cs.ucl.ac.uk., 360000, IN, NS, ns1.cs.ucl.ac.uk.)], [(ns3.msft.net., 172800, IN, A, 213.199.180.53), (a3-129.akadns.net., 172800, IN, A, 96.7.49.129), (ns0.ja.net., 172800, IN, A, 193.63.94.20), (ns1.cs.ucl.ac.uk., 360000, IN, A, 128.16.5.32)])
 
 
 
