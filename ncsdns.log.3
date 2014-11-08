@@ -1,5 +1,5 @@
 NSCache INIT = 
-{.: {f.root-servers.net.: <CE exp=9223372035439376704s auth=True>}}
+{.: {f.root-servers.net.: <CE exp=9223372035439300089s auth=True>}}
 
 
 
@@ -42,32 +42,30 @@ NSCache INIT =
 
 
 ================================================================================================================================================================================================================================================================================================================================================================================================================
-Best matching RR's for www.microsoft.com. are for parent domain ".":
+Best matching RR's for www.microsoft.com. are for parent domain "."
+ the nameserves in cache for that zone are as follows:
 
 f.root-servers.net.
 
 This will probably get added to SLIST
 NSCache is:
-{  .: {  f.root-servers.net.: <CE exp=9223372035439376700s auth=True>}}
+{  .: {  f.root-servers.net.: <CE exp=9223372035439300086s auth=True>}}
 
-Picking from slist, checking if we have an A record in cache for: f.root-servers.net.
+Picking from slist, checking if we have an A record (probably supplied as glue) in cache for: f.root-servers.net.
 
     We have: f.root-servers.net.@192.5.5.241
 
-Attempting:
-f.root-servers.net.
-
-sending to f.root-servers.net. @('192.5.5.241', 53):
-0000   1F 87 00 00 00 01 00 00 00 00 00 00 03 77 77 77    .............www
+sending question for A record for  www.microsoft.com.  to f.root-servers.net. @('192.5.5.241', 53):
+0000   50 E5 00 00 00 01 00 00 00 00 00 00 03 77 77 77    P............www
 0010   09 6D 69 63 72 6F 73 6F 66 74 03 63 6F 6D 00 00    .microsoft.com..
 0020   01 00 01                                           ...
 
 
 Answer received from f.root-servers.net. server is:
  {  'additional': [  (a.gtld-servers.net., 172800, IN, A, 192.5.6.30),
-                    <gz01.dnslib.RR.RR_AAAA instance at 0x105f3f170>,
+                    <gz01.dnslib.RR.RR_AAAA instance at 0x10d0aa368>,
                     (b.gtld-servers.net., 172800, IN, A, 192.33.14.30),
-                    <gz01.dnslib.RR.RR_AAAA instance at 0x105f3f320>,
+                    <gz01.dnslib.RR.RR_AAAA instance at 0x10d0aa518>,
                     (c.gtld-servers.net., 172800, IN, A, 192.26.92.30),
                     (d.gtld-servers.net., 172800, IN, A, 192.31.80.30),
                     (e.gtld-servers.net., 172800, IN, A, 192.12.94.30),
@@ -79,836 +77,24 @@ Answer received from f.root-servers.net. server is:
                     (k.gtld-servers.net., 172800, IN, A, 192.52.178.30),
                     (l.gtld-servers.net., 172800, IN, A, 192.41.162.30)],
    'answer': [],
-   'authority': [  (com., 172800, IN, NS, g.gtld-servers.net.),
-                   (com., 172800, IN, NS, d.gtld-servers.net.),
+   'authority': [  (com., 172800, IN, NS, f.gtld-servers.net.),
+                   (com., 172800, IN, NS, c.gtld-servers.net.),
+                   (com., 172800, IN, NS, g.gtld-servers.net.),
+                   (com., 172800, IN, NS, k.gtld-servers.net.),
+                   (com., 172800, IN, NS, j.gtld-servers.net.),
                    (com., 172800, IN, NS, h.gtld-servers.net.),
-                   (com., 172800, IN, NS, m.gtld-servers.net.),
+                   (com., 172800, IN, NS, i.gtld-servers.net.),
                    (com., 172800, IN, NS, b.gtld-servers.net.),
                    (com., 172800, IN, NS, l.gtld-servers.net.),
-                   (com., 172800, IN, NS, i.gtld-servers.net.),
-                   (com., 172800, IN, NS, c.gtld-servers.net.),
-                   (com., 172800, IN, NS, j.gtld-servers.net.),
-                   (com., 172800, IN, NS, e.gtld-servers.net.),
-                   (com., 172800, IN, NS, k.gtld-servers.net.),
-                   (com., 172800, IN, NS, a.gtld-servers.net.),
-                   (com., 172800, IN, NS, f.gtld-servers.net.)],
-   'question': [<gz01.dnslib.QE.QE instance at 0x105f2fbd8>]}
-**************************************************
-Best matching RR's for www.microsoft.com. are for parent domain "com.":
-
-m.gtld-servers.net.
-
-j.gtld-servers.net.
-
-d.gtld-servers.net.
-
-h.gtld-servers.net.
-
-l.gtld-servers.net.
-
-c.gtld-servers.net.
-
-a.gtld-servers.net.
-
-g.gtld-servers.net.
-
-e.gtld-servers.net.
-
-b.gtld-servers.net.
-
-k.gtld-servers.net.
-
-i.gtld-servers.net.
-
-f.gtld-servers.net.
-
-This will probably get added to SLIST
-NSCache is:
-{  .: {  f.root-servers.net.: <CE exp=9223372035439376700s auth=True>},
-   com.: {  a.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            b.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            c.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            d.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            e.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            f.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            g.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            h.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            i.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            j.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            k.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            l.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            m.gtld-servers.net.: <CE exp=-1415226307s auth=False>}}
-
-Picking from slist, checking if we have an A record in cache for: g.gtld-servers.net.
-
-    We have: g.gtld-servers.net.@192.42.93.30
-
-Attempting:
-g.gtld-servers.net.
-
-sending to g.gtld-servers.net. @('192.42.93.30', 53):
-0000   CD 77 00 00 00 01 00 00 00 00 00 00 03 77 77 77    .w...........www
-0010   09 6D 69 63 72 6F 73 6F 66 74 03 63 6F 6D 00 00    .microsoft.com..
-0020   01 00 01                                           ...
-
-
-Answer received from g.gtld-servers.net. server is:
- {  'additional': [  (ns3.msft.net., 172800, IN, A, 213.199.180.53),
-                    <gz01.dnslib.RR.RR_AAAA instance at 0x105f4b5a8>,
-                    <gz01.dnslib.RR.RR_AAAA instance at 0x105f4b680>,
-                    (ns1.msft.net., 172800, IN, A, 65.55.37.62),
-                    (ns2.msft.net., 172800, IN, A, 208.84.2.53),
-                    <gz01.dnslib.RR.RR_AAAA instance at 0x105f4b908>,
-                    (ns4.msft.net., 172800, IN, A, 208.76.45.53),
-                    <gz01.dnslib.RR.RR_AAAA instance at 0x105f4bab8>],
-   'answer': [],
-   'authority': [  (microsoft.com., 172800, IN, NS, ns3.msft.net.),
-                   (microsoft.com., 172800, IN, NS, ns1.msft.net.),
-                   (microsoft.com., 172800, IN, NS, ns2.msft.net.),
-                   (microsoft.com., 172800, IN, NS, ns4.msft.net.)],
-   'question': [<gz01.dnslib.QE.QE instance at 0x105f44cb0>]}
-**************************************************
-Best matching RR's for www.microsoft.com. are for parent domain "microsoft.com.":
-
-ns1.msft.net.
-
-ns4.msft.net.
-
-ns3.msft.net.
-
-ns2.msft.net.
-
-This will probably get added to SLIST
-NSCache is:
-{  .: {  f.root-servers.net.: <CE exp=9223372035439376700s auth=True>},
-   com.: {  a.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            b.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            c.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            d.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            e.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            f.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            g.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            h.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            i.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            j.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            k.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            l.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            m.gtld-servers.net.: <CE exp=-1415226307s auth=False>},
-   microsoft.com.: {  ns1.msft.net.: <CE exp=-1415226307s auth=False>,
-                      ns2.msft.net.: <CE exp=-1415226307s auth=False>,
-                      ns3.msft.net.: <CE exp=-1415226307s auth=False>,
-                      ns4.msft.net.: <CE exp=-1415226307s auth=False>}}
-
-Picking from slist, checking if we have an A record in cache for: ns3.msft.net.
-
-    We have: ns3.msft.net.@213.199.180.53
-
-Attempting:
-ns3.msft.net.
-
-sending to ns3.msft.net. @('213.199.180.53', 53):
-0000   7D B8 00 00 00 01 00 00 00 00 00 00 03 77 77 77    }............www
-0010   09 6D 69 63 72 6F 73 6F 66 74 03 63 6F 6D 00 00    .microsoft.com..
-0020   01 00 01                                           ...
-
-
-Answer received from ns3.msft.net. server is:
- {  'additional': [],
-   'answer': [  (www.microsoft.com., 3600, IN, CNAME, toggle.www.ms.akadns.net.)],
-   'authority': [],
-   'question': [<gz01.dnslib.QE.QE instance at 0x105f4f170>]}
-**************************************************
-Sanswers is [(www.microsoft.com., 3600, IN, CNAME, toggle.www.ms.akadns.net.)]
-Best matching RR's for toggle.www.ms.akadns.net. are for parent domain ".":
-
-f.root-servers.net.
-
-This will probably get added to SLIST
-NSCache is:
-{  .: {  f.root-servers.net.: <CE exp=9223372035439376700s auth=True>},
-   com.: {  a.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            b.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            c.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            d.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            e.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            f.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            g.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            h.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            i.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            j.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            k.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            l.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            m.gtld-servers.net.: <CE exp=-1415226307s auth=False>},
-   microsoft.com.: {  ns1.msft.net.: <CE exp=-1415226307s auth=False>,
-                      ns2.msft.net.: <CE exp=-1415226307s auth=False>,
-                      ns3.msft.net.: <CE exp=-1415226307s auth=False>,
-                      ns4.msft.net.: <CE exp=-1415226307s auth=False>}}
-
-Picking from slist, checking if we have an A record in cache for: f.root-servers.net.
-
-    We have: f.root-servers.net.@192.5.5.241
-
-Attempting:
-f.root-servers.net.
-
-sending to f.root-servers.net. @('192.5.5.241', 53):
-0000   1E 7A 00 00 00 01 00 00 00 00 00 00 06 74 6F 67    .z...........tog
-0010   67 6C 65 03 77 77 77 02 6D 73 06 61 6B 61 64 6E    gle.www.ms.akadn
-0020   73 03 6E 65 74 00 00 01 00 01                      s.net.....
-
-
-Answer received from f.root-servers.net. server is:
- {  'additional': [  (a.gtld-servers.net., 172800, IN, A, 192.5.6.30),
-                    <gz01.dnslib.RR.RR_AAAA instance at 0x105f52b48>,
-                    (b.gtld-servers.net., 172800, IN, A, 192.33.14.30),
-                    <gz01.dnslib.RR.RR_AAAA instance at 0x105f52cf8>,
-                    (c.gtld-servers.net., 172800, IN, A, 192.26.92.30),
-                    (d.gtld-servers.net., 172800, IN, A, 192.31.80.30),
-                    (e.gtld-servers.net., 172800, IN, A, 192.12.94.30),
-                    (f.gtld-servers.net., 172800, IN, A, 192.35.51.30),
-                    (g.gtld-servers.net., 172800, IN, A, 192.42.93.30),
-                    (h.gtld-servers.net., 172800, IN, A, 192.54.112.30),
-                    (i.gtld-servers.net., 172800, IN, A, 192.43.172.30),
-                    (j.gtld-servers.net., 172800, IN, A, 192.48.79.30),
-                    (k.gtld-servers.net., 172800, IN, A, 192.52.178.30),
-                    (l.gtld-servers.net., 172800, IN, A, 192.41.162.30)],
-   'answer': [],
-   'authority': [  (net., 172800, IN, NS, l.gtld-servers.net.),
-                   (net., 172800, IN, NS, h.gtld-servers.net.),
-                   (net., 172800, IN, NS, j.gtld-servers.net.),
-                   (net., 172800, IN, NS, k.gtld-servers.net.),
-                   (net., 172800, IN, NS, f.gtld-servers.net.),
-                   (net., 172800, IN, NS, m.gtld-servers.net.),
-                   (net., 172800, IN, NS, g.gtld-servers.net.),
-                   (net., 172800, IN, NS, e.gtld-servers.net.),
-                   (net., 172800, IN, NS, c.gtld-servers.net.),
-                   (net., 172800, IN, NS, i.gtld-servers.net.),
-                   (net., 172800, IN, NS, b.gtld-servers.net.),
-                   (net., 172800, IN, NS, a.gtld-servers.net.),
-                   (net., 172800, IN, NS, d.gtld-servers.net.)],
-   'question': [<gz01.dnslib.QE.QE instance at 0x105f4f5f0>]}
-**************************************************
-Best matching RR's for toggle.www.ms.akadns.net. are for parent domain "net.":
-
-m.gtld-servers.net.
-
-j.gtld-servers.net.
-
-d.gtld-servers.net.
-
-h.gtld-servers.net.
-
-l.gtld-servers.net.
-
-c.gtld-servers.net.
-
-a.gtld-servers.net.
-
-g.gtld-servers.net.
-
-e.gtld-servers.net.
-
-b.gtld-servers.net.
-
-k.gtld-servers.net.
-
-i.gtld-servers.net.
-
-f.gtld-servers.net.
-
-This will probably get added to SLIST
-NSCache is:
-{  .: {  f.root-servers.net.: <CE exp=9223372035439376700s auth=True>},
-   com.: {  a.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            b.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            c.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            d.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            e.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            f.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            g.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            h.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            i.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            j.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            k.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            l.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            m.gtld-servers.net.: <CE exp=-1415226307s auth=False>},
-   microsoft.com.: {  ns1.msft.net.: <CE exp=-1415226307s auth=False>,
-                      ns2.msft.net.: <CE exp=-1415226307s auth=False>,
-                      ns3.msft.net.: <CE exp=-1415226307s auth=False>,
-                      ns4.msft.net.: <CE exp=-1415226307s auth=False>},
-   net.: {  a.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            b.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            c.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            d.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            e.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            f.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            g.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            h.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            i.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            j.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            k.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            l.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            m.gtld-servers.net.: <CE exp=-1415226307s auth=False>}}
-
-Picking from slist, checking if we have an A record in cache for: l.gtld-servers.net.
-
-    We have: l.gtld-servers.net.@192.41.162.30
-
-Attempting:
-l.gtld-servers.net.
-
-sending to l.gtld-servers.net. @('192.41.162.30', 53):
-0000   38 0F 00 00 00 01 00 00 00 00 00 00 06 74 6F 67    8............tog
-0010   67 6C 65 03 77 77 77 02 6D 73 06 61 6B 61 64 6E    gle.www.ms.akadn
-0020   73 03 6E 65 74 00 00 01 00 01                      s.net.....
-
-
-Answer received from l.gtld-servers.net. server is:
- {  'additional': [  (a3-129.akadns.net., 172800, IN, A, 96.7.49.129),
-                    (a7-131.akadns.net., 172800, IN, A, 23.61.199.131),
-                    (a11-129.akadns.net., 172800, IN, A, 23.74.25.129),
-                    (a1-128.akadns.net., 172800, IN, A, 193.108.88.128),
-                    (a9-128.akadns.net., 172800, IN, A, 95.101.36.128)],
-   'answer': [],
-   'authority': [  (akadns.net., 172800, IN, NS, a3-129.akadns.net.),
-                   (akadns.net., 172800, IN, NS, a7-131.akadns.net.),
-                   (akadns.net., 172800, IN, NS, a11-129.akadns.net.),
-                   (akadns.net., 172800, IN, NS, a1-128.akadns.net.),
-                   (akadns.net., 172800, IN, NS, a9-128.akadns.net.),
-                   (akadns.net., 172800, IN, NS, a5-130.akadns.org.),
-                   (akadns.net., 172800, IN, NS, a13-130.akadns.org.),
-                   (akadns.net., 172800, IN, NS, a4-131.akadns.org.),
-                   (akadns.net., 172800, IN, NS, a10-128.akadns.org.),
-                   (akadns.net., 172800, IN, NS, a28-129.akadns.org.)],
-   'question': [<gz01.dnslib.QE.QE instance at 0x105f57b48>]}
-**************************************************
-Best matching RR's for toggle.www.ms.akadns.net. are for parent domain "akadns.net.":
-
-a9-128.akadns.net.
-
-a13-130.akadns.org.
-
-a3-129.akadns.net.
-
-a11-129.akadns.net.
-
-a5-130.akadns.org.
-
-a10-128.akadns.org.
-
-a1-128.akadns.net.
-
-a4-131.akadns.org.
-
-a7-131.akadns.net.
-
-a28-129.akadns.org.
-
-This will probably get added to SLIST
-NSCache is:
-{  .: {  f.root-servers.net.: <CE exp=9223372035439376700s auth=True>},
-   akadns.net.: {  a1-128.akadns.net.: <CE exp=-1415226307s auth=False>,
-                   a10-128.akadns.org.: <CE exp=-1415226307s auth=False>,
-                   a11-129.akadns.net.: <CE exp=-1415226307s auth=False>,
-                   a13-130.akadns.org.: <CE exp=-1415226307s auth=False>,
-                   a28-129.akadns.org.: <CE exp=-1415226307s auth=False>,
-                   a3-129.akadns.net.: <CE exp=-1415226307s auth=False>,
-                   a4-131.akadns.org.: <CE exp=-1415226307s auth=False>,
-                   a5-130.akadns.org.: <CE exp=-1415226307s auth=False>,
-                   a7-131.akadns.net.: <CE exp=-1415226307s auth=False>,
-                   a9-128.akadns.net.: <CE exp=-1415226307s auth=False>},
-   com.: {  a.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            b.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            c.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            d.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            e.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            f.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            g.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            h.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            i.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            j.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            k.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            l.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            m.gtld-servers.net.: <CE exp=-1415226307s auth=False>},
-   microsoft.com.: {  ns1.msft.net.: <CE exp=-1415226307s auth=False>,
-                      ns2.msft.net.: <CE exp=-1415226307s auth=False>,
-                      ns3.msft.net.: <CE exp=-1415226307s auth=False>,
-                      ns4.msft.net.: <CE exp=-1415226307s auth=False>},
-   net.: {  a.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            b.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            c.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            d.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            e.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            f.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            g.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            h.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            i.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            j.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            k.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            l.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            m.gtld-servers.net.: <CE exp=-1415226307s auth=False>}}
-
-Picking from slist, checking if we have an A record in cache for: a3-129.akadns.net.
-
-    We have: a3-129.akadns.net.@96.7.49.129
-
-Attempting:
-a3-129.akadns.net.
-
-sending to a3-129.akadns.net. @('96.7.49.129', 53):
-0000   58 EF 00 00 00 01 00 00 00 00 00 00 06 74 6F 67    X............tog
-0010   67 6C 65 03 77 77 77 02 6D 73 06 61 6B 61 64 6E    gle.www.ms.akadn
-0020   73 03 6E 65 74 00 00 01 00 01                      s.net.....
-
-
-Answer received from a3-129.akadns.net. server is:
- {  'additional': [],
-   'answer': [  (toggle.www.ms.akadns.net., 300, IN, CNAME, c.www.ms.akadns.net.)],
-   'authority': [],
-   'question': [<gz01.dnslib.QE.QE instance at 0x105f60878>]}
-**************************************************
-Sanswers is [  (www.microsoft.com., 3600, IN, CNAME, toggle.www.ms.akadns.net.),
-   (toggle.www.ms.akadns.net., 300, IN, CNAME, c.www.ms.akadns.net.)]
-Best matching RR's for c.www.ms.akadns.net. are for parent domain "akadns.net.":
-
-a9-128.akadns.net.
-
-a13-130.akadns.org.
-
-a3-129.akadns.net.
-
-a11-129.akadns.net.
-
-a5-130.akadns.org.
-
-a10-128.akadns.org.
-
-a1-128.akadns.net.
-
-a4-131.akadns.org.
-
-a7-131.akadns.net.
-
-a28-129.akadns.org.
-
-This will probably get added to SLIST
-NSCache is:
-{  .: {  f.root-servers.net.: <CE exp=9223372035439376700s auth=True>},
-   akadns.net.: {  a1-128.akadns.net.: <CE exp=-1415226307s auth=False>,
-                   a10-128.akadns.org.: <CE exp=-1415226307s auth=False>,
-                   a11-129.akadns.net.: <CE exp=-1415226307s auth=False>,
-                   a13-130.akadns.org.: <CE exp=-1415226307s auth=False>,
-                   a28-129.akadns.org.: <CE exp=-1415226307s auth=False>,
-                   a3-129.akadns.net.: <CE exp=-1415226307s auth=False>,
-                   a4-131.akadns.org.: <CE exp=-1415226307s auth=False>,
-                   a5-130.akadns.org.: <CE exp=-1415226307s auth=False>,
-                   a7-131.akadns.net.: <CE exp=-1415226307s auth=False>,
-                   a9-128.akadns.net.: <CE exp=-1415226307s auth=False>},
-   com.: {  a.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            b.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            c.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            d.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            e.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            f.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            g.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            h.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            i.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            j.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            k.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            l.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            m.gtld-servers.net.: <CE exp=-1415226307s auth=False>},
-   microsoft.com.: {  ns1.msft.net.: <CE exp=-1415226307s auth=False>,
-                      ns2.msft.net.: <CE exp=-1415226307s auth=False>,
-                      ns3.msft.net.: <CE exp=-1415226307s auth=False>,
-                      ns4.msft.net.: <CE exp=-1415226307s auth=False>},
-   net.: {  a.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            b.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            c.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            d.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            e.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            f.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            g.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            h.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            i.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            j.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            k.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            l.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            m.gtld-servers.net.: <CE exp=-1415226307s auth=False>}}
-
-Picking from slist, checking if we have an A record in cache for: a3-129.akadns.net.
-
-    We have: a3-129.akadns.net.@96.7.49.129
-
-Attempting:
-a3-129.akadns.net.
-
-sending to a3-129.akadns.net. @('96.7.49.129', 53):
-0000   E1 E2 00 00 00 01 00 00 00 00 00 00 01 63 03 77    .............c.w
-0010   77 77 02 6D 73 06 61 6B 61 64 6E 73 03 6E 65 74    ww.ms.akadns.net
-0020   00 00 01 00 01                                     .....
-
-
-Answer received from a3-129.akadns.net. server is:
- {  'additional': [],
-   'answer': [(c.www.ms.akadns.net., 300, IN, CNAME, lb1.www.ms.akadns.net.)],
-   'authority': [],
-   'question': [<gz01.dnslib.QE.QE instance at 0x105f60cb0>]}
-**************************************************
-Sanswers is [  (www.microsoft.com., 3600, IN, CNAME, toggle.www.ms.akadns.net.),
-   (toggle.www.ms.akadns.net., 300, IN, CNAME, c.www.ms.akadns.net.),
-   (c.www.ms.akadns.net., 300, IN, CNAME, lb1.www.ms.akadns.net.)]
-Best matching RR's for lb1.www.ms.akadns.net. are for parent domain "akadns.net.":
-
-a9-128.akadns.net.
-
-a13-130.akadns.org.
-
-a3-129.akadns.net.
-
-a11-129.akadns.net.
-
-a5-130.akadns.org.
-
-a10-128.akadns.org.
-
-a1-128.akadns.net.
-
-a4-131.akadns.org.
-
-a7-131.akadns.net.
-
-a28-129.akadns.org.
-
-This will probably get added to SLIST
-NSCache is:
-{  .: {  f.root-servers.net.: <CE exp=9223372035439376700s auth=True>},
-   akadns.net.: {  a1-128.akadns.net.: <CE exp=-1415226307s auth=False>,
-                   a10-128.akadns.org.: <CE exp=-1415226307s auth=False>,
-                   a11-129.akadns.net.: <CE exp=-1415226307s auth=False>,
-                   a13-130.akadns.org.: <CE exp=-1415226307s auth=False>,
-                   a28-129.akadns.org.: <CE exp=-1415226307s auth=False>,
-                   a3-129.akadns.net.: <CE exp=-1415226307s auth=False>,
-                   a4-131.akadns.org.: <CE exp=-1415226307s auth=False>,
-                   a5-130.akadns.org.: <CE exp=-1415226307s auth=False>,
-                   a7-131.akadns.net.: <CE exp=-1415226307s auth=False>,
-                   a9-128.akadns.net.: <CE exp=-1415226307s auth=False>},
-   com.: {  a.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            b.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            c.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            d.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            e.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            f.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            g.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            h.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            i.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            j.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            k.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            l.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            m.gtld-servers.net.: <CE exp=-1415226307s auth=False>},
-   microsoft.com.: {  ns1.msft.net.: <CE exp=-1415226307s auth=False>,
-                      ns2.msft.net.: <CE exp=-1415226307s auth=False>,
-                      ns3.msft.net.: <CE exp=-1415226307s auth=False>,
-                      ns4.msft.net.: <CE exp=-1415226307s auth=False>},
-   net.: {  a.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            b.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            c.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            d.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            e.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            f.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            g.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            h.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            i.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            j.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            k.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            l.gtld-servers.net.: <CE exp=-1415226307s auth=False>,
-            m.gtld-servers.net.: <CE exp=-1415226307s auth=False>}}
-
-Picking from slist, checking if we have an A record in cache for: a3-129.akadns.net.
-
-    We have: a3-129.akadns.net.@96.7.49.129
-
-Attempting:
-a3-129.akadns.net.
-
-sending to a3-129.akadns.net. @('96.7.49.129', 53):
-0000   BD 96 00 00 00 01 00 00 00 00 00 00 03 6C 62 31    .............lb1
-0010   03 77 77 77 02 6D 73 06 61 6B 61 64 6E 73 03 6E    .www.ms.akadns.n
-0020   65 74 00 00 01 00 01                               et.....
-
-
-Answer received from a3-129.akadns.net. server is:
- {  'additional': [],
-   'answer': [(lb1.www.ms.akadns.net., 300, IN, A, 65.55.57.27)],
-   'authority': [],
-   'question': [<gz01.dnslib.QE.QE instance at 0x105f64128>]}
-**************************************************
-Sanswers is [  (www.microsoft.com., 3600, IN, CNAME, toggle.www.ms.akadns.net.),
-   (toggle.www.ms.akadns.net., 300, IN, CNAME, c.www.ms.akadns.net.),
-   (c.www.ms.akadns.net., 300, IN, CNAME, lb1.www.ms.akadns.net.),
-   (lb1.www.ms.akadns.net., 300, IN, A, 65.55.57.27)]
-&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#
-
-
-Response:
-@w€      www	microsoftcom   www	microsoftcom      togglewwwmsakadnsnet togglewwwmsakadnsnet     , cwwwmsakadnsnet cwwwmsakadnsnet     , lb1wwwmsakadnsnet lb1wwwmsakadnsnet     , A79
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-================================================================================================================================================================================================================================================================================================================================================================================================================
-Best matching RR's for www.microsoft.com. are for parent domain "microsoft.com.":
-
-ns1.msft.net.
-
-ns4.msft.net.
-
-ns3.msft.net.
-
-ns2.msft.net.
-
-This will probably get added to SLIST
-NSCache is:
-{  .: {  f.root-servers.net.: <CE exp=9223372035439376695s auth=True>},
-   akadns.net.: {  a1-128.akadns.net.: <CE exp=-1415226312s auth=False>,
-                   a10-128.akadns.org.: <CE exp=-1415226312s auth=False>,
-                   a11-129.akadns.net.: <CE exp=-1415226312s auth=False>,
-                   a13-130.akadns.org.: <CE exp=-1415226312s auth=False>,
-                   a28-129.akadns.org.: <CE exp=-1415226312s auth=False>,
-                   a3-129.akadns.net.: <CE exp=-1415226312s auth=False>,
-                   a4-131.akadns.org.: <CE exp=-1415226312s auth=False>,
-                   a5-130.akadns.org.: <CE exp=-1415226312s auth=False>,
-                   a7-131.akadns.net.: <CE exp=-1415226312s auth=False>,
-                   a9-128.akadns.net.: <CE exp=-1415226312s auth=False>},
-   com.: {  a.gtld-servers.net.: <CE exp=-1415226312s auth=False>,
-            b.gtld-servers.net.: <CE exp=-1415226312s auth=False>,
-            c.gtld-servers.net.: <CE exp=-1415226312s auth=False>,
-            d.gtld-servers.net.: <CE exp=-1415226312s auth=False>,
-            e.gtld-servers.net.: <CE exp=-1415226312s auth=False>,
-            f.gtld-servers.net.: <CE exp=-1415226312s auth=False>,
-            g.gtld-servers.net.: <CE exp=-1415226312s auth=False>,
-            h.gtld-servers.net.: <CE exp=-1415226312s auth=False>,
-            i.gtld-servers.net.: <CE exp=-1415226312s auth=False>,
-            j.gtld-servers.net.: <CE exp=-1415226312s auth=False>,
-            k.gtld-servers.net.: <CE exp=-1415226312s auth=False>,
-            l.gtld-servers.net.: <CE exp=-1415226312s auth=False>,
-            m.gtld-servers.net.: <CE exp=-1415226312s auth=False>},
-   microsoft.com.: {  ns1.msft.net.: <CE exp=-1415226312s auth=False>,
-                      ns2.msft.net.: <CE exp=-1415226312s auth=False>,
-                      ns3.msft.net.: <CE exp=-1415226312s auth=False>,
-                      ns4.msft.net.: <CE exp=-1415226312s auth=False>},
-   net.: {  a.gtld-servers.net.: <CE exp=-1415226312s auth=False>,
-            b.gtld-servers.net.: <CE exp=-1415226312s auth=False>,
-            c.gtld-servers.net.: <CE exp=-1415226312s auth=False>,
-            d.gtld-servers.net.: <CE exp=-1415226312s auth=False>,
-            e.gtld-servers.net.: <CE exp=-1415226312s auth=False>,
-            f.gtld-servers.net.: <CE exp=-1415226312s auth=False>,
-            g.gtld-servers.net.: <CE exp=-1415226312s auth=False>,
-            h.gtld-servers.net.: <CE exp=-1415226312s auth=False>,
-            i.gtld-servers.net.: <CE exp=-1415226312s auth=False>,
-            j.gtld-servers.net.: <CE exp=-1415226312s auth=False>,
-            k.gtld-servers.net.: <CE exp=-1415226312s auth=False>,
-            l.gtld-servers.net.: <CE exp=-1415226312s auth=False>,
-            m.gtld-servers.net.: <CE exp=-1415226312s auth=False>}}
-
-NSCache INIT = 
-{.: {f.root-servers.net.: <CE exp=9223372035439376667s auth=True>}}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-================================================================================================================================================================================================================================================================================================================================================================================================================
-Best matching RR's for www.microsoft.com. are for parent domain ".":
-
-f.root-servers.net.
-
-This will probably get added to SLIST
-NSCache is:
-{  .: {  f.root-servers.net.: <CE exp=9223372035439376663s auth=True>}}
-
-Picking from slist, checking if we have an A record in cache for: f.root-servers.net.
-
-    We have: f.root-servers.net.@192.5.5.241
-
-Attempting:
-f.root-servers.net.
-
-sending to f.root-servers.net. @('192.5.5.241', 53):
-0000   21 2E 00 00 00 01 00 00 00 00 00 00 03 77 77 77    !............www
-0010   09 6D 69 63 72 6F 73 6F 66 74 03 63 6F 6D 00 00    .microsoft.com..
-0020   01 00 01                                           ...
-
-
-NSCache INIT = 
-{.: {f.root-servers.net.: <CE exp=9223372035439376643s auth=True>}}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-================================================================================================================================================================================================================================================================================================================================================================================================================
-Best matching RR's for www.microsoft.com. are for parent domain ".":
-
-f.root-servers.net.
-
-This will probably get added to SLIST
-NSCache is:
-{  .: {  f.root-servers.net.: <CE exp=9223372035439376642s auth=True>}}
-
-Picking from slist, checking if we have an A record in cache for: f.root-servers.net.
-
-    We have: f.root-servers.net.@192.5.5.241
-
-Attempting:
-f.root-servers.net.
-
-sending to f.root-servers.net. @('192.5.5.241', 53):
-0000   2E 71 00 00 00 01 00 00 00 00 00 00 03 77 77 77    .q...........www
-0010   09 6D 69 63 72 6F 73 6F 66 74 03 63 6F 6D 00 00    .microsoft.com..
-0020   01 00 01                                           ...
-
-
-Answer received from f.root-servers.net. server is:
- {  'additional': [  (a.gtld-servers.net., 172800, IN, A, 192.5.6.30),
-                    <gz01.dnslib.RR.RR_AAAA instance at 0x109e63170>,
-                    (b.gtld-servers.net., 172800, IN, A, 192.33.14.30),
-                    <gz01.dnslib.RR.RR_AAAA instance at 0x109e63320>,
-                    (c.gtld-servers.net., 172800, IN, A, 192.26.92.30),
-                    (d.gtld-servers.net., 172800, IN, A, 192.31.80.30),
-                    (e.gtld-servers.net., 172800, IN, A, 192.12.94.30),
-                    (f.gtld-servers.net., 172800, IN, A, 192.35.51.30),
-                    (g.gtld-servers.net., 172800, IN, A, 192.42.93.30),
-                    (h.gtld-servers.net., 172800, IN, A, 192.54.112.30),
-                    (i.gtld-servers.net., 172800, IN, A, 192.43.172.30),
-                    (j.gtld-servers.net., 172800, IN, A, 192.48.79.30),
-                    (k.gtld-servers.net., 172800, IN, A, 192.52.178.30),
-                    (l.gtld-servers.net., 172800, IN, A, 192.41.162.30)],
-   'answer': [],
-   'authority': [  (com., 172800, IN, NS, g.gtld-servers.net.),
-                   (com., 172800, IN, NS, l.gtld-servers.net.),
                    (com., 172800, IN, NS, d.gtld-servers.net.),
-                   (com., 172800, IN, NS, f.gtld-servers.net.),
-                   (com., 172800, IN, NS, j.gtld-servers.net.),
-                   (com., 172800, IN, NS, c.gtld-servers.net.),
-                   (com., 172800, IN, NS, e.gtld-servers.net.),
-                   (com., 172800, IN, NS, i.gtld-servers.net.),
                    (com., 172800, IN, NS, a.gtld-servers.net.),
-                   (com., 172800, IN, NS, k.gtld-servers.net.),
-                   (com., 172800, IN, NS, h.gtld-servers.net.),
-                   (com., 172800, IN, NS, b.gtld-servers.net.),
+                   (com., 172800, IN, NS, e.gtld-servers.net.),
                    (com., 172800, IN, NS, m.gtld-servers.net.)],
-   'question': [<gz01.dnslib.QE.QE instance at 0x109e53bd8>]}
+   'header': <gz01.dnslib.Header.Header instance at 0x10d09ac68>,
+   'question': [<gz01.dnslib.QE.QE instance at 0x10d09add0>]}
 **************************************************
-Best matching RR's for www.microsoft.com. are for parent domain "com.":
+Best matching RR's for www.microsoft.com. are for parent domain "com."
+ the nameserves in cache for that zone are as follows:
 
 m.gtld-servers.net.
 
@@ -938,51 +124,50 @@ f.gtld-servers.net.
 
 This will probably get added to SLIST
 NSCache is:
-{  .: {  f.root-servers.net.: <CE exp=9223372035439376642s auth=True>},
-   com.: {  a.gtld-servers.net.: <CE exp=-1415226365s auth=False>,
-            b.gtld-servers.net.: <CE exp=-1415226365s auth=False>,
-            c.gtld-servers.net.: <CE exp=-1415226365s auth=False>,
-            d.gtld-servers.net.: <CE exp=-1415226365s auth=False>,
-            e.gtld-servers.net.: <CE exp=-1415226365s auth=False>,
-            f.gtld-servers.net.: <CE exp=-1415226365s auth=False>,
-            g.gtld-servers.net.: <CE exp=-1415226365s auth=False>,
-            h.gtld-servers.net.: <CE exp=-1415226365s auth=False>,
-            i.gtld-servers.net.: <CE exp=-1415226365s auth=False>,
-            j.gtld-servers.net.: <CE exp=-1415226365s auth=False>,
-            k.gtld-servers.net.: <CE exp=-1415226365s auth=False>,
-            l.gtld-servers.net.: <CE exp=-1415226365s auth=False>,
-            m.gtld-servers.net.: <CE exp=-1415226365s auth=False>}}
+{  .: {  f.root-servers.net.: <CE exp=9223372035439300086s auth=True>},
+   com.: {  a.gtld-servers.net.: <CE exp=172800s auth=False>,
+            b.gtld-servers.net.: <CE exp=172800s auth=False>,
+            c.gtld-servers.net.: <CE exp=172800s auth=False>,
+            d.gtld-servers.net.: <CE exp=172800s auth=False>,
+            e.gtld-servers.net.: <CE exp=172800s auth=False>,
+            f.gtld-servers.net.: <CE exp=172800s auth=False>,
+            g.gtld-servers.net.: <CE exp=172800s auth=False>,
+            h.gtld-servers.net.: <CE exp=172800s auth=False>,
+            i.gtld-servers.net.: <CE exp=172800s auth=False>,
+            j.gtld-servers.net.: <CE exp=172800s auth=False>,
+            k.gtld-servers.net.: <CE exp=172800s auth=False>,
+            l.gtld-servers.net.: <CE exp=172800s auth=False>,
+            m.gtld-servers.net.: <CE exp=172800s auth=False>}}
 
-Picking from slist, checking if we have an A record in cache for: g.gtld-servers.net.
+Picking from slist, checking if we have an A record (probably supplied as glue) in cache for: f.gtld-servers.net.
 
-    We have: g.gtld-servers.net.@192.42.93.30
+    We have: f.gtld-servers.net.@192.35.51.30
 
-Attempting:
-g.gtld-servers.net.
-
-sending to g.gtld-servers.net. @('192.42.93.30', 53):
-0000   A4 82 00 00 00 01 00 00 00 00 00 00 03 77 77 77    .............www
+sending question for A record for  www.microsoft.com.  to f.gtld-servers.net. @('192.35.51.30', 53):
+0000   93 5A 00 00 00 01 00 00 00 00 00 00 03 77 77 77    .Z...........www
 0010   09 6D 69 63 72 6F 73 6F 66 74 03 63 6F 6D 00 00    .microsoft.com..
 0020   01 00 01                                           ...
 
 
-Answer received from g.gtld-servers.net. server is:
+Answer received from f.gtld-servers.net. server is:
  {  'additional': [  (ns3.msft.net., 172800, IN, A, 213.199.180.53),
-                    <gz01.dnslib.RR.RR_AAAA instance at 0x109e6f5a8>,
-                    <gz01.dnslib.RR.RR_AAAA instance at 0x109e6f680>,
+                    <gz01.dnslib.RR.RR_AAAA instance at 0x10d0b67a0>,
+                    <gz01.dnslib.RR.RR_AAAA instance at 0x10d0b6878>,
                     (ns1.msft.net., 172800, IN, A, 65.55.37.62),
                     (ns2.msft.net., 172800, IN, A, 208.84.2.53),
-                    <gz01.dnslib.RR.RR_AAAA instance at 0x109e6f908>,
+                    <gz01.dnslib.RR.RR_AAAA instance at 0x10d0b6b00>,
                     (ns4.msft.net., 172800, IN, A, 208.76.45.53),
-                    <gz01.dnslib.RR.RR_AAAA instance at 0x109e6fab8>],
+                    <gz01.dnslib.RR.RR_AAAA instance at 0x10d0b6cb0>],
    'answer': [],
    'authority': [  (microsoft.com., 172800, IN, NS, ns3.msft.net.),
                    (microsoft.com., 172800, IN, NS, ns1.msft.net.),
                    (microsoft.com., 172800, IN, NS, ns2.msft.net.),
                    (microsoft.com., 172800, IN, NS, ns4.msft.net.)],
-   'question': [<gz01.dnslib.QE.QE instance at 0x109e68cb0>]}
+   'header': <gz01.dnslib.Header.Header instance at 0x10d0afef0>,
+   'question': [<gz01.dnslib.QE.QE instance at 0x10d0affc8>]}
 **************************************************
-Best matching RR's for www.microsoft.com. are for parent domain "microsoft.com.":
+Best matching RR's for www.microsoft.com. are for parent domain "microsoft.com."
+ the nameserves in cache for that zone are as follows:
 
 ns1.msft.net.
 
@@ -994,34 +179,31 @@ ns2.msft.net.
 
 This will probably get added to SLIST
 NSCache is:
-{  .: {  f.root-servers.net.: <CE exp=9223372035439376642s auth=True>},
-   com.: {  a.gtld-servers.net.: <CE exp=-1415226365s auth=False>,
-            b.gtld-servers.net.: <CE exp=-1415226365s auth=False>,
-            c.gtld-servers.net.: <CE exp=-1415226365s auth=False>,
-            d.gtld-servers.net.: <CE exp=-1415226365s auth=False>,
-            e.gtld-servers.net.: <CE exp=-1415226365s auth=False>,
-            f.gtld-servers.net.: <CE exp=-1415226365s auth=False>,
-            g.gtld-servers.net.: <CE exp=-1415226365s auth=False>,
-            h.gtld-servers.net.: <CE exp=-1415226365s auth=False>,
-            i.gtld-servers.net.: <CE exp=-1415226365s auth=False>,
-            j.gtld-servers.net.: <CE exp=-1415226365s auth=False>,
-            k.gtld-servers.net.: <CE exp=-1415226365s auth=False>,
-            l.gtld-servers.net.: <CE exp=-1415226365s auth=False>,
-            m.gtld-servers.net.: <CE exp=-1415226365s auth=False>},
-   microsoft.com.: {  ns1.msft.net.: <CE exp=-1415226365s auth=False>,
-                      ns2.msft.net.: <CE exp=-1415226365s auth=False>,
-                      ns3.msft.net.: <CE exp=-1415226365s auth=False>,
-                      ns4.msft.net.: <CE exp=-1415226365s auth=False>}}
+{  .: {  f.root-servers.net.: <CE exp=9223372035439300086s auth=True>},
+   com.: {  a.gtld-servers.net.: <CE exp=172800s auth=False>,
+            b.gtld-servers.net.: <CE exp=172800s auth=False>,
+            c.gtld-servers.net.: <CE exp=172800s auth=False>,
+            d.gtld-servers.net.: <CE exp=172800s auth=False>,
+            e.gtld-servers.net.: <CE exp=172800s auth=False>,
+            f.gtld-servers.net.: <CE exp=172800s auth=False>,
+            g.gtld-servers.net.: <CE exp=172800s auth=False>,
+            h.gtld-servers.net.: <CE exp=172800s auth=False>,
+            i.gtld-servers.net.: <CE exp=172800s auth=False>,
+            j.gtld-servers.net.: <CE exp=172800s auth=False>,
+            k.gtld-servers.net.: <CE exp=172800s auth=False>,
+            l.gtld-servers.net.: <CE exp=172800s auth=False>,
+            m.gtld-servers.net.: <CE exp=172800s auth=False>},
+   microsoft.com.: {  ns1.msft.net.: <CE exp=172800s auth=False>,
+                      ns2.msft.net.: <CE exp=172800s auth=False>,
+                      ns3.msft.net.: <CE exp=172800s auth=False>,
+                      ns4.msft.net.: <CE exp=172800s auth=False>}}
 
-Picking from slist, checking if we have an A record in cache for: ns3.msft.net.
+Picking from slist, checking if we have an A record (probably supplied as glue) in cache for: ns3.msft.net.
 
     We have: ns3.msft.net.@213.199.180.53
 
-Attempting:
-ns3.msft.net.
-
-sending to ns3.msft.net. @('213.199.180.53', 53):
-0000   46 A8 00 00 00 01 00 00 00 00 00 00 03 77 77 77    F............www
+sending question for A record for  www.microsoft.com.  to ns3.msft.net. @('213.199.180.53', 53):
+0000   A5 65 00 00 00 01 00 00 00 00 00 00 03 77 77 77    .e...........www
 0010   09 6D 69 63 72 6F 73 6F 66 74 03 63 6F 6D 00 00    .microsoft.com..
 0020   01 00 01                                           ...
 
@@ -1030,52 +212,51 @@ Answer received from ns3.msft.net. server is:
  {  'additional': [],
    'answer': [  (www.microsoft.com., 3600, IN, CNAME, toggle.www.ms.akadns.net.)],
    'authority': [],
-   'question': [<gz01.dnslib.QE.QE instance at 0x109e73170>]}
+   'header': <gz01.dnslib.Header.Header instance at 0x10d0b9440>,
+   'question': [<gz01.dnslib.QE.QE instance at 0x10d0b9518>]}
 **************************************************
 Sanswers is [(www.microsoft.com., 3600, IN, CNAME, toggle.www.ms.akadns.net.)]
-Best matching RR's for toggle.www.ms.akadns.net. are for parent domain ".":
+Best matching RR's for toggle.www.ms.akadns.net. are for parent domain "."
+ the nameserves in cache for that zone are as follows:
 
 f.root-servers.net.
 
 This will probably get added to SLIST
 NSCache is:
-{  .: {  f.root-servers.net.: <CE exp=9223372035439376642s auth=True>},
-   com.: {  a.gtld-servers.net.: <CE exp=-1415226365s auth=False>,
-            b.gtld-servers.net.: <CE exp=-1415226365s auth=False>,
-            c.gtld-servers.net.: <CE exp=-1415226365s auth=False>,
-            d.gtld-servers.net.: <CE exp=-1415226365s auth=False>,
-            e.gtld-servers.net.: <CE exp=-1415226365s auth=False>,
-            f.gtld-servers.net.: <CE exp=-1415226365s auth=False>,
-            g.gtld-servers.net.: <CE exp=-1415226365s auth=False>,
-            h.gtld-servers.net.: <CE exp=-1415226365s auth=False>,
-            i.gtld-servers.net.: <CE exp=-1415226365s auth=False>,
-            j.gtld-servers.net.: <CE exp=-1415226365s auth=False>,
-            k.gtld-servers.net.: <CE exp=-1415226365s auth=False>,
-            l.gtld-servers.net.: <CE exp=-1415226365s auth=False>,
-            m.gtld-servers.net.: <CE exp=-1415226365s auth=False>},
-   microsoft.com.: {  ns1.msft.net.: <CE exp=-1415226365s auth=False>,
-                      ns2.msft.net.: <CE exp=-1415226365s auth=False>,
-                      ns3.msft.net.: <CE exp=-1415226365s auth=False>,
-                      ns4.msft.net.: <CE exp=-1415226365s auth=False>}}
+{  .: {  f.root-servers.net.: <CE exp=9223372035439300086s auth=True>},
+   com.: {  a.gtld-servers.net.: <CE exp=172800s auth=False>,
+            b.gtld-servers.net.: <CE exp=172800s auth=False>,
+            c.gtld-servers.net.: <CE exp=172800s auth=False>,
+            d.gtld-servers.net.: <CE exp=172800s auth=False>,
+            e.gtld-servers.net.: <CE exp=172800s auth=False>,
+            f.gtld-servers.net.: <CE exp=172800s auth=False>,
+            g.gtld-servers.net.: <CE exp=172800s auth=False>,
+            h.gtld-servers.net.: <CE exp=172800s auth=False>,
+            i.gtld-servers.net.: <CE exp=172800s auth=False>,
+            j.gtld-servers.net.: <CE exp=172800s auth=False>,
+            k.gtld-servers.net.: <CE exp=172800s auth=False>,
+            l.gtld-servers.net.: <CE exp=172800s auth=False>,
+            m.gtld-servers.net.: <CE exp=172800s auth=False>},
+   microsoft.com.: {  ns1.msft.net.: <CE exp=172800s auth=False>,
+                      ns2.msft.net.: <CE exp=172800s auth=False>,
+                      ns3.msft.net.: <CE exp=172800s auth=True>,
+                      ns4.msft.net.: <CE exp=172800s auth=False>}}
 
-Picking from slist, checking if we have an A record in cache for: f.root-servers.net.
+Picking from slist, checking if we have an A record (probably supplied as glue) in cache for: f.root-servers.net.
 
     We have: f.root-servers.net.@192.5.5.241
 
-Attempting:
-f.root-servers.net.
-
-sending to f.root-servers.net. @('192.5.5.241', 53):
-0000   91 D8 00 00 00 01 00 00 00 00 00 00 06 74 6F 67    .............tog
+sending question for A record for  toggle.www.ms.akadns.net.  to f.root-servers.net. @('192.5.5.241', 53):
+0000   65 D6 00 00 00 01 00 00 00 00 00 00 06 74 6F 67    e............tog
 0010   67 6C 65 03 77 77 77 02 6D 73 06 61 6B 61 64 6E    gle.www.ms.akadn
 0020   73 03 6E 65 74 00 00 01 00 01                      s.net.....
 
 
 Answer received from f.root-servers.net. server is:
  {  'additional': [  (a.gtld-servers.net., 172800, IN, A, 192.5.6.30),
-                    <gz01.dnslib.RR.RR_AAAA instance at 0x109e76b48>,
+                    <gz01.dnslib.RR.RR_AAAA instance at 0x10d0c2050>,
                     (b.gtld-servers.net., 172800, IN, A, 192.33.14.30),
-                    <gz01.dnslib.RR.RR_AAAA instance at 0x109e76cf8>,
+                    <gz01.dnslib.RR.RR_AAAA instance at 0x10d0c2200>,
                     (c.gtld-servers.net., 172800, IN, A, 192.26.92.30),
                     (d.gtld-servers.net., 172800, IN, A, 192.31.80.30),
                     (e.gtld-servers.net., 172800, IN, A, 192.12.94.30),
@@ -1087,22 +268,24 @@ Answer received from f.root-servers.net. server is:
                     (k.gtld-servers.net., 172800, IN, A, 192.52.178.30),
                     (l.gtld-servers.net., 172800, IN, A, 192.41.162.30)],
    'answer': [],
-   'authority': [  (net., 172800, IN, NS, c.gtld-servers.net.),
+   'authority': [  (net., 172800, IN, NS, b.gtld-servers.net.),
+                   (net., 172800, IN, NS, m.gtld-servers.net.),
+                   (net., 172800, IN, NS, e.gtld-servers.net.),
+                   (net., 172800, IN, NS, i.gtld-servers.net.),
+                   (net., 172800, IN, NS, j.gtld-servers.net.),
+                   (net., 172800, IN, NS, g.gtld-servers.net.),
                    (net., 172800, IN, NS, a.gtld-servers.net.),
                    (net., 172800, IN, NS, l.gtld-servers.net.),
+                   (net., 172800, IN, NS, c.gtld-servers.net.),
                    (net., 172800, IN, NS, d.gtld-servers.net.),
-                   (net., 172800, IN, NS, k.gtld-servers.net.),
-                   (net., 172800, IN, NS, j.gtld-servers.net.),
-                   (net., 172800, IN, NS, e.gtld-servers.net.),
                    (net., 172800, IN, NS, f.gtld-servers.net.),
-                   (net., 172800, IN, NS, b.gtld-servers.net.),
-                   (net., 172800, IN, NS, h.gtld-servers.net.),
-                   (net., 172800, IN, NS, g.gtld-servers.net.),
-                   (net., 172800, IN, NS, m.gtld-servers.net.),
-                   (net., 172800, IN, NS, i.gtld-servers.net.)],
-   'question': [<gz01.dnslib.QE.QE instance at 0x109e735f0>]}
+                   (net., 172800, IN, NS, k.gtld-servers.net.),
+                   (net., 172800, IN, NS, h.gtld-servers.net.)],
+   'header': <gz01.dnslib.Header.Header instance at 0x10d0b9a70>,
+   'question': [<gz01.dnslib.QE.QE instance at 0x10d0b9b00>]}
 **************************************************
-Best matching RR's for toggle.www.ms.akadns.net. are for parent domain "net.":
+Best matching RR's for toggle.www.ms.akadns.net. are for parent domain "net."
+ the nameserves in cache for that zone are as follows:
 
 m.gtld-servers.net.
 
@@ -1132,52 +315,49 @@ f.gtld-servers.net.
 
 This will probably get added to SLIST
 NSCache is:
-{  .: {  f.root-servers.net.: <CE exp=9223372035439376642s auth=True>},
-   com.: {  a.gtld-servers.net.: <CE exp=-1415226365s auth=False>,
-            b.gtld-servers.net.: <CE exp=-1415226365s auth=False>,
-            c.gtld-servers.net.: <CE exp=-1415226365s auth=False>,
-            d.gtld-servers.net.: <CE exp=-1415226365s auth=False>,
-            e.gtld-servers.net.: <CE exp=-1415226365s auth=False>,
-            f.gtld-servers.net.: <CE exp=-1415226365s auth=False>,
-            g.gtld-servers.net.: <CE exp=-1415226365s auth=False>,
-            h.gtld-servers.net.: <CE exp=-1415226365s auth=False>,
-            i.gtld-servers.net.: <CE exp=-1415226365s auth=False>,
-            j.gtld-servers.net.: <CE exp=-1415226365s auth=False>,
-            k.gtld-servers.net.: <CE exp=-1415226365s auth=False>,
-            l.gtld-servers.net.: <CE exp=-1415226365s auth=False>,
-            m.gtld-servers.net.: <CE exp=-1415226365s auth=False>},
-   microsoft.com.: {  ns1.msft.net.: <CE exp=-1415226365s auth=False>,
-                      ns2.msft.net.: <CE exp=-1415226365s auth=False>,
-                      ns3.msft.net.: <CE exp=-1415226365s auth=False>,
-                      ns4.msft.net.: <CE exp=-1415226365s auth=False>},
-   net.: {  a.gtld-servers.net.: <CE exp=-1415226365s auth=False>,
-            b.gtld-servers.net.: <CE exp=-1415226365s auth=False>,
-            c.gtld-servers.net.: <CE exp=-1415226365s auth=False>,
-            d.gtld-servers.net.: <CE exp=-1415226365s auth=False>,
-            e.gtld-servers.net.: <CE exp=-1415226365s auth=False>,
-            f.gtld-servers.net.: <CE exp=-1415226365s auth=False>,
-            g.gtld-servers.net.: <CE exp=-1415226365s auth=False>,
-            h.gtld-servers.net.: <CE exp=-1415226365s auth=False>,
-            i.gtld-servers.net.: <CE exp=-1415226365s auth=False>,
-            j.gtld-servers.net.: <CE exp=-1415226365s auth=False>,
-            k.gtld-servers.net.: <CE exp=-1415226365s auth=False>,
-            l.gtld-servers.net.: <CE exp=-1415226365s auth=False>,
-            m.gtld-servers.net.: <CE exp=-1415226365s auth=False>}}
+{  .: {  f.root-servers.net.: <CE exp=9223372035439300086s auth=True>},
+   com.: {  a.gtld-servers.net.: <CE exp=172800s auth=False>,
+            b.gtld-servers.net.: <CE exp=172800s auth=False>,
+            c.gtld-servers.net.: <CE exp=172800s auth=False>,
+            d.gtld-servers.net.: <CE exp=172800s auth=False>,
+            e.gtld-servers.net.: <CE exp=172800s auth=False>,
+            f.gtld-servers.net.: <CE exp=172800s auth=False>,
+            g.gtld-servers.net.: <CE exp=172800s auth=False>,
+            h.gtld-servers.net.: <CE exp=172800s auth=False>,
+            i.gtld-servers.net.: <CE exp=172800s auth=False>,
+            j.gtld-servers.net.: <CE exp=172800s auth=False>,
+            k.gtld-servers.net.: <CE exp=172800s auth=False>,
+            l.gtld-servers.net.: <CE exp=172800s auth=False>,
+            m.gtld-servers.net.: <CE exp=172800s auth=False>},
+   microsoft.com.: {  ns1.msft.net.: <CE exp=172800s auth=False>,
+                      ns2.msft.net.: <CE exp=172800s auth=False>,
+                      ns3.msft.net.: <CE exp=172800s auth=True>,
+                      ns4.msft.net.: <CE exp=172800s auth=False>},
+   net.: {  a.gtld-servers.net.: <CE exp=172800s auth=False>,
+            b.gtld-servers.net.: <CE exp=172800s auth=False>,
+            c.gtld-servers.net.: <CE exp=172800s auth=False>,
+            d.gtld-servers.net.: <CE exp=172800s auth=False>,
+            e.gtld-servers.net.: <CE exp=172800s auth=False>,
+            f.gtld-servers.net.: <CE exp=172800s auth=False>,
+            g.gtld-servers.net.: <CE exp=172800s auth=False>,
+            h.gtld-servers.net.: <CE exp=172800s auth=False>,
+            i.gtld-servers.net.: <CE exp=172800s auth=False>,
+            j.gtld-servers.net.: <CE exp=172800s auth=False>,
+            k.gtld-servers.net.: <CE exp=172800s auth=False>,
+            l.gtld-servers.net.: <CE exp=172800s auth=False>,
+            m.gtld-servers.net.: <CE exp=172800s auth=False>}}
 
-Picking from slist, checking if we have an A record in cache for: c.gtld-servers.net.
+Picking from slist, checking if we have an A record (probably supplied as glue) in cache for: b.gtld-servers.net.
 
-    We have: c.gtld-servers.net.@192.26.92.30
+    We have: b.gtld-servers.net.@192.33.14.30
 
-Attempting:
-c.gtld-servers.net.
-
-sending to c.gtld-servers.net. @('192.26.92.30', 53):
-0000   C8 2F 00 00 00 01 00 00 00 00 00 00 06 74 6F 67    ./...........tog
+sending question for A record for  toggle.www.ms.akadns.net.  to b.gtld-servers.net. @('192.33.14.30', 53):
+0000   9A FE 00 00 00 01 00 00 00 00 00 00 06 74 6F 67    .............tog
 0010   67 6C 65 03 77 77 77 02 6D 73 06 61 6B 61 64 6E    gle.www.ms.akadn
 0020   73 03 6E 65 74 00 00 01 00 01                      s.net.....
 
 
-Answer received from c.gtld-servers.net. server is:
+Answer received from b.gtld-servers.net. server is:
  {  'additional': [  (a3-129.akadns.net., 172800, IN, A, 96.7.49.129),
                     (a7-131.akadns.net., 172800, IN, A, 23.61.199.131),
                     (a11-129.akadns.net., 172800, IN, A, 23.74.25.129),
@@ -1194,9 +374,11 @@ Answer received from c.gtld-servers.net. server is:
                    (akadns.net., 172800, IN, NS, a4-131.akadns.org.),
                    (akadns.net., 172800, IN, NS, a10-128.akadns.org.),
                    (akadns.net., 172800, IN, NS, a28-129.akadns.org.)],
-   'question': [<gz01.dnslib.QE.QE instance at 0x109e7bb48>]}
+   'header': <gz01.dnslib.Header.Header instance at 0x10d0c7098>,
+   'question': [<gz01.dnslib.QE.QE instance at 0x10d0c7128>]}
 **************************************************
-Best matching RR's for toggle.www.ms.akadns.net. are for parent domain "akadns.net.":
+Best matching RR's for toggle.www.ms.akadns.net. are for parent domain "akadns.net."
+ the nameserves in cache for that zone are as follows:
 
 a9-128.akadns.net.
 
@@ -1220,57 +402,54 @@ a28-129.akadns.org.
 
 This will probably get added to SLIST
 NSCache is:
-{  .: {  f.root-servers.net.: <CE exp=9223372035439376641s auth=True>},
-   akadns.net.: {  a1-128.akadns.net.: <CE exp=-1415226366s auth=False>,
-                   a10-128.akadns.org.: <CE exp=-1415226366s auth=False>,
-                   a11-129.akadns.net.: <CE exp=-1415226366s auth=False>,
-                   a13-130.akadns.org.: <CE exp=-1415226366s auth=False>,
-                   a28-129.akadns.org.: <CE exp=-1415226366s auth=False>,
-                   a3-129.akadns.net.: <CE exp=-1415226366s auth=False>,
-                   a4-131.akadns.org.: <CE exp=-1415226366s auth=False>,
-                   a5-130.akadns.org.: <CE exp=-1415226366s auth=False>,
-                   a7-131.akadns.net.: <CE exp=-1415226366s auth=False>,
-                   a9-128.akadns.net.: <CE exp=-1415226366s auth=False>},
-   com.: {  a.gtld-servers.net.: <CE exp=-1415226366s auth=False>,
-            b.gtld-servers.net.: <CE exp=-1415226366s auth=False>,
-            c.gtld-servers.net.: <CE exp=-1415226366s auth=False>,
-            d.gtld-servers.net.: <CE exp=-1415226366s auth=False>,
-            e.gtld-servers.net.: <CE exp=-1415226366s auth=False>,
-            f.gtld-servers.net.: <CE exp=-1415226366s auth=False>,
-            g.gtld-servers.net.: <CE exp=-1415226366s auth=False>,
-            h.gtld-servers.net.: <CE exp=-1415226366s auth=False>,
-            i.gtld-servers.net.: <CE exp=-1415226366s auth=False>,
-            j.gtld-servers.net.: <CE exp=-1415226366s auth=False>,
-            k.gtld-servers.net.: <CE exp=-1415226366s auth=False>,
-            l.gtld-servers.net.: <CE exp=-1415226366s auth=False>,
-            m.gtld-servers.net.: <CE exp=-1415226366s auth=False>},
-   microsoft.com.: {  ns1.msft.net.: <CE exp=-1415226366s auth=False>,
-                      ns2.msft.net.: <CE exp=-1415226366s auth=False>,
-                      ns3.msft.net.: <CE exp=-1415226366s auth=False>,
-                      ns4.msft.net.: <CE exp=-1415226366s auth=False>},
-   net.: {  a.gtld-servers.net.: <CE exp=-1415226366s auth=False>,
-            b.gtld-servers.net.: <CE exp=-1415226366s auth=False>,
-            c.gtld-servers.net.: <CE exp=-1415226366s auth=False>,
-            d.gtld-servers.net.: <CE exp=-1415226366s auth=False>,
-            e.gtld-servers.net.: <CE exp=-1415226366s auth=False>,
-            f.gtld-servers.net.: <CE exp=-1415226366s auth=False>,
-            g.gtld-servers.net.: <CE exp=-1415226366s auth=False>,
-            h.gtld-servers.net.: <CE exp=-1415226366s auth=False>,
-            i.gtld-servers.net.: <CE exp=-1415226366s auth=False>,
-            j.gtld-servers.net.: <CE exp=-1415226366s auth=False>,
-            k.gtld-servers.net.: <CE exp=-1415226366s auth=False>,
-            l.gtld-servers.net.: <CE exp=-1415226366s auth=False>,
-            m.gtld-servers.net.: <CE exp=-1415226366s auth=False>}}
+{  .: {  f.root-servers.net.: <CE exp=9223372035439300086s auth=True>},
+   akadns.net.: {  a1-128.akadns.net.: <CE exp=172800s auth=False>,
+                   a10-128.akadns.org.: <CE exp=172800s auth=False>,
+                   a11-129.akadns.net.: <CE exp=172800s auth=False>,
+                   a13-130.akadns.org.: <CE exp=172800s auth=False>,
+                   a28-129.akadns.org.: <CE exp=172800s auth=False>,
+                   a3-129.akadns.net.: <CE exp=172800s auth=False>,
+                   a4-131.akadns.org.: <CE exp=172800s auth=False>,
+                   a5-130.akadns.org.: <CE exp=172800s auth=False>,
+                   a7-131.akadns.net.: <CE exp=172800s auth=False>,
+                   a9-128.akadns.net.: <CE exp=172800s auth=False>},
+   com.: {  a.gtld-servers.net.: <CE exp=172800s auth=False>,
+            b.gtld-servers.net.: <CE exp=172800s auth=False>,
+            c.gtld-servers.net.: <CE exp=172800s auth=False>,
+            d.gtld-servers.net.: <CE exp=172800s auth=False>,
+            e.gtld-servers.net.: <CE exp=172800s auth=False>,
+            f.gtld-servers.net.: <CE exp=172800s auth=False>,
+            g.gtld-servers.net.: <CE exp=172800s auth=False>,
+            h.gtld-servers.net.: <CE exp=172800s auth=False>,
+            i.gtld-servers.net.: <CE exp=172800s auth=False>,
+            j.gtld-servers.net.: <CE exp=172800s auth=False>,
+            k.gtld-servers.net.: <CE exp=172800s auth=False>,
+            l.gtld-servers.net.: <CE exp=172800s auth=False>,
+            m.gtld-servers.net.: <CE exp=172800s auth=False>},
+   microsoft.com.: {  ns1.msft.net.: <CE exp=172800s auth=False>,
+                      ns2.msft.net.: <CE exp=172800s auth=False>,
+                      ns3.msft.net.: <CE exp=172800s auth=True>,
+                      ns4.msft.net.: <CE exp=172800s auth=False>},
+   net.: {  a.gtld-servers.net.: <CE exp=172800s auth=False>,
+            b.gtld-servers.net.: <CE exp=172800s auth=False>,
+            c.gtld-servers.net.: <CE exp=172800s auth=False>,
+            d.gtld-servers.net.: <CE exp=172800s auth=False>,
+            e.gtld-servers.net.: <CE exp=172800s auth=False>,
+            f.gtld-servers.net.: <CE exp=172800s auth=False>,
+            g.gtld-servers.net.: <CE exp=172800s auth=False>,
+            h.gtld-servers.net.: <CE exp=172800s auth=False>,
+            i.gtld-servers.net.: <CE exp=172800s auth=False>,
+            j.gtld-servers.net.: <CE exp=172800s auth=False>,
+            k.gtld-servers.net.: <CE exp=172800s auth=False>,
+            l.gtld-servers.net.: <CE exp=172800s auth=False>,
+            m.gtld-servers.net.: <CE exp=172800s auth=False>}}
 
-Picking from slist, checking if we have an A record in cache for: a3-129.akadns.net.
+Picking from slist, checking if we have an A record (probably supplied as glue) in cache for: a3-129.akadns.net.
 
     We have: a3-129.akadns.net.@96.7.49.129
 
-Attempting:
-a3-129.akadns.net.
-
-sending to a3-129.akadns.net. @('96.7.49.129', 53):
-0000   90 97 00 00 00 01 00 00 00 00 00 00 06 74 6F 67    .............tog
+sending question for A record for  toggle.www.ms.akadns.net.  to a3-129.akadns.net. @('96.7.49.129', 53):
+0000   37 55 00 00 00 01 00 00 00 00 00 00 06 74 6F 67    7U...........tog
 0010   67 6C 65 03 77 77 77 02 6D 73 06 61 6B 61 64 6E    gle.www.ms.akadn
 0020   73 03 6E 65 74 00 00 01 00 01                      s.net.....
 
@@ -1279,11 +458,13 @@ Answer received from a3-129.akadns.net. server is:
  {  'additional': [],
    'answer': [  (toggle.www.ms.akadns.net., 300, IN, CNAME, c.www.ms.akadns.net.)],
    'authority': [],
-   'question': [<gz01.dnslib.QE.QE instance at 0x109e84878>]}
+   'header': <gz01.dnslib.Header.Header instance at 0x10d0cbdd0>,
+   'question': [<gz01.dnslib.QE.QE instance at 0x10d0cbe60>]}
 **************************************************
 Sanswers is [  (www.microsoft.com., 3600, IN, CNAME, toggle.www.ms.akadns.net.),
    (toggle.www.ms.akadns.net., 300, IN, CNAME, c.www.ms.akadns.net.)]
-Best matching RR's for c.www.ms.akadns.net. are for parent domain "akadns.net.":
+Best matching RR's for c.www.ms.akadns.net. are for parent domain "akadns.net."
+ the nameserves in cache for that zone are as follows:
 
 a9-128.akadns.net.
 
@@ -1307,57 +488,54 @@ a28-129.akadns.org.
 
 This will probably get added to SLIST
 NSCache is:
-{  .: {  f.root-servers.net.: <CE exp=9223372035439376641s auth=True>},
-   akadns.net.: {  a1-128.akadns.net.: <CE exp=-1415226366s auth=False>,
-                   a10-128.akadns.org.: <CE exp=-1415226366s auth=False>,
-                   a11-129.akadns.net.: <CE exp=-1415226366s auth=False>,
-                   a13-130.akadns.org.: <CE exp=-1415226366s auth=False>,
-                   a28-129.akadns.org.: <CE exp=-1415226366s auth=False>,
-                   a3-129.akadns.net.: <CE exp=-1415226366s auth=False>,
-                   a4-131.akadns.org.: <CE exp=-1415226366s auth=False>,
-                   a5-130.akadns.org.: <CE exp=-1415226366s auth=False>,
-                   a7-131.akadns.net.: <CE exp=-1415226366s auth=False>,
-                   a9-128.akadns.net.: <CE exp=-1415226366s auth=False>},
-   com.: {  a.gtld-servers.net.: <CE exp=-1415226366s auth=False>,
-            b.gtld-servers.net.: <CE exp=-1415226366s auth=False>,
-            c.gtld-servers.net.: <CE exp=-1415226366s auth=False>,
-            d.gtld-servers.net.: <CE exp=-1415226366s auth=False>,
-            e.gtld-servers.net.: <CE exp=-1415226366s auth=False>,
-            f.gtld-servers.net.: <CE exp=-1415226366s auth=False>,
-            g.gtld-servers.net.: <CE exp=-1415226366s auth=False>,
-            h.gtld-servers.net.: <CE exp=-1415226366s auth=False>,
-            i.gtld-servers.net.: <CE exp=-1415226366s auth=False>,
-            j.gtld-servers.net.: <CE exp=-1415226366s auth=False>,
-            k.gtld-servers.net.: <CE exp=-1415226366s auth=False>,
-            l.gtld-servers.net.: <CE exp=-1415226366s auth=False>,
-            m.gtld-servers.net.: <CE exp=-1415226366s auth=False>},
-   microsoft.com.: {  ns1.msft.net.: <CE exp=-1415226366s auth=False>,
-                      ns2.msft.net.: <CE exp=-1415226366s auth=False>,
-                      ns3.msft.net.: <CE exp=-1415226366s auth=False>,
-                      ns4.msft.net.: <CE exp=-1415226366s auth=False>},
-   net.: {  a.gtld-servers.net.: <CE exp=-1415226366s auth=False>,
-            b.gtld-servers.net.: <CE exp=-1415226366s auth=False>,
-            c.gtld-servers.net.: <CE exp=-1415226366s auth=False>,
-            d.gtld-servers.net.: <CE exp=-1415226366s auth=False>,
-            e.gtld-servers.net.: <CE exp=-1415226366s auth=False>,
-            f.gtld-servers.net.: <CE exp=-1415226366s auth=False>,
-            g.gtld-servers.net.: <CE exp=-1415226366s auth=False>,
-            h.gtld-servers.net.: <CE exp=-1415226366s auth=False>,
-            i.gtld-servers.net.: <CE exp=-1415226366s auth=False>,
-            j.gtld-servers.net.: <CE exp=-1415226366s auth=False>,
-            k.gtld-servers.net.: <CE exp=-1415226366s auth=False>,
-            l.gtld-servers.net.: <CE exp=-1415226366s auth=False>,
-            m.gtld-servers.net.: <CE exp=-1415226366s auth=False>}}
+{  .: {  f.root-servers.net.: <CE exp=9223372035439300086s auth=True>},
+   akadns.net.: {  a1-128.akadns.net.: <CE exp=172800s auth=False>,
+                   a10-128.akadns.org.: <CE exp=172800s auth=False>,
+                   a11-129.akadns.net.: <CE exp=172800s auth=False>,
+                   a13-130.akadns.org.: <CE exp=172800s auth=False>,
+                   a28-129.akadns.org.: <CE exp=172800s auth=False>,
+                   a3-129.akadns.net.: <CE exp=172800s auth=True>,
+                   a4-131.akadns.org.: <CE exp=172800s auth=False>,
+                   a5-130.akadns.org.: <CE exp=172800s auth=False>,
+                   a7-131.akadns.net.: <CE exp=172800s auth=False>,
+                   a9-128.akadns.net.: <CE exp=172800s auth=False>},
+   com.: {  a.gtld-servers.net.: <CE exp=172800s auth=False>,
+            b.gtld-servers.net.: <CE exp=172800s auth=False>,
+            c.gtld-servers.net.: <CE exp=172800s auth=False>,
+            d.gtld-servers.net.: <CE exp=172800s auth=False>,
+            e.gtld-servers.net.: <CE exp=172800s auth=False>,
+            f.gtld-servers.net.: <CE exp=172800s auth=False>,
+            g.gtld-servers.net.: <CE exp=172800s auth=False>,
+            h.gtld-servers.net.: <CE exp=172800s auth=False>,
+            i.gtld-servers.net.: <CE exp=172800s auth=False>,
+            j.gtld-servers.net.: <CE exp=172800s auth=False>,
+            k.gtld-servers.net.: <CE exp=172800s auth=False>,
+            l.gtld-servers.net.: <CE exp=172800s auth=False>,
+            m.gtld-servers.net.: <CE exp=172800s auth=False>},
+   microsoft.com.: {  ns1.msft.net.: <CE exp=172800s auth=False>,
+                      ns2.msft.net.: <CE exp=172800s auth=False>,
+                      ns3.msft.net.: <CE exp=172800s auth=True>,
+                      ns4.msft.net.: <CE exp=172800s auth=False>},
+   net.: {  a.gtld-servers.net.: <CE exp=172800s auth=False>,
+            b.gtld-servers.net.: <CE exp=172800s auth=False>,
+            c.gtld-servers.net.: <CE exp=172800s auth=False>,
+            d.gtld-servers.net.: <CE exp=172800s auth=False>,
+            e.gtld-servers.net.: <CE exp=172800s auth=False>,
+            f.gtld-servers.net.: <CE exp=172800s auth=False>,
+            g.gtld-servers.net.: <CE exp=172800s auth=False>,
+            h.gtld-servers.net.: <CE exp=172800s auth=False>,
+            i.gtld-servers.net.: <CE exp=172800s auth=False>,
+            j.gtld-servers.net.: <CE exp=172800s auth=False>,
+            k.gtld-servers.net.: <CE exp=172800s auth=False>,
+            l.gtld-servers.net.: <CE exp=172800s auth=False>,
+            m.gtld-servers.net.: <CE exp=172800s auth=False>}}
 
-Picking from slist, checking if we have an A record in cache for: a3-129.akadns.net.
+Picking from slist, checking if we have an A record (probably supplied as glue) in cache for: a3-129.akadns.net.
 
     We have: a3-129.akadns.net.@96.7.49.129
 
-Attempting:
-a3-129.akadns.net.
-
-sending to a3-129.akadns.net. @('96.7.49.129', 53):
-0000   2D FB 00 00 00 01 00 00 00 00 00 00 01 63 03 77    -............c.w
+sending question for A record for  c.www.ms.akadns.net.  to a3-129.akadns.net. @('96.7.49.129', 53):
+0000   AC 7B 00 00 00 01 00 00 00 00 00 00 01 63 03 77    .{...........c.w
 0010   77 77 02 6D 73 06 61 6B 61 64 6E 73 03 6E 65 74    ww.ms.akadns.net
 0020   00 00 01 00 01                                     .....
 
@@ -1366,12 +544,14 @@ Answer received from a3-129.akadns.net. server is:
  {  'additional': [],
    'answer': [(c.www.ms.akadns.net., 300, IN, CNAME, lb1.www.ms.akadns.net.)],
    'authority': [],
-   'question': [<gz01.dnslib.QE.QE instance at 0x109e84cb0>]}
+   'header': <gz01.dnslib.Header.Header instance at 0x10d0cf3f8>,
+   'question': [<gz01.dnslib.QE.QE instance at 0x10d0cf488>]}
 **************************************************
 Sanswers is [  (www.microsoft.com., 3600, IN, CNAME, toggle.www.ms.akadns.net.),
    (toggle.www.ms.akadns.net., 300, IN, CNAME, c.www.ms.akadns.net.),
    (c.www.ms.akadns.net., 300, IN, CNAME, lb1.www.ms.akadns.net.)]
-Best matching RR's for lb1.www.ms.akadns.net. are for parent domain "akadns.net.":
+Best matching RR's for lb1.www.ms.akadns.net. are for parent domain "akadns.net."
+ the nameserves in cache for that zone are as follows:
 
 a9-128.akadns.net.
 
@@ -1395,674 +575,74 @@ a28-129.akadns.org.
 
 This will probably get added to SLIST
 NSCache is:
-{  .: {  f.root-servers.net.: <CE exp=9223372035439376641s auth=True>},
-   akadns.net.: {  a1-128.akadns.net.: <CE exp=-1415226366s auth=False>,
-                   a10-128.akadns.org.: <CE exp=-1415226366s auth=False>,
-                   a11-129.akadns.net.: <CE exp=-1415226366s auth=False>,
-                   a13-130.akadns.org.: <CE exp=-1415226366s auth=False>,
-                   a28-129.akadns.org.: <CE exp=-1415226366s auth=False>,
-                   a3-129.akadns.net.: <CE exp=-1415226366s auth=False>,
-                   a4-131.akadns.org.: <CE exp=-1415226366s auth=False>,
-                   a5-130.akadns.org.: <CE exp=-1415226366s auth=False>,
-                   a7-131.akadns.net.: <CE exp=-1415226366s auth=False>,
-                   a9-128.akadns.net.: <CE exp=-1415226366s auth=False>},
-   com.: {  a.gtld-servers.net.: <CE exp=-1415226366s auth=False>,
-            b.gtld-servers.net.: <CE exp=-1415226366s auth=False>,
-            c.gtld-servers.net.: <CE exp=-1415226366s auth=False>,
-            d.gtld-servers.net.: <CE exp=-1415226366s auth=False>,
-            e.gtld-servers.net.: <CE exp=-1415226366s auth=False>,
-            f.gtld-servers.net.: <CE exp=-1415226366s auth=False>,
-            g.gtld-servers.net.: <CE exp=-1415226366s auth=False>,
-            h.gtld-servers.net.: <CE exp=-1415226366s auth=False>,
-            i.gtld-servers.net.: <CE exp=-1415226366s auth=False>,
-            j.gtld-servers.net.: <CE exp=-1415226366s auth=False>,
-            k.gtld-servers.net.: <CE exp=-1415226366s auth=False>,
-            l.gtld-servers.net.: <CE exp=-1415226366s auth=False>,
-            m.gtld-servers.net.: <CE exp=-1415226366s auth=False>},
-   microsoft.com.: {  ns1.msft.net.: <CE exp=-1415226366s auth=False>,
-                      ns2.msft.net.: <CE exp=-1415226366s auth=False>,
-                      ns3.msft.net.: <CE exp=-1415226366s auth=False>,
-                      ns4.msft.net.: <CE exp=-1415226366s auth=False>},
-   net.: {  a.gtld-servers.net.: <CE exp=-1415226366s auth=False>,
-            b.gtld-servers.net.: <CE exp=-1415226366s auth=False>,
-            c.gtld-servers.net.: <CE exp=-1415226366s auth=False>,
-            d.gtld-servers.net.: <CE exp=-1415226366s auth=False>,
-            e.gtld-servers.net.: <CE exp=-1415226366s auth=False>,
-            f.gtld-servers.net.: <CE exp=-1415226366s auth=False>,
-            g.gtld-servers.net.: <CE exp=-1415226366s auth=False>,
-            h.gtld-servers.net.: <CE exp=-1415226366s auth=False>,
-            i.gtld-servers.net.: <CE exp=-1415226366s auth=False>,
-            j.gtld-servers.net.: <CE exp=-1415226366s auth=False>,
-            k.gtld-servers.net.: <CE exp=-1415226366s auth=False>,
-            l.gtld-servers.net.: <CE exp=-1415226366s auth=False>,
-            m.gtld-servers.net.: <CE exp=-1415226366s auth=False>}}
+{  .: {  f.root-servers.net.: <CE exp=9223372035439300086s auth=True>},
+   akadns.net.: {  a1-128.akadns.net.: <CE exp=172800s auth=False>,
+                   a10-128.akadns.org.: <CE exp=172800s auth=False>,
+                   a11-129.akadns.net.: <CE exp=172800s auth=False>,
+                   a13-130.akadns.org.: <CE exp=172800s auth=False>,
+                   a28-129.akadns.org.: <CE exp=172800s auth=False>,
+                   a3-129.akadns.net.: <CE exp=172800s auth=True>,
+                   a4-131.akadns.org.: <CE exp=172800s auth=False>,
+                   a5-130.akadns.org.: <CE exp=172800s auth=False>,
+                   a7-131.akadns.net.: <CE exp=172800s auth=False>,
+                   a9-128.akadns.net.: <CE exp=172800s auth=False>},
+   com.: {  a.gtld-servers.net.: <CE exp=172800s auth=False>,
+            b.gtld-servers.net.: <CE exp=172800s auth=False>,
+            c.gtld-servers.net.: <CE exp=172800s auth=False>,
+            d.gtld-servers.net.: <CE exp=172800s auth=False>,
+            e.gtld-servers.net.: <CE exp=172800s auth=False>,
+            f.gtld-servers.net.: <CE exp=172800s auth=False>,
+            g.gtld-servers.net.: <CE exp=172800s auth=False>,
+            h.gtld-servers.net.: <CE exp=172800s auth=False>,
+            i.gtld-servers.net.: <CE exp=172800s auth=False>,
+            j.gtld-servers.net.: <CE exp=172800s auth=False>,
+            k.gtld-servers.net.: <CE exp=172800s auth=False>,
+            l.gtld-servers.net.: <CE exp=172800s auth=False>,
+            m.gtld-servers.net.: <CE exp=172800s auth=False>},
+   microsoft.com.: {  ns1.msft.net.: <CE exp=172800s auth=False>,
+                      ns2.msft.net.: <CE exp=172800s auth=False>,
+                      ns3.msft.net.: <CE exp=172800s auth=True>,
+                      ns4.msft.net.: <CE exp=172800s auth=False>},
+   net.: {  a.gtld-servers.net.: <CE exp=172800s auth=False>,
+            b.gtld-servers.net.: <CE exp=172800s auth=False>,
+            c.gtld-servers.net.: <CE exp=172800s auth=False>,
+            d.gtld-servers.net.: <CE exp=172800s auth=False>,
+            e.gtld-servers.net.: <CE exp=172800s auth=False>,
+            f.gtld-servers.net.: <CE exp=172800s auth=False>,
+            g.gtld-servers.net.: <CE exp=172800s auth=False>,
+            h.gtld-servers.net.: <CE exp=172800s auth=False>,
+            i.gtld-servers.net.: <CE exp=172800s auth=False>,
+            j.gtld-servers.net.: <CE exp=172800s auth=False>,
+            k.gtld-servers.net.: <CE exp=172800s auth=False>,
+            l.gtld-servers.net.: <CE exp=172800s auth=False>,
+            m.gtld-servers.net.: <CE exp=172800s auth=False>}}
 
-Picking from slist, checking if we have an A record in cache for: a3-129.akadns.net.
+Picking from slist, checking if we have an A record (probably supplied as glue) in cache for: a3-129.akadns.net.
 
     We have: a3-129.akadns.net.@96.7.49.129
 
-Attempting:
-a3-129.akadns.net.
-
-sending to a3-129.akadns.net. @('96.7.49.129', 53):
-0000   2D D2 00 00 00 01 00 00 00 00 00 00 03 6C 62 31    -............lb1
+sending question for A record for  lb1.www.ms.akadns.net.  to a3-129.akadns.net. @('96.7.49.129', 53):
+0000   E8 DC 00 00 00 01 00 00 00 00 00 00 03 6C 62 31    .............lb1
 0010   03 77 77 77 02 6D 73 06 61 6B 61 64 6E 73 03 6E    .www.ms.akadns.n
 0020   65 74 00 00 01 00 01                               et.....
 
 
 Answer received from a3-129.akadns.net. server is:
  {  'additional': [],
-   'answer': [(lb1.www.ms.akadns.net., 300, IN, A, 65.55.57.27)],
+   'answer': [(lb1.www.ms.akadns.net., 300, IN, A, 134.170.188.84)],
    'authority': [],
-   'question': [<gz01.dnslib.QE.QE instance at 0x109e88128>]}
+   'header': <gz01.dnslib.Header.Header instance at 0x10d0cf9e0>,
+   'question': [<gz01.dnslib.QE.QE instance at 0x10d0cfa70>]}
 **************************************************
 Sanswers is [  (www.microsoft.com., 3600, IN, CNAME, toggle.www.ms.akadns.net.),
    (toggle.www.ms.akadns.net., 300, IN, CNAME, c.www.ms.akadns.net.),
    (c.www.ms.akadns.net., 300, IN, CNAME, lb1.www.ms.akadns.net.),
-   (lb1.www.ms.akadns.net., 300, IN, A, 65.55.57.27)]
+   (lb1.www.ms.akadns.net., 300, IN, A, 134.170.188.84)]
 &#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#
 
 
 Response:
-¤§€      www	microsoftcom   www	microsoftcom      togglewwwmsakadnsnet togglewwwmsakadnsnet     , cwwwmsakadnsnet cwwwmsakadnsnet     , lb1wwwmsakadnsnet lb1wwwmsakadnsnet     , A79
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-================================================================================================================================================================================================================================================================================================================================================================================================================
-Best matching RR's for www.microsoft.com. are for parent domain "microsoft.com.":
-
-ns1.msft.net.
-
-ns4.msft.net.
-
-ns3.msft.net.
-
-ns2.msft.net.
-
-This will probably get added to SLIST
-NSCache is:
-{  .: {  f.root-servers.net.: <CE exp=9223372035439376633s auth=True>},
-   akadns.net.: {  a1-128.akadns.net.: <CE exp=-1415226374s auth=False>,
-                   a10-128.akadns.org.: <CE exp=-1415226374s auth=False>,
-                   a11-129.akadns.net.: <CE exp=-1415226374s auth=False>,
-                   a13-130.akadns.org.: <CE exp=-1415226374s auth=False>,
-                   a28-129.akadns.org.: <CE exp=-1415226374s auth=False>,
-                   a3-129.akadns.net.: <CE exp=-1415226374s auth=False>,
-                   a4-131.akadns.org.: <CE exp=-1415226374s auth=False>,
-                   a5-130.akadns.org.: <CE exp=-1415226374s auth=False>,
-                   a7-131.akadns.net.: <CE exp=-1415226374s auth=False>,
-                   a9-128.akadns.net.: <CE exp=-1415226374s auth=False>},
-   com.: {  a.gtld-servers.net.: <CE exp=-1415226374s auth=False>,
-            b.gtld-servers.net.: <CE exp=-1415226374s auth=False>,
-            c.gtld-servers.net.: <CE exp=-1415226374s auth=False>,
-            d.gtld-servers.net.: <CE exp=-1415226374s auth=False>,
-            e.gtld-servers.net.: <CE exp=-1415226374s auth=False>,
-            f.gtld-servers.net.: <CE exp=-1415226374s auth=False>,
-            g.gtld-servers.net.: <CE exp=-1415226374s auth=False>,
-            h.gtld-servers.net.: <CE exp=-1415226374s auth=False>,
-            i.gtld-servers.net.: <CE exp=-1415226374s auth=False>,
-            j.gtld-servers.net.: <CE exp=-1415226374s auth=False>,
-            k.gtld-servers.net.: <CE exp=-1415226374s auth=False>,
-            l.gtld-servers.net.: <CE exp=-1415226374s auth=False>,
-            m.gtld-servers.net.: <CE exp=-1415226374s auth=False>},
-   microsoft.com.: {  ns1.msft.net.: <CE exp=-1415226374s auth=False>,
-                      ns2.msft.net.: <CE exp=-1415226374s auth=False>,
-                      ns3.msft.net.: <CE exp=-1415226374s auth=False>,
-                      ns4.msft.net.: <CE exp=-1415226374s auth=False>},
-   net.: {  a.gtld-servers.net.: <CE exp=-1415226374s auth=False>,
-            b.gtld-servers.net.: <CE exp=-1415226374s auth=False>,
-            c.gtld-servers.net.: <CE exp=-1415226374s auth=False>,
-            d.gtld-servers.net.: <CE exp=-1415226374s auth=False>,
-            e.gtld-servers.net.: <CE exp=-1415226374s auth=False>,
-            f.gtld-servers.net.: <CE exp=-1415226374s auth=False>,
-            g.gtld-servers.net.: <CE exp=-1415226374s auth=False>,
-            h.gtld-servers.net.: <CE exp=-1415226374s auth=False>,
-            i.gtld-servers.net.: <CE exp=-1415226374s auth=False>,
-            j.gtld-servers.net.: <CE exp=-1415226374s auth=False>,
-            k.gtld-servers.net.: <CE exp=-1415226374s auth=False>,
-            l.gtld-servers.net.: <CE exp=-1415226374s auth=False>,
-            m.gtld-servers.net.: <CE exp=-1415226374s auth=False>}}
-
-Best matching RR's for toggle.www.ms.akadns.net. are for parent domain "akadns.net.":
-
-a9-128.akadns.net.
-
-a13-130.akadns.org.
-
-a3-129.akadns.net.
-
-a11-129.akadns.net.
-
-a5-130.akadns.org.
-
-a10-128.akadns.org.
-
-a1-128.akadns.net.
-
-a4-131.akadns.org.
-
-a7-131.akadns.net.
-
-a28-129.akadns.org.
-
-This will probably get added to SLIST
-NSCache is:
-{  .: {  f.root-servers.net.: <CE exp=9223372035439376633s auth=True>},
-   akadns.net.: {  a1-128.akadns.net.: <CE exp=-1415226374s auth=False>,
-                   a10-128.akadns.org.: <CE exp=-1415226374s auth=False>,
-                   a11-129.akadns.net.: <CE exp=-1415226374s auth=False>,
-                   a13-130.akadns.org.: <CE exp=-1415226374s auth=False>,
-                   a28-129.akadns.org.: <CE exp=-1415226374s auth=False>,
-                   a3-129.akadns.net.: <CE exp=-1415226374s auth=False>,
-                   a4-131.akadns.org.: <CE exp=-1415226374s auth=False>,
-                   a5-130.akadns.org.: <CE exp=-1415226374s auth=False>,
-                   a7-131.akadns.net.: <CE exp=-1415226374s auth=False>,
-                   a9-128.akadns.net.: <CE exp=-1415226374s auth=False>},
-   com.: {  a.gtld-servers.net.: <CE exp=-1415226374s auth=False>,
-            b.gtld-servers.net.: <CE exp=-1415226374s auth=False>,
-            c.gtld-servers.net.: <CE exp=-1415226374s auth=False>,
-            d.gtld-servers.net.: <CE exp=-1415226374s auth=False>,
-            e.gtld-servers.net.: <CE exp=-1415226374s auth=False>,
-            f.gtld-servers.net.: <CE exp=-1415226374s auth=False>,
-            g.gtld-servers.net.: <CE exp=-1415226374s auth=False>,
-            h.gtld-servers.net.: <CE exp=-1415226374s auth=False>,
-            i.gtld-servers.net.: <CE exp=-1415226374s auth=False>,
-            j.gtld-servers.net.: <CE exp=-1415226374s auth=False>,
-            k.gtld-servers.net.: <CE exp=-1415226374s auth=False>,
-            l.gtld-servers.net.: <CE exp=-1415226374s auth=False>,
-            m.gtld-servers.net.: <CE exp=-1415226374s auth=False>},
-   microsoft.com.: {  ns1.msft.net.: <CE exp=-1415226374s auth=False>,
-                      ns2.msft.net.: <CE exp=-1415226374s auth=False>,
-                      ns3.msft.net.: <CE exp=-1415226374s auth=False>,
-                      ns4.msft.net.: <CE exp=-1415226374s auth=False>},
-   net.: {  a.gtld-servers.net.: <CE exp=-1415226374s auth=False>,
-            b.gtld-servers.net.: <CE exp=-1415226374s auth=False>,
-            c.gtld-servers.net.: <CE exp=-1415226374s auth=False>,
-            d.gtld-servers.net.: <CE exp=-1415226374s auth=False>,
-            e.gtld-servers.net.: <CE exp=-1415226374s auth=False>,
-            f.gtld-servers.net.: <CE exp=-1415226374s auth=False>,
-            g.gtld-servers.net.: <CE exp=-1415226374s auth=False>,
-            h.gtld-servers.net.: <CE exp=-1415226374s auth=False>,
-            i.gtld-servers.net.: <CE exp=-1415226374s auth=False>,
-            j.gtld-servers.net.: <CE exp=-1415226374s auth=False>,
-            k.gtld-servers.net.: <CE exp=-1415226374s auth=False>,
-            l.gtld-servers.net.: <CE exp=-1415226374s auth=False>,
-            m.gtld-servers.net.: <CE exp=-1415226374s auth=False>}}
-
-Best matching RR's for c.www.ms.akadns.net. are for parent domain "akadns.net.":
-
-a9-128.akadns.net.
-
-a13-130.akadns.org.
-
-a3-129.akadns.net.
-
-a11-129.akadns.net.
-
-a5-130.akadns.org.
-
-a10-128.akadns.org.
-
-a1-128.akadns.net.
-
-a4-131.akadns.org.
-
-a7-131.akadns.net.
-
-a28-129.akadns.org.
-
-This will probably get added to SLIST
-NSCache is:
-{  .: {  f.root-servers.net.: <CE exp=9223372035439376633s auth=True>},
-   akadns.net.: {  a1-128.akadns.net.: <CE exp=-1415226374s auth=False>,
-                   a10-128.akadns.org.: <CE exp=-1415226374s auth=False>,
-                   a11-129.akadns.net.: <CE exp=-1415226374s auth=False>,
-                   a13-130.akadns.org.: <CE exp=-1415226374s auth=False>,
-                   a28-129.akadns.org.: <CE exp=-1415226374s auth=False>,
-                   a3-129.akadns.net.: <CE exp=-1415226374s auth=False>,
-                   a4-131.akadns.org.: <CE exp=-1415226374s auth=False>,
-                   a5-130.akadns.org.: <CE exp=-1415226374s auth=False>,
-                   a7-131.akadns.net.: <CE exp=-1415226374s auth=False>,
-                   a9-128.akadns.net.: <CE exp=-1415226374s auth=False>},
-   com.: {  a.gtld-servers.net.: <CE exp=-1415226374s auth=False>,
-            b.gtld-servers.net.: <CE exp=-1415226374s auth=False>,
-            c.gtld-servers.net.: <CE exp=-1415226374s auth=False>,
-            d.gtld-servers.net.: <CE exp=-1415226374s auth=False>,
-            e.gtld-servers.net.: <CE exp=-1415226374s auth=False>,
-            f.gtld-servers.net.: <CE exp=-1415226374s auth=False>,
-            g.gtld-servers.net.: <CE exp=-1415226374s auth=False>,
-            h.gtld-servers.net.: <CE exp=-1415226374s auth=False>,
-            i.gtld-servers.net.: <CE exp=-1415226374s auth=False>,
-            j.gtld-servers.net.: <CE exp=-1415226374s auth=False>,
-            k.gtld-servers.net.: <CE exp=-1415226374s auth=False>,
-            l.gtld-servers.net.: <CE exp=-1415226374s auth=False>,
-            m.gtld-servers.net.: <CE exp=-1415226374s auth=False>},
-   microsoft.com.: {  ns1.msft.net.: <CE exp=-1415226374s auth=False>,
-                      ns2.msft.net.: <CE exp=-1415226374s auth=False>,
-                      ns3.msft.net.: <CE exp=-1415226374s auth=False>,
-                      ns4.msft.net.: <CE exp=-1415226374s auth=False>},
-   net.: {  a.gtld-servers.net.: <CE exp=-1415226374s auth=False>,
-            b.gtld-servers.net.: <CE exp=-1415226374s auth=False>,
-            c.gtld-servers.net.: <CE exp=-1415226374s auth=False>,
-            d.gtld-servers.net.: <CE exp=-1415226374s auth=False>,
-            e.gtld-servers.net.: <CE exp=-1415226374s auth=False>,
-            f.gtld-servers.net.: <CE exp=-1415226374s auth=False>,
-            g.gtld-servers.net.: <CE exp=-1415226374s auth=False>,
-            h.gtld-servers.net.: <CE exp=-1415226374s auth=False>,
-            i.gtld-servers.net.: <CE exp=-1415226374s auth=False>,
-            j.gtld-servers.net.: <CE exp=-1415226374s auth=False>,
-            k.gtld-servers.net.: <CE exp=-1415226374s auth=False>,
-            l.gtld-servers.net.: <CE exp=-1415226374s auth=False>,
-            m.gtld-servers.net.: <CE exp=-1415226374s auth=False>}}
-
-Best matching RR's for lb1.www.ms.akadns.net. are for parent domain "akadns.net.":
-
-a9-128.akadns.net.
-
-a13-130.akadns.org.
-
-a3-129.akadns.net.
-
-a11-129.akadns.net.
-
-a5-130.akadns.org.
-
-a10-128.akadns.org.
-
-a1-128.akadns.net.
-
-a4-131.akadns.org.
-
-a7-131.akadns.net.
-
-a28-129.akadns.org.
-
-This will probably get added to SLIST
-NSCache is:
-{  .: {  f.root-servers.net.: <CE exp=9223372035439376633s auth=True>},
-   akadns.net.: {  a1-128.akadns.net.: <CE exp=-1415226374s auth=False>,
-                   a10-128.akadns.org.: <CE exp=-1415226374s auth=False>,
-                   a11-129.akadns.net.: <CE exp=-1415226374s auth=False>,
-                   a13-130.akadns.org.: <CE exp=-1415226374s auth=False>,
-                   a28-129.akadns.org.: <CE exp=-1415226374s auth=False>,
-                   a3-129.akadns.net.: <CE exp=-1415226374s auth=False>,
-                   a4-131.akadns.org.: <CE exp=-1415226374s auth=False>,
-                   a5-130.akadns.org.: <CE exp=-1415226374s auth=False>,
-                   a7-131.akadns.net.: <CE exp=-1415226374s auth=False>,
-                   a9-128.akadns.net.: <CE exp=-1415226374s auth=False>},
-   com.: {  a.gtld-servers.net.: <CE exp=-1415226374s auth=False>,
-            b.gtld-servers.net.: <CE exp=-1415226374s auth=False>,
-            c.gtld-servers.net.: <CE exp=-1415226374s auth=False>,
-            d.gtld-servers.net.: <CE exp=-1415226374s auth=False>,
-            e.gtld-servers.net.: <CE exp=-1415226374s auth=False>,
-            f.gtld-servers.net.: <CE exp=-1415226374s auth=False>,
-            g.gtld-servers.net.: <CE exp=-1415226374s auth=False>,
-            h.gtld-servers.net.: <CE exp=-1415226374s auth=False>,
-            i.gtld-servers.net.: <CE exp=-1415226374s auth=False>,
-            j.gtld-servers.net.: <CE exp=-1415226374s auth=False>,
-            k.gtld-servers.net.: <CE exp=-1415226374s auth=False>,
-            l.gtld-servers.net.: <CE exp=-1415226374s auth=False>,
-            m.gtld-servers.net.: <CE exp=-1415226374s auth=False>},
-   microsoft.com.: {  ns1.msft.net.: <CE exp=-1415226374s auth=False>,
-                      ns2.msft.net.: <CE exp=-1415226374s auth=False>,
-                      ns3.msft.net.: <CE exp=-1415226374s auth=False>,
-                      ns4.msft.net.: <CE exp=-1415226374s auth=False>},
-   net.: {  a.gtld-servers.net.: <CE exp=-1415226374s auth=False>,
-            b.gtld-servers.net.: <CE exp=-1415226374s auth=False>,
-            c.gtld-servers.net.: <CE exp=-1415226374s auth=False>,
-            d.gtld-servers.net.: <CE exp=-1415226374s auth=False>,
-            e.gtld-servers.net.: <CE exp=-1415226374s auth=False>,
-            f.gtld-servers.net.: <CE exp=-1415226374s auth=False>,
-            g.gtld-servers.net.: <CE exp=-1415226374s auth=False>,
-            h.gtld-servers.net.: <CE exp=-1415226374s auth=False>,
-            i.gtld-servers.net.: <CE exp=-1415226374s auth=False>,
-            j.gtld-servers.net.: <CE exp=-1415226374s auth=False>,
-            k.gtld-servers.net.: <CE exp=-1415226374s auth=False>,
-            l.gtld-servers.net.: <CE exp=-1415226374s auth=False>,
-            m.gtld-servers.net.: <CE exp=-1415226374s auth=False>}}
-
-wangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwang
-
-
-Response:
-cË€      www	microsoftcom   www	microsoftcom       togglewwwmsakadnsnet togglewwwmsakadnsnet       cwwwmsakadnsnet cwwwmsakadnsnet       lb1wwwmsakadnsnet lb1wwwmsakadnsnet       A79
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-================================================================================================================================================================================================================================================================================================================================================================================================================
-Best matching RR's for www.microsoft.com. are for parent domain "microsoft.com.":
-
-ns1.msft.net.
-
-ns4.msft.net.
-
-ns3.msft.net.
-
-ns2.msft.net.
-
-This will probably get added to SLIST
-NSCache is:
-{  .: {  f.root-servers.net.: <CE exp=9223372035439376611s auth=True>},
-   akadns.net.: {  a1-128.akadns.net.: <CE exp=-1415226396s auth=False>,
-                   a10-128.akadns.org.: <CE exp=-1415226396s auth=False>,
-                   a11-129.akadns.net.: <CE exp=-1415226396s auth=False>,
-                   a13-130.akadns.org.: <CE exp=-1415226396s auth=False>,
-                   a28-129.akadns.org.: <CE exp=-1415226396s auth=False>,
-                   a3-129.akadns.net.: <CE exp=-1415226396s auth=False>,
-                   a4-131.akadns.org.: <CE exp=-1415226396s auth=False>,
-                   a5-130.akadns.org.: <CE exp=-1415226396s auth=False>,
-                   a7-131.akadns.net.: <CE exp=-1415226396s auth=False>,
-                   a9-128.akadns.net.: <CE exp=-1415226396s auth=False>},
-   com.: {  a.gtld-servers.net.: <CE exp=-1415226396s auth=False>,
-            b.gtld-servers.net.: <CE exp=-1415226396s auth=False>,
-            c.gtld-servers.net.: <CE exp=-1415226396s auth=False>,
-            d.gtld-servers.net.: <CE exp=-1415226396s auth=False>,
-            e.gtld-servers.net.: <CE exp=-1415226396s auth=False>,
-            f.gtld-servers.net.: <CE exp=-1415226396s auth=False>,
-            g.gtld-servers.net.: <CE exp=-1415226396s auth=False>,
-            h.gtld-servers.net.: <CE exp=-1415226396s auth=False>,
-            i.gtld-servers.net.: <CE exp=-1415226396s auth=False>,
-            j.gtld-servers.net.: <CE exp=-1415226396s auth=False>,
-            k.gtld-servers.net.: <CE exp=-1415226396s auth=False>,
-            l.gtld-servers.net.: <CE exp=-1415226396s auth=False>,
-            m.gtld-servers.net.: <CE exp=-1415226396s auth=False>},
-   microsoft.com.: {  ns1.msft.net.: <CE exp=-1415226396s auth=False>,
-                      ns2.msft.net.: <CE exp=-1415226396s auth=False>,
-                      ns3.msft.net.: <CE exp=-1415226396s auth=False>,
-                      ns4.msft.net.: <CE exp=-1415226396s auth=False>},
-   net.: {  a.gtld-servers.net.: <CE exp=-1415226396s auth=False>,
-            b.gtld-servers.net.: <CE exp=-1415226396s auth=False>,
-            c.gtld-servers.net.: <CE exp=-1415226396s auth=False>,
-            d.gtld-servers.net.: <CE exp=-1415226396s auth=False>,
-            e.gtld-servers.net.: <CE exp=-1415226396s auth=False>,
-            f.gtld-servers.net.: <CE exp=-1415226396s auth=False>,
-            g.gtld-servers.net.: <CE exp=-1415226396s auth=False>,
-            h.gtld-servers.net.: <CE exp=-1415226396s auth=False>,
-            i.gtld-servers.net.: <CE exp=-1415226396s auth=False>,
-            j.gtld-servers.net.: <CE exp=-1415226396s auth=False>,
-            k.gtld-servers.net.: <CE exp=-1415226396s auth=False>,
-            l.gtld-servers.net.: <CE exp=-1415226396s auth=False>,
-            m.gtld-servers.net.: <CE exp=-1415226396s auth=False>}}
-
-Best matching RR's for toggle.www.ms.akadns.net. are for parent domain "akadns.net.":
-
-a9-128.akadns.net.
-
-a13-130.akadns.org.
-
-a3-129.akadns.net.
-
-a11-129.akadns.net.
-
-a5-130.akadns.org.
-
-a10-128.akadns.org.
-
-a1-128.akadns.net.
-
-a4-131.akadns.org.
-
-a7-131.akadns.net.
-
-a28-129.akadns.org.
-
-This will probably get added to SLIST
-NSCache is:
-{  .: {  f.root-servers.net.: <CE exp=9223372035439376611s auth=True>},
-   akadns.net.: {  a1-128.akadns.net.: <CE exp=-1415226396s auth=False>,
-                   a10-128.akadns.org.: <CE exp=-1415226396s auth=False>,
-                   a11-129.akadns.net.: <CE exp=-1415226396s auth=False>,
-                   a13-130.akadns.org.: <CE exp=-1415226396s auth=False>,
-                   a28-129.akadns.org.: <CE exp=-1415226396s auth=False>,
-                   a3-129.akadns.net.: <CE exp=-1415226396s auth=False>,
-                   a4-131.akadns.org.: <CE exp=-1415226396s auth=False>,
-                   a5-130.akadns.org.: <CE exp=-1415226396s auth=False>,
-                   a7-131.akadns.net.: <CE exp=-1415226396s auth=False>,
-                   a9-128.akadns.net.: <CE exp=-1415226396s auth=False>},
-   com.: {  a.gtld-servers.net.: <CE exp=-1415226396s auth=False>,
-            b.gtld-servers.net.: <CE exp=-1415226396s auth=False>,
-            c.gtld-servers.net.: <CE exp=-1415226396s auth=False>,
-            d.gtld-servers.net.: <CE exp=-1415226396s auth=False>,
-            e.gtld-servers.net.: <CE exp=-1415226396s auth=False>,
-            f.gtld-servers.net.: <CE exp=-1415226396s auth=False>,
-            g.gtld-servers.net.: <CE exp=-1415226396s auth=False>,
-            h.gtld-servers.net.: <CE exp=-1415226396s auth=False>,
-            i.gtld-servers.net.: <CE exp=-1415226396s auth=False>,
-            j.gtld-servers.net.: <CE exp=-1415226396s auth=False>,
-            k.gtld-servers.net.: <CE exp=-1415226396s auth=False>,
-            l.gtld-servers.net.: <CE exp=-1415226396s auth=False>,
-            m.gtld-servers.net.: <CE exp=-1415226396s auth=False>},
-   microsoft.com.: {  ns1.msft.net.: <CE exp=-1415226396s auth=False>,
-                      ns2.msft.net.: <CE exp=-1415226396s auth=False>,
-                      ns3.msft.net.: <CE exp=-1415226396s auth=False>,
-                      ns4.msft.net.: <CE exp=-1415226396s auth=False>},
-   net.: {  a.gtld-servers.net.: <CE exp=-1415226396s auth=False>,
-            b.gtld-servers.net.: <CE exp=-1415226396s auth=False>,
-            c.gtld-servers.net.: <CE exp=-1415226396s auth=False>,
-            d.gtld-servers.net.: <CE exp=-1415226396s auth=False>,
-            e.gtld-servers.net.: <CE exp=-1415226396s auth=False>,
-            f.gtld-servers.net.: <CE exp=-1415226396s auth=False>,
-            g.gtld-servers.net.: <CE exp=-1415226396s auth=False>,
-            h.gtld-servers.net.: <CE exp=-1415226396s auth=False>,
-            i.gtld-servers.net.: <CE exp=-1415226396s auth=False>,
-            j.gtld-servers.net.: <CE exp=-1415226396s auth=False>,
-            k.gtld-servers.net.: <CE exp=-1415226396s auth=False>,
-            l.gtld-servers.net.: <CE exp=-1415226396s auth=False>,
-            m.gtld-servers.net.: <CE exp=-1415226396s auth=False>}}
-
-Best matching RR's for c.www.ms.akadns.net. are for parent domain "akadns.net.":
-
-a9-128.akadns.net.
-
-a13-130.akadns.org.
-
-a3-129.akadns.net.
-
-a11-129.akadns.net.
-
-a5-130.akadns.org.
-
-a10-128.akadns.org.
-
-a1-128.akadns.net.
-
-a4-131.akadns.org.
-
-a7-131.akadns.net.
-
-a28-129.akadns.org.
-
-This will probably get added to SLIST
-NSCache is:
-{  .: {  f.root-servers.net.: <CE exp=9223372035439376611s auth=True>},
-   akadns.net.: {  a1-128.akadns.net.: <CE exp=-1415226396s auth=False>,
-                   a10-128.akadns.org.: <CE exp=-1415226396s auth=False>,
-                   a11-129.akadns.net.: <CE exp=-1415226396s auth=False>,
-                   a13-130.akadns.org.: <CE exp=-1415226396s auth=False>,
-                   a28-129.akadns.org.: <CE exp=-1415226396s auth=False>,
-                   a3-129.akadns.net.: <CE exp=-1415226396s auth=False>,
-                   a4-131.akadns.org.: <CE exp=-1415226396s auth=False>,
-                   a5-130.akadns.org.: <CE exp=-1415226396s auth=False>,
-                   a7-131.akadns.net.: <CE exp=-1415226396s auth=False>,
-                   a9-128.akadns.net.: <CE exp=-1415226396s auth=False>},
-   com.: {  a.gtld-servers.net.: <CE exp=-1415226396s auth=False>,
-            b.gtld-servers.net.: <CE exp=-1415226396s auth=False>,
-            c.gtld-servers.net.: <CE exp=-1415226396s auth=False>,
-            d.gtld-servers.net.: <CE exp=-1415226396s auth=False>,
-            e.gtld-servers.net.: <CE exp=-1415226396s auth=False>,
-            f.gtld-servers.net.: <CE exp=-1415226396s auth=False>,
-            g.gtld-servers.net.: <CE exp=-1415226396s auth=False>,
-            h.gtld-servers.net.: <CE exp=-1415226396s auth=False>,
-            i.gtld-servers.net.: <CE exp=-1415226396s auth=False>,
-            j.gtld-servers.net.: <CE exp=-1415226396s auth=False>,
-            k.gtld-servers.net.: <CE exp=-1415226396s auth=False>,
-            l.gtld-servers.net.: <CE exp=-1415226396s auth=False>,
-            m.gtld-servers.net.: <CE exp=-1415226396s auth=False>},
-   microsoft.com.: {  ns1.msft.net.: <CE exp=-1415226396s auth=False>,
-                      ns2.msft.net.: <CE exp=-1415226396s auth=False>,
-                      ns3.msft.net.: <CE exp=-1415226396s auth=False>,
-                      ns4.msft.net.: <CE exp=-1415226396s auth=False>},
-   net.: {  a.gtld-servers.net.: <CE exp=-1415226396s auth=False>,
-            b.gtld-servers.net.: <CE exp=-1415226396s auth=False>,
-            c.gtld-servers.net.: <CE exp=-1415226396s auth=False>,
-            d.gtld-servers.net.: <CE exp=-1415226396s auth=False>,
-            e.gtld-servers.net.: <CE exp=-1415226396s auth=False>,
-            f.gtld-servers.net.: <CE exp=-1415226396s auth=False>,
-            g.gtld-servers.net.: <CE exp=-1415226396s auth=False>,
-            h.gtld-servers.net.: <CE exp=-1415226396s auth=False>,
-            i.gtld-servers.net.: <CE exp=-1415226396s auth=False>,
-            j.gtld-servers.net.: <CE exp=-1415226396s auth=False>,
-            k.gtld-servers.net.: <CE exp=-1415226396s auth=False>,
-            l.gtld-servers.net.: <CE exp=-1415226396s auth=False>,
-            m.gtld-servers.net.: <CE exp=-1415226396s auth=False>}}
-
-Best matching RR's for lb1.www.ms.akadns.net. are for parent domain "akadns.net.":
-
-a9-128.akadns.net.
-
-a13-130.akadns.org.
-
-a3-129.akadns.net.
-
-a11-129.akadns.net.
-
-a5-130.akadns.org.
-
-a10-128.akadns.org.
-
-a1-128.akadns.net.
-
-a4-131.akadns.org.
-
-a7-131.akadns.net.
-
-a28-129.akadns.org.
-
-This will probably get added to SLIST
-NSCache is:
-{  .: {  f.root-servers.net.: <CE exp=9223372035439376611s auth=True>},
-   akadns.net.: {  a1-128.akadns.net.: <CE exp=-1415226396s auth=False>,
-                   a10-128.akadns.org.: <CE exp=-1415226396s auth=False>,
-                   a11-129.akadns.net.: <CE exp=-1415226396s auth=False>,
-                   a13-130.akadns.org.: <CE exp=-1415226396s auth=False>,
-                   a28-129.akadns.org.: <CE exp=-1415226396s auth=False>,
-                   a3-129.akadns.net.: <CE exp=-1415226396s auth=False>,
-                   a4-131.akadns.org.: <CE exp=-1415226396s auth=False>,
-                   a5-130.akadns.org.: <CE exp=-1415226396s auth=False>,
-                   a7-131.akadns.net.: <CE exp=-1415226396s auth=False>,
-                   a9-128.akadns.net.: <CE exp=-1415226396s auth=False>},
-   com.: {  a.gtld-servers.net.: <CE exp=-1415226396s auth=False>,
-            b.gtld-servers.net.: <CE exp=-1415226396s auth=False>,
-            c.gtld-servers.net.: <CE exp=-1415226396s auth=False>,
-            d.gtld-servers.net.: <CE exp=-1415226396s auth=False>,
-            e.gtld-servers.net.: <CE exp=-1415226396s auth=False>,
-            f.gtld-servers.net.: <CE exp=-1415226396s auth=False>,
-            g.gtld-servers.net.: <CE exp=-1415226396s auth=False>,
-            h.gtld-servers.net.: <CE exp=-1415226396s auth=False>,
-            i.gtld-servers.net.: <CE exp=-1415226396s auth=False>,
-            j.gtld-servers.net.: <CE exp=-1415226396s auth=False>,
-            k.gtld-servers.net.: <CE exp=-1415226396s auth=False>,
-            l.gtld-servers.net.: <CE exp=-1415226396s auth=False>,
-            m.gtld-servers.net.: <CE exp=-1415226396s auth=False>},
-   microsoft.com.: {  ns1.msft.net.: <CE exp=-1415226396s auth=False>,
-                      ns2.msft.net.: <CE exp=-1415226396s auth=False>,
-                      ns3.msft.net.: <CE exp=-1415226396s auth=False>,
-                      ns4.msft.net.: <CE exp=-1415226396s auth=False>},
-   net.: {  a.gtld-servers.net.: <CE exp=-1415226396s auth=False>,
-            b.gtld-servers.net.: <CE exp=-1415226396s auth=False>,
-            c.gtld-servers.net.: <CE exp=-1415226396s auth=False>,
-            d.gtld-servers.net.: <CE exp=-1415226396s auth=False>,
-            e.gtld-servers.net.: <CE exp=-1415226396s auth=False>,
-            f.gtld-servers.net.: <CE exp=-1415226396s auth=False>,
-            g.gtld-servers.net.: <CE exp=-1415226396s auth=False>,
-            h.gtld-servers.net.: <CE exp=-1415226396s auth=False>,
-            i.gtld-servers.net.: <CE exp=-1415226396s auth=False>,
-            j.gtld-servers.net.: <CE exp=-1415226396s auth=False>,
-            k.gtld-servers.net.: <CE exp=-1415226396s auth=False>,
-            l.gtld-servers.net.: <CE exp=-1415226396s auth=False>,
-            m.gtld-servers.net.: <CE exp=-1415226396s auth=False>}}
-
-wangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwang
-
-
-Response:
-àï€      www	microsoftcom   www	microsoftcom       togglewwwmsakadnsnet togglewwwmsakadnsnet       cwwwmsakadnsnet cwwwmsakadnsnet       lb1wwwmsakadnsnet lb1wwwmsakadnsnet       A79
+(20381, <gz01.dnslib.QE.QE instance at 0x10d09a758>, [(www.microsoft.com., 3600, IN, CNAME, toggle.www.ms.akadns.net.), (toggle.www.ms.akadns.net., 300, IN, CNAME, c.www.ms.akadns.net.), (c.www.ms.akadns.net., 300, IN, CNAME, lb1.www.ms.akadns.net.), (lb1.www.ms.akadns.net., 300, IN, A, 134.170.188.84)], [(microsoft.com., 172800, IN, NS, ns3.msft.net.), (akadns.net., 172800, IN, NS, a3-129.akadns.net.), (akadns.net., 172800, IN, NS, a3-129.akadns.net.), (akadns.net., 172800, IN, NS, a3-129.akadns.net.)], [(ns3.msft.net., 172800, IN, A, 213.199.180.53), (a3-129.akadns.net., 172800, IN, A, 96.7.49.129), (a3-129.akadns.net., 172800, IN, A, 96.7.49.129), (a3-129.akadns.net., 172800, IN, A, 96.7.49.129)])
 
 
 
