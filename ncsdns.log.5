@@ -1,5 +1,5 @@
 NSCache INIT = 
-{.: {f.root-servers.net.: <CE exp=731927639s auth=True>}}
+{.: {f.root-servers.net.: <CE exp=731902587s auth=True>}}
 
 
 
@@ -42,7 +42,7 @@ NSCache INIT =
 
 
 ================================================================================================================================================================================================================================================================================================================================================================================================================
-Best matching RR's for www.caltech.edu. are for parent domain "."
+Best matching RR's for www.ucl.ac.uk. are for parent domain "."
  the nameserves in cache for that zone are as follows:
 
 f.root-servers.net.
@@ -52,280 +52,119 @@ Picking from slist, checking if we have an A record (probably supplied as glue) 
 
     We have: f.root-servers.net.@192.5.5.241
 
-sending question for A record for  www.caltech.edu.  to f.root-servers.net. @('192.5.5.241', 53):
-0000   B4 9C 00 00 00 01 00 00 00 00 00 00 03 77 77 77    .............www
-0010   07 63 61 6C 74 65 63 68 03 65 64 75 00 00 01 00    .caltech.edu....
-0020   01                                                 .
+sending question for A record for  www.ucl.ac.uk.  to f.root-servers.net. @('192.5.5.241', 53):
+0000   75 9E 00 00 00 01 00 00 00 00 00 00 03 77 77 77    u............www
+0010   03 75 63 6C 02 61 63 02 75 6B 00 00 01 00 01       .ucl.ac.uk.....
 
 
 Answer received from f.root-servers.net. server is:
- {  'additional': [  (a.edu-servers.net., 172800, IN, A, 192.5.6.30),
-                    (c.edu-servers.net., 172800, IN, A, 192.26.92.30),
-                    (d.edu-servers.net., 172800, IN, A, 192.31.80.30),
-                    (f.edu-servers.net., 172800, IN, A, 192.35.51.30),
-                    (g.edu-servers.net., 172800, IN, A, 192.42.93.30),
-                    <gz01.dnslib.RR.RR_AAAA instance at 0x10654b050>,
-                    (l.edu-servers.net., 172800, IN, A, 192.41.162.30)],
+ {  'additional': [  (ns1.nic.uk., 172800, IN, A, 195.66.240.130),
+                    <gz01.dnslib.RR.RR_AAAA instance at 0x10a7a7248>,
+                    (ns2.nic.uk., 172800, IN, A, 217.79.164.131),
+                    (ns4.nic.uk., 172800, IN, A, 194.83.244.131),
+                    <gz01.dnslib.RR.RR_AAAA instance at 0x10a7a74d0>,
+                    (ns5.nic.uk., 172800, IN, A, 213.246.167.131),
+                    (ns6.nic.uk., 172800, IN, A, 213.248.254.130),
+                    (ns7.nic.uk., 172800, IN, A, 212.121.40.130),
+                    (nsa.nic.uk., 172800, IN, A, 156.154.100.3),
+                    <gz01.dnslib.RR.RR_AAAA instance at 0x10a7a7908>,
+                    (nsb.nic.uk., 172800, IN, A, 156.154.101.3),
+                    (nsc.nic.uk., 172800, IN, A, 156.154.102.3),
+                    (nsd.nic.uk., 172800, IN, A, 156.154.103.3)],
    'answer': [],
-   'authority': [  (edu., 172800, IN, NS, f.edu-servers.net.),
-                   (edu., 172800, IN, NS, a.edu-servers.net.),
-                   (edu., 172800, IN, NS, g.edu-servers.net.),
-                   (edu., 172800, IN, NS, l.edu-servers.net.),
-                   (edu., 172800, IN, NS, d.edu-servers.net.),
-                   (edu., 172800, IN, NS, c.edu-servers.net.)],
-   'header': <gz01.dnslib.Header.Header instance at 0x106537e60>,
-   'question': [<gz01.dnslib.QE.QE instance at 0x106545050>]}
+   'authority': [  (uk., 172800, IN, NS, ns2.nic.uk.),
+                   (uk., 172800, IN, NS, ns1.nic.uk.),
+                   (uk., 172800, IN, NS, ns4.nic.uk.),
+                   (uk., 172800, IN, NS, nsb.nic.uk.),
+                   (uk., 172800, IN, NS, ns7.nic.uk.),
+                   (uk., 172800, IN, NS, ns5.nic.uk.),
+                   (uk., 172800, IN, NS, nsa.nic.uk.),
+                   (uk., 172800, IN, NS, nsd.nic.uk.),
+                   (uk., 172800, IN, NS, ns6.nic.uk.),
+                   (uk., 172800, IN, NS, nsc.nic.uk.)],
+   'header': <gz01.dnslib.Header.Header instance at 0x10a793e60>,
+   'question': [<gz01.dnslib.QE.QE instance at 0x10a7a1050>]}
 **************************************************
-Best matching RR's for www.caltech.edu. are for parent domain "edu."
+Best matching RR's for www.ucl.ac.uk. are for parent domain "uk."
  the nameserves in cache for that zone are as follows:
 
-l.edu-servers.net.
+nsd.nic.uk.
 
-g.edu-servers.net.
+ns6.nic.uk.
 
-a.edu-servers.net.
+nsb.nic.uk.
 
-f.edu-servers.net.
+ns1.nic.uk.
 
-c.edu-servers.net.
+ns4.nic.uk.
 
-d.edu-servers.net.
+nsc.nic.uk.
 
-This will probably get added to SLIST
-Picking from slist, checking if we have an A record (probably supplied as glue) in cache for: a.edu-servers.net.
+ns5.nic.uk.
 
-    We have: a.edu-servers.net.@192.5.6.30
+ns2.nic.uk.
 
-sending question for A record for  www.caltech.edu.  to a.edu-servers.net. @('192.5.6.30', 53):
-0000   CD E7 00 00 00 01 00 00 00 00 00 00 03 77 77 77    .............www
-0010   07 63 61 6C 74 65 63 68 03 65 64 75 00 00 01 00    .caltech.edu....
-0020   01                                                 .
+nsa.nic.uk.
 
-
-Answer received from a.edu-servers.net. server is:
- {  'additional': [  (tybalt.caltech.edu., 172800, IN, A, 131.215.139.100),
-                    (mercutio.ni.caltech.edu., 172800, IN, A, 131.215.254.99),
-                    (tepid.ni.caltech.edu., 172800, IN, A, 131.215.254.100),
-                    (ns11.tex-an.net., 172800, IN, A, 204.65.222.236)],
-   'answer': [],
-   'authority': [  (caltech.edu., 172800, IN, NS, tybalt.caltech.edu.),
-                   (caltech.edu., 172800, IN, NS, nsx.lbl.gov.),
-                   (caltech.edu., 172800, IN, NS, mercutio.ni.caltech.edu.),
-                   (caltech.edu., 172800, IN, NS, ns5.capnet.state.tx.us.),
-                   (caltech.edu., 172800, IN, NS, tepid.ni.caltech.edu.),
-                   (caltech.edu., 172800, IN, NS, ns11.tex-an.net.)],
-   'header': <gz01.dnslib.Header.Header instance at 0x10654b950>,
-   'question': [<gz01.dnslib.QE.QE instance at 0x10654ba70>]}
-**************************************************
-Best matching RR's for www.caltech.edu. are for parent domain "caltech.edu."
- the nameserves in cache for that zone are as follows:
-
-ns5.capnet.state.tx.us.
-
-tybalt.caltech.edu.
-
-nsx.lbl.gov.
-
-mercutio.ni.caltech.edu.
-
-tepid.ni.caltech.edu.
-
-ns11.tex-an.net.
+ns7.nic.uk.
 
 This will probably get added to SLIST
-Picking from slist, checking if we have an A record (probably supplied as glue) in cache for: ns11.tex-an.net.
+Picking from slist, checking if we have an A record (probably supplied as glue) in cache for: ns7.nic.uk.
 
-    We have: ns11.tex-an.net.@204.65.222.236
+    We have: ns7.nic.uk.@212.121.40.130
 
-sending question for A record for  www.caltech.edu.  to ns11.tex-an.net. @('204.65.222.236', 53):
-0000   4F 52 00 00 00 01 00 00 00 00 00 00 03 77 77 77    OR...........www
-0010   07 63 61 6C 74 65 63 68 03 65 64 75 00 00 01 00    .caltech.edu....
-0020   01                                                 .
-
-
-ns11.tex-an.net.
-setting ns11.tex-an.net. as auth for parent domain caltech.edu. of www.caltech.edu.
-NSCache (out) is:
-{  .: {  f.root-servers.net.: <CE exp=731927636s auth=True>},
-   caltech.edu.: {  mercutio.ni.caltech.edu.: <CE exp=172800s auth=False>,
-                    ns11.tex-an.net.: <CE exp=172800s auth=True>,
-                    ns5.capnet.state.tx.us.: <CE exp=172800s auth=False>,
-                    nsx.lbl.gov.: <CE exp=172800s auth=False>,
-                    tepid.ni.caltech.edu.: <CE exp=172800s auth=False>,
-                    tybalt.caltech.edu.: <CE exp=172800s auth=False>},
-   edu.: {  a.edu-servers.net.: <CE exp=172800s auth=False>,
-            c.edu-servers.net.: <CE exp=172800s auth=False>,
-            d.edu-servers.net.: <CE exp=172800s auth=False>,
-            f.edu-servers.net.: <CE exp=172800s auth=False>,
-            g.edu-servers.net.: <CE exp=172800s auth=False>,
-            l.edu-servers.net.: <CE exp=172800s auth=False>}}
-
-Answer received from ns11.tex-an.net. server is:
- {  'additional': [],
-   'answer': [  (www.caltech.edu., 300, IN, CNAME, www-caltech-edu-prod-1-103959757.us-west-1.elb.amazonaws.com.)],
-   'authority': [],
-   'header': <gz01.dnslib.Header.Header instance at 0x106553e60>,
-   'question': [<gz01.dnslib.QE.QE instance at 0x106553f80>]}
-**************************************************
-Sanswers is [  (www.caltech.edu., 300, IN, CNAME, www-caltech-edu-prod-1-103959757.us-west-1.elb.amazonaws.com.)]
-Best matching RR's for www-caltech-edu-prod-1-103959757.us-west-1.elb.amazonaws.com. are for parent domain "."
- the nameserves in cache for that zone are as follows:
-
-f.root-servers.net.
-
-This will probably get added to SLIST
-Picking from slist, checking if we have an A record (probably supplied as glue) in cache for: f.root-servers.net.
-
-    We have: f.root-servers.net.@192.5.5.241
-
-sending question for A record for  www-caltech-edu-prod-1-103959757.us-west-1.elb.amazonaws.com.  to f.root-servers.net. @('192.5.5.241', 53):
-0000   6E 71 00 00 00 01 00 00 00 00 00 00 20 77 77 77    nq.......... www
-0010   2D 63 61 6C 74 65 63 68 2D 65 64 75 2D 70 72 6F    -caltech-edu-pro
-0020   64 2D 31 2D 31 30 33 39 35 39 37 35 37 09 75 73    d-1-103959757.us
-0030   2D 77 65 73 74 2D 31 03 65 6C 62 09 61 6D 61 7A    -west-1.elb.amaz
-0040   6F 6E 61 77 73 03 63 6F 6D 00 00 01 00 01          onaws.com.....
+sending question for A record for  www.ucl.ac.uk.  to ns7.nic.uk. @('212.121.40.130', 53):
+0000   A0 E7 00 00 00 01 00 00 00 00 00 00 03 77 77 77    .............www
+0010   03 75 63 6C 02 61 63 02 75 6B 00 00 01 00 01       .ucl.ac.uk.....
 
 
-Answer received from f.root-servers.net. server is:
- {  'additional': [  (a.gtld-servers.net., 172800, IN, A, 192.5.6.30),
-                    <gz01.dnslib.RR.RR_AAAA instance at 0x10655ac68>,
-                    (b.gtld-servers.net., 172800, IN, A, 192.33.14.30),
-                    <gz01.dnslib.RR.RR_AAAA instance at 0x10655ae18>,
-                    (c.gtld-servers.net., 172800, IN, A, 192.26.92.30),
-                    (d.gtld-servers.net., 172800, IN, A, 192.31.80.30),
-                    (e.gtld-servers.net., 172800, IN, A, 192.12.94.30),
-                    (f.gtld-servers.net., 172800, IN, A, 192.35.51.30),
-                    (g.gtld-servers.net., 172800, IN, A, 192.42.93.30),
-                    (h.gtld-servers.net., 172800, IN, A, 192.54.112.30),
-                    (i.gtld-servers.net., 172800, IN, A, 192.43.172.30)],
-   'answer': [],
-   'authority': [  (com., 172800, IN, NS, d.gtld-servers.net.),
-                   (com., 172800, IN, NS, c.gtld-servers.net.),
-                   (com., 172800, IN, NS, i.gtld-servers.net.),
-                   (com., 172800, IN, NS, l.gtld-servers.net.),
-                   (com., 172800, IN, NS, e.gtld-servers.net.),
-                   (com., 172800, IN, NS, a.gtld-servers.net.),
-                   (com., 172800, IN, NS, g.gtld-servers.net.),
-                   (com., 172800, IN, NS, k.gtld-servers.net.),
-                   (com., 172800, IN, NS, j.gtld-servers.net.),
-                   (com., 172800, IN, NS, m.gtld-servers.net.),
-                   (com., 172800, IN, NS, f.gtld-servers.net.),
-                   (com., 172800, IN, NS, b.gtld-servers.net.),
-                   (com., 172800, IN, NS, h.gtld-servers.net.)],
-   'header': <gz01.dnslib.Header.Header instance at 0x106557638>,
-   'question': [<gz01.dnslib.QE.QE instance at 0x106557758>]}
-**************************************************
-Best matching RR's for www-caltech-edu-prod-1-103959757.us-west-1.elb.amazonaws.com. are for parent domain "com."
- the nameserves in cache for that zone are as follows:
-
-m.gtld-servers.net.
-
-j.gtld-servers.net.
-
-d.gtld-servers.net.
-
-h.gtld-servers.net.
-
-l.gtld-servers.net.
-
-c.gtld-servers.net.
-
-a.gtld-servers.net.
-
-g.gtld-servers.net.
-
-e.gtld-servers.net.
-
-b.gtld-servers.net.
-
-k.gtld-servers.net.
-
-i.gtld-servers.net.
-
-f.gtld-servers.net.
-
-This will probably get added to SLIST
-Picking from slist, checking if we have an A record (probably supplied as glue) in cache for: d.gtld-servers.net.
-
-    We have: d.gtld-servers.net.@192.31.80.30
-
-sending question for A record for  www-caltech-edu-prod-1-103959757.us-west-1.elb.amazonaws.com.  to d.gtld-servers.net. @('192.31.80.30', 53):
-0000   DF 77 00 00 00 01 00 00 00 00 00 00 20 77 77 77    .w.......... www
-0010   2D 63 61 6C 74 65 63 68 2D 65 64 75 2D 70 72 6F    -caltech-edu-pro
-0020   64 2D 31 2D 31 30 33 39 35 39 37 35 37 09 75 73    d-1-103959757.us
-0030   2D 77 65 73 74 2D 31 03 65 6C 62 09 61 6D 61 7A    -west-1.elb.amaz
-0040   6F 6E 61 77 73 03 63 6F 6D 00 00 01 00 01          onaws.com.....
-
-
-Answer received from d.gtld-servers.net. server is:
- {  'additional': [  (u1.amazonaws.com., 172800, IN, A, 156.154.64.10),
-                    (u2.amazonaws.com., 172800, IN, A, 156.154.65.10),
-                    (r1.amazonaws.com., 172800, IN, A, 205.251.192.27),
-                    (r2.amazonaws.com., 172800, IN, A, 205.251.195.199)],
-   'answer': [],
-   'authority': [  (amazonaws.com., 172800, IN, NS, u1.amazonaws.com.),
-                   (amazonaws.com., 172800, IN, NS, u2.amazonaws.com.),
-                   (amazonaws.com., 172800, IN, NS, r1.amazonaws.com.),
-                   (amazonaws.com., 172800, IN, NS, r2.amazonaws.com.)],
-   'header': <gz01.dnslib.Header.Header instance at 0x1065632d8>,
-   'question': [<gz01.dnslib.QE.QE instance at 0x106563368>]}
-**************************************************
-Best matching RR's for www-caltech-edu-prod-1-103959757.us-west-1.elb.amazonaws.com. are for parent domain "amazonaws.com."
- the nameserves in cache for that zone are as follows:
-
-u2.amazonaws.com.
-
-u1.amazonaws.com.
-
-r1.amazonaws.com.
-
-r2.amazonaws.com.
-
-This will probably get added to SLIST
-Picking from slist, checking if we have an A record (probably supplied as glue) in cache for: r2.amazonaws.com.
-
-    We have: r2.amazonaws.com.@205.251.195.199
-
-sending question for A record for  www-caltech-edu-prod-1-103959757.us-west-1.elb.amazonaws.com.  to r2.amazonaws.com. @('205.251.195.199', 53):
-0000   7F D8 00 00 00 01 00 00 00 00 00 00 20 77 77 77    ............ www
-0010   2D 63 61 6C 74 65 63 68 2D 65 64 75 2D 70 72 6F    -caltech-edu-pro
-0020   64 2D 31 2D 31 30 33 39 35 39 37 35 37 09 75 73    d-1-103959757.us
-0030   2D 77 65 73 74 2D 31 03 65 6C 62 09 61 6D 61 7A    -west-1.elb.amaz
-0040   6F 6E 61 77 73 03 63 6F 6D 00 00 01 00 01          onaws.com.....
-
-
-Answer received from r2.amazonaws.com. server is:
+Answer received from ns7.nic.uk. server is:
  {  'additional': [],
    'answer': [],
-   'authority': [  (us-west-1.elb.amazonaws.com., 300, IN, NS, ns-1036.awsdns-01.org.),
-                   (us-west-1.elb.amazonaws.com., 300, IN, NS, ns-1850.awsdns-39.co.uk.),
-                   (us-west-1.elb.amazonaws.com., 300, IN, NS, ns-467.awsdns-58.com.),
-                   (us-west-1.elb.amazonaws.com., 300, IN, NS, ns-699.awsdns-23.net.)],
-   'header': <gz01.dnslib.Header.Header instance at 0x1065673b0>,
-   'question': [<gz01.dnslib.QE.QE instance at 0x106567440>]}
+   'authority': [  (ac.uk., 172800, IN, NS, ns0.ja.net.),
+                   (ac.uk., 172800, IN, NS, ns1.surfnet.nl.),
+                   (ac.uk., 172800, IN, NS, ns2.ja.net.),
+                   (ac.uk., 172800, IN, NS, ns3.ja.net.),
+                   (ac.uk., 172800, IN, NS, ns4.ja.net.),
+                   (ac.uk., 172800, IN, NS, auth03.ns.uu.net.),
+                   (ac.uk., 172800, IN, NS, ws-fra1.win-ip.dfn.de.)],
+   'header': <gz01.dnslib.Header.Header instance at 0x10a7ac950>,
+   'question': [<gz01.dnslib.QE.QE instance at 0x10a7aca28>]}
 **************************************************
-Best matching RR's for www-caltech-edu-prod-1-103959757.us-west-1.elb.amazonaws.com. are for parent domain "us-west-1.elb.amazonaws.com."
+Best matching RR's for www.ucl.ac.uk. are for parent domain "ac.uk."
  the nameserves in cache for that zone are as follows:
 
-ns-699.awsdns-23.net.
+ns3.ja.net.
 
-ns-1036.awsdns-01.org.
+ns1.surfnet.nl.
 
-ns-467.awsdns-58.com.
+auth03.ns.uu.net.
 
-ns-1850.awsdns-39.co.uk.
+ns0.ja.net.
+
+ns4.ja.net.
+
+ns2.ja.net.
+
+ws-fra1.win-ip.dfn.de.
 
 This will probably get added to SLIST
-Picking from slist, checking if we have an A record (probably supplied as glue) in cache for: ns-1036.awsdns-01.org.
+Picking from slist, checking if we have an A record (probably supplied as glue) in cache for: ns4.ja.net.
 
-Picking from slist, checking if we have an A record (probably supplied as glue) in cache for: ns-467.awsdns-58.com.
+Picking from slist, checking if we have an A record (probably supplied as glue) in cache for: ns1.surfnet.nl.
 
-Picking from slist, checking if we have an A record (probably supplied as glue) in cache for: ns-1850.awsdns-39.co.uk.
+Picking from slist, checking if we have an A record (probably supplied as glue) in cache for: ws-fra1.win-ip.dfn.de.
 
-Picking from slist, checking if we have an A record (probably supplied as glue) in cache for: ns-699.awsdns-23.net.
+Picking from slist, checking if we have an A record (probably supplied as glue) in cache for: ns3.ja.net.
+
+Picking from slist, checking if we have an A record (probably supplied as glue) in cache for: ns2.ja.net.
+
+Picking from slist, checking if we have an A record (probably supplied as glue) in cache for: ns0.ja.net.
+
+Picking from slist, checking if we have an A record (probably supplied as glue) in cache for: auth03.ns.uu.net.
 
 exhausted list, and couldnt find anything about these servers in our cache
-Best matching RR's for ns-699.awsdns-23.net. are for parent domain "."
+Best matching RR's for ns3.ja.net. are for parent domain "."
  the nameserves in cache for that zone are as follows:
 
 f.root-servers.net.
@@ -335,17 +174,16 @@ Picking from slist, checking if we have an A record (probably supplied as glue) 
 
     We have: f.root-servers.net.@192.5.5.241
 
-sending question for A record for  ns-699.awsdns-23.net.  to f.root-servers.net. @('192.5.5.241', 53):
-0000   83 20 00 00 00 01 00 00 00 00 00 00 06 6E 73 2D    . ...........ns-
-0010   36 39 39 09 61 77 73 64 6E 73 2D 32 33 03 6E 65    699.awsdns-23.ne
-0020   74 00 00 01 00 01                                  t.....
+sending question for A record for  ns3.ja.net.  to f.root-servers.net. @('192.5.5.241', 53):
+0000   8A F9 00 00 00 01 00 00 00 00 00 00 03 6E 73 33    .............ns3
+0010   02 6A 61 03 6E 65 74 00 00 01 00 01                .ja.net.....
 
 
 Answer received from f.root-servers.net. server is:
  {  'additional': [  (a.gtld-servers.net., 172800, IN, A, 192.5.6.30),
-                    <gz01.dnslib.RR.RR_AAAA instance at 0x10656f518>,
+                    <gz01.dnslib.RR.RR_AAAA instance at 0x10a7b90e0>,
                     (b.gtld-servers.net., 172800, IN, A, 192.33.14.30),
-                    <gz01.dnslib.RR.RR_AAAA instance at 0x10656f6c8>,
+                    <gz01.dnslib.RR.RR_AAAA instance at 0x10a7b9290>,
                     (c.gtld-servers.net., 172800, IN, A, 192.26.92.30),
                     (d.gtld-servers.net., 172800, IN, A, 192.31.80.30),
                     (e.gtld-servers.net., 172800, IN, A, 192.12.94.30),
@@ -357,23 +195,23 @@ Answer received from f.root-servers.net. server is:
                     (k.gtld-servers.net., 172800, IN, A, 192.52.178.30),
                     (l.gtld-servers.net., 172800, IN, A, 192.41.162.30)],
    'answer': [],
-   'authority': [  (net., 172800, IN, NS, d.gtld-servers.net.),
-                   (net., 172800, IN, NS, h.gtld-servers.net.),
-                   (net., 172800, IN, NS, g.gtld-servers.net.),
-                   (net., 172800, IN, NS, b.gtld-servers.net.),
-                   (net., 172800, IN, NS, i.gtld-servers.net.),
-                   (net., 172800, IN, NS, e.gtld-servers.net.),
-                   (net., 172800, IN, NS, c.gtld-servers.net.),
+   'authority': [  (net., 172800, IN, NS, l.gtld-servers.net.),
+                   (net., 172800, IN, NS, d.gtld-servers.net.),
                    (net., 172800, IN, NS, k.gtld-servers.net.),
                    (net., 172800, IN, NS, m.gtld-servers.net.),
+                   (net., 172800, IN, NS, h.gtld-servers.net.),
+                   (net., 172800, IN, NS, c.gtld-servers.net.),
                    (net., 172800, IN, NS, f.gtld-servers.net.),
+                   (net., 172800, IN, NS, e.gtld-servers.net.),
                    (net., 172800, IN, NS, a.gtld-servers.net.),
-                   (net., 172800, IN, NS, j.gtld-servers.net.),
-                   (net., 172800, IN, NS, l.gtld-servers.net.)],
-   'header': <gz01.dnslib.Header.Header instance at 0x106567dd0>,
-   'question': [<gz01.dnslib.QE.QE instance at 0x106567e60>]}
+                   (net., 172800, IN, NS, b.gtld-servers.net.),
+                   (net., 172800, IN, NS, g.gtld-servers.net.),
+                   (net., 172800, IN, NS, i.gtld-servers.net.),
+                   (net., 172800, IN, NS, j.gtld-servers.net.)],
+   'header': <gz01.dnslib.Header.Header instance at 0x10a7b2998>,
+   'question': [<gz01.dnslib.QE.QE instance at 0x10a7b2a70>]}
 **************************************************
-Best matching RR's for ns-699.awsdns-23.net. are for parent domain "net."
+Best matching RR's for ns3.ja.net. are for parent domain "net."
  the nameserves in cache for that zone are as follows:
 
 m.gtld-servers.net.
@@ -403,226 +241,249 @@ i.gtld-servers.net.
 f.gtld-servers.net.
 
 This will probably get added to SLIST
-Picking from slist, checking if we have an A record (probably supplied as glue) in cache for: j.gtld-servers.net.
+Picking from slist, checking if we have an A record (probably supplied as glue) in cache for: c.gtld-servers.net.
 
-    We have: j.gtld-servers.net.@192.48.79.30
+    We have: c.gtld-servers.net.@192.26.92.30
 
-sending question for A record for  ns-699.awsdns-23.net.  to j.gtld-servers.net. @('192.48.79.30', 53):
-0000   0C 7C 00 00 00 01 00 00 00 00 00 00 06 6E 73 2D    .|...........ns-
-0010   36 39 39 09 61 77 73 64 6E 73 2D 32 33 03 6E 65    699.awsdns-23.ne
-0020   74 00 00 01 00 01                                  t.....
+sending question for A record for  ns3.ja.net.  to c.gtld-servers.net. @('192.26.92.30', 53):
+0000   8C C1 00 00 00 01 00 00 00 00 00 00 03 6E 73 33    .............ns3
+0010   02 6A 61 03 6E 65 74 00 00 01 00 01                .ja.net.....
 
 
-Answer received from j.gtld-servers.net. server is:
- {  'additional': [  (g-ns-472.awsdns-23.net., 172800, IN, A, 205.251.193.216),
-                    (g-ns-793.awsdns-23.net., 172800, IN, A, 205.251.195.25),
-                    (g-ns-1367.awsdns-23.net., 172800, IN, A, 205.251.197.87),
-                    (g-ns-1943.awsdns-23.net., 172800, IN, A, 205.251.199.151)],
+Answer received from c.gtld-servers.net. server is:
+ {  'additional': [  (ns0.ja.net., 172800, IN, A, 128.86.1.20),
+                    (ns0.ja.net., 172800, IN, A, 193.63.94.20),
+                    <gz01.dnslib.RR.RR_AAAA instance at 0x10a7c4878>,
+                    <gz01.dnslib.RR.RR_AAAA instance at 0x10a7c4950>,
+                    (ns1.ja.net., 172800, IN, A, 194.81.227.226),
+                    <gz01.dnslib.RR.RR_AAAA instance at 0x10a7c4b00>,
+                    (ns2.ja.net., 172800, IN, A, 193.63.105.17),
+                    <gz01.dnslib.RR.RR_AAAA instance at 0x10a7c4cb0>,
+                    (ns4.ja.net., 172800, IN, A, 193.62.157.66),
+                    <gz01.dnslib.RR.RR_AAAA instance at 0x10a7c4e60>],
    'answer': [],
-   'authority': [  (awsdns-23.net., 172800, IN, NS, g-ns-472.awsdns-23.net.),
-                   (awsdns-23.net., 172800, IN, NS, g-ns-793.awsdns-23.net.),
-                   (awsdns-23.net., 172800, IN, NS, g-ns-1367.awsdns-23.net.),
-                   (awsdns-23.net., 172800, IN, NS, g-ns-1943.awsdns-23.net.)],
-   'header': <gz01.dnslib.Header.Header instance at 0x1065748c0>,
-   'question': [<gz01.dnslib.QE.QE instance at 0x106574950>]}
+   'authority': [  (ja.net., 172800, IN, NS, ns0.ja.net.),
+                   (ja.net., 172800, IN, NS, ns1.surfnet.nl.),
+                   (ja.net., 172800, IN, NS, ns1.ja.net.),
+                   (ja.net., 172800, IN, NS, ns2.ja.net.),
+                   (ja.net., 172800, IN, NS, ns4.ja.net.)],
+   'header': <gz01.dnslib.Header.Header instance at 0x10a7bfc20>,
+   'question': [<gz01.dnslib.QE.QE instance at 0x10a7bfcf8>]}
 **************************************************
-Best matching RR's for ns-699.awsdns-23.net. are for parent domain "awsdns-23.net."
+Best matching RR's for ns3.ja.net. are for parent domain "ja.net."
  the nameserves in cache for that zone are as follows:
 
-g-ns-1367.awsdns-23.net.
+ns1.surfnet.nl.
 
-g-ns-793.awsdns-23.net.
+ns1.ja.net.
 
-g-ns-472.awsdns-23.net.
+ns2.ja.net.
 
-g-ns-1943.awsdns-23.net.
+ns4.ja.net.
+
+ns0.ja.net.
 
 This will probably get added to SLIST
-Picking from slist, checking if we have an A record (probably supplied as glue) in cache for: g-ns-1943.awsdns-23.net.
+Picking from slist, checking if we have an A record (probably supplied as glue) in cache for: ns1.surfnet.nl.
 
-    We have: g-ns-1943.awsdns-23.net.@205.251.199.151
+Picking from slist, checking if we have an A record (probably supplied as glue) in cache for: ns1.ja.net.
 
-sending question for A record for  ns-699.awsdns-23.net.  to g-ns-1943.awsdns-23.net. @('205.251.199.151', 53):
-0000   CC F3 00 00 00 01 00 00 00 00 00 00 06 6E 73 2D    .............ns-
-0010   36 39 39 09 61 77 73 64 6E 73 2D 32 33 03 6E 65    699.awsdns-23.ne
-0020   74 00 00 01 00 01                                  t.....
+    We have: ns1.ja.net.@194.81.227.226
+
+sending question for A record for  ns3.ja.net.  to ns1.ja.net. @('194.81.227.226', 53):
+0000   25 C8 00 00 00 01 00 00 00 00 00 00 03 6E 73 33    %............ns3
+0010   02 6A 61 03 6E 65 74 00 00 01 00 01                .ja.net.....
 
 
-g-ns-1943.awsdns-23.net.
-setting g-ns-1943.awsdns-23.net. as auth for parent domain awsdns-23.net. of ns-699.awsdns-23.net.
+ns1.ja.net.
+setting ns1.ja.net. as auth for parent domain ja.net. of ns3.ja.net.
 NSCache (out) is:
-{  .: {  f.root-servers.net.: <CE exp=731927635s auth=True>},
-   amazonaws.com.: {  r1.amazonaws.com.: <CE exp=172799s auth=False>,
-                      r2.amazonaws.com.: <CE exp=172799s auth=False>,
-                      u1.amazonaws.com.: <CE exp=172799s auth=False>,
-                      u2.amazonaws.com.: <CE exp=172799s auth=False>},
-   awsdns-23.net.: {  g-ns-1367.awsdns-23.net.: <CE exp=172800s auth=False>,
-                      g-ns-1943.awsdns-23.net.: <CE exp=172800s auth=True>,
-                      g-ns-472.awsdns-23.net.: <CE exp=172800s auth=False>,
-                      g-ns-793.awsdns-23.net.: <CE exp=172800s auth=False>},
-   caltech.edu.: {  mercutio.ni.caltech.edu.: <CE exp=172799s auth=False>,
-                    ns11.tex-an.net.: <CE exp=172799s auth=True>,
-                    ns5.capnet.state.tx.us.: <CE exp=172799s auth=False>,
-                    nsx.lbl.gov.: <CE exp=172799s auth=False>,
-                    tepid.ni.caltech.edu.: <CE exp=172799s auth=False>,
-                    tybalt.caltech.edu.: <CE exp=172799s auth=False>},
-   com.: {  a.gtld-servers.net.: <CE exp=172799s auth=False>,
-            b.gtld-servers.net.: <CE exp=172799s auth=False>,
-            c.gtld-servers.net.: <CE exp=172799s auth=False>,
-            d.gtld-servers.net.: <CE exp=172799s auth=False>,
-            e.gtld-servers.net.: <CE exp=172799s auth=False>,
-            f.gtld-servers.net.: <CE exp=172799s auth=False>,
-            g.gtld-servers.net.: <CE exp=172799s auth=False>,
-            h.gtld-servers.net.: <CE exp=172799s auth=False>,
-            i.gtld-servers.net.: <CE exp=172799s auth=False>,
-            j.gtld-servers.net.: <CE exp=172799s auth=False>,
-            k.gtld-servers.net.: <CE exp=172799s auth=False>,
-            l.gtld-servers.net.: <CE exp=172799s auth=False>,
-            m.gtld-servers.net.: <CE exp=172799s auth=False>},
-   edu.: {  a.edu-servers.net.: <CE exp=172799s auth=False>,
-            c.edu-servers.net.: <CE exp=172799s auth=False>,
-            d.edu-servers.net.: <CE exp=172799s auth=False>,
-            f.edu-servers.net.: <CE exp=172799s auth=False>,
-            g.edu-servers.net.: <CE exp=172799s auth=False>,
-            l.edu-servers.net.: <CE exp=172799s auth=False>},
-   net.: {  a.gtld-servers.net.: <CE exp=172799s auth=False>,
-            b.gtld-servers.net.: <CE exp=172799s auth=False>,
-            c.gtld-servers.net.: <CE exp=172799s auth=False>,
-            d.gtld-servers.net.: <CE exp=172799s auth=False>,
-            e.gtld-servers.net.: <CE exp=172799s auth=False>,
-            f.gtld-servers.net.: <CE exp=172799s auth=False>,
-            g.gtld-servers.net.: <CE exp=172799s auth=False>,
-            h.gtld-servers.net.: <CE exp=172799s auth=False>,
-            i.gtld-servers.net.: <CE exp=172799s auth=False>,
-            j.gtld-servers.net.: <CE exp=172799s auth=False>,
-            k.gtld-servers.net.: <CE exp=172799s auth=False>,
-            l.gtld-servers.net.: <CE exp=172799s auth=False>,
-            m.gtld-servers.net.: <CE exp=172799s auth=False>},
-   us-west-1.elb.amazonaws.com.: {  ns-1036.awsdns-01.org.: <CE exp=299s auth=False>,
-                                    ns-1850.awsdns-39.co.uk.: <CE exp=299s auth=False>,
-                                    ns-467.awsdns-58.com.: <CE exp=299s auth=False>,
-                                    ns-699.awsdns-23.net.: <CE exp=299s auth=False>}}
+{  .: {  f.root-servers.net.: <CE exp=731902572s auth=True>},
+   ac.uk.: {  auth03.ns.uu.net.: <CE exp=172800s auth=False>,
+              ns0.ja.net.: <CE exp=172800s auth=False>,
+              ns1.surfnet.nl.: <CE exp=172800s auth=False>,
+              ns2.ja.net.: <CE exp=172800s auth=False>,
+              ns3.ja.net.: <CE exp=172800s auth=False>,
+              ns4.ja.net.: <CE exp=172800s auth=False>,
+              ws-fra1.win-ip.dfn.de.: <CE exp=172800s auth=False>},
+   ja.net.: {  ns0.ja.net.: <CE exp=172800s auth=False>,
+               ns1.ja.net.: <CE exp=172800s auth=True>,
+               ns1.surfnet.nl.: <CE exp=172800s auth=False>,
+               ns2.ja.net.: <CE exp=172800s auth=False>,
+               ns4.ja.net.: <CE exp=172800s auth=False>},
+   net.: {  a.gtld-servers.net.: <CE exp=172800s auth=False>,
+            b.gtld-servers.net.: <CE exp=172800s auth=False>,
+            c.gtld-servers.net.: <CE exp=172800s auth=False>,
+            d.gtld-servers.net.: <CE exp=172800s auth=False>,
+            e.gtld-servers.net.: <CE exp=172800s auth=False>,
+            f.gtld-servers.net.: <CE exp=172800s auth=False>,
+            g.gtld-servers.net.: <CE exp=172800s auth=False>,
+            h.gtld-servers.net.: <CE exp=172800s auth=False>,
+            i.gtld-servers.net.: <CE exp=172800s auth=False>,
+            j.gtld-servers.net.: <CE exp=172800s auth=False>,
+            k.gtld-servers.net.: <CE exp=172800s auth=False>,
+            l.gtld-servers.net.: <CE exp=172800s auth=False>,
+            m.gtld-servers.net.: <CE exp=172800s auth=False>},
+   uk.: {  ns1.nic.uk.: <CE exp=172800s auth=False>,
+           ns2.nic.uk.: <CE exp=172800s auth=False>,
+           ns4.nic.uk.: <CE exp=172800s auth=False>,
+           ns5.nic.uk.: <CE exp=172800s auth=False>,
+           ns6.nic.uk.: <CE exp=172800s auth=False>,
+           ns7.nic.uk.: <CE exp=172800s auth=False>,
+           nsa.nic.uk.: <CE exp=172800s auth=False>,
+           nsb.nic.uk.: <CE exp=172800s auth=False>,
+           nsc.nic.uk.: <CE exp=172800s auth=False>,
+           nsd.nic.uk.: <CE exp=172800s auth=False>}}
 
-Answer received from g-ns-1943.awsdns-23.net. server is:
- {  'additional': [  (g-ns-1367.awsdns-23.net., 172800, IN, A, 205.251.197.87),
-                    (g-ns-1943.awsdns-23.net., 172800, IN, A, 205.251.199.151),
-                    (g-ns-472.awsdns-23.net., 172800, IN, A, 205.251.193.216),
-                    (g-ns-793.awsdns-23.net., 172800, IN, A, 205.251.195.25)],
-   'answer': [(ns-699.awsdns-23.net., 172800, IN, A, 205.251.194.187)],
-   'authority': [  (awsdns-23.net., 172800, IN, NS, g-ns-1367.awsdns-23.net.),
-                   (awsdns-23.net., 172800, IN, NS, g-ns-1943.awsdns-23.net.),
-                   (awsdns-23.net., 172800, IN, NS, g-ns-472.awsdns-23.net.),
-                   (awsdns-23.net., 172800, IN, NS, g-ns-793.awsdns-23.net.)],
-   'header': <gz01.dnslib.Header.Header instance at 0x106578950>,
-   'question': [<gz01.dnslib.QE.QE instance at 0x1065789e0>]}
+Answer received from ns1.ja.net. server is:
+ {  'additional': [  (ns0.ja.net., 86400, IN, A, 193.63.94.20),
+                    (ns0.ja.net., 86400, IN, A, 128.86.1.20),
+                    <gz01.dnslib.RR.RR_AAAA instance at 0x10a7cd128>,
+                    <gz01.dnslib.RR.RR_AAAA instance at 0x10a7cd200>,
+                    (ns1.ja.net., 86400, IN, A, 194.81.227.226),
+                    <gz01.dnslib.RR.RR_AAAA instance at 0x10a7cd3b0>,
+                    (ns2.ja.net., 86400, IN, A, 193.63.105.17),
+                    <gz01.dnslib.RR.RR_AAAA instance at 0x10a7cd560>,
+                    (ns4.ja.net., 86400, IN, A, 193.62.157.66),
+                    <gz01.dnslib.RR.RR_AAAA instance at 0x10a7cd710>],
+   'answer': [(ns3.ja.net., 86400, IN, A, 193.63.106.103)],
+   'authority': [  (ja.net., 86400, IN, NS, ns4.ja.net.),
+                   (ja.net., 86400, IN, NS, ns1.ja.net.),
+                   (ja.net., 86400, IN, NS, ns0.ja.net.),
+                   (ja.net., 86400, IN, NS, ns1.surfnet.nl.),
+                   (ja.net., 86400, IN, NS, ns2.ja.net.)],
+   'header': <gz01.dnslib.Header.Header instance at 0x10a7c93f8>,
+   'question': [<gz01.dnslib.QE.QE instance at 0x10a7c94d0>]}
 **************************************************
-Sanswers is [(ns-699.awsdns-23.net., 172800, IN, A, 205.251.194.187)]
+Sanswers is [(ns3.ja.net., 86400, IN, A, 193.63.106.103)]
 &#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#
 
 
 Response:
-(43973, <gz01.dnslib.QE.QE instance at 0x106537bd8>, [(ns-699.awsdns-23.net., 172800, IN, A, 205.251.194.187)], [], [])
-Best matching RR's for www-caltech-edu-prod-1-103959757.us-west-1.elb.amazonaws.com. are for parent domain "us-west-1.elb.amazonaws.com."
+(38657, <gz01.dnslib.QE.QE instance at 0x10a793bd8>, [(ns3.ja.net., 86400, IN, A, 193.63.106.103)], [(ja.net., 172800, IN, NS, ns1.ja.net.)], [(ns1.ja.net., 172800, IN, A, 194.81.227.226)])
+Best matching RR's for www.ucl.ac.uk. are for parent domain "ac.uk."
  the nameserves in cache for that zone are as follows:
 
-ns-699.awsdns-23.net.
+ns3.ja.net.
 
-ns-1036.awsdns-01.org.
+ns1.surfnet.nl.
 
-ns-467.awsdns-58.com.
+auth03.ns.uu.net.
 
-ns-1850.awsdns-39.co.uk.
+ns0.ja.net.
+
+ns4.ja.net.
+
+ns2.ja.net.
+
+ws-fra1.win-ip.dfn.de.
 
 This will probably get added to SLIST
-Picking from slist, checking if we have an A record (probably supplied as glue) in cache for: ns-1036.awsdns-01.org.
+Picking from slist, checking if we have an A record (probably supplied as glue) in cache for: ns3.ja.net.
 
-Picking from slist, checking if we have an A record (probably supplied as glue) in cache for: ns-1850.awsdns-39.co.uk.
+    We have: ns3.ja.net.@193.63.106.103
 
-Picking from slist, checking if we have an A record (probably supplied as glue) in cache for: ns-699.awsdns-23.net.
-
-    We have: ns-699.awsdns-23.net.@205.251.194.187
-
-sending question for A record for  www-caltech-edu-prod-1-103959757.us-west-1.elb.amazonaws.com.  to ns-699.awsdns-23.net. @('205.251.194.187', 53):
-0000   9F 84 00 00 00 01 00 00 00 00 00 00 20 77 77 77    ............ www
-0010   2D 63 61 6C 74 65 63 68 2D 65 64 75 2D 70 72 6F    -caltech-edu-pro
-0020   64 2D 31 2D 31 30 33 39 35 39 37 35 37 09 75 73    d-1-103959757.us
-0030   2D 77 65 73 74 2D 31 03 65 6C 62 09 61 6D 61 7A    -west-1.elb.amaz
-0040   6F 6E 61 77 73 03 63 6F 6D 00 00 01 00 01          onaws.com.....
+sending question for A record for  www.ucl.ac.uk.  to ns3.ja.net. @('193.63.106.103', 53):
+0000   32 69 00 00 00 01 00 00 00 00 00 00 03 77 77 77    2i...........www
+0010   03 75 63 6C 02 61 63 02 75 6B 00 00 01 00 01       .ucl.ac.uk.....
 
 
-ns-699.awsdns-23.net.
-setting ns-699.awsdns-23.net. as auth for parent domain us-west-1.elb.amazonaws.com. of www-caltech-edu-prod-1-103959757.us-west-1.elb.amazonaws.com.
-NSCache (out) is:
-{  .: {  f.root-servers.net.: <CE exp=731927635s auth=True>},
-   amazonaws.com.: {  r1.amazonaws.com.: <CE exp=172799s auth=False>,
-                      r2.amazonaws.com.: <CE exp=172799s auth=False>,
-                      u1.amazonaws.com.: <CE exp=172799s auth=False>,
-                      u2.amazonaws.com.: <CE exp=172799s auth=False>},
-   awsdns-23.net.: {  g-ns-1367.awsdns-23.net.: <CE exp=172800s auth=False>,
-                      g-ns-1943.awsdns-23.net.: <CE exp=172800s auth=True>,
-                      g-ns-472.awsdns-23.net.: <CE exp=172800s auth=False>,
-                      g-ns-793.awsdns-23.net.: <CE exp=172800s auth=False>},
-   caltech.edu.: {  mercutio.ni.caltech.edu.: <CE exp=172799s auth=False>,
-                    ns11.tex-an.net.: <CE exp=172799s auth=True>,
-                    ns5.capnet.state.tx.us.: <CE exp=172799s auth=False>,
-                    nsx.lbl.gov.: <CE exp=172799s auth=False>,
-                    tepid.ni.caltech.edu.: <CE exp=172799s auth=False>,
-                    tybalt.caltech.edu.: <CE exp=172799s auth=False>},
-   com.: {  a.gtld-servers.net.: <CE exp=172799s auth=False>,
-            b.gtld-servers.net.: <CE exp=172799s auth=False>,
-            c.gtld-servers.net.: <CE exp=172799s auth=False>,
-            d.gtld-servers.net.: <CE exp=172799s auth=False>,
-            e.gtld-servers.net.: <CE exp=172799s auth=False>,
-            f.gtld-servers.net.: <CE exp=172799s auth=False>,
-            g.gtld-servers.net.: <CE exp=172799s auth=False>,
-            h.gtld-servers.net.: <CE exp=172799s auth=False>,
-            i.gtld-servers.net.: <CE exp=172799s auth=False>,
-            j.gtld-servers.net.: <CE exp=172799s auth=False>,
-            k.gtld-servers.net.: <CE exp=172799s auth=False>,
-            l.gtld-servers.net.: <CE exp=172799s auth=False>,
-            m.gtld-servers.net.: <CE exp=172799s auth=False>},
-   edu.: {  a.edu-servers.net.: <CE exp=172799s auth=False>,
-            c.edu-servers.net.: <CE exp=172799s auth=False>,
-            d.edu-servers.net.: <CE exp=172799s auth=False>,
-            f.edu-servers.net.: <CE exp=172799s auth=False>,
-            g.edu-servers.net.: <CE exp=172799s auth=False>,
-            l.edu-servers.net.: <CE exp=172799s auth=False>},
-   net.: {  a.gtld-servers.net.: <CE exp=172799s auth=False>,
-            b.gtld-servers.net.: <CE exp=172799s auth=False>,
-            c.gtld-servers.net.: <CE exp=172799s auth=False>,
-            d.gtld-servers.net.: <CE exp=172799s auth=False>,
-            e.gtld-servers.net.: <CE exp=172799s auth=False>,
-            f.gtld-servers.net.: <CE exp=172799s auth=False>,
-            g.gtld-servers.net.: <CE exp=172799s auth=False>,
-            h.gtld-servers.net.: <CE exp=172799s auth=False>,
-            i.gtld-servers.net.: <CE exp=172799s auth=False>,
-            j.gtld-servers.net.: <CE exp=172799s auth=False>,
-            k.gtld-servers.net.: <CE exp=172799s auth=False>,
-            l.gtld-servers.net.: <CE exp=172799s auth=False>,
-            m.gtld-servers.net.: <CE exp=172799s auth=False>},
-   us-west-1.elb.amazonaws.com.: {  ns-1036.awsdns-01.org.: <CE exp=299s auth=False>,
-                                    ns-1850.awsdns-39.co.uk.: <CE exp=299s auth=False>,
-                                    ns-467.awsdns-58.com.: <CE exp=299s auth=False>,
-                                    ns-699.awsdns-23.net.: <CE exp=299s auth=True>}}
-
-Answer received from ns-699.awsdns-23.net. server is:
- {  'additional': [],
-   'answer': [  (www-caltech-edu-prod-1-103959757.us-west-1.elb.amazonaws.com., 60, IN, A, 184.72.40.239),
-                (www-caltech-edu-prod-1-103959757.us-west-1.elb.amazonaws.com., 60, IN, A, 54.241.31.219)],
-   'authority': [  (us-west-1.elb.amazonaws.com., 1800, IN, NS, ns-1036.awsdns-01.org.),
-                   (us-west-1.elb.amazonaws.com., 1800, IN, NS, ns-1850.awsdns-39.co.uk.),
-                   (us-west-1.elb.amazonaws.com., 1800, IN, NS, ns-467.awsdns-58.com.),
-                   (us-west-1.elb.amazonaws.com., 1800, IN, NS, ns-699.awsdns-23.net.)],
-   'header': <gz01.dnslib.Header.Header instance at 0x10656c368>,
-   'question': [<gz01.dnslib.QE.QE instance at 0x10656c290>]}
+Answer received from ns3.ja.net. server is:
+ {  'additional': [  (ns1.cs.ucl.ac.uk., 86400, IN, A, 128.16.5.32),
+                    (ns2.ja.net., 86400, IN, A, 193.63.105.17),
+                    <gz01.dnslib.RR.RR_AAAA instance at 0x10a7b90e0>,
+                    (bas-a.bcc.ac.uk., 86400, IN, A, 144.82.100.41),
+                    (link-1.ts.bcc.ac.uk., 86400, IN, A, 144.82.100.1)],
+   'answer': [],
+   'authority': [  (ucl.ac.uk., 86400, IN, NS, ns2.ja.net.),
+                   (ucl.ac.uk., 86400, IN, NS, ns1.cs.ucl.ac.uk.),
+                   (ucl.ac.uk., 86400, IN, NS, bas-a.bcc.ac.uk.),
+                   (ucl.ac.uk., 86400, IN, NS, link-1.ts.bcc.ac.uk.)],
+   'header': <gz01.dnslib.Header.Header instance at 0x10a7b6098>,
+   'question': [<gz01.dnslib.QE.QE instance at 0x10a7b62d8>]}
 **************************************************
-Sanswers is [  (www.caltech.edu., 300, IN, CNAME, www-caltech-edu-prod-1-103959757.us-west-1.elb.amazonaws.com.),
-   (www-caltech-edu-prod-1-103959757.us-west-1.elb.amazonaws.com., 60, IN, A, 184.72.40.239)]
+Best matching RR's for www.ucl.ac.uk. are for parent domain "ucl.ac.uk."
+ the nameserves in cache for that zone are as follows:
+
+bas-a.bcc.ac.uk.
+
+ns2.ja.net.
+
+ns1.cs.ucl.ac.uk.
+
+link-1.ts.bcc.ac.uk.
+
+This will probably get added to SLIST
+Picking from slist, checking if we have an A record (probably supplied as glue) in cache for: bas-a.bcc.ac.uk.
+
+    We have: bas-a.bcc.ac.uk.@144.82.100.41
+
+sending question for A record for  www.ucl.ac.uk.  to bas-a.bcc.ac.uk. @('144.82.100.41', 53):
+0000   9C 98 00 00 00 01 00 00 00 00 00 00 03 77 77 77    .............www
+0010   03 75 63 6C 02 61 63 02 75 6B 00 00 01 00 01       .ucl.ac.uk.....
+
+
+bas-a.bcc.ac.uk.
+setting bas-a.bcc.ac.uk. as auth for parent domain ucl.ac.uk. of www.ucl.ac.uk.
+NSCache (out) is:
+{  .: {  f.root-servers.net.: <CE exp=731902572s auth=True>},
+   ac.uk.: {  auth03.ns.uu.net.: <CE exp=172800s auth=False>,
+              ns0.ja.net.: <CE exp=172800s auth=False>,
+              ns1.surfnet.nl.: <CE exp=172800s auth=False>,
+              ns2.ja.net.: <CE exp=172800s auth=False>,
+              ns3.ja.net.: <CE exp=172800s auth=False>,
+              ns4.ja.net.: <CE exp=172800s auth=False>,
+              ws-fra1.win-ip.dfn.de.: <CE exp=172800s auth=False>},
+   ja.net.: {  ns0.ja.net.: <CE exp=86400s auth=False>,
+               ns1.ja.net.: <CE exp=86400s auth=True>,
+               ns1.surfnet.nl.: <CE exp=86400s auth=False>,
+               ns2.ja.net.: <CE exp=86400s auth=False>,
+               ns4.ja.net.: <CE exp=86400s auth=False>},
+   net.: {  a.gtld-servers.net.: <CE exp=172800s auth=False>,
+            b.gtld-servers.net.: <CE exp=172800s auth=False>,
+            c.gtld-servers.net.: <CE exp=172800s auth=False>,
+            d.gtld-servers.net.: <CE exp=172800s auth=False>,
+            e.gtld-servers.net.: <CE exp=172800s auth=False>,
+            f.gtld-servers.net.: <CE exp=172800s auth=False>,
+            g.gtld-servers.net.: <CE exp=172800s auth=False>,
+            h.gtld-servers.net.: <CE exp=172800s auth=False>,
+            i.gtld-servers.net.: <CE exp=172800s auth=False>,
+            j.gtld-servers.net.: <CE exp=172800s auth=False>,
+            k.gtld-servers.net.: <CE exp=172800s auth=False>,
+            l.gtld-servers.net.: <CE exp=172800s auth=False>,
+            m.gtld-servers.net.: <CE exp=172800s auth=False>},
+   ucl.ac.uk.: {  bas-a.bcc.ac.uk.: <CE exp=86400s auth=True>,
+                  link-1.ts.bcc.ac.uk.: <CE exp=86400s auth=False>,
+                  ns1.cs.ucl.ac.uk.: <CE exp=86400s auth=False>,
+                  ns2.ja.net.: <CE exp=86400s auth=False>},
+   uk.: {  ns1.nic.uk.: <CE exp=172800s auth=False>,
+           ns2.nic.uk.: <CE exp=172800s auth=False>,
+           ns4.nic.uk.: <CE exp=172800s auth=False>,
+           ns5.nic.uk.: <CE exp=172800s auth=False>,
+           ns6.nic.uk.: <CE exp=172800s auth=False>,
+           ns7.nic.uk.: <CE exp=172800s auth=False>,
+           nsa.nic.uk.: <CE exp=172800s auth=False>,
+           nsb.nic.uk.: <CE exp=172800s auth=False>,
+           nsc.nic.uk.: <CE exp=172800s auth=False>,
+           nsd.nic.uk.: <CE exp=172800s auth=False>}}
+
+Answer received from bas-a.bcc.ac.uk. server is:
+ {  'additional': [  (bas-a.bcc.ac.uk., 86400, IN, A, 144.82.100.41),
+                    (link-1.ts.bcc.ac.uk., 86400, IN, A, 144.82.100.1)],
+   'answer': [(www.ucl.ac.uk., 3600, IN, A, 144.82.111.20)],
+   'authority': [  (ucl.ac.uk., 360000, IN, NS, link-1.ts.bcc.ac.uk.),
+                   (ucl.ac.uk., 360000, IN, NS, ns1.cs.ucl.ac.uk.),
+                   (ucl.ac.uk., 360000, IN, NS, bas-a.bcc.ac.uk.),
+                   (ucl.ac.uk., 360000, IN, NS, ns2.ja.net.)],
+   'header': <gz01.dnslib.Header.Header instance at 0x10a7b2998>,
+   'question': [<gz01.dnslib.QE.QE instance at 0x10a7c4098>]}
+**************************************************
+Sanswers is [(www.ucl.ac.uk., 3600, IN, A, 144.82.111.20)]
 &#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#
 
 
 Response:
-(43973, <gz01.dnslib.QE.QE instance at 0x106537bd8>, [(www.caltech.edu., 300, IN, CNAME, www-caltech-edu-prod-1-103959757.us-west-1.elb.amazonaws.com.), (www-caltech-edu-prod-1-103959757.us-west-1.elb.amazonaws.com., 60, IN, A, 184.72.40.239)], [], [])
+(38657, <gz01.dnslib.QE.QE instance at 0x10a793bd8>, [(www.ucl.ac.uk., 3600, IN, A, 144.82.111.20)], [(ucl.ac.uk., 86400, IN, NS, bas-a.bcc.ac.uk.)], [(bas-a.bcc.ac.uk., 86400, IN, A, 144.82.100.41)])
 
 
 
@@ -665,39 +526,23 @@ Response:
 
 
 ================================================================================================================================================================================================================================================================================================================================================================================================================
-Best matching RR's for www.caltech.edu. are for parent domain "caltech.edu."
+Best matching RR's for www.ucl.ac.uk. are for parent domain "ucl.ac.uk."
  the nameserves in cache for that zone are as follows:
 
-ns5.capnet.state.tx.us.
+bas-a.bcc.ac.uk.
 
-tybalt.caltech.edu.
+ns2.ja.net.
 
-nsx.lbl.gov.
+ns1.cs.ucl.ac.uk.
 
-mercutio.ni.caltech.edu.
-
-tepid.ni.caltech.edu.
-
-ns11.tex-an.net.
-
-This will probably get added to SLIST
-Best matching RR's for www-caltech-edu-prod-1-103959757.us-west-1.elb.amazonaws.com. are for parent domain "us-west-1.elb.amazonaws.com."
- the nameserves in cache for that zone are as follows:
-
-ns-699.awsdns-23.net.
-
-ns-1036.awsdns-01.org.
-
-ns-467.awsdns-58.com.
-
-ns-1850.awsdns-39.co.uk.
+link-1.ts.bcc.ac.uk.
 
 This will probably get added to SLIST
 wangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwang
 
 
 Response:
-(2168, <gz01.dnslib.QE.QE instance at 0x106545170>, [(www.caltech.edu., 293, IN, CNAME, www-caltech-edu-prod-1-103959757.us-west-1.elb.amazonaws.com.), (www-caltech-edu-prod-1-103959757.us-west-1.elb.amazonaws.com., 54, IN, A, 54.241.31.219)], [(caltech.edu., 172793, IN, NS, ns11.tex-an.net.), (us-west-1.elb.amazonaws.com., 1794, IN, NS, ns-699.awsdns-23.net.)], [(www-caltech-edu-prod-1-103959757.us-west-1.elb.amazonaws.com., 54, IN, A, 54.241.31.219)])
+(28394, <gz01.dnslib.QE.QE instance at 0x10a7bfd40>, [(www.ucl.ac.uk., 3591, IN, A, 144.82.111.20)], [(ucl.ac.uk., 359991, IN, NS, bas-a.bcc.ac.uk.)], [])
 
 
 
