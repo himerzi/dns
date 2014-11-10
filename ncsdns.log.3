@@ -1,5 +1,5 @@
 NSCache INIT = 
-{.: {f.root-servers.net.: <CE exp=9223372035439287037s auth=True>}}
+{.: {f.root-servers.net.: <CE exp=731927011s auth=True>}}
 
 
 
@@ -42,7 +42,7 @@ NSCache INIT =
 
 
 ================================================================================================================================================================================================================================================================================================================================================================================================================
-Best matching RR's for haig.cs.ucl.ac.uk. are for parent domain "."
+Best matching RR's for www.ucl.ac.uk. are for parent domain "."
  the nameserves in cache for that zone are as follows:
 
 f.root-servers.net.
@@ -52,41 +52,40 @@ Picking from slist, checking if we have an A record (probably supplied as glue) 
 
     We have: f.root-servers.net.@192.5.5.241
 
-sending question for A record for  haig.cs.ucl.ac.uk.  to f.root-servers.net. @('192.5.5.241', 53):
-0000   20 DB 00 00 00 01 00 00 00 00 00 00 04 68 61 69     ............hai
-0010   67 02 63 73 03 75 63 6C 02 61 63 02 75 6B 00 00    g.cs.ucl.ac.uk..
-0020   01 00 01                                           ...
+sending question for A record for  www.ucl.ac.uk.  to f.root-servers.net. @('192.5.5.241', 53):
+0000   52 AC 00 00 00 01 00 00 00 00 00 00 03 77 77 77    R............www
+0010   03 75 63 6C 02 61 63 02 75 6B 00 00 01 00 01       .ucl.ac.uk.....
 
 
 Answer received from f.root-servers.net. server is:
  {  'additional': [  (ns1.nic.uk., 172800, IN, A, 195.66.240.130),
-                    <gz01.dnslib.RR.RR_AAAA instance at 0x10ff97128>,
+                    <gz01.dnslib.RR.RR_AAAA instance at 0x10eed8248>,
                     (ns2.nic.uk., 172800, IN, A, 217.79.164.131),
                     (ns4.nic.uk., 172800, IN, A, 194.83.244.131),
-                    <gz01.dnslib.RR.RR_AAAA instance at 0x10ff973b0>,
+                    <gz01.dnslib.RR.RR_AAAA instance at 0x10eed84d0>,
                     (ns5.nic.uk., 172800, IN, A, 213.246.167.131),
                     (ns6.nic.uk., 172800, IN, A, 213.248.254.130),
                     (ns7.nic.uk., 172800, IN, A, 212.121.40.130),
                     (nsa.nic.uk., 172800, IN, A, 156.154.100.3),
-                    <gz01.dnslib.RR.RR_AAAA instance at 0x10ff977e8>,
+                    <gz01.dnslib.RR.RR_AAAA instance at 0x10eed8908>,
                     (nsb.nic.uk., 172800, IN, A, 156.154.101.3),
                     (nsc.nic.uk., 172800, IN, A, 156.154.102.3),
                     (nsd.nic.uk., 172800, IN, A, 156.154.103.3)],
    'answer': [],
-   'authority': [  (uk., 172800, IN, NS, ns5.nic.uk.),
-                   (uk., 172800, IN, NS, nsd.nic.uk.),
+   'authority': [  (uk., 172800, IN, NS, ns2.nic.uk.),
+                   (uk., 172800, IN, NS, ns5.nic.uk.),
+                   (uk., 172800, IN, NS, nsb.nic.uk.),
+                   (uk., 172800, IN, NS, nsc.nic.uk.),
+                   (uk., 172800, IN, NS, ns4.nic.uk.),
+                   (uk., 172800, IN, NS, nsa.nic.uk.),
                    (uk., 172800, IN, NS, ns6.nic.uk.),
                    (uk., 172800, IN, NS, ns7.nic.uk.),
-                   (uk., 172800, IN, NS, nsc.nic.uk.),
-                   (uk., 172800, IN, NS, ns2.nic.uk.),
-                   (uk., 172800, IN, NS, nsa.nic.uk.),
                    (uk., 172800, IN, NS, ns1.nic.uk.),
-                   (uk., 172800, IN, NS, nsb.nic.uk.),
-                   (uk., 172800, IN, NS, ns4.nic.uk.)],
-   'header': <gz01.dnslib.Header.Header instance at 0x10ff83d88>,
-   'question': [<gz01.dnslib.QE.QE instance at 0x10ff83ef0>]}
+                   (uk., 172800, IN, NS, nsd.nic.uk.)],
+   'header': <gz01.dnslib.Header.Header instance at 0x10eec4e60>,
+   'question': [<gz01.dnslib.QE.QE instance at 0x10eed2050>]}
 **************************************************
-Best matching RR's for haig.cs.ucl.ac.uk. are for parent domain "uk."
+Best matching RR's for www.ucl.ac.uk. are for parent domain "uk."
  the nameserves in cache for that zone are as follows:
 
 nsd.nic.uk.
@@ -110,30 +109,29 @@ nsa.nic.uk.
 ns7.nic.uk.
 
 This will probably get added to SLIST
-Picking from slist, checking if we have an A record (probably supplied as glue) in cache for: ns5.nic.uk.
+Picking from slist, checking if we have an A record (probably supplied as glue) in cache for: ns2.nic.uk.
 
-    We have: ns5.nic.uk.@213.246.167.131
+    We have: ns2.nic.uk.@217.79.164.131
 
-sending question for A record for  haig.cs.ucl.ac.uk.  to ns5.nic.uk. @('213.246.167.131', 53):
-0000   F0 6D 00 00 00 01 00 00 00 00 00 00 04 68 61 69    .m...........hai
-0010   67 02 63 73 03 75 63 6C 02 61 63 02 75 6B 00 00    g.cs.ucl.ac.uk..
-0020   01 00 01                                           ...
+sending question for A record for  www.ucl.ac.uk.  to ns2.nic.uk. @('217.79.164.131', 53):
+0000   85 6E 00 00 00 01 00 00 00 00 00 00 03 77 77 77    .n...........www
+0010   03 75 63 6C 02 61 63 02 75 6B 00 00 01 00 01       .ucl.ac.uk.....
 
 
-Answer received from ns5.nic.uk. server is:
+Answer received from ns2.nic.uk. server is:
  {  'additional': [],
    'answer': [],
-   'authority': [  (ac.uk., 172800, IN, NS, ns2.ja.net.),
-                   (ac.uk., 172800, IN, NS, ns0.ja.net.),
+   'authority': [  (ac.uk., 172800, IN, NS, ns4.ja.net.),
+                   (ac.uk., 172800, IN, NS, ns2.ja.net.),
                    (ac.uk., 172800, IN, NS, ns3.ja.net.),
                    (ac.uk., 172800, IN, NS, ns1.surfnet.nl.),
-                   (ac.uk., 172800, IN, NS, auth03.ns.uu.net.),
+                   (ac.uk., 172800, IN, NS, ns0.ja.net.),
                    (ac.uk., 172800, IN, NS, ws-fra1.win-ip.dfn.de.),
-                   (ac.uk., 172800, IN, NS, ns4.ja.net.)],
-   'header': <gz01.dnslib.Header.Header instance at 0x10ff9e950>,
-   'question': [<gz01.dnslib.QE.QE instance at 0x10ff9e830>]}
+                   (ac.uk., 172800, IN, NS, auth03.ns.uu.net.)],
+   'header': <gz01.dnslib.Header.Header instance at 0x10eedd950>,
+   'question': [<gz01.dnslib.QE.QE instance at 0x10eedda28>]}
 **************************************************
-Best matching RR's for haig.cs.ucl.ac.uk. are for parent domain "ac.uk."
+Best matching RR's for www.ucl.ac.uk. are for parent domain "ac.uk."
  the nameserves in cache for that zone are as follows:
 
 ns3.ja.net.
@@ -151,19 +149,19 @@ ns2.ja.net.
 ws-fra1.win-ip.dfn.de.
 
 This will probably get added to SLIST
-Picking from slist, checking if we have an A record (probably supplied as glue) in cache for: ns2.ja.net.
-
-Picking from slist, checking if we have an A record (probably supplied as glue) in cache for: ns0.ja.net.
-
-Picking from slist, checking if we have an A record (probably supplied as glue) in cache for: ns3.ja.net.
-
-Picking from slist, checking if we have an A record (probably supplied as glue) in cache for: ns1.surfnet.nl.
-
 Picking from slist, checking if we have an A record (probably supplied as glue) in cache for: auth03.ns.uu.net.
+
+Picking from slist, checking if we have an A record (probably supplied as glue) in cache for: ns4.ja.net.
 
 Picking from slist, checking if we have an A record (probably supplied as glue) in cache for: ws-fra1.win-ip.dfn.de.
 
-Picking from slist, checking if we have an A record (probably supplied as glue) in cache for: ns4.ja.net.
+Picking from slist, checking if we have an A record (probably supplied as glue) in cache for: ns1.surfnet.nl.
+
+Picking from slist, checking if we have an A record (probably supplied as glue) in cache for: ns0.ja.net.
+
+Picking from slist, checking if we have an A record (probably supplied as glue) in cache for: ns2.ja.net.
+
+Picking from slist, checking if we have an A record (probably supplied as glue) in cache for: ns3.ja.net.
 
 exhausted list, and couldnt find anything about these servers in our cache
 Best matching RR's for ns3.ja.net. are for parent domain "."
@@ -177,15 +175,15 @@ Picking from slist, checking if we have an A record (probably supplied as glue) 
     We have: f.root-servers.net.@192.5.5.241
 
 sending question for A record for  ns3.ja.net.  to f.root-servers.net. @('192.5.5.241', 53):
-0000   6A D1 00 00 00 01 00 00 00 00 00 00 03 6E 73 33    j............ns3
+0000   0F D7 00 00 00 01 00 00 00 00 00 00 03 6E 73 33    .............ns3
 0010   02 6A 61 03 6E 65 74 00 00 01 00 01                .ja.net.....
 
 
 Answer received from f.root-servers.net. server is:
  {  'additional': [  (a.gtld-servers.net., 172800, IN, A, 192.5.6.30),
-                    <gz01.dnslib.RR.RR_AAAA instance at 0x10ffa5fc8>,
+                    <gz01.dnslib.RR.RR_AAAA instance at 0x10eeea0e0>,
                     (b.gtld-servers.net., 172800, IN, A, 192.33.14.30),
-                    <gz01.dnslib.RR.RR_AAAA instance at 0x10ffac170>,
+                    <gz01.dnslib.RR.RR_AAAA instance at 0x10eeea290>,
                     (c.gtld-servers.net., 172800, IN, A, 192.26.92.30),
                     (d.gtld-servers.net., 172800, IN, A, 192.31.80.30),
                     (e.gtld-servers.net., 172800, IN, A, 192.12.94.30),
@@ -197,21 +195,21 @@ Answer received from f.root-servers.net. server is:
                     (k.gtld-servers.net., 172800, IN, A, 192.52.178.30),
                     (l.gtld-servers.net., 172800, IN, A, 192.41.162.30)],
    'answer': [],
-   'authority': [  (net., 172800, IN, NS, a.gtld-servers.net.),
+   'authority': [  (net., 172800, IN, NS, d.gtld-servers.net.),
                    (net., 172800, IN, NS, f.gtld-servers.net.),
-                   (net., 172800, IN, NS, c.gtld-servers.net.),
-                   (net., 172800, IN, NS, k.gtld-servers.net.),
                    (net., 172800, IN, NS, m.gtld-servers.net.),
-                   (net., 172800, IN, NS, d.gtld-servers.net.),
-                   (net., 172800, IN, NS, b.gtld-servers.net.),
+                   (net., 172800, IN, NS, k.gtld-servers.net.),
                    (net., 172800, IN, NS, g.gtld-servers.net.),
-                   (net., 172800, IN, NS, l.gtld-servers.net.),
                    (net., 172800, IN, NS, h.gtld-servers.net.),
-                   (net., 172800, IN, NS, i.gtld-servers.net.),
+                   (net., 172800, IN, NS, c.gtld-servers.net.),
                    (net., 172800, IN, NS, e.gtld-servers.net.),
+                   (net., 172800, IN, NS, i.gtld-servers.net.),
+                   (net., 172800, IN, NS, l.gtld-servers.net.),
+                   (net., 172800, IN, NS, b.gtld-servers.net.),
+                   (net., 172800, IN, NS, a.gtld-servers.net.),
                    (net., 172800, IN, NS, j.gtld-servers.net.)],
-   'header': <gz01.dnslib.Header.Header instance at 0x10ffa57e8>,
-   'question': [<gz01.dnslib.QE.QE instance at 0x10ffa5950>]}
+   'header': <gz01.dnslib.Header.Header instance at 0x10eee3998>,
+   'question': [<gz01.dnslib.QE.QE instance at 0x10eee3a70>]}
 **************************************************
 Best matching RR's for ns3.ja.net. are for parent domain "net."
  the nameserves in cache for that zone are as follows:
@@ -243,34 +241,34 @@ i.gtld-servers.net.
 f.gtld-servers.net.
 
 This will probably get added to SLIST
-Picking from slist, checking if we have an A record (probably supplied as glue) in cache for: a.gtld-servers.net.
+Picking from slist, checking if we have an A record (probably supplied as glue) in cache for: b.gtld-servers.net.
 
-    We have: a.gtld-servers.net.@192.5.6.30
+    We have: b.gtld-servers.net.@192.33.14.30
 
-sending question for A record for  ns3.ja.net.  to a.gtld-servers.net. @('192.5.6.30', 53):
-0000   39 EC 00 00 00 01 00 00 00 00 00 00 03 6E 73 33    9............ns3
+sending question for A record for  ns3.ja.net.  to b.gtld-servers.net. @('192.33.14.30', 53):
+0000   CC 97 00 00 00 01 00 00 00 00 00 00 03 6E 73 33    .............ns3
 0010   02 6A 61 03 6E 65 74 00 00 01 00 01                .ja.net.....
 
 
-Answer received from a.gtld-servers.net. server is:
+Answer received from b.gtld-servers.net. server is:
  {  'additional': [  (ns0.ja.net., 172800, IN, A, 128.86.1.20),
                     (ns0.ja.net., 172800, IN, A, 193.63.94.20),
-                    <gz01.dnslib.RR.RR_AAAA instance at 0x10ffb45a8>,
-                    <gz01.dnslib.RR.RR_AAAA instance at 0x10ffb4680>,
+                    <gz01.dnslib.RR.RR_AAAA instance at 0x10eef5878>,
+                    <gz01.dnslib.RR.RR_AAAA instance at 0x10eef5950>,
                     (ns1.ja.net., 172800, IN, A, 194.81.227.226),
-                    <gz01.dnslib.RR.RR_AAAA instance at 0x10ffb4830>,
+                    <gz01.dnslib.RR.RR_AAAA instance at 0x10eef5b00>,
                     (ns2.ja.net., 172800, IN, A, 193.63.105.17),
-                    <gz01.dnslib.RR.RR_AAAA instance at 0x10ffb49e0>,
+                    <gz01.dnslib.RR.RR_AAAA instance at 0x10eef5cb0>,
                     (ns4.ja.net., 172800, IN, A, 193.62.157.66),
-                    <gz01.dnslib.RR.RR_AAAA instance at 0x10ffb4b90>],
+                    <gz01.dnslib.RR.RR_AAAA instance at 0x10eef5e60>],
    'answer': [],
    'authority': [  (ja.net., 172800, IN, NS, ns0.ja.net.),
                    (ja.net., 172800, IN, NS, ns1.surfnet.nl.),
                    (ja.net., 172800, IN, NS, ns1.ja.net.),
                    (ja.net., 172800, IN, NS, ns2.ja.net.),
                    (ja.net., 172800, IN, NS, ns4.ja.net.)],
-   'header': <gz01.dnslib.Header.Header instance at 0x10ffb0878>,
-   'question': [<gz01.dnslib.QE.QE instance at 0x10ffb0a28>]}
+   'header': <gz01.dnslib.Header.Header instance at 0x10eef0c20>,
+   'question': [<gz01.dnslib.QE.QE instance at 0x10eef0cf8>]}
 **************************************************
 Best matching RR's for ns3.ja.net. are for parent domain "ja.net."
  the nameserves in cache for that zone are as follows:
@@ -286,44 +284,82 @@ ns4.ja.net.
 ns0.ja.net.
 
 This will probably get added to SLIST
-Picking from slist, checking if we have an A record (probably supplied as glue) in cache for: ns0.ja.net.
+Picking from slist, checking if we have an A record (probably supplied as glue) in cache for: ns1.ja.net.
 
-    We have: ns0.ja.net.@193.63.94.20
+    We have: ns1.ja.net.@194.81.227.226
 
-sending question for A record for  ns3.ja.net.  to ns0.ja.net. @('193.63.94.20', 53):
-0000   43 BE 00 00 00 01 00 00 00 00 00 00 03 6E 73 33    C............ns3
+sending question for A record for  ns3.ja.net.  to ns1.ja.net. @('194.81.227.226', 53):
+0000   EC 93 00 00 00 01 00 00 00 00 00 00 03 6E 73 33    .............ns3
 0010   02 6A 61 03 6E 65 74 00 00 01 00 01                .ja.net.....
 
 
-Answer received from ns0.ja.net. server is:
+ns1.ja.net.
+setting ns1.ja.net. as auth for parent domain ja.net. of ns3.ja.net.
+NSCache (out) is:
+{  .: {  f.root-servers.net.: <CE exp=731927008s auth=True>},
+   ac.uk.: {  auth03.ns.uu.net.: <CE exp=172800s auth=False>,
+              ns0.ja.net.: <CE exp=172800s auth=False>,
+              ns1.surfnet.nl.: <CE exp=172800s auth=False>,
+              ns2.ja.net.: <CE exp=172800s auth=False>,
+              ns3.ja.net.: <CE exp=172800s auth=False>,
+              ns4.ja.net.: <CE exp=172800s auth=False>,
+              ws-fra1.win-ip.dfn.de.: <CE exp=172800s auth=False>},
+   ja.net.: {  ns0.ja.net.: <CE exp=172800s auth=False>,
+               ns1.ja.net.: <CE exp=172800s auth=True>,
+               ns1.surfnet.nl.: <CE exp=172800s auth=False>,
+               ns2.ja.net.: <CE exp=172800s auth=False>,
+               ns4.ja.net.: <CE exp=172800s auth=False>},
+   net.: {  a.gtld-servers.net.: <CE exp=172800s auth=False>,
+            b.gtld-servers.net.: <CE exp=172800s auth=False>,
+            c.gtld-servers.net.: <CE exp=172800s auth=False>,
+            d.gtld-servers.net.: <CE exp=172800s auth=False>,
+            e.gtld-servers.net.: <CE exp=172800s auth=False>,
+            f.gtld-servers.net.: <CE exp=172800s auth=False>,
+            g.gtld-servers.net.: <CE exp=172800s auth=False>,
+            h.gtld-servers.net.: <CE exp=172800s auth=False>,
+            i.gtld-servers.net.: <CE exp=172800s auth=False>,
+            j.gtld-servers.net.: <CE exp=172800s auth=False>,
+            k.gtld-servers.net.: <CE exp=172800s auth=False>,
+            l.gtld-servers.net.: <CE exp=172800s auth=False>,
+            m.gtld-servers.net.: <CE exp=172800s auth=False>},
+   uk.: {  ns1.nic.uk.: <CE exp=172800s auth=False>,
+           ns2.nic.uk.: <CE exp=172800s auth=False>,
+           ns4.nic.uk.: <CE exp=172800s auth=False>,
+           ns5.nic.uk.: <CE exp=172800s auth=False>,
+           ns6.nic.uk.: <CE exp=172800s auth=False>,
+           ns7.nic.uk.: <CE exp=172800s auth=False>,
+           nsa.nic.uk.: <CE exp=172800s auth=False>,
+           nsb.nic.uk.: <CE exp=172800s auth=False>,
+           nsc.nic.uk.: <CE exp=172800s auth=False>,
+           nsd.nic.uk.: <CE exp=172800s auth=False>}}
+
+Answer received from ns1.ja.net. server is:
  {  'additional': [  (ns0.ja.net., 86400, IN, A, 128.86.1.20),
                     (ns0.ja.net., 86400, IN, A, 193.63.94.20),
-                    <gz01.dnslib.RR.RR_AAAA instance at 0x10ffbbe60>,
-                    <gz01.dnslib.RR.RR_AAAA instance at 0x10ffbe050>,
+                    <gz01.dnslib.RR.RR_AAAA instance at 0x10eefe128>,
+                    <gz01.dnslib.RR.RR_AAAA instance at 0x10eefe200>,
                     (ns1.ja.net., 86400, IN, A, 194.81.227.226),
-                    <gz01.dnslib.RR.RR_AAAA instance at 0x10ffbe1b8>,
-                    (ns1.surfnet.nl., 3600, IN, A, 192.87.106.101),
-                    <gz01.dnslib.RR.RR_AAAA instance at 0x10ffbe368>,
+                    <gz01.dnslib.RR.RR_AAAA instance at 0x10eefe3b0>,
                     (ns2.ja.net., 86400, IN, A, 193.63.105.17),
-                    <gz01.dnslib.RR.RR_AAAA instance at 0x10ffbe518>,
+                    <gz01.dnslib.RR.RR_AAAA instance at 0x10eefe560>,
                     (ns4.ja.net., 86400, IN, A, 193.62.157.66),
-                    <gz01.dnslib.RR.RR_AAAA instance at 0x10ffbe6c8>],
+                    <gz01.dnslib.RR.RR_AAAA instance at 0x10eefe710>],
    'answer': [(ns3.ja.net., 86400, IN, A, 193.63.106.103)],
    'authority': [  (ja.net., 86400, IN, NS, ns4.ja.net.),
-                   (ja.net., 86400, IN, NS, ns1.surfnet.nl.),
+                   (ja.net., 86400, IN, NS, ns1.ja.net.),
                    (ja.net., 86400, IN, NS, ns2.ja.net.),
-                   (ja.net., 86400, IN, NS, ns0.ja.net.),
-                   (ja.net., 86400, IN, NS, ns1.ja.net.)],
-   'header': <gz01.dnslib.Header.Header instance at 0x10ffbb128>,
-   'question': [<gz01.dnslib.QE.QE instance at 0x10ffbb2d8>]}
+                   (ja.net., 86400, IN, NS, ns1.surfnet.nl.),
+                   (ja.net., 86400, IN, NS, ns0.ja.net.)],
+   'header': <gz01.dnslib.Header.Header instance at 0x10eefa3f8>,
+   'question': [<gz01.dnslib.QE.QE instance at 0x10eefa4d0>]}
 **************************************************
 Sanswers is [(ns3.ja.net., 86400, IN, A, 193.63.106.103)]
 &#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#
 
 
 Response:
-(28996, <gz01.dnslib.QE.QE instance at 0x10ff83ab8>, [(ns3.ja.net., 86400, IN, A, 193.63.106.103)], [(ja.net., 172800, IN, NS, ns0.ja.net.)], [(ns0.ja.net., 172800, IN, A, 193.63.94.20)])
-Best matching RR's for haig.cs.ucl.ac.uk. are for parent domain "ac.uk."
+(45684, <gz01.dnslib.QE.QE instance at 0x10eec4bd8>, [(ns3.ja.net., 86400, IN, A, 193.63.106.103)], [(ja.net., 172800, IN, NS, ns1.ja.net.)], [(ns1.ja.net., 172800, IN, A, 194.81.227.226)])
+Best matching RR's for www.ucl.ac.uk. are for parent domain "ac.uk."
  the nameserves in cache for that zone are as follows:
 
 ns3.ja.net.
@@ -341,66 +377,115 @@ ns2.ja.net.
 ws-fra1.win-ip.dfn.de.
 
 This will probably get added to SLIST
+Picking from slist, checking if we have an A record (probably supplied as glue) in cache for: ns1.surfnet.nl.
+
+Picking from slist, checking if we have an A record (probably supplied as glue) in cache for: ns0.ja.net.
+
+    We have: ns0.ja.net.@193.63.94.20
+
+sending question for A record for  www.ucl.ac.uk.  to ns0.ja.net. @('193.63.94.20', 53):
+0000   BD 18 00 00 00 01 00 00 00 00 00 00 03 77 77 77    .............www
+0010   03 75 63 6C 02 61 63 02 75 6B 00 00 01 00 01       .ucl.ac.uk.....
+
+
+Answer received from ns0.ja.net. server is:
+ {  'additional': [  (ns1.cs.ucl.ac.uk., 360000, IN, A, 128.16.5.32),
+                    (ns2.ja.net., 86400, IN, A, 193.63.105.17),
+                    <gz01.dnslib.RR.RR_AAAA instance at 0x10eeea0e0>,
+                    (bas-a.bcc.ac.uk., 86400, IN, A, 144.82.100.41),
+                    (link-1.ts.bcc.ac.uk., 86400, IN, A, 144.82.100.1)],
+   'answer': [],
+   'authority': [  (ucl.ac.uk., 86400, IN, NS, bas-a.bcc.ac.uk.),
+                   (ucl.ac.uk., 86400, IN, NS, link-1.ts.bcc.ac.uk.),
+                   (ucl.ac.uk., 86400, IN, NS, ns2.ja.net.),
+                   (ucl.ac.uk., 86400, IN, NS, ns1.cs.ucl.ac.uk.)],
+   'header': <gz01.dnslib.Header.Header instance at 0x10eee7098>,
+   'question': [<gz01.dnslib.QE.QE instance at 0x10eee72d8>]}
+**************************************************
+Best matching RR's for www.ucl.ac.uk. are for parent domain "ucl.ac.uk."
+ the nameserves in cache for that zone are as follows:
+
+bas-a.bcc.ac.uk.
+
+ns2.ja.net.
+
+ns1.cs.ucl.ac.uk.
+
+link-1.ts.bcc.ac.uk.
+
+This will probably get added to SLIST
 Picking from slist, checking if we have an A record (probably supplied as glue) in cache for: ns2.ja.net.
 
     We have: ns2.ja.net.@193.63.105.17
 
-sending question for A record for  haig.cs.ucl.ac.uk.  to ns2.ja.net. @('193.63.105.17', 53):
-0000   73 CF 00 00 00 01 00 00 00 00 00 00 04 68 61 69    s............hai
-0010   67 02 63 73 03 75 63 6C 02 61 63 02 75 6B 00 00    g.cs.ucl.ac.uk..
-0020   01 00 01                                           ...
+sending question for A record for  www.ucl.ac.uk.  to ns2.ja.net. @('193.63.105.17', 53):
+0000   CA 2B 00 00 00 01 00 00 00 00 00 00 03 77 77 77    .+...........www
+0010   03 75 63 6C 02 61 63 02 75 6B 00 00 01 00 01       .ucl.ac.uk.....
 
+
+ns2.ja.net.
+setting ns2.ja.net. as auth for parent domain ucl.ac.uk. of www.ucl.ac.uk.
+NSCache (out) is:
+{  .: {  f.root-servers.net.: <CE exp=731927008s auth=True>},
+   ac.uk.: {  auth03.ns.uu.net.: <CE exp=172800s auth=False>,
+              ns0.ja.net.: <CE exp=172800s auth=False>,
+              ns1.surfnet.nl.: <CE exp=172800s auth=False>,
+              ns2.ja.net.: <CE exp=172800s auth=False>,
+              ns3.ja.net.: <CE exp=172800s auth=False>,
+              ns4.ja.net.: <CE exp=172800s auth=False>,
+              ws-fra1.win-ip.dfn.de.: <CE exp=172800s auth=False>},
+   ja.net.: {  ns0.ja.net.: <CE exp=86400s auth=False>,
+               ns1.ja.net.: <CE exp=86400s auth=True>,
+               ns1.surfnet.nl.: <CE exp=86400s auth=False>,
+               ns2.ja.net.: <CE exp=86400s auth=False>,
+               ns4.ja.net.: <CE exp=86400s auth=False>},
+   net.: {  a.gtld-servers.net.: <CE exp=172800s auth=False>,
+            b.gtld-servers.net.: <CE exp=172800s auth=False>,
+            c.gtld-servers.net.: <CE exp=172800s auth=False>,
+            d.gtld-servers.net.: <CE exp=172800s auth=False>,
+            e.gtld-servers.net.: <CE exp=172800s auth=False>,
+            f.gtld-servers.net.: <CE exp=172800s auth=False>,
+            g.gtld-servers.net.: <CE exp=172800s auth=False>,
+            h.gtld-servers.net.: <CE exp=172800s auth=False>,
+            i.gtld-servers.net.: <CE exp=172800s auth=False>,
+            j.gtld-servers.net.: <CE exp=172800s auth=False>,
+            k.gtld-servers.net.: <CE exp=172800s auth=False>,
+            l.gtld-servers.net.: <CE exp=172800s auth=False>,
+            m.gtld-servers.net.: <CE exp=172800s auth=False>},
+   ucl.ac.uk.: {  bas-a.bcc.ac.uk.: <CE exp=86400s auth=False>,
+                  link-1.ts.bcc.ac.uk.: <CE exp=86400s auth=False>,
+                  ns1.cs.ucl.ac.uk.: <CE exp=86400s auth=False>,
+                  ns2.ja.net.: <CE exp=86400s auth=True>},
+   uk.: {  ns1.nic.uk.: <CE exp=172800s auth=False>,
+           ns2.nic.uk.: <CE exp=172800s auth=False>,
+           ns4.nic.uk.: <CE exp=172800s auth=False>,
+           ns5.nic.uk.: <CE exp=172800s auth=False>,
+           ns6.nic.uk.: <CE exp=172800s auth=False>,
+           ns7.nic.uk.: <CE exp=172800s auth=False>,
+           nsa.nic.uk.: <CE exp=172800s auth=False>,
+           nsb.nic.uk.: <CE exp=172800s auth=False>,
+           nsc.nic.uk.: <CE exp=172800s auth=False>,
+           nsd.nic.uk.: <CE exp=172800s auth=False>}}
 
 Answer received from ns2.ja.net. server is:
- {  'additional': [  (ns0.ja.net., 86400, IN, A, 128.86.1.20),
-                    (ns0.ja.net., 86400, IN, A, 193.63.94.20),
-                    <gz01.dnslib.RR.RR_AAAA instance at 0x10ffa8cf8>,
-                    <gz01.dnslib.RR.RR_AAAA instance at 0x10ffa8e60>,
-                    (ns1.cs.ucl.ac.uk., 360000, IN, A, 128.16.5.32),
-                    (sun.mhs-relay.ac.uk., 50400, IN, A, 128.86.8.25),
-                    <gz01.dnslib.RR.RR_AAAA instance at 0x10ffac320>],
-   'answer': [],
-   'authority': [  (cs.ucl.ac.uk., 360000, IN, NS, ns1.cs.ucl.ac.uk.),
-                   (cs.ucl.ac.uk., 360000, IN, NS, ns0.ja.net.),
-                   (cs.ucl.ac.uk., 360000, IN, NS, sun.mhs-relay.ac.uk.)],
-   'header': <gz01.dnslib.Header.Header instance at 0x10ffa8050>,
-   'question': [<gz01.dnslib.QE.QE instance at 0x10ffa8248>]}
+ {  'additional': [  (ns2.ja.net., 86400, IN, A, 193.63.105.17),
+                    <gz01.dnslib.RR.RR_AAAA instance at 0x10eef5b48>,
+                    (bas-a.bcc.ac.uk., 86400, IN, A, 144.82.100.41),
+                    (link-1.ts.bcc.ac.uk., 86400, IN, A, 144.82.100.1)],
+   'answer': [(www.ucl.ac.uk., 3600, IN, A, 144.82.111.20)],
+   'authority': [  (ucl.ac.uk., 360000, IN, NS, bas-a.bcc.ac.uk.),
+                   (ucl.ac.uk., 360000, IN, NS, ns2.ja.net.),
+                   (ucl.ac.uk., 360000, IN, NS, link-1.ts.bcc.ac.uk.),
+                   (ucl.ac.uk., 360000, IN, NS, ns1.cs.ucl.ac.uk.)],
+   'header': <gz01.dnslib.Header.Header instance at 0x10eee3998>,
+   'question': [<gz01.dnslib.QE.QE instance at 0x10eef5098>]}
 **************************************************
-Best matching RR's for haig.cs.ucl.ac.uk. are for parent domain "cs.ucl.ac.uk."
- the nameserves in cache for that zone are as follows:
-
-sun.mhs-relay.ac.uk.
-
-ns1.cs.ucl.ac.uk.
-
-ns0.ja.net.
-
-This will probably get added to SLIST
-Picking from slist, checking if we have an A record (probably supplied as glue) in cache for: ns1.cs.ucl.ac.uk.
-
-    We have: ns1.cs.ucl.ac.uk.@128.16.5.32
-
-sending question for A record for  haig.cs.ucl.ac.uk.  to ns1.cs.ucl.ac.uk. @('128.16.5.32', 53):
-0000   DE BA 00 00 00 01 00 00 00 00 00 00 04 68 61 69    .............hai
-0010   67 02 63 73 03 75 63 6C 02 61 63 02 75 6B 00 00    g.cs.ucl.ac.uk..
-0020   01 00 01                                           ...
-
-
-Answer received from ns1.cs.ucl.ac.uk. server is:
- {  'additional': [(ns1.cs.ucl.ac.uk., 360000, IN, A, 128.16.5.32)],
-   'answer': [(haig.cs.ucl.ac.uk., 86400, IN, A, 128.16.6.8)],
-   'authority': [  (cs.ucl.ac.uk., 360000, IN, NS, ns1.cs.ucl.ac.uk.),
-                   (cs.ucl.ac.uk., 360000, IN, NS, sun.mhs-relay.ac.uk.),
-                   (cs.ucl.ac.uk., 360000, IN, NS, ns0.ja.net.)],
-   'header': <gz01.dnslib.Header.Header instance at 0x10ffa5fc8>,
-   'question': [<gz01.dnslib.QE.QE instance at 0x10ffa57e8>]}
-**************************************************
-Sanswers is [(haig.cs.ucl.ac.uk., 86400, IN, A, 128.16.6.8)]
+Sanswers is [(www.ucl.ac.uk., 3600, IN, A, 144.82.111.20)]
 &#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#
 
 
 Response:
-(28996, <gz01.dnslib.QE.QE instance at 0x10ff83ab8>, [(haig.cs.ucl.ac.uk., 86400, IN, A, 128.16.6.8)], [(ja.net., 172800, IN, NS, ns0.ja.net.), (cs.ucl.ac.uk., 360000, IN, NS, ns1.cs.ucl.ac.uk.)], [(ns0.ja.net., 172800, IN, A, 193.63.94.20), (ns1.cs.ucl.ac.uk., 360000, IN, A, 128.16.5.32)])
+(45684, <gz01.dnslib.QE.QE instance at 0x10eec4bd8>, [(www.ucl.ac.uk., 3600, IN, A, 144.82.111.20)], [(ucl.ac.uk., 86400, IN, NS, ns2.ja.net.)], [(ns2.ja.net., 86400, IN, A, 193.63.105.17)])
 
 
 
@@ -443,130 +528,23 @@ Response:
 
 
 ================================================================================================================================================================================================================================================================================================================================================================================================================
-Best matching RR's for sipb.mit.edu. are for parent domain "."
+Best matching RR's for www.ucl.ac.uk. are for parent domain "ucl.ac.uk."
  the nameserves in cache for that zone are as follows:
 
-f.root-servers.net.
+bas-a.bcc.ac.uk.
+
+ns2.ja.net.
+
+ns1.cs.ucl.ac.uk.
+
+link-1.ts.bcc.ac.uk.
 
 This will probably get added to SLIST
-Picking from slist, checking if we have an A record (probably supplied as glue) in cache for: f.root-servers.net.
-
-    We have: f.root-servers.net.@192.5.5.241
-
-sending question for A record for  sipb.mit.edu.  to f.root-servers.net. @('192.5.5.241', 53):
-0000   80 0D 00 00 00 01 00 00 00 00 00 00 04 73 69 70    .............sip
-0010   62 03 6D 69 74 03 65 64 75 00 00 01 00 01          b.mit.edu.....
-
-
-Answer received from f.root-servers.net. server is:
- {  'additional': [  (a.edu-servers.net., 172800, IN, A, 192.5.6.30),
-                    (c.edu-servers.net., 172800, IN, A, 192.26.92.30),
-                    (d.edu-servers.net., 172800, IN, A, 192.31.80.30),
-                    (f.edu-servers.net., 172800, IN, A, 192.35.51.30),
-                    (g.edu-servers.net., 172800, IN, A, 192.42.93.30),
-                    <gz01.dnslib.RR.RR_AAAA instance at 0x10ff93ef0>,
-                    (l.edu-servers.net., 172800, IN, A, 192.41.162.30)],
-   'answer': [],
-   'authority': [  (edu., 172800, IN, NS, c.edu-servers.net.),
-                   (edu., 172800, IN, NS, l.edu-servers.net.),
-                   (edu., 172800, IN, NS, a.edu-servers.net.),
-                   (edu., 172800, IN, NS, f.edu-servers.net.),
-                   (edu., 172800, IN, NS, g.edu-servers.net.),
-                   (edu., 172800, IN, NS, d.edu-servers.net.)],
-   'header': <gz01.dnslib.Header.Header instance at 0x10ff933f8>,
-   'question': [<gz01.dnslib.QE.QE instance at 0x10ff93560>]}
-**************************************************
-Best matching RR's for sipb.mit.edu. are for parent domain "edu."
- the nameserves in cache for that zone are as follows:
-
-l.edu-servers.net.
-
-g.edu-servers.net.
-
-a.edu-servers.net.
-
-f.edu-servers.net.
-
-c.edu-servers.net.
-
-d.edu-servers.net.
-
-This will probably get added to SLIST
-Picking from slist, checking if we have an A record (probably supplied as glue) in cache for: c.edu-servers.net.
-
-    We have: c.edu-servers.net.@192.26.92.30
-
-sending question for A record for  sipb.mit.edu.  to c.edu-servers.net. @('192.26.92.30', 53):
-0000   A6 BB 00 00 00 01 00 00 00 00 00 00 04 73 69 70    .............sip
-0010   62 03 6D 69 74 03 65 64 75 00 00 01 00 01          b.mit.edu.....
-
-
-Answer received from c.edu-servers.net. server is:
- {  'additional': [  (usw2.akam.net., 172800, IN, A, 184.26.161.64),
-                    (asia1.akam.net., 172800, IN, A, 95.100.175.64),
-                    (asia2.akam.net., 172800, IN, A, 95.101.36.64),
-                    (use2.akam.net., 172800, IN, A, 96.7.49.64),
-                    (ns1-37.akam.net., 172800, IN, A, 193.108.91.37),
-                    <gz01.dnslib.RR.RR_AAAA instance at 0x10ffb4248>,
-                    (ns1-173.akam.net., 172800, IN, A, 193.108.91.173),
-                    <gz01.dnslib.RR.RR_AAAA instance at 0x10ffb44d0>,
-                    (eur5.akam.net., 172800, IN, A, 23.74.25.64),
-                    (use5.akam.net., 172800, IN, A, 2.16.40.64),
-                    <gz01.dnslib.RR.RR_AAAA instance at 0x10ffb0b90>],
-   'answer': [],
-   'authority': [  (mit.edu., 172800, IN, NS, usw2.akam.net.),
-                   (mit.edu., 172800, IN, NS, asia1.akam.net.),
-                   (mit.edu., 172800, IN, NS, asia2.akam.net.),
-                   (mit.edu., 172800, IN, NS, use2.akam.net.),
-                   (mit.edu., 172800, IN, NS, ns1-37.akam.net.),
-                   (mit.edu., 172800, IN, NS, ns1-173.akam.net.),
-                   (mit.edu., 172800, IN, NS, eur5.akam.net.),
-                   (mit.edu., 172800, IN, NS, use5.akam.net.)],
-   'header': <gz01.dnslib.Header.Header instance at 0x10ffa85f0>,
-   'question': [<gz01.dnslib.QE.QE instance at 0x10ffa8950>]}
-**************************************************
-Best matching RR's for sipb.mit.edu. are for parent domain "mit.edu."
- the nameserves in cache for that zone are as follows:
-
-usw2.akam.net.
-
-asia2.akam.net.
-
-ns1-37.akam.net.
-
-eur5.akam.net.
-
-asia1.akam.net.
-
-use2.akam.net.
-
-use5.akam.net.
-
-ns1-173.akam.net.
-
-This will probably get added to SLIST
-Picking from slist, checking if we have an A record (probably supplied as glue) in cache for: usw2.akam.net.
-
-    We have: usw2.akam.net.@184.26.161.64
-
-sending question for A record for  sipb.mit.edu.  to usw2.akam.net. @('184.26.161.64', 53):
-0000   6E DE 00 00 00 01 00 00 00 00 00 00 04 73 69 70    n............sip
-0010   62 03 6D 69 74 03 65 64 75 00 00 01 00 01          b.mit.edu.....
-
-
-Answer received from usw2.akam.net. server is:
- {  'additional': [],
-   'answer': [(sipb.mit.edu., 1800, IN, A, 18.181.0.29)],
-   'authority': [],
-   'header': <gz01.dnslib.Header.Header instance at 0x10ffbb2d8>,
-   'question': [<gz01.dnslib.QE.QE instance at 0x10ffbb170>]}
-**************************************************
-Sanswers is [(sipb.mit.edu., 1800, IN, A, 18.181.0.29)]
-&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#&#
+wangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwangwang
 
 
 Response:
-(63511, <gz01.dnslib.QE.QE instance at 0x10ff930e0>, [(sipb.mit.edu., 1800, IN, A, 18.181.0.29)], [(ja.net., 172800, IN, NS, ns0.ja.net.), (cs.ucl.ac.uk., 360000, IN, NS, ns1.cs.ucl.ac.uk.), (mit.edu., 172800, IN, NS, usw2.akam.net.)], [(ns0.ja.net., 172800, IN, A, 193.63.94.20), (ns1.cs.ucl.ac.uk., 360000, IN, A, 128.16.5.32), (usw2.akam.net., 172800, IN, A, 184.26.161.64)])
+(8981, <gz01.dnslib.QE.QE instance at 0x10eef0cf8>, [(www.ucl.ac.uk., 3592, IN, A, 144.82.111.20)], [(ucl.ac.uk., 359992, IN, NS, ns2.ja.net.)], [(www.ucl.ac.uk., 3592, IN, A, 144.82.111.20)])
 
 
 

@@ -6,10 +6,10 @@ import pprint
 from random import seed, randint
 import struct
 from socket import *
-from sys import exit, maxint as MAXINT
+from sys import exit# maxint as MAXINT
 from time import time, sleep
 from string import join
-import signal, os
+import signal, os, random
 
 from gz01.collections_backport import OrderedDict
 from gz01.dnslib.RR import *
@@ -18,6 +18,7 @@ from gz01.dnslib.QE import QE
 from gz01.inetlib.types import *
 from gz01.util import *
 
+MAXINT = 2147483647
 # timeout in seconds to wait for reply
 TIMEOUT = 5
 
@@ -118,7 +119,7 @@ pp = pprint.PrettyPrinter(indent=3)
 nscache = dict([(DomainName("."), 
             OrderedDict([(DomainName(ROOTNS_DN), 
                    CacheEntry(expiration=MAXINT, authoritative=True))]))])
-logger.log(DEBUG2, "NSCache INIT = \n{}".format(nscache))
+logger.log(DEBUG2, "NSCache INIT = \n{0}".format(nscache))
 # Initialize the address cache data structure;
 # [domain name --> [in_addr --> CacheEntry]]:
 acache = dict([(DomainName(ROOTNS_DN),
@@ -183,13 +184,13 @@ def get_best_ns(ns_cache, qname):
     Also takes into account aliased names we have in the cnamecache
   """
   #sname is the name we are searchiing for in our list of ns's
-  #logger.log(DEBUG2, "NSCache (out) is:\n{}\n".format(pp.pformat(nscache)))
-  #logger.log(DEBUG2, "NSCache (in)  is:\n{}\n".format(pp.pformat(ns_cache)))
+  #
+  #logger.log(DEBUG2, "NSCache (in)  is:\n{0}\n".format(pp.pformat(ns_cache)))
   for super_domain in qname:
       if super_domain in ns_cache:
-          logger.log(DEBUG2, "Best matching RR's for {} are for parent domain \"{}\"\n the nameserves in cache for that zone are as follows:\n".format(qname, super_domain))
+          logger.log(DEBUG2, "Best matching RR's for {0} are for parent domain \"{1}\"\n the nameserves in cache for that zone are as follows:\n".format(qname, super_domain))
           for key in ns_cache[super_domain].iterkeys():
-            logger.log(DEBUG2, "{}\n".format(key))
+            logger.log(DEBUG2, "{0}\n".format(key))
           logger.log(DEBUG2, "This will probably get added to SLIST")
           return ns_cache[super_domain]
   else:
@@ -199,13 +200,13 @@ def construct_response(id, question, answers, authority, additional, RCODE=Heade
     ancount = len(answers)
     nscount = len(authority)
     arcount = len(additional)
-    #print "ans {} auths {} \n adds {}".format(answers, authority, additional)
+    #print "ans {0} auths {1} \n adds {2}".format(answers, authority, additional)
     header = Header(id, Header.OPCODE_QUERY, RCODE, qdcount=1, ancount=ancount,
                     nscount=nscount, arcount=arcount, qr=True, aa=False, tc=False, rd=True, ra=True)
     packed_secs = ""
     for sec in [answers, authority, additional]:
         packed_secs += reduce(lambda x, y: x + y.pack(), sec, "")
-    return "{}{}{}".format(header.pack(),question.pack(), packed_secs)
+    return "{0}{1}{2}".format(header.pack(),question.pack(), packed_secs)
 def construct_A_query(domain_name):
     """
     domain name is the domain name we're querying about
@@ -220,38 +221,64 @@ def construct_A_query(domain_name):
     
     question                = QE(type=QE.TYPE_A, dn=domain_name)
 
-    return ("{}{}".format(header.pack(),question.pack()), question)
+    return ("{0}{1}".format(header.pack(),question.pack()), question)
     
 def print_dns_payload(data):
-  logger.log(DEBUG1, "payload (length:{} bytes) received is:\n{}\n".format(len(data), hexdump(data)))
-  logger.log(DEBUG1, "Header received  is:\n{}\n".format(Header.fromData(data)))
+  logger.log(DEBUG1, "payload (length:{0} bytes) received is:\n{1}\n".format(len(data), hexdump(data)))
+  logger.log(DEBUG1, "Header received  is:\n{0}\n".format(Header.fromData(data)))
   header_len                = len(Header.fromData(data))
   question                  = QE.fromData(data, header_len)
-  logger.log(DEBUG1, "Question received  is:\n{}\n".format(question))
-  #logger.log(DEBUG2, "raw from {} type {}:\n{}".format(address,type(data), repr(data)))
+  logger.log(DEBUG1, "Question received  is:\n{0}\n".format(question))
+  #logger.log(DEBUG2, "raw from {0} type {1}:\n{2}".format(address,type(data), repr(data)))
 
 def set_authoritative(subdom, ns_dn):
     """
     subdomain is the domain that NS_DN is an authority for
     returns a RR for that NS
     """
+    print "setting {0} as auth for parent domain {1}".format(ns_dn, subdom)
     for super_domain in subdom:
         if super_domain in nscache:
-            #print "super {}".format (pp.pformat(nscache[super_domain]))
-            #print "setting {} as auth for parent domain {} of {}".format(ns_dn, super_domain, subdom)
+            #print "super {0}".format (pp.pformat(nscache[super_domain]))
+            logger.log(DEBUG2,  "setting {0} as auth for parent domain {1} of {2}".format(ns_dn, super_domain, subdom))
             nscache[super_domain][ns_dn]._authoritative = True
+            
             now = int(time())
             ttl = nscache[super_domain][ns_dn]._expiration - now
             #dn, ttl, nsdn
             rr_ns = RR_NS(DomainName(super_domain), ttl, ns_dn)
             rr_ns.pack()
+            logger.log(DEBUG2, "NSCache (out) is:\n{0}\n".format(pp.pformat(nscache)))
             return rr_ns
-def construct_a_rr_from_cache(dn):
-    ce = acache[dn]
-    ip = ce._dict.keys()[0].toNetwork()
+def construct_ns_rr_from_cache(dn):
+    """
+    returns any authortitative ns we have in cache for that dn. Wasn't necesarily used in this query.
+    Is simply a valid cache entry we have for an NS
+    """
     now = int(time())
-    ttl = ce._dict.values()[0]._expiration - now
-    return RR_A(dn, ttl, ip)           
+    for super_domain in dn:
+       # print "super: {0} , base {1}".format(super_domain, dn)
+        if super_domain in nscache:
+            #print "super: {0} , base {1}".format(super_domain, dn)
+            for ns in nscache[super_domain]:
+                if nscache[super_domain][ns]._authoritative is  True:
+                    ttl = nscache[super_domain][ns]._expiration - now
+                    rr_ns = RR_NS(DomainName(super_domain), ttl, ns)
+                    print "NS: {0}".format(rr_ns)
+                    return rr_ns
+    return None
+    
+def construct_a_rr_from_cache(dn):
+    for super_domain in dn:
+      if super_domain in acache:
+        ce = acache[super_domain]
+        ip = ce._dict.keys()[0].toNetwork()
+        now = int(time())
+        ttl = ce._dict.values()[0]._expiration - now
+        rr_a = RR_A(DomainName(super_domain), ttl, ip)
+        print 'A: {0}'.format(RR_A(DomainName(super_domain), ttl, ip))
+        return RR_A(DomainName(super_domain), ttl, ip)
+    return None           
 def parse_rrs(payload, offset, quantity):
   rrs = []
   for i in range(quantity):
@@ -301,7 +328,7 @@ def parse_response_payload(payload):
                                                                         byte_ptr,
                                                                         num_entries)    
       parsed[key] = rrs
-  #logger.log(DEBUG2, "parsed:\n{}\n".format(pp.pformat(parsed)))
+  #logger.log(DEBUG2, "parsed:\n{0}\n".format(pp.pformat(parsed)))
   return parsed
 def insert_in_ccache(rr, authoritative=False):
     now = int(time())
@@ -323,7 +350,10 @@ def insert_in_nscache(rr,  authoritative=False):
   nsdn = rr._nsdn
   ce =  CacheEntry(expiration=now+rr._ttl, authoritative=authoritative)
   if dn in nscache:
-   
+    if nsdn in nscache[dn]:
+        if nscache[dn][nsdn]._authoritative is True:
+            ce._authoritative = True
+            
     nscache[dn][nsdn] = ce
   else:
    
@@ -341,24 +371,73 @@ def load_records_into_cache(rrs):
 def load_response_into_cache(response):
   for key in ["answer", "authority", "additional"]:
     load_records_into_cache(response[key])
-def update_caches():
+def get_expired_cnamecache():
     now = int(time())
     keys_to_del = []
-    for entry, value  in acache.iteritems():
-        #print "expiration is {}".format(value._dict.values()[0]._expiration)
+    for key, ce in cnamecache.iteritems():
+        if ce._expiration - now <= 0:
+            keys_to_del.append(key)
+    return (keys_to_del, cnamecache)
+def get_expired_nscache():
+    now = int(time())
+    keys_to_del = []
+    for key, odict in nscache.iteritems():
+        for dn, ce in odict.iteritems():
+            if ce._expiration - now <= 0:
+                keys_to_del.append((key, dn))
+    return (keys_to_del, nscache)
+def get_expired_acache():
+    now = int(time())
+    keys_to_del = []
+    print "checking a"
+    for entry, value in acache.iteritems():
         if value._dict.values()[0]._expiration - now <= 0:
-            print "deleting {}".format(entry)
+            print "found exp a"
             keys_to_del.append(entry)
-    for key in keys_to_del:
-        del acache[key]
+    return (keys_to_del, acache)
+def update_caches():
+    a = get_expired_acache()
+    c = get_expired_cnamecache()
+    ns = get_expired_nscache()
+    for keys, cache  in [a, c]:
+        for key in keys:
+            print "deleting {0}".format(key)
+            del cache[key]
+    ns_keys, cache = ns
+    for key, dn  in ns_keys:
+        print "deleting {0}{1}".format(key, dn)
+        del nscache[key][dn]
+        
 def get_ip_from_acache(key):
     return str(acache[key]._dict.keys()[0])
-
+def construct_authorities_for_answers(answers):
+    """
+    For every A or CNAME in answers, we should strive to include glue for the Authoritative
+    NS's for those answers
+    """
+    domains = [rr._dn for rr in answers]
+    glue = {"authority": [], "additional": []}
+    for domain  in domains:
+        auth =  construct_ns_rr_from_cache(domain)
+        #this is wrong...should be constructing a RR for auths.. not for domain
+        additional = construct_a_rr_from_cache(auth._nsdn)
+        if auth:
+            glue["authority"].append(auth)
+        if additional:
+            glue["additional"].append(additional)
+    return (glue["authority"], glue["additional"])
+    
 def pick_from_slist(slist):
+    #make sure we're not picking the same server every time this function is called, as
+    #sometimes it will be called multiple times with the same slist. This avoids the possible pitfall
+    #of always sending a request over and over to a server that is down/behaving erronously
+    items = slist.items()
+    random.shuffle(items)
+    slist = OrderedDict(items)
     for server in slist:
-        logger.log(DEBUG2, "Picking from slist, checking if we have an A record (probably supplied as glue) in cache for: {}\n".format(server))
+        logger.log(DEBUG2, "Picking from slist, checking if we have an A record (probably supplied as glue) in cache for: {0}\n".format(server))
         if server in acache:
-            logger.log(DEBUG2, "    We have: {}@{}\n".format(server, acache[server]._dict.keys()[0]))
+            logger.log(DEBUG2, "    We have: {0}@{1}\n".format(server, acache[server]._dict.keys()[0]))
             ipv4 = str(acache[server]._dict.keys()[0]) #this is what a ridiculously obfuscated data type looks like!
             return (server, ipv4)
     else:
@@ -368,9 +447,10 @@ def resolve(iteration_count, qid, original_question, qname, sname, slist, sanswe
     qname is original domain name were looking for
     sname is current name were resolving
     """
-    #logger.log(DEBUG2, "Acache is:\n{}\n".format(pp.pformat(acache)))
-    #logger.log(DEBUG2, "NSCache is:\n{}\n".format(pp.pformat(nscache)))
+    #logger.log(DEBUG2, "Acache is:\n{0}\n".format(pp.pformat(acache)))
+    #logger.log(DEBUG2, "NSCache is:\n{1}\n".format(pp.pformat(nscache)))
     #check if its an alias we know of
+    
     iteration_count += 1
     #requirement #2
     if iteration_count > 200:
@@ -381,12 +461,17 @@ def resolve(iteration_count, qid, original_question, qname, sname, slist, sanswe
          cname_record = RR_CNAME(sname, cnamecache[sname]._expiration - now, new_sname)
          sanswers.append(cname_record)
          return resolve(iteration_count, qid, original_question, qname, new_sname, get_best_ns(nscache, new_sname), sanswers, sauthorities, sadditional)
+     
     if sname in acache:
+        now = int(time())
         ip = acache[sname]._dict.keys()[0].toNetwork()
-        answer_a_record = RR_A (sname, 1, ip)
+        exp = acache[sname]._dict.values()[0]._expiration - now
+        answer_a_record = RR_A (sname, exp, ip)
         sanswers.append(answer_a_record)
+        
+        sauthorities, sadditional = construct_authorities_for_answers(sanswers)
         our_response = (qid, original_question, sanswers, sauthorities, sadditional)
-        logger.log(DEBUG1, "wang"*50+"\n"*3+"Response:\n{}".format(our_response))
+        logger.log(DEBUG1, "wang"*50+"\n"*3+"Response:\n{0}".format(our_response))
         return our_response
     
     ns_to_query = pick_from_slist(slist)
@@ -406,11 +491,11 @@ def resolve(iteration_count, qid, original_question, qname, sname, slist, sanswe
         return resolve(iteration_count, qid, original_question, qname, sname, get_best_ns(nscache, sname), sanswers, sauthorities, sadditional)
     
     (firstup, ipv4) = ns_to_query
-    #logger.log(DEBUG2, "CCache is:\n{}\n".format(pp.pformat(cnamecache)))
+    #logger.log(DEBUG2, "CCache is:\n{0}\n".format(pp.pformat(cnamecache)))
     address                   = (ipv4,53)
     payload, question                   = construct_A_query(sname)
     
-    logger.log(DEBUG1, "sending question for A record for  {}  to {} @{}:\n{}\n".format(question._dn, firstup, address, hexdump(payload)))
+    logger.log(DEBUG1, "sending question for A record for  {0}  to {1} @{2}:\n{3}\n".format(question._dn, firstup, address, hexdump(payload)))
     #requirement #8
     #cs.sendto(payload, address)
     cs.sendto(payload, address)
@@ -426,10 +511,11 @@ def resolve(iteration_count, qid, original_question, qname, sname, slist, sanswe
     response = parse_response_payload(cs_data)
     #if is authority
     if response["header"]._aa is 1:
+        #print "response {0} from {1} ".format(response, firstup)
+        logger.log(DEBUG1, "{0}".format( firstup))
         ns_ns_rr = set_authoritative(sname, firstup)
         ns_a_rr = construct_a_rr_from_cache(firstup)
         if ns_ns_rr not in sauthorities:
-            print "adding to cache {}".format(ns_ns_rr)
             sauthorities.append(ns_ns_rr)
         if ns_a_rr not in sadditional:
             sadditional.append(ns_a_rr)
@@ -437,17 +523,18 @@ def resolve(iteration_count, qid, original_question, qname, sname, slist, sanswe
         #sauthorities
         
     load_response_into_cache(response)
-    logger.log(DEBUG2, "Answer received from {} server is:\n {}".format(firstup, pp.pformat(response)))
+    logger.log(DEBUG2, "Answer received from {0} server is:\n {1}".format(firstup, pp.pformat(response)))
     logger.log(DEBUG1, "*"*50)
     answer_sec = response["answer"]
     if len(answer_sec) > 0:
         sanswers.append(response["answer"][0])
-        logger.log(DEBUG2, "Sanswers is {}".format(pp.pformat(sanswers)))
+        logger.log(DEBUG2, "Sanswers is {0}".format(pp.pformat(sanswers)))
         if answer_sec[0]._type is RR.TYPE_CNAME:
             sname  =  answer_sec[0]._cname
             return resolve(iteration_count, qid, original_question, qname, sname,  get_best_ns(nscache, sname), sanswers, sauthorities, sadditional)
+        #sauthorities, sadditional = construct_authorities_for_answers(sanswers)
         our_response = (qid, original_question, sanswers, sauthorities, sadditional)
-        logger.log(DEBUG1, "&#"*50+"\n"*3+"Response:\n{}".format(our_response))
+        logger.log(DEBUG1, "&#"*50+"\n"*3+"Response:\n{0}".format(our_response))
         return our_response       
     return resolve(iteration_count, qid, original_question, qname, sname, get_best_ns(nscache, sname), sanswers, sauthorities, sadditional)
  
@@ -500,7 +587,7 @@ while 1:
   question = QE.fromData(data, header_len)
   qname                     = DomainName.fromData(data, header_len)
   response = exc(qid, qname, question)
-  #logger.info( "&#"*50+"\n"*3+"Response:\n{}".format(response))
+  #logger.info( "&#"*50+"\n"*3+"Response:\n{0}".format(response))
 #  ss.sendto(reply, acache[firstup])
   ss.sendto(response, address)
   
